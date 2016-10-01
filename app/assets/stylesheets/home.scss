@@ -1,0 +1,45 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#oa_logo{
+  float: left;
+  width: 160px;
+  height: 45px;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+
+#dm_logo{
+  height: 50px;
+  width: 340px;
+  padding-left: 250px;
+}
+
+#oa_logo2{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
+footer{
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover{
+  color: #e6f2ff;
+
+}
+
+footer small{
+  float:left;
+}
+
+footer ul{
+  float: right;
+  list-style: none;
+}
