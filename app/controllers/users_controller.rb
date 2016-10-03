@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :admin_user, only: [:destroy]
   # GET /users
   # GET /users.json
   def index
@@ -56,13 +57,17 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'User was successfully deleted.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
+
     def set_user
       @user = User.find(params[:id])
     end

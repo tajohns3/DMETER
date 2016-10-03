@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002005409) do
+ActiveRecord::Schema.define(version: 20161003053905) do
 
   create_table "states", force: :cascade do |t|
     t.string   "state",      limit: 4000
@@ -26,19 +26,20 @@ ActiveRecord::Schema.define(version: 20161002005409) do
     t.string   "location",               limit: 4000
     t.string   "user_name",              limit: 4000
     t.string   "role",                   limit: 4000
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
     t.integer  "state_id",               limit: 4
-    t.string   "email",                  limit: 4000, default: "", null: false
-    t.string   "encrypted_password",     limit: 4000, default: "", null: false
+    t.string   "email",                  limit: 4000, default: "",    null: false
+    t.string   "encrypted_password",     limit: 4000, default: "",    null: false
     t.string   "reset_password_token",   limit: 4000
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,    default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,    default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 4000
     t.string   "last_sign_in_ip",        limit: 4000
+    t.boolean  "admin",                               default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
