@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003053905) do
+ActiveRecord::Schema.define(version: 20161003064651) do
 
   create_table "states", force: :cascade do |t|
     t.string   "state",      limit: 4000
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20161003053905) do
     t.string   "current_sign_in_ip",     limit: 4000
     t.string   "last_sign_in_ip",        limit: 4000
     t.boolean  "admin",                               default: false
+    t.boolean  "access"
+    t.boolean  "approved",                            default: false, null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

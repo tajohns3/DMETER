@@ -2,11 +2,16 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :admin_user, only: [:destroy]
+  before_action :read_user, only: [:edit]
   # GET /users
   # GET /users.json
   def index
+    if params[:approved]=="false"
+      @users = User.where(approved: false)
+    else
     @users = User.all
   end
+    end
 
   # GET /users/1
   # GET /users/1.json
@@ -68,12 +73,16 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
 
+  def read_user
+    redirect_to(root_url) unless current_user.access?
+  end
+
     def set_user
       @user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :sur_name, :phone, :location, :user_name, :role,:state_id)
+      params.require(:user).permit(:first_name, :sur_name, :phone, :location, :user_name, :role,:state_id, :approved)
     end
 end
