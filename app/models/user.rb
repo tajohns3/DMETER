@@ -1,11 +1,16 @@
 class User < ActiveRecord::Base
   before_create :auto_username
-  after_create :send_admin_mail
+  before_create :lower_email
+  after_update :send_admin_mail
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+  def lower_email
+    self.email = email.downcase
+  end
 
   def auto_username
     number=0
@@ -24,19 +29,15 @@ class User < ActiveRecord::Base
       super
     end
   end
-  #redo these
+
   def send_admin_mail
-    AdminMailer.new_user_waiting_for_approval(self).deliver
+    if self.approved_changed? && self.approved==true
+      AdminMailer.new_user_waiting_for_approval(self).deliver
+    end
+
   end
 
-  def self.send_reset_password_instructions(attributes={})
-    recoverable = find_or_initialize_with_errors(reset_password_keys, attributes, :not_found)
-    if !recoverable.approved?
-      recoverable.errors[:base] << I18n.t("devise.failure.not_approved")
-    elsif recoverable.persisted?
-      recoverable.send_reset_password_instructions
-    end
-    recoverable
-  end
+
+
 
 end

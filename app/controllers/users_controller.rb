@@ -1,15 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_action :admin_user, only: [:destroy]
-  before_action :read_user, only: [:edit]
+  before_action :admin_user, only: [:index,:destroy]
+  before_action :input_user, only: [:edit, :update]
   # GET /users
   # GET /users.json
   def index
     if params[:approved]=="false"
-      @users = User.where(approved: false)
+      @users = User.where(approved: false).paginate(page: params[:page], per_page: 1)
     else
-    @users = User.all
+    @users = User.paginate(page: params[:page], per_page: 1)
   end
     end
 
@@ -73,7 +73,7 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
 
-  def read_user
+  def input_user
     redirect_to(root_url) unless current_user.access?
   end
 
@@ -83,6 +83,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :sur_name, :phone, :location, :user_name, :role,:state_id, :approved)
+      params.require(:user).permit(:first_name, :sur_name, :phone, :location, :user_name, :role,:state_id, :approved, :access)
     end
 end

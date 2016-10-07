@@ -1,7 +1,7 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
 
     <div class="field">
       <div class="form-group">
@@ -24,70 +24,77 @@
         <%=f.text_field :phone, class: 'form-control'%>
       </div>
     </div>
+
     <div class="field">
-      <div class="form-group">
+      <div class="form-group" >
         <%=f.label :location%>
-        <%=f.select :location, options_for_select([["Home Office",'home_office'],["Field Staff",'field_staff']]),{}, class: 'form-control', id: 'category_category_id'%>
+        <%=f.select :location, options_for_select([["Home Office",'home_office'],["Field Staff",'field_staff']]),{:include_blank => ''}, class: 'form-control'%>
       </div>
+    </div>
 
-      <div class="field">
-        <div class="form-group">
-          <%=f.label :role%>
-          <%=f.text_field :role, class: 'form-control', id:'category_criteria_reason'%>
+    <div class="field" id="role_select">
+      <div class="form-group">
+        <div class="field">
+          <div class="form-group">
+            <%=f.label :state_id%>
+            <%=f.collection_select :state_id, State.all, :id, :state%>
+          </div>
         </div>
-      </div>
 
+        <%=f.label :role, 'Position'%>
+        <%=f.select :role, options_for_select([["Sales Representative", 'sale_representative'],["Area Manager",'area_manager'],["State_Manager",'state_manager']]),
+                    {:include_blank => ''},
+                    class: 'form-control'%>
+
+      </div>
     </div>
     <div class="field">
       <div class="form-group">
-        <%=f.label :user_name%>
-        <%=f.text_field :user_name, class: 'form-control'%>
+
+        <%=f.hidden_field :user_name, class: 'form-control'%>
       </div>
     </div>
 
 
-  <div class="field">
-    <div class="form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+    <div class="field">
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
       </div>
-  </div>
+    </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <div class="form-group">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
-      </div>
-  </div>
 
-  <div class="field">
-    <div class="form-group">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-  </div>
+    <div class="field">
+      <div class="form-group">
+        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        <% if @minimum_password_length %>
+            <br />
+            <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
     </div>
 
-  <div class="field">
-    <div class="form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
-  </div>
-  </div>
-  <div class="actions">
-    <%= f.submit "Update", class: "btn btn-primary" %>
-  </div>
+    <div class="field">
+      <div class="form-group">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="form-group">
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit "Update", class: "btn btn-primary" %>
+    </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
