@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :banks
+  resources :dealers
   devise_for :users
   devise_scope :user do
     authenticated :user do

@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @dealer.state_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @dealer.user_id %>
+</p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @dealer.pocket_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dealer.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @dealer.address %>
+</p>
+
+<p>
+  <strong>Atpost:</strong>
+  <%= @dealer.atpost %>
+</p>
+
+<p>
+  <strong>Pin code:</strong>
+  <%= @dealer.pin_code %>
+</p>
+
+<p>
+  <strong>Taluka:</strong>
+  <%= @dealer.taluka_id %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @dealer.district_id %>
+</p>
+<p>
+  <strong>Bank Account:</strong>
+  <% @dealer.banks.each do |bank| %>
+  <li><%=bank.name%></li>
+    <li><%=bank.account_number%></li>
+    <%end%>
+</p>
+
+<%= link_to 'Edit', edit_dealer_path(@dealer) %> |
+<%= link_to 'Back', dealers_path %>

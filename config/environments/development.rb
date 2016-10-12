@@ -37,9 +37,9 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
   host = 'localhost:3000'
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :test
 
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
   config.action_mailer.smtp_settings = {
       :address        => 'smtp.gmail.com',
       :domain         => 'mail.google.com',

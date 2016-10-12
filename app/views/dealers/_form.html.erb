@@ -1,0 +1,74 @@
+<%= form_for(@dealer) do |f| %>
+  <% if @dealer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dealer.errors.count, "error") %> prohibited this dealer from being saved:</h2>
+
+      <ul>
+      <% @dealer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :state_id %><br>
+    <%= f.collection_select :state_id, State.all, :id, :state, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id, 'Area Manager' %><br>
+
+    <%= f.grouped_collection_select :user_id, State.all, :area_managers, :state, :id, :sur_name,  include_blank: true%>
+  </div>
+
+
+    <%=@dealer.user%>
+
+    <div class="field">
+      <%= f.label :user_id, 'Sales Representative' %><br>
+      <%= f.collection_select :user_id, User.where(role: 'sale_representative'), :id, :sur_name,  include_blank: true%>
+    </div>
+
+  <div class="field">
+    <%= f.label :pocket_id %><br>
+    <%= f.number_field :pocket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :atpost %><br>
+    <%= f.text_field :atpost %>
+  </div>
+  <div class="field">
+    <%= f.label :pin_code %><br>
+    <%= f.text_field :pin_code %>
+  </div>
+  <div class="field">
+    <%= f.label :taluka_id %><br>
+    <%= f.number_field :taluka_id %>
+  </div>
+  <div class="field">
+    <%= f.label :district_id %><br>
+    <%= f.number_field :district_id %>
+  </div>
+    <div>
+      <%= f.fields_for :banks do |bank|%>
+          <%=render 'bank_fields', f: bank%>
+      <%end%>
+      <div class="links">
+        <%=link_to_add_association 'Add Bank Account', f, :banks%>
+      </div>
+    </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
