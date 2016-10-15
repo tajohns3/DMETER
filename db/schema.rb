@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20161003064651) do
     t.string   "current_sign_in_ip",     limit: 4000
     t.string   "last_sign_in_ip",        limit: 4000
     t.boolean  "admin",                               default: false
-    t.boolean  "access"
+    t.boolean  "access",                              default: false, null: false
     t.boolean  "approved",                            default: false, null: false
   end
 
