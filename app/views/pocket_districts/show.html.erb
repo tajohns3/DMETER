@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @pocket_district.pocket_id %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @pocket_district.district_id %>
+</p>
+
+<%= link_to 'Edit', edit_pocket_district_path(@pocket_district) %> |
+<%= link_to 'Back', pocket_districts_path %>

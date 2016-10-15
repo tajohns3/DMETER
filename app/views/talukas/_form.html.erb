@@ -1,0 +1,21 @@
+<%= form_for(@taluka) do |f| %>
+  <% if @taluka.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@taluka.errors.count, "error") %> prohibited this taluka from being saved:</h2>
+
+      <ul>
+      <% @taluka.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :taluka %><br>
+    <%= f.text_field :taluka %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

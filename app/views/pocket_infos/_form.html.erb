@@ -1,0 +1,37 @@
+<%= form_for(@pocket_info) do |f| %>
+  <% if @pocket_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pocket_info.errors.count, "error") %> prohibited this pocket_info from being saved:</h2>
+
+      <ul>
+      <% @pocket_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :taluka_id, "Taluka" %><br>
+    <%= f.collection_select :taluka_id, Taluka.all, :id, :taluka, {:include_blank => true}, {class: "form-control"} %>
+  </div>
+  <div class="field">
+    <%= f.label :village_id %><br>
+    <%= f.number_field :village_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dealer_id %><br>
+    <%= f.number_field :dealer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :farmer_id %><br>
+    <%= f.number_field :farmer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fa_id %><br>
+    <%= f.number_field :fa_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

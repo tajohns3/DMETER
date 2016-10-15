@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @pocket_dat.pocket_id %>
+</p>
+
+<p>
+  <strong>Pocket info:</strong>
+  <%= @pocket_dat.pocket_info_id %>
+</p>
+
+<%= link_to 'Edit', edit_pocket_dat_path(@pocket_dat) %> |
+<%= link_to 'Back', pocket_dats_path %>

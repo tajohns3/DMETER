@@ -1,0 +1,2 @@
+json.extract! pocket, :id, :state_id, :user_id, :pocket_name, :user_id, :district_id, :crop_id, :type_a, :type_b, :type_c, :type_d, :total_pdealer, :agriculture_land, :percent_irr, :created_at, :updated_at
+json.url pocket_url(pocket, format: :json)

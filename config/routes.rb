@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :pocket_crops
+  resources :pocket_districts
+  resources :pocket_dats
+  resources :pocket_infos
+  resources :villages
+  resources :talukas
+  resources :crops
+  resources :districts
+  resources :pockets
   devise_for :users
   devise_scope :user do
     authenticated :user do

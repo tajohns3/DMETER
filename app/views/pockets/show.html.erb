@@ -1,0 +1,208 @@
+<p id="notice"><%= notice %></p>
+
+<body>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1 class="panel-title text-center">
+        <strong>Pocket:</strong>
+        <%= @pocket.pocket_name %>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Geographic Information</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>State:</strong>
+                  <%= @pocket.state_id %>
+                </div>
+                <div class="col-md-6">
+                  <strong>State Manager:</strong>
+                  <%= @pocket.user_id %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <strong>Sales Representative:</strong>
+                  <%= @pocket.user_id %>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>District(s):</strong>
+                  <td><% @pocket.districts.each do |sname| %>
+                        <li><%=sname.district%></li>
+                    <%end%></td>
+                </div>
+                <div class="col-md-6">
+                  <strong>Crop(s):</strong>
+                  <td><% @pocket.crops.each do |sname| %>
+                        <li><%=sname.crop%></li>
+                    <%end%></td>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Number of Potential Dealers</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <strong>Type A:</strong>
+                  <%= @pocket.type_a %>
+                </div>
+                <div class="col-md-3">
+                  <strong>Type B:</strong>
+                  <%= @pocket.type_b %>
+                </div>
+                <div class="col-md-3">
+                  <strong>Type C:</strong>
+                  <%= @pocket.type_c %>
+                </div>
+                <div class="col-md-3">
+                  <strong>Type D:</strong>
+                  <%= @pocket.type_d %>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <strong>Total Number of Potential Dealers:</strong>
+                  <%= @pocket.total_pdeals %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Land Information</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Agriculture land:</strong>
+                  <%= @pocket.agriculture_land %>
+                </div>
+                <div class="col-md-6">
+                  <strong>Percentage of Land Irrigated</strong>
+                  <%= @pocket.percent_irr %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Pocket Information</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <table class="table table-bordered">
+                    <tbody>
+                    </tbody>
+                    <thead>
+                    <tr>
+                      <th class="text-center">
+                        Taluka
+                      </th>
+                      <th class="text-center">
+                        Village
+                      </th>
+                      <th class="text-center">
+                        Dealer
+                      </th>
+                      <th class="text-center">
+                        Farmer
+                      </th>
+                      <th class="text-center">
+                        FA
+                      </th>
+                    </tr>
+                    <tr>
+                      <th class="text-center">
+                        <% @pocket.pocket_dats.each do |pockinfo| %>
+                            <%= pockinfo.taluka %><br><br>
+                        <% end %>
+                      </th>
+                      <th class="text-center">
+                        <% @pocket.pocket_dats.each do |pockinfo| %>
+                            <%= pockinfo.village %><br><br>
+                        <% end %>
+                      </th>
+                      <th class="text-center">
+                        <% @pocket.pocket_dats.each do |pockinfo| %>
+                            <%= pockinfo.taluka %><br><br>
+                        <% end %>
+                      </th>
+                      <th class="text-center">
+                        <% @pocket.pocket_dats.each do |pockinfo| %>
+                            <%= pockinfo.taluka %><br><br>
+                        <% end %>
+                      </th>
+                      <th class="text-center">
+                        <% @pocket.pocket_dats.each do |pockinfo| %>
+                            <%= pockinfo.taluka %><br><br>
+                        <% end %>
+                      </th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to 'Back', pockets_path, class: "btn btn-danger",:style=>'color:#FFFFFF'%>
+          <%= link_to 'Edit', edit_pocket_path(@pocket), class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+>
+</script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+>
+</script>
+</body>

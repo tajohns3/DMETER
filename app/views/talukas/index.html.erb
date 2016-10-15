@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Talukas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Taluka</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @talukas.each do |taluka| %>
+      <tr>
+        <td><%= taluka.taluka %></td>
+        <td><%= link_to 'Show', taluka %></td>
+        <td><%= link_to 'Edit', edit_taluka_path(taluka) %></td>
+        <td><%= link_to 'Destroy', taluka, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taluka', new_taluka_path %>

@@ -1,0 +1,1 @@
+json.partial! "pocket_districts/pocket_district", pocket_district: @pocket_district

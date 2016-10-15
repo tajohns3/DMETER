@@ -1,0 +1,1 @@
+json.array! @pocket_districts, partial: 'pocket_districts/pocket_district', as: :pocket_district

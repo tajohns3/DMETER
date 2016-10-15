@@ -11,10 +11,78 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003064651) do
+ActiveRecord::Schema.define(version: 20161014025650) do
+
+  create_table "crops", force: :cascade do |t|
+    t.string   "crop",       limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.string   "district",   limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "pocket_crops", force: :cascade do |t|
+    t.integer  "pocket_id",  limit: 4
+    t.integer  "crop_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "pocket_dats", force: :cascade do |t|
+    t.integer  "pocket_id",      limit: 4
+    t.integer  "pocket_info_id", limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "taluka",         limit: 4000
+    t.string   "village",        limit: 4000
+  end
+
+  create_table "pocket_districts", force: :cascade do |t|
+    t.integer  "pocket_id",   limit: 4
+    t.integer  "district_id", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "pocket_infos", force: :cascade do |t|
+    t.integer  "taluka_id",  limit: 4
+    t.integer  "village_id", limit: 4
+    t.integer  "dealer_id",  limit: 4
+    t.integer  "farmer_id",  limit: 4
+    t.integer  "fa_id",      limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "pockets", force: :cascade do |t|
+    t.integer  "state_id",         limit: 4
+    t.integer  "user_id",          limit: 4
+    t.string   "pocket_name",      limit: 4000
+    t.integer  "district_id",      limit: 4
+    t.integer  "crop_id",          limit: 4
+    t.integer  "type_a",           limit: 4
+    t.integer  "type_b",           limit: 4
+    t.integer  "type_c",           limit: 4
+    t.integer  "type_d",           limit: 4
+    t.integer  "total_pdealer",    limit: 4
+    t.string   "agriculture_land", limit: 4000
+    t.decimal  "percent_irr",                   precision: 18, scale: 0
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+  end
 
   create_table "states", force: :cascade do |t|
     t.string   "state",      limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "talukas", force: :cascade do |t|
+    t.string   "taluka",     limit: 4000
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
@@ -40,11 +108,18 @@ ActiveRecord::Schema.define(version: 20161003064651) do
     t.string   "current_sign_in_ip",     limit: 4000
     t.string   "last_sign_in_ip",        limit: 4000
     t.boolean  "admin",                               default: false
-    t.boolean  "access"
+    t.boolean  "access",                              default: false, null: false
     t.boolean  "approved",                            default: false, null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, where: "([reset_password_token] IS NOT NULL)"
+
+  create_table "villages", force: :cascade do |t|
+    t.string   "village",    limit: 4000
+    t.integer  "state_id",   limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
 end
