@@ -1,0 +1,1 @@
+json.array! @meet_farmers, partial: 'meet_farmers/meet_farmer', as: :meet_farmer

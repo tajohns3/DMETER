@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :meet_farmers
+  resources :fa_activities
   resources :banks
   resources :dealers
   devise_for :users

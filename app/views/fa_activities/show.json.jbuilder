@@ -1,0 +1,1 @@
+json.partial! "fa_activities/fa_activity", fa_activity: @fa_activity

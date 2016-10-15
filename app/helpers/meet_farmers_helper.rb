@@ -1,0 +1,2 @@
+module MeetFarmersHelper
+end

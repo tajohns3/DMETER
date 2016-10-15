@@ -1,0 +1,49 @@
+<%= form_for(@fa_activity) do |f| %>
+  <% if @fa_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fa_activity.errors.count, "error") %> prohibited this fa_activity from being saved:</h2>
+
+      <ul>
+      <% @fa_activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :field_assistant_id %><br>
+    <%= f.number_field :field_assistant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :state_id %><br>
+    <%= f.number_field :state_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pocket_id %><br>
+    <%= f.number_field :pocket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+
+    <div class="field">
+      <%= f.label :activity %><br>
+      <%= f.select :activity, options_for_select([["Meet Farmer(s)", 'meet_farmers'], ["Visit Dealer Shop", 'visit_dealer'], ["Assist Sales Representative", 'assist_sr'],
+                                                  ["Met Sales Representative", 'meet_sr'], ["Other", 'misc']]),
+                   {include_blank: ''}%>
+    </div>
+
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

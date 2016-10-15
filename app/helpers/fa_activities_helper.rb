@@ -1,0 +1,2 @@
+module FaActivitiesHelper
+end
