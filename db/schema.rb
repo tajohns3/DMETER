@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003064651) do
+ActiveRecord::Schema.define(version: 20161015234936) do
+
+  create_table "prodsamples", force: :cascade do |t|
+    t.integer  "psid",        limit: 4
+    t.integer  "stid",        limit: 4
+    t.integer  "faid",        limit: 4
+    t.string   "sample_purp", limit: 4000
+    t.string   "sampletype",  limit: 4000
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "states", force: :cascade do |t|
     t.string   "state",      limit: 4000
