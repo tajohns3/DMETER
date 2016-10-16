@@ -15,7 +15,8 @@ class FaActivitiesController < ApplicationController
   # GET /fa_activities/new
   def new
     @fa_activity = FaActivity.new
-    @fa_activity.meet_farmers.build
+    meet_farmer =@fa_activity.meet_farmers.build
+    meet_farmer.product_prescriptions.build
 
 
   end
@@ -74,6 +75,8 @@ class FaActivitiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def fa_activity_params
       params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,
-                                          meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:consultation,:product_prescription_id, :_destroy])
+                                          meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:consultation,
+                                                                    product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
+                                                                                                      :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]])
     end
 end

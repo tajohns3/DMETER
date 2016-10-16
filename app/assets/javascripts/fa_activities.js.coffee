@@ -17,3 +17,9 @@ jQuery ->
   $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
     if $(this).val() is "consultation"
       $('#meet_farmer_consultation_div').fadeToggle()
+
+
+jQuery ->
+  $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
+    if $(this).val() is "product_prescription"
+      $('#prod_pres_sele').fadeToggle()
