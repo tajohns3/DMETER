@@ -1,0 +1,2 @@
+json.extract! product_prescription, :id, :dealer_id, :farmer_id, :crop_id, :condition, :crop_growth, :crop_cond, :acreage, :prescribe, :created_at, :updated_at
+json.url product_prescription_url(product_prescription, format: :json)

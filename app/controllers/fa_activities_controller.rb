@@ -15,6 +15,9 @@ class FaActivitiesController < ApplicationController
   # GET /fa_activities/new
   def new
     @fa_activity = FaActivity.new
+    @fa_activity.meet_farmers.build
+
+
   end
 
   # GET /fa_activities/1/edit
@@ -25,6 +28,7 @@ class FaActivitiesController < ApplicationController
   # POST /fa_activities.json
   def create
     @fa_activity = FaActivity.new(fa_activity_params)
+
 
     respond_to do |format|
       if @fa_activity.save
@@ -69,6 +73,7 @@ class FaActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fa_activity_params
-      params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment)
+      params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,
+                                          meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:consultation,:product_prescription_id, :_destroy])
     end
 end

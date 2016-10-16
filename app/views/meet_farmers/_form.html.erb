@@ -19,13 +19,16 @@
     <%= f.label :farmer_id %><br>
     <%= f.number_field :farmer_id %>
   </div>
-  <div class="field">
-    <%= f.label :purpose %><br>
-    <%= f.text_field :purpose %>
-  </div>
-  <div class="field">
+    <div class="field">
+      <%= f.label :purpose %><br>
+      <%= f.select :purpose, options_for_select([["Introduction", 'introduction'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
+                   {include_blank: ''}%>
+    </div>
+  <div class="field", id="meet_farmer_consultation_div">
     <%= f.label :consultation %><br>
-    <%= f.text_field :consultation %>
+    <%= f.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
+                                                    ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
+                                                     {include_blank: ''}%>
   </div>
   <div class="field">
     <%= f.label :product_prescription_id %><br>

@@ -39,6 +39,35 @@
                    {include_blank: ''}%>
     </div>
 
+    <div>
+      <div id="meet_farm_sele", class="container">
+
+      <%= f.fields_for :meet_farmers do |meet|%>
+            <div class="field">
+              <%= meet.label :farmer_id %><br>
+              <%= meet.number_field :farmer_id %>
+            </div>
+            <div class="field">
+              <%= meet.label :purpose %><br>
+              <%= meet.select :purpose, options_for_select([["Introduction", 'introduction'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
+                           {include_blank: ''}%>
+            </div>
+            <div class="field", id="meet_farmer_consultation_div">
+              <%= meet.label :consultation %><br>
+              <%= meet.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
+                                                              ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
+                           {include_blank: ''}%>
+            </div>
+            <div class="field">
+              <%= meet.label :product_prescription_id %><br>
+              <%= meet.number_field :product_prescription_id %>
+            </div>
+
+
+      <%end%>
+      </div>
+    </div>
+
   <div class="field">
     <%= f.label :comment %><br>
     <%= f.text_area :comment %>

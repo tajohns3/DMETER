@@ -4,3 +4,16 @@
 jQuery ->
   $('#fa_activity_date').datepicker
     dateFormat: "yy-mm-dd"
+
+
+
+jQuery ->
+  $('#fa_activity_activity').on "change",  ->
+    if $(this).val() is "meet_farmers"
+      $('#meet_farm_sele').fadeToggle()
+
+
+jQuery ->
+  $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
+    if $(this).val() is "consultation"
+      $('#meet_farmer_consultation_div').fadeToggle()

@@ -1,0 +1,1 @@
+json.array! @product_prescriptions, partial: 'product_prescriptions/product_prescription', as: :product_prescription
