@@ -1,0 +1,1 @@
+json.array! @dealer_visits, partial: 'dealer_visits/dealer_visit', as: :dealer_visit

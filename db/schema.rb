@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016061731) do
+ActiveRecord::Schema.define(version: 20161017051027) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
     t.integer  "dealer_id",  limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "assist_reps", force: :cascade do |t|
+    t.integer  "fa_activity_id", limit: 4
+    t.string   "assist",         limit: 4000
+    t.text     "comment",        limit: 2147483647
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "banks", force: :cascade do |t|
@@ -34,6 +42,16 @@ ActiveRecord::Schema.define(version: 20161016061731) do
     t.string   "crop",       limit: 4000
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "dealer_visits", force: :cascade do |t|
+    t.integer  "dealer_id",      limit: 4
+    t.integer  "fa_activity_id", limit: 4
+    t.integer  "farmer_id",      limit: 4
+    t.integer  "number_farmer",  limit: 4
+    t.string   "purpose",        limit: 4000
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "dealers", force: :cascade do |t|
@@ -68,6 +86,13 @@ ActiveRecord::Schema.define(version: 20161016061731) do
     t.string   "activity",           limit: 4000
   end
 
+  create_table "inventories", force: :cascade do |t|
+    t.integer  "dealer_visit_id", limit: 4
+    t.integer  "product_id",      limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "meet_farmers", force: :cascade do |t|
     t.integer  "fa_activity_id", limit: 4
     t.integer  "farmer_id",      limit: 4
@@ -75,6 +100,9 @@ ActiveRecord::Schema.define(version: 20161016061731) do
     t.string   "consultation",   limit: 4000
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "dealer_id",      limit: 4
+    t.integer  "village_id",     limit: 4
+    t.integer  "number_farmer",  limit: 4
   end
 
   create_table "pocket_crops", force: :cascade do |t|

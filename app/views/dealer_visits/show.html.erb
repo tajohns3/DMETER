@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @dealer_visit.dealer_id %>
+</p>
+
+<p>
+  <strong>Fa activity:</strong>
+  <%= @dealer_visit.fa_activity_id %>
+</p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @dealer_visit.farmer_id %>
+</p>
+
+<p>
+  <strong>Number farmer:</strong>
+  <%= @dealer_visit.number_farmer %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @dealer_visit.purpose %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_dealer_visit_path(@dealer_visit) %> |
+<%= link_to 'Back', dealer_visits_path %>

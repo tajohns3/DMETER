@@ -1,0 +1,1 @@
+json.partial! "assist_reps/assist_rep", assist_rep: @assist_rep

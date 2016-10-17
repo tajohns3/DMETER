@@ -17,6 +17,8 @@ class FaActivitiesController < ApplicationController
     @fa_activity = FaActivity.new
     meet_farmer =@fa_activity.meet_farmers.build
     meet_farmer.product_prescriptions.build
+    dealer_visit = @fa_activity.dealer_visits.build
+    assist_rep = @fa_activity.assist_reps.build
 
 
   end
@@ -61,7 +63,7 @@ class FaActivitiesController < ApplicationController
   def destroy
     @fa_activity.destroy
     respond_to do |format|
-      format.html { redirect_to fa_activities_url, notice: 'Fa activity was successfully destroyed.' }
+      format.html { redirect_to fa_activities_url, notice: 'Fa activity was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -75,8 +77,10 @@ class FaActivitiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def fa_activity_params
       params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,
-                                          meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:consultation,
+                                          meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:dealer_id,:village_id,:number_farmer,:consultation,
                                                                     product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
-                                                                                                      :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]])
+                                                                                                      :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]],
+                                          dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy],
+                                          assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment])
     end
 end

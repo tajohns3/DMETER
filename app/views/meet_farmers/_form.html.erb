@@ -15,10 +15,20 @@
     <%= f.label :fa_activity_id %><br>
     <%= f.number_field :fa_activity_id %>
   </div>
-  <div class="field">
+  <div class="field", id="farm_met_1">
     <%= f.label :farmer_id %><br>
     <%= f.number_field :farmer_id %>
   </div>
+    <div class="field">
+      <%= f.label :dealer_id%>
+      <%=f.number_field :dealer_id%>
+    </div>
+    <div class="field">
+      <%= f.label :village_id%>
+      <%=f.number_field :village_id%>
+    </div>
+
+
     <div class="field">
       <%= f.label :purpose %><br>
       <%= f.select :purpose, options_for_select([["Introduction", 'introduction'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
@@ -30,10 +40,7 @@
                                                     ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
                                                      {include_blank: ''}%>
   </div>
-  <div class="field">
-    <%= f.label :product_prescription_id %><br>
-    <%= f.number_field :product_prescription_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

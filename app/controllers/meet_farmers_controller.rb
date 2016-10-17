@@ -69,7 +69,7 @@ class MeetFarmersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meet_farmer_params
-      params.require(:meet_farmer).permit(:fa_activity_id, :farmer_id, :purpose, :consultation, product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
+      params.require(:meet_farmer).permit(:fa_activity_id, :farmer_id,:dealer_id,:village_id,:number_farmer, :purpose, :consultation, product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
                                                                                                                                   :acreage,:prescribe,:units,:meet_farmer_id])
     end
 end

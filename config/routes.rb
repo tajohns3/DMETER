@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :assist_reps
+  resources :dealer_visits
   resources :product_prescriptions
   resources :meet_farmers
   resources :fa_activities

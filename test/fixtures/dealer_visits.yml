@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dealer_id: 1
+  fa_activities_id: 1
+  farmer_id: 1
+  number_farmer: 1
+  purpose: MyString
+  inventory_id: 1
+
+two:
+  dealer_id: 1
+  fa_activities_id: 1
+  farmer_id: 1
+  number_farmer: 1
+  purpose: MyString
+  inventory_id: 1
