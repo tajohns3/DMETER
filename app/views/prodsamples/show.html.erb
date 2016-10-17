@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1 class="panel-title text-center">
+        <b> Product Sample Information</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <b>Geographic Information</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <strong>State:</strong>
+                    <%= @prodsample.stid %>
+                  </div>
+                  <div>
+                    <strong>Sales Representative:</strong>
+                    <%= @prodsample.faid %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <b>Sample Information</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <strong>Sample Purpose:</strong>
+                    <%= @prodsample.sample_purp %>
+                  </div>
+                  <div>
+                    <strong>Sample Type:</strong>
+                    <%= @prodsample.sampletype %>
+                  </div>
+                </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="field">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div class="col-md-6">
+          <div class="actions">
+            <%= link_to "Edit", edit_prodsample_path(@prodsample), class: "btn btn-primary pull-right"%>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="actions">
+            <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

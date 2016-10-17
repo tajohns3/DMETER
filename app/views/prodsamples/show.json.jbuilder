@@ -1,0 +1,1 @@
+json.partial! "prodsamples/prodsample", prodsample: @prodsample
