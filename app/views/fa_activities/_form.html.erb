@@ -44,6 +44,13 @@
       <%= f.fields_for :meet_farmers do |meet|%>
           <%=render 'meet_farmer_fields', f: meet%>
       <%end%>
+
+        <div class="container", id="demo_meeting">
+          <%=f.fields_for :pre_demonstrations do |predemo|%>
+              <%= render 'pre_demonstration_fields', f: predemo%>
+          <%end%>
+        </div>
+
       </div>
     </div>
 
@@ -58,6 +65,9 @@
       <%=render 'assist_rep_fields', f: assist%>
           <%end%>
     </div>
+
+
+
 
   <div class="field", id="act_comment">
     <%= f.label :comment %><br>

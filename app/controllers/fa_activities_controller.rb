@@ -19,6 +19,8 @@ class FaActivitiesController < ApplicationController
     meet_farmer.product_prescriptions.build
     dealer_visit = @fa_activity.dealer_visits.build
     assist_rep = @fa_activity.assist_reps.build
+    pre_demo =@fa_activity.pre_demonstrations.build
+    pre_demo.applications.build
 
 
   end
@@ -81,6 +83,8 @@ class FaActivitiesController < ApplicationController
                                                                     product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
                                                                                                       :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]],
                                           dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy],
-                                          assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment])
+                                          assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment, :_destroy],
+                                          pre_demonstrations_attributes: [:id,:farmer_id,:crop_id, :fa_activity_id,:crop_growth,:condition,:demo_code,:_destroy,
+                                          applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,{product_ids: []},:_destroy]])
     end
 end

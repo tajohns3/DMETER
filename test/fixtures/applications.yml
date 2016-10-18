@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pre_demonstration_id: 1
+  app_area: MyString
+  app_date: 2016-10-17
+  competitor: MyString
+  app_type: MyString
+  follow_date: 2016-10-17
+
+two:
+  pre_demonstration_id: 1
+  app_area: MyString
+  app_date: 2016-10-17
+  competitor: MyString
+  app_type: MyString
+  follow_date: 2016-10-17

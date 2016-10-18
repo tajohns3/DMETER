@@ -1,0 +1,1 @@
+json.array! @pre_demonstrations, partial: 'pre_demonstrations/pre_demonstration', as: :pre_demonstration

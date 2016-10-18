@@ -5,7 +5,9 @@ jQuery ->
   $('#fa_activity_date').datepicker
     dateFormat: "yy-mm-dd"
 
-
+jQuery ->
+  $('#fa_activity_pre_demonstrations_attributes_0_applications_attributes_0_app_date_1i').datepicker
+    dateFormat: "yy-mm-dd"
 
 jQuery ->
   $('#fa_activity_activity').on "change",  ->
@@ -29,6 +31,17 @@ jQuery ->
       $('#prod_pres_sele').fadeIn()
     else
       $('#prod_pres_sele').fadeOut()
+
+
+
+
+#meet farmer drop down pre demo
+jQuery ->
+  $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
+    if $(this).val() is "pre_demonstration"
+      $('#demo_meeting').fadeIn()
+    else
+      $('#demo_meeting').fadeOut()
 
 #fa act dropdown
 jQuery ->
