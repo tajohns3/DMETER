@@ -6,7 +6,11 @@ jQuery ->
     dateFormat: "yy-mm-dd"
 
 jQuery ->
-  $('#fa_activity_pre_demonstrations_attributes_0_applications_attributes_0_app_date_1i').datepicker
+  $('#fa_activity_pre_demonstrations_attributes_0_applications_attributes_0_app_date').datepicker
+    dateFormat: "yy-mm-dd"
+
+jQuery ->
+  $('#fa_activity_pre_demonstrations_attributes_0_applications_attributes_0_follow_date').datepicker
     dateFormat: "yy-mm-dd"
 
 jQuery ->
@@ -31,8 +35,6 @@ jQuery ->
       $('#prod_pres_sele').fadeIn()
     else
       $('#prod_pres_sele').fadeOut()
-
-
 
 
 #meet farmer drop down pre demo

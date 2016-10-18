@@ -28,3 +28,14 @@
 #demo_meeting{
   display: none;
 }
+.checkbox input[type="checkbox"]{
+
+  list-style: none;
+  width: 40%
+}
+
+.checkbox input[type="checkbox"] + label {
+  display: inline-block;
+  margin-left: 10%;
+  width: 150%;
+}

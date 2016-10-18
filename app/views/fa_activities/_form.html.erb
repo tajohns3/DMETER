@@ -11,22 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :field_assistant_id %><br>
-    <%= f.number_field :field_assistant_id %>
-  </div>
+
   <div class="field">
     <%= f.label :state_id %><br>
     <%= f.number_field :state_id %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
+    <%= f.label :user_id, 'Area Manager' %><br>
     <%= f.number_field :user_id %>
   </div>
+
+    <div class="field">
+      <%= f.label :user_id, 'Sales Representative' %><br>
+      <%= f.number_field :user_id %>
+    </div>
+
   <div class="field">
     <%= f.label :pocket_id %><br>
     <%= f.number_field :pocket_id %>
   </div>
+
+    <div class="field">
+      <%= f.label :field_assistant_id %><br>
+      <%= f.number_field :field_assistant_id %>
+    </div>
+
   <div class="field">
     <%= f.label :date %><br>
     <%= f.text_field :date %>
