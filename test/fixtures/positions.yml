@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fa_number: MyString
+  first_name: MyString
+  surname: MyString
+  address: MyString
+  taluka: MyString
+  district: MyString
+  pin_code: MyString
+  contact_number: MyString
+  form: MyString
+  'yes': false
+  'no': false
+  dealer_id: 1
+
+two:
+  fa_number: MyString
+  first_name: MyString
+  surname: MyString
+  address: MyString
+  taluka: MyString
+  district: MyString
+  pin_code: MyString
+  contact_number: MyString
+  form: MyString
+  'yes': false
+  'no': false
+  dealer_id: 1

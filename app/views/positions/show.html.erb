@@ -1,0 +1,144 @@
+<p id="notice"><%= notice %></p>
+
+<body>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1 class="panel-title text-center">
+        <strong>Field Asssistant:</strong>
+        <%= @position.first_name%><%=""%> <%= @position.surname%>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Field Assistant Information</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Position:</strong>
+                  <%= @position.field_assistant.fa_num%>
+                </div>
+                <div class="col-md-6">
+                  <strong>Pin Code:</strong>
+                  <%= @position.pin_code %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>First Name:</strong>
+                  <%= @position.first_name %>
+                </div>
+                <div class="col-md-6">
+                  <strong>Surname:</strong>
+                  <%= @position.surname %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Taluka:</strong>
+                  <%= @position.taluka %>
+                </div>
+                <div class="col-md-6">
+                  <strong>District:</strong>
+                  <%= @position.district %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Address:</strong>
+                  <%= @position.address %>
+                </div>
+                <div class="col-md-6">
+                  <strong>Contact Number:</strong>
+                  <%= @position.contact_number %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Recommended Dealer:</strong>
+                  <%= @position.dealer_id %>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+              </div>
+              <br>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Experience In Field</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Yes:</strong>
+                  <%= @position.yes %>
+                </div>
+                <div class="col-md-6">
+                  <strong>No:</strong>
+                  <%= @position.no %>
+                </div>
+              </div>
+
+              <br>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Field Assistant Registration Form</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <strong>Form:</strong>
+                  <%= link_to (image_tag(@position.form_url(:thumb))), @position.form_url %>
+                </div>
+              </div>
+              <br>
+              <br>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to 'Back', positions_path, class: "btn btn-danger",:style=>'color:#FFFFFF'%>
+          <%= link_to 'Edit', edit_position_path(@position), class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+>
+</script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+>
+</script>
+</body>

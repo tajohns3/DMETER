@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @target.dealer_id %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @target.crop_id %>
+</p>
+
+<%= link_to 'Edit', edit_target_path(@target) %> |
+<%= link_to 'Back', targets_path %>

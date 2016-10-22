@@ -1,0 +1,57 @@
+<%= form_for(@fa_target) do |f| %>
+  <% if @fa_target.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fa_target.errors.count, "error") %> prohibited this fa_target from being saved:</h2>
+
+      <ul>
+      <% @fa_target.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :field_assistant_id %><br>
+    <%= f.number_field :field_assistant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :target_id %><br>
+    <%= f.number_field :target_id %>
+  </div>
+  <div class="field">
+    <%= f.label :village_number %><br>
+    <%= f.number_field :village_number %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :total_month %><br>
+    <%= f.number_field :total_month %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_number %><br>
+    <%= f.number_field :sample_number %>
+  </div>
+  <div class="field">
+    <%= f.label :demo_number %><br>
+    <%= f.number_field :demo_number %>
+  </div>
+  <div class="field">
+    <%= f.label :farmer_number %><br>
+    <%= f.number_field :farmer_number %>
+  </div>
+  <div class="field">
+    <%= f.label :prescription_number %><br>
+    <%= f.number_field :prescription_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

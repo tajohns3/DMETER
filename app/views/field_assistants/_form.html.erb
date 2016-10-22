@@ -1,0 +1,168 @@
+<%= form_for @field_assistant, :html =>{:multipart => true} do |f| %>
+  <% if @field_assistant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@field_assistant.errors.count, "error") %> prohibited this field_assistant from being saved:</h2>
+
+      <ul>
+      <% @field_assistant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <b>Register New Field Assistant</b>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseEx" aria-expanded="false" aria-controls="collapseEx">
+              Create Position
+            </button>
+            </p>
+            <div class="collapse" id="collapseEx">
+              <div class="card card-block">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title text-center">
+                      <b>Geographic Information</b>
+                    </h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>
+                            State
+                          </label>
+                          <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>
+                            State Manager
+                          </label>
+                          <select class="form-control">
+                            <option value="pizza">
+                              Pizza
+                            </option>
+                            <option value="salad">
+                              Salad
+                            </option>
+                            <option value="pizzasalad">
+                              Pizza and Salad
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>
+                            Area Manager
+                          </label>
+                          <select class="form-control">
+                            <option value="pizza">
+                              Pizza
+                            </option>
+                            <option value="salad">
+                              Salad
+                            </option>
+                            <option value="pizzasalad">
+                              Pizza and Salad
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>
+                            Sales Representative
+                          </label>
+                          <select class="form-control">
+                            <option value="pizza">
+                              Pizza
+                            </option>
+                            <option value="salad">
+                              Salad
+                            </option>
+                            <option value="pizzasalad">
+                              Pizza and Salad
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>
+                            Pocket
+                          </label>
+                          <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label>
+                            Field Assistant ID
+                          </label>
+                          <%= f.text_field :fa_number,:disabled => true, class: "form-control" %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default" id="panel1">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-target="#collapseOn">
+                         <strong> Field Assistant Targets</strong>
+                        </a>
+                      </h4>
+
+                    </div>
+                    <div id="collapseOn" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-md-12 text-center">
+                            <%= link_to_add_association "Add FA Target", f, :fa_targets,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <%= link_to 'Fullfill Position', new_position_path, class: "btn btn-success",:style=>'color:#FFFFFF' %>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
+      </div>
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4 text-right">
+        <div class="actions">
+          <%= f.submit "Submit", class: "btn btn-primary pull-right", id:"sub_stuff"%>
+        </div>
+      </div>
+    </div>
+
+
+<% end %>

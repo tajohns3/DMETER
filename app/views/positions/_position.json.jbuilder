@@ -1,0 +1,2 @@
+json.extract! position, :id, :fa_number, :first_name, :surname, :address, :taluka, :district, :pin_code, :contact_number, :form, :yes, :no, :dealer_id, :created_at, :updated_at
+json.url position_url(position, format: :json)

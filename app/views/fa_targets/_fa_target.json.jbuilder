@@ -1,0 +1,2 @@
+json.extract! fa_target, :id, :field_assistant_id, :target_id, :village_number, :start_date, :end_date, :total_month, :sample_number, :demo_number, :farmer_number, :prescription_number, :created_at, :updated_at
+json.url fa_target_url(fa_target, format: :json)

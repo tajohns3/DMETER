@@ -14,10 +14,6 @@
 
 <body>
 <div class="container">
-  <h3>
-    <i></i>
-    Action Page
-  </h3>
   <div class="row">
     <div class="col-md-5">
       <div class="panel panel-default">
@@ -50,9 +46,7 @@
           </button>
         </div>
         <div class="panel-body">
-          <button type="submit" class="btn btn-block btn-primary">
-            Register New FA
-          </button>
+          <%= link_to 'Register New Field Assistant', new_field_assistant_path , 'data-no-turbolink' => true, class: "btn btn-block btn-primary",:style=>'color:#FFFFFF' %>
         </div>
         <div class="panel-body">
           <%= link_to 'Register New Pocket', new_pocket_path , 'data-no-turbolink' => true, class: "btn btn-block btn-primary",:style=>'color:#FFFFFF' %>
