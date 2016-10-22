@@ -11,7 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015234936) do
+ActiveRecord::Schema.define(version: 20161019015512) do
+
+  create_table "demoresults", force: :cascade do |t|
+    t.integer  "amid",               limit: 4
+    t.integer  "srid",               limit: 4
+    t.integer  "pocketid",           limit: 4
+    t.integer  "faid",               limit: 4
+    t.string   "demostatus",         limit: 4000
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "stid",               limit: 4
+    t.integer  "demoid",             limit: 4
+    t.string   "photo_file_name",    limit: 4000
+    t.string   "photo_content_type", limit: 4000
+    t.integer  "photo_file_size",    limit: 4
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "demos", force: :cascade do |t|
+    t.string   "demostatus", limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "pockets", force: :cascade do |t|
+    t.integer  "state_id",         limit: 4
+    t.integer  "user_id",          limit: 4
+    t.string   "pocket_name",      limit: 4000
+    t.integer  "district_id",      limit: 4
+    t.integer  "crop_id",          limit: 4
+    t.integer  "type_a",           limit: 4
+    t.integer  "type_b",           limit: 4
+    t.integer  "type_c",           limit: 4
+    t.integer  "type_d",           limit: 4
+    t.integer  "total_pdealer",    limit: 4
+    t.string   "agriculture_land", limit: 4000
+    t.decimal  "percent_irr",                   precision: 18, scale: 0
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+  end
 
   create_table "prodsamples", force: :cascade do |t|
     t.integer  "psid",        limit: 4
@@ -21,6 +60,7 @@ ActiveRecord::Schema.define(version: 20161015234936) do
     t.string   "sampletype",  limit: 4000
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "demoid",      limit: 4000
   end
 
   create_table "states", force: :cascade do |t|
