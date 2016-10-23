@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  psid: 1
+  stid: 1
+  faid: 1
+  sample_purp: MyString
+  sampletype: MyString
+
+two:
+  psid: 1
+  stid: 1
+  faid: 1
+  sample_purp: MyString
+  sampletype: MyString

@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
     super && approved?
   end
 
+  def fullname
+    "#{first_name} #{sur_name}"
+  end
+
   def innactive_message
     if !approved?
       :not_approved

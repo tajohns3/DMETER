@@ -1,0 +1,86 @@
+<%= form_for(@prodsample) do |f| %>
+  <% if @prodsample.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prodsample.errors.count, "error") %> prohibited this prodsample from being saved:</h2>
+
+      <ul>
+      <% @prodsample.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h1 class="panel-title text-center">
+            <b> Request product Sample</b>
+          </h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Geographic Information</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :State %><br>
+                        <%= f.collection_select :stid, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label 'Select FA' %><br>
+                        <%= f.collection_select :faid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Sample Information</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div>
+                          <%=	f.label 'Select Sample Purpose' %><br>
+                          <%= f.select :sample_purp, [['Active Field Demonstration'],['Dealer Introduction'],['Farmer Meeting'],['Organize Dealer Meeting'],['Complimentary']], {:include_blank => true}, {class: "form-control"} %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="field">
+                          <%= f.label 'Select Sample Type' %><br>
+                          <%= f.select :sampletype, [['Pouch'],['Kit'],['Field Kit']], {:include_blank => true}, {class: "form-control"} %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="actions">
+                <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="actions">
+              <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>

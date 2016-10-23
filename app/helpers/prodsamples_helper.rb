@@ -1,0 +1,2 @@
+module ProdsamplesHelper
+end
