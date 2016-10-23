@@ -7,9 +7,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     if params[:approved]=="false"
-      @users = User.where(approved: false).paginate(page: params[:page], per_page: 1)
+      @users = User.where(approved: false)
     else
-    @users = User.paginate(page: params[:page], per_page: 1)
+    @users = User.all
   end
     end
 

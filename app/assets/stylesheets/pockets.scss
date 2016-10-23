@@ -1,0 +1,21 @@
+// Place all the styles related to the Pockets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.spec{
+  padding-left: 20px;
+}
+
+h1.panel-title {
+  font-size: 25px;
+}
+
+.checkbox-list input[type="checkbox"] {
+  display: inline-block;
+  width: 40%;
+}
+
+.checkbox-list input[type="checkbox"] + label {
+  display: inline-block;
+  margin-left: 10%;
+  width: 150%;
+}

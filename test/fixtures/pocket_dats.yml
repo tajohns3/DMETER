@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pocket_id: 1
+  pocket_info_id: 1
+
+two:
+  pocket_id: 1
+  pocket_info_id: 1

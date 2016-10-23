@@ -1,0 +1,208 @@
+<%= form_for(@pocket) do |f| %>
+    <% if @pocket.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@pocket.errors.count, "error") %> prohibited this pocket from being saved:</h2>
+
+          <ul>
+            <% @pocket.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <body>
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h1 class="panel-title text-center">
+            <b> Register New Pocket</b>
+          </h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Geographic Information</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :state_id %><br>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :user_id, "State Manager" %><br>
+                        <%= f.number_field :user_id, {class: "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :pocket_name, "Pocket Name" %><br>
+                        <%= f.text_field :pocket_name, {class: "form-control"}  %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :user_id, "Sales Representative" %><br>
+                        <%= f.number_field :user_id, {class: "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 checkbox-list text-center">
+                      <div class="form-group">
+                        <br>
+                        <div class="dropdown">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Districts
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <div class="checkbox">
+                              <%= f.collection_check_boxes :district_ids, District.all, :id, :district%>
+                            </div>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 checkbox-list text-center">
+                      <div class="form-group">
+                        <br>
+                        <div class="dropdown">
+                          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Crops
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <div class="checkbox">
+                              <%= f.collection_check_boxes :crop_ids, Crop.all, :id, :crop%>
+                            </div>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Number of Potential Dealers</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :type_a, "Type A" %><br>
+                        <%= f.number_field :type_a, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :type_b, "Type B" %><br>
+                        <%= f.number_field :type_b, {class: "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :type_c, "Type C" %><br>
+                        <%= f.number_field :type_c, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :type_d, "Type D" %><br>
+                        <%= f.number_field :type_d, {class: "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <%= f.label :total_pdealer, "Total Number of Potential Dealers" %><br>
+                        <%= f.number_field :total_pdealer,:disabled => true, class: "form-control" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :agriculture_land, "Overall Agriculture Land (Optional)" %><br>
+                <%= f.text_field :agriculture_land, {class: "form-control"} %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :percent_irr, "Percentage of Area Irrigated (Optional)" %><br>
+                <%= f.text_field :percent_irr, {class: "form-control"} %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title text-center">
+                    <b>Pocket Information</b>
+                  </h3>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4 text-center">
+                          <%= link_to_add_association "Add Pocket Information", f, :pocket_dats,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <div class="actions">
+                <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    >
+    </script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+    >
+    </script>
+    </body>
+    <script>
+      $('.dropdown-toggle').dropdown()
+    </script>
+<% end %>

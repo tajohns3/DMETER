@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  taluka_id: 1
+  village_id: 1
+  dealer_id: 1
+  farmer_id: 1
+  fa_id: 1
+
+two:
+  taluka_id: 1
+  village_id: 1
+  dealer_id: 1
+  farmer_id: 1
+  fa_id: 1

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Taluka:</strong>
+  <%= @pocket_info.taluka_id %>
+</p>
+
+<p>
+  <strong>Village:</strong>
+  <%= @pocket_info.village_id %>
+</p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @pocket_info.dealer_id %>
+</p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @pocket_info.farmer_id %>
+</p>
+
+<p>
+  <strong>Fa:</strong>
+  <%= @pocket_info.fa_id %>
+</p>
+
+<%= link_to 'Edit', edit_pocket_info_path(@pocket_info) %> |
+<%= link_to 'Back', pocket_infos_path %>

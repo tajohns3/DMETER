@@ -1,0 +1,25 @@
+<%= form_for(@pocket_crop) do |f| %>
+  <% if @pocket_crop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pocket_crop.errors.count, "error") %> prohibited this pocket_crop from being saved:</h2>
+
+      <ul>
+      <% @pocket_crop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pocket_id %><br>
+    <%= f.number_field :pocket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :crop_id %><br>
+    <%= f.number_field :crop_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

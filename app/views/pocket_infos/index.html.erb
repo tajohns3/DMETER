@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pocket Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Taluka</th>
+      <th>Village</th>
+      <th>Dealer</th>
+      <th>Farmer</th>
+      <th>Fa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pocket_infos.each do |pocket_info| %>
+      <tr>
+        <td><%= pocket_info.taluka_id %></td>
+        <td><%= pocket_info.village_id %></td>
+        <td><%= pocket_info.dealer_id %></td>
+        <td><%= pocket_info.farmer_id %></td>
+        <td><%= pocket_info.fa_id %></td>
+        <td><%= link_to 'Show', pocket_info %></td>
+        <td><%= link_to 'Edit', edit_pocket_info_path(pocket_info) %></td>
+        <td><%= link_to 'Destroy', pocket_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pocket info', new_pocket_info_path %>

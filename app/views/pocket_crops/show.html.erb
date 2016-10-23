@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @pocket_crop.pocket_id %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @pocket_crop.crop_id %>
+</p>
+
+<%= link_to 'Edit', edit_pocket_crop_path(@pocket_crop) %> |
+<%= link_to 'Back', pocket_crops_path %>

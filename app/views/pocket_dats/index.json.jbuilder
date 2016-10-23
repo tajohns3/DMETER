@@ -1,0 +1,1 @@
+json.array! @pocket_dats, partial: 'pocket_dats/pocket_dat', as: :pocket_dat

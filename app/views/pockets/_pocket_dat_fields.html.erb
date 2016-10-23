@@ -1,0 +1,84 @@
+  <div class="nested-fields">
+    <table class="table table-bordered">
+      <tbody>
+      </tbody>
+      <thead>
+      <tr>
+        <th class="text-center">
+          Taluka
+        </th>
+        <th class="text-center">
+          Village
+        </th>
+        <th class="text-center">
+          Dealers
+        </th>
+        <th class="text-center">
+          Farmers
+        </th>
+        <th class="text-center">
+          FA
+        </th>
+      </tr>
+      <tr>
+        <th class="text-center">
+          <div class="form-group">
+            <%= f.text_field :taluka, class: "form-control" %>
+          </div>
+        </th>
+        <th class="text-center">
+          <div class="form-group">
+            <%= f.text_field :village, class: "form-control" %>
+          </div>
+        </th>
+        <th class="text-center">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="pizza">
+                Pizza
+              </option>
+              <option value="salad">
+                Salad
+              </option>
+              <option value="pizzasalad">
+                Pizza and Salad
+              </option>
+            </select>
+          </div>
+        </th>
+        <th class="text-center">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="pizza">
+                Pizza
+              </option>
+              <option value="salad">
+                Salad
+              </option>
+              <option value="pizzasalad">
+                Pizza and Salad
+              </option>
+            </select>
+          </div>
+        </th>
+        <th class="text-center">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="pizza">
+                Pizza
+              </option>
+              <option value="salad">
+                Salad
+              </option>
+              <option value="pizzasalad">
+                Pizza and Salad
+              </option>
+            </select>
+          </div>
+        </th>
+      </tr>
+      </thead>
+    </table>
+    <%= link_to_remove_association "Remove", f, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF'%>
+  </div>
+</table>

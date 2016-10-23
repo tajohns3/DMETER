@@ -1,0 +1,1 @@
+json.array! @pocket_crops, partial: 'pocket_crops/pocket_crop', as: :pocket_crop

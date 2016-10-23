@@ -1,0 +1,33 @@
+<%= form_for(@pocket_dat) do |f| %>
+  <% if @pocket_dat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pocket_dat.errors.count, "error") %> prohibited this pocket_dat from being saved:</h2>
+
+      <ul>
+      <% @pocket_dat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pocket_id %><br>
+    <%= f.number_field :pocket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pocket_info_id %><br>
+    <%= f.number_field :pocket_info_id %>
+  </div>
+    <div class="field">
+      <%= f.label :taluka %><br>
+      <%= f.text_field :taluka %>
+    </div>
+    <div class="field">
+      <%= f.label :village %><br>
+      <%= f.text_field :village %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
