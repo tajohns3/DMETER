@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017051027) do
+ActiveRecord::Schema.define(version: 20161018022934) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
     t.integer  "dealer_id",  limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "applications", force: :cascade do |t|
+    t.integer  "pre_demonstration_id", limit: 4
+    t.string   "app_area",             limit: 4000
+    t.date     "app_date"
+    t.string   "competitor",           limit: 4000
+    t.string   "app_type",             limit: 4000
+    t.date     "follow_date"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "assist_reps", force: :cascade do |t|
@@ -155,6 +166,35 @@ ActiveRecord::Schema.define(version: 20161017051027) do
     t.datetime "updated_at",                                             null: false
   end
 
+  create_table "pre_demonstrations", force: :cascade do |t|
+    t.integer  "farmer_id",      limit: 4
+    t.integer  "crop_id",        limit: 4
+    t.integer  "fa_activity_id", limit: 4
+    t.string   "crop_growth",    limit: 4000
+    t.string   "condition",      limit: 4000
+    t.string   "demo_code",      limit: 4000
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "prodsamples", force: :cascade do |t|
+    t.integer  "psid",        limit: 4
+    t.integer  "stid",        limit: 4
+    t.integer  "faid",        limit: 4
+    t.string   "sample_purp", limit: 4000
+    t.string   "sampletype",  limit: 4000
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "product_applications", force: :cascade do |t|
+    t.integer  "application_id", limit: 4
+    t.integer  "product_id",     limit: 4
+    t.integer  "quantity",       limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "prodsamples", force: :cascade do |t|
     t.integer  "psid",        limit: 4
     t.integer  "stid",        limit: 4
@@ -178,6 +218,12 @@ ActiveRecord::Schema.define(version: 20161017051027) do
     t.datetime "updated_at",                  null: false
     t.string   "units",          limit: 4000
     t.integer  "meet_farmer_id", limit: 4
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name",       limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "states", force: :cascade do |t|

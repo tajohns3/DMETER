@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pre demonstration:</strong>
+  <%= @application.pre_demonstration_id %>
+</p>
+
+<p>
+  <strong>App area:</strong>
+  <%= @application.app_area %>
+</p>
+
+<p>
+  <strong>App date:</strong>
+  <%= @application.app_date %>
+</p>
+
+<p>
+  <strong>Competitor:</strong>
+  <%= @application.competitor %>
+</p>
+
+<p>
+  <strong>App type:</strong>
+  <%= @application.app_type %>
+</p>
+
+<p>
+  <strong>Follow date:</strong>
+  <%= @application.follow_date %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

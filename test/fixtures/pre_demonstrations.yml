@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farmer_id: 1
+  crop_id: 1
+  fa_activity: 1
+  crop_growth: MyString
+  condition: MyString
+  demo_code: MyString
+
+two:
+  farmer_id: 1
+  crop_id: 1
+  fa_activity: 1
+  crop_growth: MyString
+  condition: MyString
+  demo_code: MyString

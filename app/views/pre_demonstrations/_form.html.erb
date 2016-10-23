@@ -1,0 +1,116 @@
+<%= form_for(@pre_demonstration) do |f| %>
+  <% if @pre_demonstration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pre_demonstration.errors.count, "error") %> prohibited this pre_demonstration from being saved:</h2>
+
+      <ul>
+      <% @pre_demonstration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="panel-body text-center">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <b>Farmer Information</b>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :farmer_id %><br>
+                <%= f.number_field :farmer_id, class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :crop_id %><br>
+                <%= f.number_field :crop_id, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :fa_activity_id %><br>
+                <%= f.number_field :fa_activity_id, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :crop_growth %><br>
+                <%= f.select :crop_growth, options_for_select([["Soil Preparation",'soil_prep'],["30 - 40 days after sowing / transplanting", '30_40_days_after_sowing_transplant'],
+                                                               ["40 - 60 days after sowing / transplanting",'40_60_days_after_sowing_transplant'],
+                                                               ["100 - 120 Days after sowing / transplanting",'100_120_days_after_sowing_transplant'],
+                                                               ["120 days after sowing / transplanting",'120_days_after_sowing_transplant'],["30 - 40 days before flowering",'30_40_days_before_flowering'],
+                                                               ["Before flowering",'before_flowering'],["After flowering",'after_flowering'],["At fruit setting",'fruit_setting'],["After fruit setting",
+                                                                                                                                                                                   'after_fruit_setting'],["30 - 40 days after pruning", '30_40_days_after_pruning'], ["50 - 60 days after pruning",'50_60_days_after_pruning'],
+                                                               ["During vegetative stage",'during_vegetative_stage'],["Immediately after pruning",'immediately_after_pruning'],["20 - 30 days after breaking dormancy",
+                                                                                                                                                                                '20_30_days_after_breaking_dormancy'],["After bunch formation",'after_bunch_formation'],["After Flowering - Before Fruit / Grain Setting", 'after_flower_before_fruit_grain_setting'],
+                                                               ["At Fruit / Grain Setting", 'at_fruit_grain_setting'],["After Fruit / Grain Setting",'after_fruit_grain_setting'],[" Boll / Bulb / Pod Formation",'boll_pod_formation'],
+                                                               ["After Plucking",'after_plucking'],["After 2-3 plucking",'2-3_after_plucking']]), {include_blank: ''}, {class: 'form-control'} %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :condition %><br>
+                <%= f.select :condition, options_for_select([["Drought", 'drought'],["Flower/Fruit Shedding", 'flower'], ["Healty Growth", 'healthy_growth'], ["Heat Stress",'heat_stress'],
+                                                             ["Infestation - Bacterial", 'bacterial_infest'], ["Infestation - Fungal",'fungal_infest'], ["Infestation - Mite", 'mite_infest'],
+                                                             ["Infestation - Nematode", 'nematode_infest'],["Infestation - Suck Pest",'suck_pest_infest'], ["Infestation - Viral",'viral_infest'],
+                                                             ["Infestation - Other",'other_infest'], ["Leaf Curling", 'leaf_curling'], ["Root Rot",'root_rot'],["Root Wilt", 'root_wilt'],
+                                                             ["Salt Stress", 'salt_stress'], ["Water Stress",'water_stress']]), {include_blank: ''}, {class: 'form-control'} %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="panel-body text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                <b>Application Information</b>
+            <%=f.fields_for :applications do |app|%>
+                <%=render 'application_fields', f: app%>
+            <%end%>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  <div class="field">
+
+  </div>
+  <div class="field">
+
+  </div>
+  <div class="field">
+    <%= f.label :demo_code %><br>
+    <%= f.text_field :demo_code %>
+  </div>
+    <div>
+      <%=f.fields_for :applications do |app|%>
+          <%=render 'application_fields', f: app%>
+      <%end%>
+      <div class="links">
+        <%=link_to_add_association 'More Product Application?', f, :applications%>
+      </div>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

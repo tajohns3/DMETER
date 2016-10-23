@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @pre_demonstration.farmer_id %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @pre_demonstration.crop_id %>
+</p>
+
+<p>
+  <strong>Fa activity:</strong>
+  <%= @pre_demonstration.fa_activity_id %>
+</p>
+
+<p>
+  <strong>Crop growth:</strong>
+  <%= @pre_demonstration.crop_growth %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @pre_demonstration.condition %>
+</p>
+
+<p>
+  <strong>Demo code:</strong>
+  <%= @pre_demonstration.demo_code %>
+</p>
+
+<%= link_to 'Edit', edit_pre_demonstration_path(@pre_demonstration) %> |
+<%= link_to 'Back', pre_demonstrations_path %>

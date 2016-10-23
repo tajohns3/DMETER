@@ -15,7 +15,7 @@ class DealersController < ApplicationController
   # GET /dealers/new
   def new
     @dealer = Dealer.new
-
+    deal_bank =@dealer.banks.build
   end
 
 

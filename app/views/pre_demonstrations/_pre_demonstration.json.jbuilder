@@ -1,0 +1,2 @@
+json.extract! pre_demonstration, :id, :farmer_id, :crop_id, :fa_activity, :crop_growth, :condition, :demo_code, :created_at, :updated_at
+json.url pre_demonstration_url(pre_demonstration, format: :json)

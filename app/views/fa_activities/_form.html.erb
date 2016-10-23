@@ -11,22 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :field_assistant_id %><br>
-    <%= f.number_field :field_assistant_id %>
-  </div>
+
   <div class="field">
     <%= f.label :state_id %><br>
     <%= f.number_field :state_id %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
+    <%= f.label :user_id, 'Area Manager' %><br>
     <%= f.number_field :user_id %>
   </div>
+
+    <div class="field">
+      <%= f.label :user_id, 'Sales Representative' %><br>
+      <%= f.number_field :user_id %>
+    </div>
+
   <div class="field">
     <%= f.label :pocket_id %><br>
     <%= f.number_field :pocket_id %>
   </div>
+
+    <div class="field">
+      <%= f.label :field_assistant_id %><br>
+      <%= f.number_field :field_assistant_id %>
+    </div>
+
   <div class="field">
     <%= f.label :date %><br>
     <%= f.text_field :date %>
@@ -44,6 +53,13 @@
       <%= f.fields_for :meet_farmers do |meet|%>
           <%=render 'meet_farmer_fields', f: meet%>
       <%end%>
+
+        <div class="container", id="demo_meeting">
+          <%=f.fields_for :pre_demonstrations do |predemo|%>
+              <%= render 'pre_demonstration_fields', f: predemo%>
+          <%end%>
+        </div>
+
       </div>
     </div>
 
@@ -58,6 +74,9 @@
       <%=render 'assist_rep_fields', f: assist%>
           <%end%>
     </div>
+
+
+
 
   <div class="field", id="act_comment">
     <%= f.label :comment %><br>

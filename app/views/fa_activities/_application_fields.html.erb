@@ -1,0 +1,51 @@
+<script>
+  $('.dropdown-toggle').dropdown()
+</script>
+
+<div class="nested-fields">
+<div class="field">
+  <%= f.label :pre_demonstration_id %><br>
+  <%= f.number_field :pre_demonstration_id %>
+</div>
+<div class="field">
+  <%= f.label :app_area, 'Area of application' %><br>
+  <%= f.text_field :app_area %>
+</div>
+<div class="field">
+  <%= f.label :app_date, 'Application Date' %><br>
+  <%= f.text_field :app_date %>
+</div>
+
+<div class="dropdown">
+  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select Product
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <div class="checkbox">
+      <%=f.collection_check_boxes :product_ids,Product.all,:id, :name%>
+    </div>
+  </ul>
+</div>
+
+
+
+
+
+<div class="field">
+  <%= f.label :app_type, 'Application Type' %><br>
+  <%= f.select :app_type, options_for_select([["Foliar", 'foliar'],["Soil",'soil'],["Drip",'drip'],["Flood",'flood']]),{include_blank: ''} %>
+</div>
+
+<div class="field">
+  <%= f.label :competitor, 'Competitors product' %><br>
+  <%= f.text_field :competitor %>
+</div>
+
+<div class="field">
+  <%= f.label :follow_date, 'Follow up Date' %><br>
+  <%= f.text_field :follow_date %>
+</div>
+
+<%=link_to_remove_association 'Remove Product Application', f %>
+</div>

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :crops
   resources :districts
   resources :pockets
+  resources :products
+  resources :applications
+  resources :pre_demonstrations
   resources :assist_reps
   resources :dealer_visits
   resources :product_prescriptions

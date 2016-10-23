@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   belongs_to :state
   has_many :dealers
+  has_many :fa_activities
   scope :area_man, -> { users.where(role: 'area_manager') }
 
   before_create :auto_username
