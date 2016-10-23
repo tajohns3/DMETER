@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @pocket.state_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pocket.user_id %>
+</p>
+
+<p>
+  <strong>Pocket name:</strong>
+  <%= @pocket.pocket_name %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @pocket.district_id %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @pocket.crop_id %>
+</p>
+
+<p>
+  <strong>Type a:</strong>
+  <%= @pocket.type_a %>
+</p>
+
+<p>
+  <strong>Type b:</strong>
+  <%= @pocket.type_b %>
+</p>
+
+<p>
+  <strong>Type c:</strong>
+  <%= @pocket.type_c %>
+</p>
+
+<p>
+  <strong>Type d:</strong>
+  <%= @pocket.type_d %>
+</p>
+
+<p>
+  <strong>Total pdealer:</strong>
+  <%= @pocket.total_pdealer %>
+</p>
+
+<p>
+  <strong>Agriculture land:</strong>
+  <%= @pocket.agriculture_land %>
+</p>
+
+<p>
+  <strong>Percent irr:</strong>
+  <%= @pocket.percent_irr %>
+</p>
+
+<%= link_to 'Edit', edit_pocket_path(@pocket) %> |
+<%= link_to 'Back', pockets_path %>

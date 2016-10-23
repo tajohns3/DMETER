@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pockets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>User</th>
+      <th>Pocket name</th>
+      <th>District</th>
+      <th>Crop</th>
+      <th>Type a</th>
+      <th>Type b</th>
+      <th>Type c</th>
+      <th>Type d</th>
+      <th>Total pdealer</th>
+      <th>Agriculture land</th>
+      <th>Percent irr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pockets.each do |pocket| %>
+      <tr>
+        <td><%= pocket.state_id %></td>
+        <td><%= pocket.user_id %></td>
+        <td><%= pocket.pocket_name %></td>
+        <td><%= pocket.district_id %></td>
+        <td><%= pocket.crop_id %></td>
+        <td><%= pocket.type_a %></td>
+        <td><%= pocket.type_b %></td>
+        <td><%= pocket.type_c %></td>
+        <td><%= pocket.type_d %></td>
+        <td><%= pocket.total_pdealer %></td>
+        <td><%= pocket.agriculture_land %></td>
+        <td><%= pocket.percent_irr %></td>
+        <td><%= link_to 'Show', pocket %></td>
+        <td><%= link_to 'Edit', edit_pocket_path(pocket) %></td>
+        <td><%= link_to 'Destroy', pocket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pocket', new_pocket_path %>

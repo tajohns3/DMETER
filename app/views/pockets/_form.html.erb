@@ -1,0 +1,65 @@
+<%= form_for(@pocket) do |f| %>
+  <% if @pocket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pocket.errors.count, "error") %> prohibited this pocket from being saved:</h2>
+
+      <ul>
+      <% @pocket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :state_id %><br>
+    <%= f.number_field :state_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pocket_name %><br>
+    <%= f.text_field :pocket_name %>
+  </div>
+  <div class="field">
+    <%= f.label :district_id %><br>
+    <%= f.number_field :district_id %>
+  </div>
+  <div class="field">
+    <%= f.label :crop_id %><br>
+    <%= f.number_field :crop_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type_a %><br>
+    <%= f.number_field :type_a %>
+  </div>
+  <div class="field">
+    <%= f.label :type_b %><br>
+    <%= f.number_field :type_b %>
+  </div>
+  <div class="field">
+    <%= f.label :type_c %><br>
+    <%= f.number_field :type_c %>
+  </div>
+  <div class="field">
+    <%= f.label :type_d %><br>
+    <%= f.number_field :type_d %>
+  </div>
+  <div class="field">
+    <%= f.label :total_pdealer %><br>
+    <%= f.number_field :total_pdealer %>
+  </div>
+  <div class="field">
+    <%= f.label :agriculture_land %><br>
+    <%= f.text_field :agriculture_land %>
+  </div>
+  <div class="field">
+    <%= f.label :percent_irr %><br>
+    <%= f.text_field :percent_irr %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

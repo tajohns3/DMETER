@@ -1,0 +1,1 @@
+json.partial! "demoresults/demoresult", demoresult: @demoresult

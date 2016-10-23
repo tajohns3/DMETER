@@ -1,0 +1,106 @@
+<%= form_for @demoresult, url: demoresults_path, :html => { :multipart => true } do |f| %>
+  <% if @demoresult.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@demoresult.errors.count, "error") %> prohibited this demoresult from being saved:</h2>
+
+      <ul>
+      <% @demoresult.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h1 class="panel-title text-center">
+            <b> Upload Demo Results</b>
+          </h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Geographic Information</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :State %><br>
+                        <%= f.collection_select :stid, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label 'Select Area Manager' %><br>
+                        <%= f.collection_select :amid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label 'Select Sales Rep' %><br>
+                        <%= f.collection_select :srid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label 'Select FA' %><br>
+                        <%= f.collection_select :faid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label 'Select Pocket' %><br>
+                        <%= f.collection_select :pocketid, Pocket.all, :id, :pocket_id, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Demo Information</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <div>
+                          <%= f.label 'Select Demo Status' %><br>
+                          <%= f.radio_button(:demostatus, "Active Demonstration") %>
+                          <%= label_tag(:demostatus, 'Active Demonstration') %> <br>
+                          <%= f.radio_button(:demostatus, "Completed Demonstration") %>
+                          <%= label_tag(:demostatus, 'Completed Demonstration') %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label 'Select Demo' %><br>
+                        <%= f.collection_select :demoid, Demo.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
+                      </div>
+                      <%= f.file_field :photo %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="actions">
+              <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="actions">
+              <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
