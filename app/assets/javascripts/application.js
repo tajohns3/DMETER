@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/datepicker
+//= require bootstrap-datepicker
 //= require turbolinks
 //= require bootstrap
 //= require jquery-ui/datepicker
@@ -20,3 +22,4 @@
 //= require_tree .
 
 $('.dropdown-toggle').dropdown()
+

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fa Targets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field assistant</th>
+      <th>Target</th>
+      <th>Village number</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Total month</th>
+      <th>Sample number</th>
+      <th>Demo number</th>
+      <th>Farmer number</th>
+      <th>Prescription number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fa_targets.each do |fa_target| %>
+      <tr>
+        <td><%= fa_target.field_assistant_id %></td>
+        <td><%= fa_target.target_id %></td>
+        <td><%= fa_target.village_number %></td>
+        <td><%= fa_target.start_date %></td>
+        <td><%= fa_target.end_date %></td>
+        <td><%= fa_target.total_month %></td>
+        <td><%= fa_target.sample_number %></td>
+        <td><%= fa_target.demo_number %></td>
+        <td><%= fa_target.farmer_number %></td>
+        <td><%= fa_target.prescription_number %></td>
+        <td><%= link_to 'Show', fa_target %></td>
+        <td><%= link_to 'Edit', edit_fa_target_path(fa_target) %></td>
+        <td><%= link_to 'Destroy', fa_target, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fa target', new_fa_target_path %>

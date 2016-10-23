@@ -1,0 +1,180 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <b>Register New Field Assistant</b>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          <b>Fullfill Position Information</b>
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">
+                                  <b>Field Assistant Demographics</b>
+                                </h3>
+                              </div>
+                              <div class="panel-body">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <label>
+                                        Select Open Position
+                                      </label>
+                                      <%= f.collection_select :field_assistant_id, FieldAssistant.all, :id, :fa_num, {:include_blank => true},{class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :contact_number, "Contact Number" %><br>
+                                      <%= f.text_field :contact_number, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :first_name, "First Name" %><br>
+                                      <%= f.text_field :first_name, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :surname, "Surname" %><br>
+                                      <%= f.text_field :surname, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :address, "Address" %><br>
+                                      <%= f.text_field :address, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :taluka, "Taluka" %><br>
+                                      <%= f.text_field :taluka, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :district, "District" %><br>
+                                      <%= f.text_field :district, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group text-left">
+                                      <%= f.label :pin_code, "Pin Code" %><br>
+                                      <%= f.text_field :pin_code, {class: "form-control"}  %>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">
+                                  <b>Work Experience in Field</b>
+                                </h3>
+                              </div>
+                              <div class="panel-body">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <%= f.label :yes %><br>
+                                    <%= f.check_box :yes %>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <%= f.label :no %><br>
+                                    <%= f.check_box :no %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">
+                                  <b>Recommended Dealer</b>
+                                </h3>
+                              </div>
+                              <div class="panel-body">
+                                <div class="form-group">
+                                  <select class="form-control">
+                                    <option value="pizza">
+                                      Pizza
+                                    </option>
+                                    <option value="salad">
+                                      Salad
+                                    </option>
+                                    <option value="pizzasalad">
+                                      Pizza and Salad
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">
+                                  <b>FA Registration Form</b>
+                                </h3>
+                              </div>
+                              <div class="panel-body" align="center">
+                                <label class="btn btn-info btn-file">
+                                  Upload Scan <%= f.file_field :form %>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <%= link_to 'Back', new_field_assistant_path, class: "btn btn-success",:style=>'color:#FFFFFF' %>
+            <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
+          </div>
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4 text-right">
+            <div class="actions">
+              <%= f.submit "Submit", class: "btn btn-primary pull-right", id:"sub_stuff"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<%end%>

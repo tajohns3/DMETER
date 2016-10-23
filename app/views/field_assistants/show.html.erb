@@ -1,0 +1,191 @@
+<p id="notice"><%= notice %></p>
+
+<body>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1 class="panel-title text-center">
+        <strong>Position:</strong>
+        <%= @field_assistant.fa_num %>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Geographic Information</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>State:</strong>
+                  <%= @field_assistant.state.state %>
+                </div>
+                <div class="col-md-6">
+                  <strong>State Manager:</strong>
+                  <%= @field_assistant.user_id %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Area Manager:</strong>
+                  <%= @field_assistant.user_id %>
+                </div>
+                <div class="col-md-6">
+                  <strong>Sales Representative:</strong>
+                  <%= @field_assistant.user_id %>
+                </div>
+              </div>
+              <br>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <b>Field Assistant Targets</b>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                      <th class="text-center">
+                        Dealer&nbsp;
+                        <br>
+                        Name
+                      </th>
+                      <th class="text-center">
+                        Number of
+                        <br>
+                        Villages
+                      </th>
+                      <th class="text-center">
+                        Crops
+                      </th>
+                      <th class="text-center">
+                        Start&nbsp;
+                        <br>
+                        Date
+                      </th>
+                      <th class="text-center">
+                        End
+                        <br>
+                        Date
+                      </th>
+                      <th class="text-center">
+                        Total&nbsp;
+                        <br>
+                        Months
+                      </th>
+                      <th class="text-center">
+                        Number of
+                        <br>
+                        Samples
+                      </th>
+                      <th class="text-center">
+                        Number of
+                        <br>
+                        Demos
+                      </th>
+                      <th class="text-center">
+                        Number of
+                        <br>
+                        Farmer Meetings
+                      </th>
+                      <th class="text-center">
+                        Number of
+                        <br>
+                        Prescription Meetings
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-group">
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.village_number %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.crop.crop %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.start_date %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.end_date %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.total_month %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.sample_number %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.demo_number %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.farmer_number %><br><br>
+                        <% end %>
+                      </td>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.farmer_number %><br><br>
+                        <% end %>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to 'Back', field_assistants_path, class: "btn btn-danger",:style=>'color:#FFFFFF'%>
+          <%= link_to 'Edit', edit_field_assistant_path(@field_assistant), class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+>
+</script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+>
+</script>
+</body>

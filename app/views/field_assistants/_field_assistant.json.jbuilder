@@ -1,0 +1,2 @@
+json.extract! field_assistant, :id, :state_id, :user_id, :pocket_id, :first_name, :surname, :address, :taluka, :district, :pin_code, :contact_number, :experience, :dealer_id, :form, :created_at, :updated_at
+json.url field_assistant_url(field_assistant, format: :json)

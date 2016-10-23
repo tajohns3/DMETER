@@ -6,4 +6,7 @@ class State < ActiveRecord::Base
   end
   has_many :prodsamples
   has_many :users
+  has_many :pockets
+  has_many :field_assistants
+  has_many :positions
 end

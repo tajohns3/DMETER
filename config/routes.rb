@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :positions
+  resources :fa_targets
+  resources :targets
+  resources :field_assistants
   resources :pocket_crops
   resources :pocket_districts
   resources :pocket_dats

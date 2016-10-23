@@ -1,0 +1,1 @@
+json.partial! "fa_targets/fa_target", fa_target: @fa_target

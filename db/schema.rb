@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20161018022934) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
+ActiveRecord::Schema.define(version: 20161021025645) do
 
   create_table "crops", force: :cascade do |t|
     t.string   "crop",       limit: 4000
@@ -83,6 +84,42 @@ ActiveRecord::Schema.define(version: 20161018022934) do
     t.string   "district",   limit: 4000
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "fa_targets", force: :cascade do |t|
+    t.integer  "field_assistant_id",  limit: 4
+    t.integer  "target_id",           limit: 4
+    t.integer  "village_number",      limit: 4
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "total_month",         limit: 4
+    t.integer  "sample_number",       limit: 4
+    t.integer  "demo_number",         limit: 4
+    t.integer  "farmer_number",       limit: 4
+    t.integer  "prescription_number", limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "crop_id",             limit: 4
+  end
+
+  create_table "field_assistants", force: :cascade do |t|
+    t.integer  "state_id",       limit: 4
+    t.integer  "user_id",        limit: 4
+    t.integer  "pocket_id",      limit: 4
+    t.string   "first_name",     limit: 4000
+    t.string   "surname",        limit: 4000
+    t.string   "address",        limit: 4000
+    t.string   "taluka",         limit: 4000
+    t.string   "district",       limit: 4000
+    t.string   "pin_code",       limit: 4000
+    t.string   "contact_number", limit: 4000
+    t.boolean  "experience"
+    t.integer  "dealer_id",      limit: 4
+    t.string   "form",           limit: 4000
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "yes"
+    t.string   "fa_number",      limit: 4000
   end
 
   create_table "fa_activities", force: :cascade do |t|
@@ -226,16 +263,43 @@ ActiveRecord::Schema.define(version: 20161018022934) do
     t.datetime "updated_at",              null: false
   end
 
+  create_table "positions", force: :cascade do |t|
+    t.string   "fa_number",          limit: 4000
+    t.string   "first_name",         limit: 4000
+    t.string   "surname",            limit: 4000
+    t.string   "address",            limit: 4000
+    t.string   "taluka",             limit: 4000
+    t.string   "district",           limit: 4000
+    t.string   "pin_code",           limit: 4000
+    t.string   "contact_number",     limit: 4000
+    t.string   "form",               limit: 4000
+    t.boolean  "yes"
+    t.boolean  "no"
+    t.integer  "dealer_id",          limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "state_id",           limit: 4
+    t.integer  "field_assistant_id", limit: 4
+  end
+
   create_table "states", force: :cascade do |t|
-    t.string   "state",      limit: 4000
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "state",        limit: 4000
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "abbreviation", limit: 4000
   end
 
   create_table "talukas", force: :cascade do |t|
     t.string   "taluka",     limit: 4000
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "targets", force: :cascade do |t|
+    t.integer  "dealer_id",  limit: 4
+    t.integer  "crop_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "users", force: :cascade do |t|

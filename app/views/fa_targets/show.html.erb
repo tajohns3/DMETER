@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Field assistant:</strong>
+  <%= @fa_target.field_assistant_id %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @fa_target.target_id %>
+</p>
+
+<p>
+  <strong>Village number:</strong>
+  <%= @fa_target.village_number %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @fa_target.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @fa_target.end_date %>
+</p>
+
+<p>
+  <strong>Total month:</strong>
+  <%= @fa_target.total_month %>
+</p>
+
+<p>
+  <strong>Sample number:</strong>
+  <%= @fa_target.sample_number %>
+</p>
+
+<p>
+  <strong>Demo number:</strong>
+  <%= @fa_target.demo_number %>
+</p>
+
+<p>
+  <strong>Farmer number:</strong>
+  <%= @fa_target.farmer_number %>
+</p>
+
+<p>
+  <strong>Prescription number:</strong>
+  <%= @fa_target.prescription_number %>
+</p>
+
+<%= link_to 'Edit', edit_fa_target_path(@fa_target) %> |
+<%= link_to 'Back', fa_targets_path %>

@@ -1,0 +1,1 @@
+json.array! @fa_targets, partial: 'fa_targets/fa_target', as: :fa_target
