@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :crops
   resources :districts
   resources :pockets
+  resources :banks
+  resources :dealers
   devise_for :users
   devise_scope :user do
     authenticated :user do

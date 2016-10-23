@@ -74,6 +74,38 @@ ActiveRecord::Schema.define(version: 20161014025650) do
     t.datetime "created_at",                                             null: false
     t.datetime "updated_at",                                             null: false
   end
+ActiveRecord::Schema.define(version: 20161009193657) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer  "bank_id",    limit: 4
+    t.integer  "dealer_id",  limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "banks", force: :cascade do |t|
+    t.string   "name",           limit: 4000
+    t.string   "branch",         limit: 4000
+    t.string   "account_number", limit: 4000
+    t.string   "address",        limit: 4000
+    t.string   "phone",          limit: 4000
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "dealers", force: :cascade do |t|
+    t.integer  "state_id",    limit: 4
+    t.integer  "user_id",     limit: 4
+    t.integer  "pocket_id",   limit: 4
+    t.string   "name",        limit: 4000
+    t.string   "address",     limit: 4000
+    t.string   "atpost",      limit: 4000
+    t.string   "pin_code",    limit: 4000
+    t.integer  "taluka_id",   limit: 4
+    t.integer  "district_id", limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "states", force: :cascade do |t|
     t.string   "state",      limit: 4000

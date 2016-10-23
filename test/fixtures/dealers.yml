@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state_id: 1
+  user_id: 1
+  pocket_id: 1
+  name: MyString
+  address: MyString
+  atpost: MyString
+  pin_code: MyString
+  taluka_id: 1
+  district_id: 1
+
+two:
+  state_id: 1
+  user_id: 1
+  pocket_id: 1
+  name: MyString
+  address: MyString
+  atpost: MyString
+  pin_code: MyString
+  taluka_id: 1
+  district_id: 1

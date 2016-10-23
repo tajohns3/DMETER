@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  belongs_to :state
+  has_many :dealers
+  scope :area_man, -> { users.where(role: 'area_manager') }
+
   before_create :auto_username
   before_create :lower_email
   after_update :send_admin_mail
