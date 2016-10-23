@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dealer Visits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dealer</th>
+      <th>Fa activity</th>
+      <th>Farmer</th>
+      <th>Number farmer</th>
+      <th>Purpose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dealer_visits.each do |dealer_visit| %>
+      <tr>
+        <td><%= dealer_visit.dealer_id %></td>
+        <td><%= dealer_visit.fa_activity_id %></td>
+        <td><%= dealer_visit.farmer_id %></td>
+        <td><%= dealer_visit.number_farmer %></td>
+        <td><%= dealer_visit.purpose %></td>
+        <td><%= link_to 'Show', dealer_visit %></td>
+        <td><%= link_to 'Edit', edit_dealer_visit_path(dealer_visit) %></td>
+        <td><%= link_to 'Destroy', dealer_visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dealer visit', new_dealer_visit_path %>

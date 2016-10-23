@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fa activity:</strong>
+  <%= @assist_rep.fa_activity_id %>
+</p>
+
+<p>
+  <strong>Assist:</strong>
+  <%= @assist_rep.assist %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @assist_rep.comment %>
+</p>
+
+<%= link_to 'Edit', edit_assist_rep_path(@assist_rep) %> |
+<%= link_to 'Back', assist_reps_path %>

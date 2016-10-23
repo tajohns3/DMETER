@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Field assistant:</strong>
+  <%= @fa_activity.field_assistant_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @fa_activity.state_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @fa_activity.user_id %>
+</p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @fa_activity.pocket_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @fa_activity.date %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @fa_activity.comment %>
+</p>
+
+<%= link_to 'Edit', edit_fa_activity_path(@fa_activity) %> |
+<%= link_to 'Back', fa_activities_path %>

@@ -1,0 +1,1 @@
+json.array! @fa_activities, partial: 'fa_activities/fa_activity', as: :fa_activity

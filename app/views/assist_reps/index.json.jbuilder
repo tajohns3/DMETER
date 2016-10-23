@@ -1,0 +1,1 @@
+json.array! @assist_reps, partial: 'assist_reps/assist_rep', as: :assist_rep

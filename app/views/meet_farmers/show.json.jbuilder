@@ -1,0 +1,1 @@
+json.partial! "meet_farmers/meet_farmer", meet_farmer: @meet_farmer

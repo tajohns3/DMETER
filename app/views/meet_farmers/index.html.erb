@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meet Farmers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fa activity</th>
+      <th>Farmer</th>
+      <th>Purpose</th>
+      <th>Consultation</th>
+      <th>Dealer</th>
+      <th>Village</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meet_farmers.each do |meet_farmer| %>
+      <tr>
+        <td><%= meet_farmer.fa_activity_id %></td>
+        <td><%= meet_farmer.farmer_id %></td>
+        <td><%= meet_farmer.purpose %></td>
+        <td><%= meet_farmer.consultation %></td>
+        <td><%=meet_farmer.dealer_id%></td>
+        <td><%=meet_farmer.village_id%></td>
+        <td><%= link_to 'Show', meet_farmer %></td>
+        <td><%= link_to 'Edit', edit_meet_farmer_path(meet_farmer) %></td>
+        <td><%= link_to 'Destroy', meet_farmer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meet farmer', new_meet_farmer_path %>

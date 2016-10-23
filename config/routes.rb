@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   resources :crops
   resources :districts
   resources :pockets
+  resources :assist_reps
+  resources :dealer_visits
+  resources :product_prescriptions
+  resources :meet_farmers
+  resources :fa_activities
   resources :banks
   resources :dealers
   resources :prodsamples

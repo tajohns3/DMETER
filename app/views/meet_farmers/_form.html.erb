@@ -1,0 +1,47 @@
+<%= form_for(@meet_farmer) do |f| %>
+  <% if @meet_farmer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meet_farmer.errors.count, "error") %> prohibited this meet_farmer from being saved:</h2>
+
+      <ul>
+      <% @meet_farmer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fa_activity_id %><br>
+    <%= f.number_field :fa_activity_id %>
+  </div>
+  <div class="field", id="farm_met_1">
+    <%= f.label :farmer_id %><br>
+    <%= f.number_field :farmer_id %>
+  </div>
+    <div class="field">
+      <%= f.label :dealer_id%>
+      <%=f.number_field :dealer_id%>
+    </div>
+    <div class="field">
+      <%= f.label :village_id%>
+      <%=f.number_field :village_id%>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :purpose %><br>
+      <%= f.select :purpose, options_for_select([["Introduction", 'introduction'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
+                   {include_blank: ''}%>
+    </div>
+  <div class="field", id="meet_farmer_consultation_div">
+    <%= f.label :consultation %><br>
+    <%= f.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
+                                                    ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
+                                                     {include_blank: ''}%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

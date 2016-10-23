@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fa activity:</strong>
+  <%= @meet_farmer.fa_activity_id %>
+</p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @meet_farmer.farmer_id %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @meet_farmer.purpose %>
+</p>
+
+<p>
+  <strong>Consultation:</strong>
+  <%= @meet_farmer.consultation %>
+</p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @meet_farmer.dealer_id %>
+</p>
+
+<p>
+  <strong>Village:</strong>
+  <%=@meet_farmer.village_id%>
+</p>
+
+<%= link_to 'Edit', edit_meet_farmer_path(@meet_farmer) %> |
+<%= link_to 'Back', meet_farmers_path %>

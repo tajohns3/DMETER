@@ -1,0 +1,29 @@
+<%= form_for(@assist_rep) do |f| %>
+  <% if @assist_rep.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assist_rep.errors.count, "error") %> prohibited this assist_rep from being saved:</h2>
+
+      <ul>
+      <% @assist_rep.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fa_activity_id %><br>
+    <%= f.number_field :fa_activity_id %>
+  </div>
+  <div class="field">
+    <%= f.label :assist %><br>
+    <%= f.text_field :assist %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

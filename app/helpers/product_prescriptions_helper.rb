@@ -1,0 +1,2 @@
+module ProductPrescriptionsHelper
+end

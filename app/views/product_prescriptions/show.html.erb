@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @product_prescription.dealer_id %>
+</p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @product_prescription.farmer_id %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @product_prescription.crop_id %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @product_prescription.condition %>
+</p>
+
+<p>
+  <strong>Crop growth:</strong>
+  <%= @product_prescription.crop_growth %>
+</p>
+
+<p>
+  <strong>Crop cond:</strong>
+  <%= @product_prescription.crop_cond %>
+</p>
+
+<p>
+  <strong>Acreage:</strong>
+  <%= @product_prescription.acreage %>
+</p>
+
+<p>
+  <strong>Prescribe:</strong>
+  <%= @product_prescription.prescribe %>
+</p>
+
+<%= link_to 'Edit', edit_product_prescription_path(@product_prescription) %> |
+<%= link_to 'Back', product_prescriptions_path %>
