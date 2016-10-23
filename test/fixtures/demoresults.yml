@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amid: 1
+  srid: 1
+  pocketid: 1
+  faid: 1
+  demostatus: MyString
+
+two:
+  amid: 1
+  srid: 1
+  pocketid: 1
+  faid: 1
+  demostatus: MyString

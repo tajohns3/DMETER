@@ -2,7 +2,7 @@
   <div class="panel panel-primary">
     <div class="panel-heading text-center">
       <h1 class="panel-title text-center">
-        <b> Product Sample Information</b>
+        <b> Demo Result Information</b>
       </h1>
     </div>
     <div class="panel-body">
@@ -16,16 +16,22 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <strong>State:</strong>
-                    <%= @prodsample.stid %>
+                    <strong>Area Manager:</strong>
+                    <%= @demoresult.amid %>
                   </div>
                   <div>
                     <strong>Sales Representative:</strong>
-                    <%= @prodsample.faid %>
+                    <%= @demoresult.srid %>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
+                  <br>
+                  <div>
+                    <strong>Field Agent:</strong>
+                    <%= @demoresult.faid %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Pocket:</strong>
+                    <%= @demoresult.pocketid %>
                   </div>
                 </div>
               </div>
@@ -35,33 +41,33 @@
         <div class="col-md-6">
           <div class="panel panel-default">
             <div class="panel-heading text-center">
-              <b>Sample Information</b>
+              <b>Demo Information</b>
             </div>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <strong>Sample Purpose:</strong>
-                    <%= @prodsample.sample_purp %>
+                    <strong>Demo Status:</strong>
+                    <%= @demoresult.demostatus %>
                   </div>
                   <div>
-                    <strong>Sample Type:</strong>
-                    <%= @prodsample.sampletype %>
-                  </div>
-                </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <div class="field">
-                    </div>
+                    <strong>Demo result:</strong><br>
+                    <%=link_to image_tag(@demoresult.photo.url(:thumb)), @demoresult.photo.url(:original), :popup=>['original_image', 'height=700,width=900'], :target=> '_blank' %>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="field">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-md-6">
           <div class="actions">
-            <%= link_to "Edit", edit_prodsample_path(@prodsample), class: "btn btn-primary pull-right"%>
+            <%= link_to "Edit", edit_demoresult_path(@demoresult), class: "btn btn-primary pull-right"%>
           </div>
         </div>
         <div class="col-md-6">
@@ -69,11 +75,9 @@
             <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
           </div>
         </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
-
-
+</div>
+</div>

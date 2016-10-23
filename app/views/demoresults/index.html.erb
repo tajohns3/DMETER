@@ -1,0 +1,103 @@
+<p id="notice"><%= notice %></p>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Demo Results </b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                State
+              </th>
+              <th class="text-center">
+                Area Manager
+              </th>
+              <th class="text-center">
+                Sales Rep
+              </th>
+              <th class="text-center">
+                Field Agent
+              </th>
+              <th class="text-center">
+                Pocket
+              </th>
+              <th class="text-center">
+                Status
+              </th>
+              <th class="text-center">
+                Demo
+              </th>
+              <td class="text-center">
+                <%= link_to 'New Demo Results', new_demoresult_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
+              </td>
+            </tr>
+            <tr>
+              <% @demoresults.each do |demoresult| %>
+                  <td class="text-center">
+                    <%= demoresult.stid %>
+                  </td>
+                  <td class="text-center">
+                    <%= demoresult.amid %>
+                  </td>
+                  <td class="text-center">
+                    <%= demoresult.srid %>
+                  </td>
+                  <td class="text-center">
+                    <%= demoresult.faid %>
+                  </td>
+                  <td class="text-center">
+                    <%= demoresult.pocketid %>
+                  </td>
+                  <td class="text-center">
+                    <%= demoresult.demostatus %>
+                  </td>
+                  <td class="text-center">
+                    <%= demoresult.demoid %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View Demo Results', demoresult, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+>
+</script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+>
+</script>

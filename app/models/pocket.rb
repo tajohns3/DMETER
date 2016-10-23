@@ -8,6 +8,10 @@ class Pocket < ActiveRecord::Base
   has_many :districts, through: :pocket_districts
   has_many :pocket_districts
 
+  has_many :districts, through: :pocket_districts
+  has_many :pocket_districts
+  has_many :demoresults
+
   has_many :crops, through: :pocket_crops
   has_many :pocket_crops
 

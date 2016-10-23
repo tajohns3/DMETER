@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   resources :fa_activities
   resources :banks
   resources :dealers
+  resources :demos
+  resources :pockets
+  resources :demoresults
   resources :prodsamples
   devise_for :users
   devise_scope :user do
