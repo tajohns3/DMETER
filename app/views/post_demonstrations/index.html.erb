@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Post Demonstrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Demonstration</th>
+      <th>Observation</th>
+      <th>Contacrsr</th>
+      <th>Comment</th>
+      <th>Demo photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post_demonstrations.each do |post_demonstration| %>
+      <tr>
+        <td><%= post_demonstration.demonstration_id %></td>
+        <td><%= post_demonstration.observation %></td>
+        <td><%= post_demonstration.contacrsr %></td>
+        <td><%= post_demonstration.comment %></td>
+        <td><%= post_demonstration.demo_photo %></td>
+        <td><%= link_to 'Show', post_demonstration %></td>
+        <td><%= link_to 'Edit', edit_post_demonstration_path(post_demonstration) %></td>
+        <td><%= link_to 'Destroy', post_demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post demonstration', new_post_demonstration_path %>

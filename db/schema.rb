@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024014323) do
-ActiveRecord::Schema.define(version: 20161024040645) do
+ActiveRecord::Schema.define(version: 20161024102013) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -91,17 +90,11 @@ ActiveRecord::Schema.define(version: 20161024040645) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "image",                limit: 4000
-  end
-
-  create_table "demonstrations", force: :cascade do |t|
-    t.integer  "pre_demonstration_id", limit: 4
-    t.string   "appdone_by",           limit: 4000
-    t.string   "demo_status",          limit: 4000
-    t.integer  "fa_activity_id",       limit: 4
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.string   "image",                limit: 4000
     t.string   "demo_pic",             limit: 4000
+    t.string   "photo_file_name",      limit: 4000
+    t.string   "photo_content_type",   limit: 4000
+    t.integer  "photo_file_size",      limit: 4
+    t.datetime "photo_updated_at"
   end
 
   create_table "demoresults", force: :cascade do |t|
@@ -265,6 +258,16 @@ ActiveRecord::Schema.define(version: 20161024040645) do
     t.datetime "updated_at",                      null: false
     t.integer  "state_id",           limit: 4
     t.integer  "field_assistant_id", limit: 4
+  end
+
+  create_table "post_demonstrations", force: :cascade do |t|
+    t.integer  "demonstration_id", limit: 4
+    t.string   "observation",      limit: 4000
+    t.boolean  "contacrsr"
+    t.text     "comment",          limit: 2147483647
+    t.string   "demo_photo",       limit: 4000
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "pre_demonstrations", force: :cascade do |t|

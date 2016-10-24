@@ -23,7 +23,7 @@
 
 <p>
   <strong>Upload Results</strong>
-  <%=image_tag @demonstration.image.thumb.url%>
+  <%=image_tag @demonstration.image_url(:thumb).to_s%>
 </p>
 <%= link_to 'Edit', edit_demonstration_path(@demonstration) %> |
 <%= link_to 'Back', demonstrations_path %>

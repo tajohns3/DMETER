@@ -1,0 +1,39 @@
+<%= form_for(@post_demonstration) do |f| %>
+  <% if @post_demonstration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post_demonstration.errors.count, "error") %> prohibited this post_demonstration from being saved:</h2>
+
+      <ul>
+      <% @post_demonstration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :demonstration_id %><br>
+    <%= f.collection_select :demonstration_id, Demonstration.all, :id,:appdone_by %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br>
+    <%= f.select :observation, options_for_select([["Expected Results",'expected'], ["Unexpected Results",'unexpected']]),
+                 {include_blank: ''}%>
+  </div>
+
+  <div class="field", id="unexpected_comments">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field", id="demo_pictures">
+    <%= f.label :demo_photo %><br>
+    <%= f.file_field :demo_photo %>
+  </div>
+    <div class="field">
+      <%= f.label :contacrsr, 'Contact Sales Representative' %><br>
+      <%= f.check_box :contacrsr %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

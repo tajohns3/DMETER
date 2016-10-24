@@ -19,7 +19,8 @@
 
     <div class="field">
       <%=f.label :appdone_by%>
-      <%=f.text_field :appdone_by%>
+      <%=f.select :appdone_by, options_for_select([["Self",'self'],["Farmer in presence of FA",'Farmer in presence of FA',
+                                                                    "Farmer in absence of FA",'Farmer in absence of FA']])%>
     </div>
 
 

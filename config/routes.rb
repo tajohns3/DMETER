@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :post_demonstrations
   get 'demo_date/populate_dates'
 
   resources :demonstrations

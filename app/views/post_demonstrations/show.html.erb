@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Demonstration:</strong>
+  <%= @post_demonstration.demonstration_id %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @post_demonstration.observation %>
+</p>
+
+<p>
+  <strong>Contacrsr:</strong>
+  <%= @post_demonstration.contacrsr %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @post_demonstration.comment %>
+</p>
+
+<p>
+  <strong>Demo photo:</strong>
+  <%= image_tag @post_demonstration.demo_photo_url(:thumb).to_s%>
+</p>
+
+<%= link_to 'Edit', edit_post_demonstration_path(@post_demonstration) %> |
+<%= link_to 'Back', post_demonstrations_path %>
