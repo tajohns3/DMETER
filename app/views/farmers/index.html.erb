@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Farmers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stid</th>
+      <th>Useridstmgr</th>
+      <th>Useridamgr</th>
+      <th>Useridsr</th>
+      <th>Pocketid</th>
+      <th>Dealerid</th>
+      <th>Name</th>
+      <th>Villageid</th>
+      <th>Phnumber</th>
+      <th>Cropid</th>
+      <th>Acreage</th>
+      <th>Unit</th>
+      <th>Irr source</th>
+      <th>Introcall</th>
+      <th>Callverified</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @farmers.each do |farmer| %>
+      <tr>
+        <td><%= farmer.stid %></td>
+        <td><%= farmer.useridstmgr %></td>
+        <td><%= farmer.useridamgr %></td>
+        <td><%= farmer.useridsr %></td>
+        <td><%= farmer.pocketid %></td>
+        <td><%= farmer.dealerid %></td>
+        <td><%= farmer.name %></td>
+        <td><%= farmer.villageid %></td>
+        <td><%= farmer.phnumber %></td>
+        <td><%= farmer.cropid %></td>
+        <td><%= farmer.acreage %></td>
+        <td><%= farmer.unit %></td>
+        <td><%= farmer.irr_source %></td>
+        <td><%= farmer.introcall %></td>
+        <td><%= farmer.callverified %></td>
+        <td><%= link_to 'Show', farmer %></td>
+        <td><%= link_to 'Edit', edit_farmer_path(farmer) %></td>
+        <td><%= link_to 'Destroy', farmer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Farmer', new_farmer_path %>

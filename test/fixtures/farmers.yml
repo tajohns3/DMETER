@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stid: 1
+  useridstmgr: 1
+  useridamgr: 1
+  useridsr: 1
+  pocketid: 1
+  dealerid: 1
+  name: MyString
+  villageid: 1
+  phnumber: MyString
+  cropid: 1
+  acreage: 1
+  unit: MyString
+  irr_source: MyString
+  introcall: MyString
+  callverified: 
+
+two:
+  stid: 1
+  useridstmgr: 1
+  useridamgr: 1
+  useridsr: 1
+  pocketid: 1
+  dealerid: 1
+  name: MyString
+  villageid: 1
+  phnumber: MyString
+  cropid: 1
+  acreage: 1
+  unit: MyString
+  irr_source: MyString
+  introcall: MyString
+  callverified: 

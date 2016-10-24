@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cropid: 1
+  acreage: 1
+  unit: MyString
+  irr_source: MyString
+  farmer_id: 
+
+two:
+  cropid: 1
+  acreage: 1
+  unit: MyString
+  irr_source: MyString
+  farmer_id: 
