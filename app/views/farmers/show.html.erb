@@ -1,3 +1,89 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1 class="panel-title text-center">
+        <b> Farmer Information </b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <b>Geographic Information</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <strong>State:</strong>
+                    <%= @farmer.stid %>
+                  </div>
+                  <div>
+                    <strong>Sales Representative:</strong>
+                    <%= @farmer.srid %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Field Agent:</strong>
+                    <%= @farmer.faid %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Pocket:</strong>
+                    <%= @farmer.pocketid %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <b>Farmer Information</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <strong>Demo Status:</strong>
+                    <%= @demoresult.demostatus %>
+                  </div>
+                  <div>
+                    <strong>Demo result:</strong><br>
+                    <%=link_to image_tag(@demoresult.photo.url(:thumb)), @demoresult.photo.url(:original), :popup=>['original_image', 'height=700,width=900'], :target=> '_blank' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="field">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="actions">
+            <%= link_to "Edit", edit_demoresult_path(@demoresult), class: "btn btn-primary pull-right"%>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="actions">
+            <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>

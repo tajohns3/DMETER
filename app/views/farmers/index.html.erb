@@ -1,55 +1,103 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Farmers</h1>
+<html lang="en">
 
-<table>
-  <thead>
-    <tr>
-      <th>Stid</th>
-      <th>Useridstmgr</th>
-      <th>Useridamgr</th>
-      <th>Useridsr</th>
-      <th>Pocketid</th>
-      <th>Dealerid</th>
-      <th>Name</th>
-      <th>Villageid</th>
-      <th>Phnumber</th>
-      <th>Cropid</th>
-      <th>Acreage</th>
-      <th>Unit</th>
-      <th>Irr source</th>
-      <th>Introcall</th>
-      <th>Callverified</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
 
-  <tbody>
-    <% @farmers.each do |farmer| %>
-      <tr>
-        <td><%= farmer.stid %></td>
-        <td><%= farmer.useridstmgr %></td>
-        <td><%= farmer.useridamgr %></td>
-        <td><%= farmer.useridsr %></td>
-        <td><%= farmer.pocketid %></td>
-        <td><%= farmer.dealerid %></td>
-        <td><%= farmer.name %></td>
-        <td><%= farmer.villageid %></td>
-        <td><%= farmer.phnumber %></td>
-        <td><%= farmer.cropid %></td>
-        <td><%= farmer.acreage %></td>
-        <td><%= farmer.unit %></td>
-        <td><%= farmer.irr_source %></td>
-        <td><%= farmer.introcall %></td>
-        <td><%= farmer.callverified %></td>
-        <td><%= link_to 'Show', farmer %></td>
-        <td><%= link_to 'Edit', edit_farmer_path(farmer) %></td>
-        <td><%= link_to 'Destroy', farmer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Farmer', new_farmer_path %>
+<body>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Farmers </b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                State
+              </th>
+              <th class="text-center">
+                Field Agent
+              </th>
+              <th class="text-center">
+                Pocket
+              </th>
+              <th class="text-center">
+                Dealer
+              </th>
+              <th class="text-center">
+                Farmer
+              </th>
+              <th class="text-center">
+                Phone Number
+              </th>
+              <th class="text-center">
+                Village
+              </th>
+              <td class="text-center">
+                <%= link_to 'New Farmer', new_farmer_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
+              </td>
+            </tr>
+            <tr>
+              <% @farmers.each do |farmer| %>
+                  <td class="text-center">
+                    <%= farmer.stid %>
+                  </td>
+                  <td class="text-center">
+                    <%= farmer.faid %>
+                  </td>
+                  <td class="text-center">
+                    <%= farmer.pocketid %>
+                  </td>
+                  <td class="text-center">
+                    <%= farmer.dealer %>
+                  </td>
+                  <td class="text-center">
+                    <%= farmer.name %>
+                  </td>
+                  <td class="text-center">
+                    <%= farmer.phnumber %>
+                  </td>
+                  <td class="text-center">
+                    <%= farmer.village %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View Farmer', farmer, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+>
+</script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+>
+</script>
