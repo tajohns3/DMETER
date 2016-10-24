@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :farmers
   resources :positions
   resources :fa_targets
   resources :targets

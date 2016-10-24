@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-13">
+    <div class="panel-body">
+<div class="nested-fields">
+      <div class="col-md-2">
+        <div class="form-group">
+          <%= f.label 'Select Crop' %>
+          <%= f.collection_select :id, Crop.all, :id, :cropid, {:include_blank => true}, {class: "form-control"} %>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <%= f.label 'Enter Acreage' %>
+          <%= f.text_field :acreage, {class: "form-control"} %>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <%= f.label 'Enter Unit' %>
+          <%= f.text_field :unit, {class: "form-control"} %>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <%= f.label 'Enter Irrigation Source' %>
+          <%= f.text_field :irr_source, {class: "form-control"} %>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <br>
+          <%= link_to_remove_association "Remove Crop", f, class: "btn btn-primary" %>
+        </div>
+      </div>
+</div>
+</div>
+</div>
+</div>

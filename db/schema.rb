@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021025645) do
+ActiveRecord::Schema.define(version: 20161024001947) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 20161021025645) do
     t.string   "photo_content_type", limit: 4000
     t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
+    t.integer  "stid",               limit: 4
   end
 
   create_table "demos", force: :cascade do |t|
@@ -132,6 +133,38 @@ ActiveRecord::Schema.define(version: 20161021025645) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.integer  "crop_id",             limit: 4
+  end
+
+  create_table "farmcrops", force: :cascade do |t|
+    t.integer  "cropid",     limit: 4
+    t.integer  "acreage",    limit: 4
+    t.string   "unit",       limit: 4000
+    t.string   "irr_source", limit: 4000
+    t.integer  "farmer_id",  limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "farmcrops", ["farmer_id"], name: "index_farmcrops_on_farmer_id"
+
+  create_table "farmers", force: :cascade do |t|
+    t.integer  "stid",         limit: 4
+    t.integer  "useridstmgr",  limit: 4
+    t.integer  "useridamgr",   limit: 4
+    t.integer  "useridsr",     limit: 4
+    t.integer  "pocketid",     limit: 4
+    t.integer  "dealerid",     limit: 4
+    t.string   "name",         limit: 4000
+    t.integer  "villageid",    limit: 4
+    t.string   "phnumber",     limit: 4000
+    t.integer  "cropid",       limit: 4
+    t.integer  "acreage",      limit: 4
+    t.string   "unit",         limit: 4000
+    t.string   "irr_source",   limit: 4000
+    t.string   "introcall",    limit: 4000
+    t.binary   "callverified", limit: 2147483647
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "field_assistants", force: :cascade do |t|
@@ -348,4 +381,5 @@ ActiveRecord::Schema.define(version: 20161021025645) do
     t.datetime "updated_at",              null: false
   end
 
+  add_foreign_key "farmcrops", "farmers"
 end
