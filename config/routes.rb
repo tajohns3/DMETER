@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'demo_date/populate_dates'
+
+  resources :demonstrations
   resources :positions
   resources :fa_targets
   resources :targets

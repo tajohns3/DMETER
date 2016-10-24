@@ -14,31 +14,31 @@
 
   <div class="field">
     <%= f.label :state_id %><br>
-    <%= f.number_field :state_id %>
+    <%= f.collection_select :state_id, State.all, :id, :state, {include_blank: ''} %>
   </div>
   <div class="field">
     <%= f.label :user_id, 'Area Manager' %><br>
-    <%= f.number_field :user_id %>
+    <%= f.collection_select :user_id, User.where(role: 'area_manager'), :id, :sur_name,  include_blank: true %>
   </div>
 
     <div class="field">
       <%= f.label :user_id, 'Sales Representative' %><br>
-      <%= f.number_field :user_id %>
+      <%= f.collection_select :user_id, User.where(role: 'sale_representative'), :id, :sur_name,  include_blank: true %>
     </div>
 
   <div class="field">
     <%= f.label :pocket_id %><br>
-    <%= f.number_field :pocket_id %>
+    <%= f.collection_select :pocket_id,Pocket.all, :id, :pocket_name %>
   </div>
 
     <div class="field">
       <%= f.label :field_assistant_id %><br>
-      <%= f.number_field :field_assistant_id %>
+      <%= f.collection_select :field_assistant_id, Position.all, :id, :surname,{}, {:id => 'field_assist'} %>
     </div>
 
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.text_field :date %>
+    <%= f.text_field :date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
   </div>
 
     <div class="field">

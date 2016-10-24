@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Demonstrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pre demonstration</th>
+      <th>Appdone by</th>
+      <th>Demo status</th>
+      <th>Fa activity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demonstrations.each do |demonstration| %>
+      <tr>
+        <td><%= demonstration.pre_demonstration_id %></td>
+        <td><%= demonstration.appdone_by %></td>
+        <td><%= demonstration.demo_status %></td>
+        <td><%= demonstration.fa_activity_id %></td>
+
+        <td><%= link_to 'Show', demonstration %></td>
+        <td><%= link_to 'Edit', edit_demonstration_path(demonstration) %></td>
+        <td><%= link_to 'Destroy', demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demonstration', new_demonstration_path %>

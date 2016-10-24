@@ -41,7 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 # Use paperclip for attaching photos
-gem "paperclip", "~> 5.0.0"
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

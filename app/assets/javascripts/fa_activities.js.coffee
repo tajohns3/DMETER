@@ -1,17 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-jQuery ->
-  $('#fa_activity_date').datepicker
-    dateFormat: "yy-mm-dd"
 
-jQuery ->
-  $('#fa_activity_pre_demonstrations_attributes_0_applications_attributes_0_app_date').datepicker
-    dateFormat: "yy-mm-dd"
-
-jQuery ->
-  $('#fa_activity_pre_demonstrations_attributes_0_applications_attributes_0_follow_date').datepicker
-    dateFormat: "yy-mm-dd"
 
 jQuery ->
   $('#fa_activity_activity').on "change",  ->
@@ -44,6 +34,15 @@ jQuery ->
       $('#demo_meeting').fadeIn()
     else
       $('#demo_meeting').fadeOut()
+
+
+#meet farmer demon stration drop down
+jQuery ->
+  $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
+    if $(this).val() is "demonstration"
+      $('#pop_forms').fadeIn()
+    else
+      $('#pop_forms').fadeOut()
 
 #fa act dropdown
 jQuery ->

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pre demonstration:</strong>
+  <%= @demonstration.pre_demonstration_id %>
+</p>
+
+<p>
+  <strong>Appdone by:</strong>
+  <%= @demonstration.appdone_by %>
+</p>
+
+<p>
+  <strong>Demo status:</strong>
+  <%= @demonstration.demo_status %>
+</p>
+
+<p>
+  <strong>Fa activity:</strong>
+  <%= @demonstration.fa_activity_id %>
+</p>
+
+
+<p>
+  <strong>Upload Results</strong>
+  <%=image_tag @demonstration.image.thumb.url%>
+</p>
+<%= link_to 'Edit', edit_demonstration_path(@demonstration) %> |
+<%= link_to 'Back', demonstrations_path %>

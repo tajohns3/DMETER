@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pre_demonstration_id: 1
+  appdone_by: MyString
+  demo_status: MyString
+  fa_activity_id: 1
+
+two:
+  pre_demonstration_id: 1
+  appdone_by: MyString
+  demo_status: MyString
+  fa_activity_id: 1

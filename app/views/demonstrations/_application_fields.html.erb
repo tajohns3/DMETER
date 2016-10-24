@@ -1,0 +1,30 @@
+<%@pre_demonstration.applications.each do |date| %>
+    <div class="field">
+      <%=f.label :app_date, 'Application Date'%><br>
+      <%= f.text_field :app_date, value: date.app_date, id: 'app_date'%>
+    </div>
+
+    <label>Changed Date?</label>
+    <label><input type="checkbox" id="chbox1" value="change_app_date">Yes</label><br>
+
+    <div class="field" id="app_comment_field">
+      <%=f.label :app_comment, 'Application Date Change Reason'%><br>
+      <%=f.text_area :app_comment%>
+    </div>
+
+
+
+
+
+    <div class="field">
+      <%=f.label :follow_date, 'Follow Up Date'%><br>
+      <%= f.text_field :follow_date, value: date.follow_date, id: 'follow_date'%>
+    </div>
+
+    <label>Changed Date?</label>
+    <label><input type="checkbox" id="chbox2" value="change_follow_date">Yes</label><br>
+    <div class="field" id="follow_comment_field">
+      <%=f.label :follow_comment, 'Follow Up  Date Change Reason'%><br>
+      <%=f.text_area :follow_comment%>
+    </div>
+<%end%>

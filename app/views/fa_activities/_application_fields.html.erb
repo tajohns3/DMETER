@@ -13,7 +13,7 @@
 </div>
 <div class="field">
   <%= f.label :app_date, 'Application Date' %><br>
-  <%= f.text_field :app_date %>
+  <%= f.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
 </div>
 
 <div class="dropdown">
@@ -44,7 +44,7 @@
 
 <div class="field">
   <%= f.label :follow_date, 'Follow up Date' %><br>
-  <%= f.text_field :follow_date %>
+  <%= f.text_field :follow_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
 </div>
 
 <%=link_to_remove_association 'Remove Product Application', f %>

@@ -23,3 +23,11 @@
 
 $('.dropdown-toggle').dropdown()
 
+$(document).on("change","#field_assist",function(){
+    $.ajax({
+        url: "/demo_date/populate_dates",
+        type: "GET",
+        data: {pre_demo_id: $(this).val()}
+    })
+
+})

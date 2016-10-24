@@ -85,6 +85,8 @@ class FaActivitiesController < ApplicationController
                                           dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy],
                                           assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment, :_destroy],
                                           pre_demonstrations_attributes: [:id,:farmer_id,:crop_id, :fa_activity_id,:crop_growth,:condition,:demo_code,:_destroy,
-                                          applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,{product_ids: []},:_destroy]])
+                                          applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy],
+     demonstrations_attributes: [:pre_demonstration_id, :done_by,:demo_status, :_destroy,
+     applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy]]],)
     end
 end

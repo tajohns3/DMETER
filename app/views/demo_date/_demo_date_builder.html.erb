@@ -1,0 +1,9 @@
+<% @populates.fa_activities.each do |f|%>
+    <% f.pre_demonstrations.each do |pre|%>
+        <%=pre.demo_code%>
+        <%= link_to 'New Demonstration', new_demonstration_path(:pre_id => pre.id)%>
+    <%end%>
+
+
+
+<%end%>

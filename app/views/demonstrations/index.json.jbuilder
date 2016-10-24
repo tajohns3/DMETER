@@ -1,0 +1,1 @@
+json.array! @demonstrations, partial: 'demonstrations/demonstration', as: :demonstration

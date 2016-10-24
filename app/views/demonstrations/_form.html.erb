@@ -1,0 +1,43 @@
+<%= form_for @demonstration, :html =>{:multipart => true} do |f| %>
+  <% if @demonstration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@demonstration.errors.count, "error") %> prohibited this demonstration from being saved:</h2>
+
+      <ul>
+      <% @demonstration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%=f.label :pre_demonstration_id%>
+      <%=f.text_field :pre_demonstration_id, value: @pre_demonstration.id%>
+    </div>
+
+
+    <div class="field">
+      <%=f.label :appdone_by%>
+      <%=f.text_field :appdone_by%>
+    </div>
+
+
+
+    <div class="field">
+      <%=f.fields_for :applications do |application| %>
+          <div class="field">
+            <%=render 'application_fields', f: application%>
+          </div>
+
+      <%end%>
+    </div>
+
+
+
+      <%=f.file_field :image%>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
