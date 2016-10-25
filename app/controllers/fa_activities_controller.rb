@@ -21,6 +21,7 @@ class FaActivitiesController < ApplicationController
     assist_rep = @fa_activity.assist_reps.build
     pre_demo =@fa_activity.pre_demonstrations.build
     pre_demo.applications.build
+    post_demo = @fa_activity.post_demonstrations.build
 
 
   end
@@ -78,15 +79,17 @@ class FaActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fa_activity_params
-      params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,:activity,
-                                          meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:dealer_id,:village_id,:number_farmer,:consultation,
-                                                                    product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
-                                                                                                      :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]],
-                                          dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy],
-                                          assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment, :_destroy],
-                                          pre_demonstrations_attributes: [:id,:farmer_id,:crop_id, :fa_activity_id,:crop_growth,:condition,:demo_code,:_destroy,
-                                          applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy],
+      params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,:activity,:position_id,
+      meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:dealer_id,:village_id,:number_farmer,:consultation,
+      product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
+     :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]],
+     dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy],
+     assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment, :_destroy],
+     pre_demonstrations_attributes: [:id,:farmer_id,:crop_id, :fa_activity_id,:crop_growth,:condition,:demo_code,:_destroy,
+     applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment, :_destroy,
+     product_applications_attributes: [:product_id,:application_id,:quantity, :_destroy],],
      demonstrations_attributes: [:pre_demonstration_id, :done_by,:demo_status, :_destroy,
-     applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy]]],)
+     applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy]]],
+      post_demonstrations_attributes: [:demonstration_id, :observation, :contacrsr, :comment, :demo_photo,:fa_activity_id,:_destroy])
     end
 end

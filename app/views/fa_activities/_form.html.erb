@@ -32,8 +32,8 @@
   </div>
 
     <div class="field">
-      <%= f.label :field_assistant_id %><br>
-      <%= f.collection_select :field_assistant_id, Position.all, :id, :surname,{}, {:id => 'field_assist'} %>
+      <%= f.label :position_id, 'Field Assistant' %><br>
+      <%= f.collection_select :position_id, Position.all, :id, :surname,{}, {:id => 'field_assist'} %>
     </div>
 
   <div class="field">
@@ -58,6 +58,12 @@
           <%=f.fields_for :pre_demonstrations do |predemo|%>
               <%= render 'pre_demonstration_fields', f: predemo%>
           <%end%>
+        </div>
+
+        <div class="container", id="post_demo_meeting">
+          <%=f.fields_for :post_demonstrations do |postdemo|%>
+          <%= render 'post_demonstration_fields', f: postdemo%>
+              <%end%>
         </div>
 
       </div>

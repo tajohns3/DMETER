@@ -19,8 +19,8 @@
 
     <div class="field">
       <%=f.label :appdone_by%>
-      <%=f.select :appdone_by, options_for_select([["Self",'self'],["Farmer in presence of FA",'Farmer in presence of FA',
-                                                                    "Farmer in absence of FA",'Farmer in absence of FA']])%>
+      <%=f.select :appdone_by, options_for_select([["Self",'self'],["Farmer in presence of FA",'Farmer in presence of FA'],
+                                                                    ["Farmer in absence of FA",'Farmer in absence of FA']])%>
     </div>
 
 
@@ -35,8 +35,17 @@
     </div>
 
 
-
+    <div>
       <%=f.file_field :image%>
+    </div>
+
+    <div>
+      <%=f.hidden_field :demo_code, value: @pre_demonstration.demo_code %>
+    </div>
+
+
+        <%=f.text_field :position_id, value: @pre_demonstration.fa_activity.position.id%>
+
 
   <div class="actions">
     <%= f.submit %>

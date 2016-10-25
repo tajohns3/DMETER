@@ -69,6 +69,6 @@ class PostDemonstrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_demonstration_params
-      params.require(:post_demonstration).permit(:demonstration_id, :observation, :contacrsr, :comment, :demo_photo)
+      params.require(:post_demonstration).permit(:demonstration_id, :observation, :contacrsr, :comment, :demo_photo,:fa_activity_id)
     end
 end

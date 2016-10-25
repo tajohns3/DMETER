@@ -35,14 +35,48 @@ jQuery ->
     else
       $('#demo_meeting').fadeOut()
 
-
-#meet farmer demon stration drop down
 jQuery ->
   $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
     if $(this).val() is "demonstration"
       $('#pop_forms').fadeIn()
     else
       $('#pop_forms').fadeOut()
+
+#post demonstration hide and show
+jQuery ->
+  $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
+    if $(this).val() is "post_demonstration"
+      $('#post_demo_meeting').fadeIn()
+    else
+      $('#post_demo_meeting').fadeOut()
+
+#Post demo results
+jQuery ->
+  $('#post_demonstration_observation').on "change", ->
+    if $(this).val() is "expected"
+      $('#demo_pictures').fadeIn()
+      $('#unexpected_comments').fadeOut()
+    else if $(this).val() is "unexpected"
+      $('#unexpected_comments').fadeIn()
+      $('#demo_pictures').fadeOut()
+    else
+      $('#unexpected_comments').fadeOut()
+      $('#demo_pictures').fadeOut()
+
+ #filter for post demo
+jQuery ->
+  $('#post_demon_id').parent().hide()
+  demonstrations = $('#post_demon_id').html()
+  $('#field_assist').change ->
+    name = $('#field_assist :selected').text()
+    escaped_name = name.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(demonstrations).filter("optgroup[label='#{escaped_name}']").html()
+    if options
+      $('#post_demon_id').html(options)
+      $('#post_demon_id').parent().show()
+    else
+      $('#post_demon_id').empty()
+      $('#post_demon_id').parent().hide()
 
 #fa act dropdown
 jQuery ->

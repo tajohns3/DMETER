@@ -1,0 +1,22 @@
+<div class="field">
+  <%= f.label :demonstration_id %><br>
+  <%= f.grouped_collection_select :demonstration_id, Position.all, :demonstrations,:surname, :id,:demo_code,{},{id: 'post_demon_id'} %>
+</div>
+<div class="field">
+  <%= f.label :observation %><br>
+  <%= f.select :observation, options_for_select([["Expected Results",'expected'], ["Unexpected Results",'unexpected']]),
+               {include_blank: ''},id: 'post_demonstration_observation'%>
+</div>
+
+<div class="field", id="unexpected_comments">
+  <%= f.label :comment %><br>
+  <%= f.text_area :comment %>
+</div>
+<div class="field", id="demo_pictures">
+  <%= f.label :demo_photo %><br>
+  <%= f.file_field :demo_photo%>
+</div>
+<div class="field">
+  <%= f.label :contacrsr, 'Contact Sales Representative' %><br>
+  <%= f.check_box :contacrsr %>
+</div>

@@ -71,7 +71,7 @@ class DemonstrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def demonstration_params
-      params.require(:demonstration).permit(:pre_demonstration_id, :appdone_by, :demo_status, :fa_activity_id,:image,
+      params.require(:demonstration).permit(:pre_demonstration_id, :appdone_by, :demo_status, :fa_activity_id,:image,:demo_code,:position_id,
       applications_attributes: [:id,:pre_demonstration_id,:demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy])
     end
 end

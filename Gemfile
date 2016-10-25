@@ -20,6 +20,8 @@ gem 'rmagick', '~> 2.16.0'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'jquery-ui-rails'
 gem 'bootstrap-datepicker-rails'
+
+gem 'bootstrap-multiselect-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

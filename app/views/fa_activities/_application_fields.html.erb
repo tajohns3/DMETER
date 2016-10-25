@@ -1,6 +1,11 @@
-<script>
-  $('.dropdown-toggle').dropdown()
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#example-with-maxHeight').multiselect({
+      maxHeight: 200
+    });
+  });
 </script>
+
 
 <div class="nested-fields">
 <div class="field">
@@ -23,11 +28,19 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
     <div class="checkbox">
-      <%=f.collection_check_boxes :product_ids,Product.all,:id, :name%>
+
     </div>
   </ul>
 </div>
 
+  <div class="field">
+    <%=f.fields_for :product_applications do |prod|%>
+        <%=render 'product_application_fields', f: :prod%>
+    <%end%>
+    <div class="links">
+      <%=link_to_add_association 'Add Product ', f, :product_applications%>
+    </div>
+  </div>
 
 
 
