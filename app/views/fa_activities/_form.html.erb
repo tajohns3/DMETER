@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= f.label :pocket_id %><br>
-    <%= f.collection_select :pocket_id,Pocket.all, :id, :pocket_name %>
+    <%= f.collection_select :pocket_id,Pocket.all, :id, :pocket_name, {include_blank: ''} %>
   </div>
 
     <div class="field">
       <%= f.label :position_id, 'Field Assistant' %><br>
-      <%= f.collection_select :position_id, Position.all, :id, :surname,{}, {:id => 'field_assist'} %>
+      <%= f.collection_select :position_id, Position.all, :id, :surname,{include_blank: ''}, {:id => 'field_assist'} %>
     </div>
 
   <div class="field">

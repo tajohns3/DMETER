@@ -1,17 +1,5 @@
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#example-with-maxHeight').multiselect({
-      maxHeight: 200
-    });
-  });
-</script>
-
-
 <div class="nested-fields">
-<div class="field">
-  <%= f.label :pre_demonstration_id %><br>
-  <%= f.number_field :pre_demonstration_id %>
-</div>
+
 <div class="field">
   <%= f.label :app_area, 'Area of application' %><br>
   <%= f.text_field :app_area %>
@@ -21,24 +9,14 @@
   <%= f.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
 </div>
 
-<div class="dropdown">
-  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Product
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <div class="checkbox">
 
-    </div>
-  </ul>
-</div>
 
   <div class="field">
     <%=f.fields_for :product_applications do |prod|%>
         <%=render 'product_application_fields', f: :prod%>
     <%end%>
     <div class="links">
-      <%=link_to_add_association 'Add Product ', f, :product_applications%>
+      <%=link_to_add_association 'Add Product ', f, :product_applications, class: 'btn btn-info'%>
     </div>
   </div>
 

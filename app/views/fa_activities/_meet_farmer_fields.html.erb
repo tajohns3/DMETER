@@ -5,7 +5,7 @@
 
 <div class="field">
   <%= f.label :village_id %><br>
-  <%= f.number_field :village_id %>
+  <%= f.collection_select :village_id, Village.all, :id, :village, {include_blank: ''}%>
 </div>
 
 
@@ -86,6 +86,6 @@
   <%end%>
 </div>
 
-<div id="pop_forms">
+<div id="pop_forms" class="container">
 
 </div>

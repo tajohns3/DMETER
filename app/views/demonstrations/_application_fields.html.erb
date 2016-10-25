@@ -1,7 +1,7 @@
 <%@pre_demonstration.applications.each do |date| %>
     <div class="field">
       <%=f.label :app_date, 'Application Date'%><br>
-      <%= f.text_field :app_date, value: date.app_date, id: 'app_date'%>
+      <%= f.text_field :app_date, value: date.app_date, id: 'app_date',"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}%>
     </div>
 
     <label>Changed Date?</label>
@@ -18,7 +18,7 @@
 
     <div class="field">
       <%=f.label :follow_date, 'Follow Up Date'%><br>
-      <%= f.text_field :follow_date, value: date.follow_date, id: 'follow_date'%>
+      <%= f.text_field :follow_date, value: date.follow_date, id: 'follow_date',"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}%>
     </div>
 
     <label>Changed Date?</label>
