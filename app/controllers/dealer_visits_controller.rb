@@ -69,6 +69,6 @@ class DealerVisitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dealer_visit_params
-      params.require(:dealer_visit).permit(:dealer_id, :fa_activity_id, :farmer_id, :number_farmer, :purpose)
+      params.require(:dealer_visit).permit(:dealer_id, :fa_activity_id, :farmer_id, :number_farmer, :purpose, product_attributes:[:name, :_destroy])
     end
 end
