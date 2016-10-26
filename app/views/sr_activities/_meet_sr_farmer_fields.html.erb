@@ -1,0 +1,28 @@
+<div class="field" id="meet_farmer_div">
+  <%= f.label :purpose %><br>
+  <%= f.select :purpose, options_for_select([["Product Information / Company Introduction",'Product Information / Company Introduction'],
+                                                        ["Technical Guidance",'technical_guidance'], ["Recommendation to/from farmers",'recommendation_farmers']]),
+               {include_blank: ''}, {id: 'meet_farmer_option'}%>
+</div>
+<div class="field" id="farmer_div">
+  <%= f.label :farmer_id %><br>
+  <%= f.number_field :farmer_id %>
+</div>
+<div class="field" id="crop_id_div">
+  <%= f.label :crop_id %><br>
+  <%= f.number_field :crop_id %>
+</div>
+
+<div class="field" id="crop_cod_div">
+  <%=f.label :crop_condition%><br>
+  <%=f.text_field :crop_condition%>
+</div>
+
+<div class="field" id="crop_growth_div">
+  <%= f.label :crop_growth %><br>
+  <%= f.text_field :crop_growth %>
+</div>
+<div class="field" id="farmer_recommend">
+  <%= f.label :recommendation %><br>
+  <%= f.text_area :recommendation %>
+</div>

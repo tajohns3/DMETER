@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @meet_state_manager.pocket_id %>
+</p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @meet_state_manager.dealer_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @meet_state_manager.position_id %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @meet_state_manager.purpose %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @meet_state_manager.other %>
+</p>
+
+<p>
+  <strong>Sr activity:</strong>
+  <%= @meet_state_manager.sr_activity_id %>
+</p>
+
+<%= link_to 'Edit', edit_meet_state_manager_path(@meet_state_manager) %> |
+<%= link_to 'Back', meet_state_managers_path %>

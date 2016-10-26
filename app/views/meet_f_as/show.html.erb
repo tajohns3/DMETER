@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sr activity:</strong>
+  <%= @meet_fa.sr_activity_id %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @meet_fa.purpose %>
+</p>
+
+<%= link_to 'Edit', edit_meet_fa_path(@meet_fa) %> |
+<%= link_to 'Back', meet_fas_path %>

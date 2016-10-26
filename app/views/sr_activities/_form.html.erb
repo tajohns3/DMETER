@@ -39,84 +39,30 @@
                                                 ["Business Development", 'business_development'],["Other",'other']]), {include_blank: ''},{id: 'sr_pactivity'} %>
   </div>
 
+
+    <div class="container" id="">
+      <%=f.fields_for :meet_state_managers do |meet_sm|%>
+      <%=render 'meet_state_manager_fields', f: meet_sm%>
+          <%end%>
+    </div>
+
+
     <div class="container">
-
-      <div class="field" id="state_mana_div">
-        <%= f.label :meet_state_manager_option, 'Purpose' %><br>
-        <%= f.select :meet_state_manager_option, options_for_select([["To Identify a Pocket", 'identify_pocket'],["To Identify a Dealer",'identify_dealer'],
-                                                                     ["To indentify Field Assistant",'identify_fa'],["Other", 'other']]),{include_blank: ''},
-                     {id: 'meet_sm_option'}%>
-      </div>
-      <div class="field" id="pocked_div">
-        <%= f.label :pocket_id %><br>
-        <%= f.number_field :pocket_id %>
-      </div>
-      <div class="field" id="dealer_div">
-        <%= f.label :dealer_id %><br>
-        <%= f.number_field :dealer_id %>
-      </div>
-      <div class="field" id="position_div">
-        <%= f.label :position_id, 'Field Assistant' %><br>
-        <%= f.number_field :position_id %>
-      </div>
-      <div class="field" id="meet_sm_other_div">
-        <%= f.label :meet_sm_other, 'Other' %><br>
-        <%= f.text_area :meet_sm_other %>
-      </div>
-
+      <%=f.fields_for :meet_dealers do |meet_dealer|%>
+          <%=render 'meet_dealer_fields', f: meet_dealer%>
+      <%end%>
     </div>
 
-    <div class="field" id="met_dealer_div">
-      <%= f.label :meet_dealer_option %><br>
-      <%= f.select :meet_dealer_option, options_for_select([["Introduction",'introduction'],["Product Demonstration",'product_demonstration'],
-                                                            ["Order Booking",'order_booking'],["Delivery Confirmation",'delivery_confirmation'],["Inventory Check",'inventory_check'],["Payment Collection",'payment_collection'],
-                                                            ["Competitor Information",'competitor_information'],["Organize Farmer Meeting",'organize_farmer_meeting'],["Other",'other']]),
-                   {include_blank: ''}, {id: 'meet_dealer_option'}%>
-    </div>
-
-    <div class="field" id="meet_dealer_other">
-      <%= f.label :meet_dealer_other %><br>
-      <%= f.text_area :meet_dealer_other %>
-    </div>
-
-
-
-
-
-    <div class="field" id="meet_fa_opt">
-    <%= f.label :meet_fa_option, 'Purpose' %><br>
-    <%= f.select :meet_fa_option, options_for_select([["Task Assignment",'task_assignment'], ["Technical Guidance",'technical_guidance'],
-                                                     ["Reporting Follow-up",'reporting_follow-up']]), {include_blank: ''},{id: 'meet_fa_option'}%>
-  </div>
     <div class="container">
-      <div class="field" id="meet_farmer_div">
-        <%= f.label :meet_farmer_option %><br>
-        <%= f.select :meet_farmer_option, options_for_select([["Product Information / Company Introduction",'Product Information / Company Introduction'],
-                                                              ["Technical Guidance",'technical_guidance'], ["Recommendation to/from farmers",'recommendation_farmers']]),
-                     {include_blank: ''}, {id: 'meet_farmer_option'}%>
-      </div>
-      <div class="field" id="farmer_div">
-        <%= f.label :farmer_id %><br>
-        <%= f.number_field :farmer_id %>
-      </div>
-      <div class="field" id="crop_id_div">
-        <%= f.label :crop_id %><br>
-        <%= f.number_field :crop_id %>
-      </div>
+      <%=f.fields_for :meet_fas do |meet_fa|%>
+          <%=render 'meet_fa_fields', f: meet_fa%>
+      <%end%>
+    </div>
 
-      <div class="field" id="crop_cod_div">
-        <%=f.label :crop_condition%><br>
-        <%=f.text_field :crop_condition%>
-      </div>
-
-      <div class="field" id="crop_growth_div">
-        <%= f.label :crop_growth_stage %><br>
-        <%= f.text_field :crop_growth_stage %>
-      </div>
-      <div class="field" id="farmer_recommend">
-        <%= f.label :farmer_recommendation %><br>
-        <%= f.text_area :farmer_recommendation %>
-      </div>
+    <div class="container">
+      <%=f.fields_for :meet_sr_farmers do |farmers|%>
+          <%=render 'meet_sr_farmer_fields', f: farmers%>
+      <%end%>
     </div>
 
 

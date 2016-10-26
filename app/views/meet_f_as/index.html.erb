@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meet Fas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sr activity</th>
+      <th>Purpose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meet_fas.each do |meet_fa| %>
+      <tr>
+        <td><%= meet_fa.sr_activity_id %></td>
+        <td><%= meet_fa.purpose %></td>
+        <td><%= link_to 'Show', meet_fa %></td>
+        <td><%= link_to 'Edit', edit_meet_fa_path(meet_fa) %></td>
+        <td><%= link_to 'Destroy', meet_fa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meet fa', new_meet_fa_path %>

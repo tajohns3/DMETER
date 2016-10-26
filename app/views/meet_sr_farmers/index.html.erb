@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meet Sr Farmers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Farmer</th>
+      <th>Crop</th>
+      <th>Crop condition</th>
+      <th>Crop growth</th>
+      <th>Recommendation</th>
+      <th>Purpose</th>
+      <th>Sr activity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meet_sr_farmers.each do |meet_sr_farmer| %>
+      <tr>
+        <td><%= meet_sr_farmer.farmer_id %></td>
+        <td><%= meet_sr_farmer.crop_id %></td>
+        <td><%= meet_sr_farmer.crop_condition %></td>
+        <td><%= meet_sr_farmer.crop_growth %></td>
+        <td><%= meet_sr_farmer.recommendation %></td>
+        <td><%= meet_sr_farmer.purpose %></td>
+        <td><%= meet_sr_farmer.sr_activity_id %></td>
+        <td><%= link_to 'Show', meet_sr_farmer %></td>
+        <td><%= link_to 'Edit', edit_meet_sr_farmer_path(meet_sr_farmer) %></td>
+        <td><%= link_to 'Destroy', meet_sr_farmer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meet sr farmer', new_meet_sr_farmer_path %>

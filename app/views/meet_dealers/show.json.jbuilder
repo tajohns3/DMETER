@@ -1,0 +1,1 @@
+json.partial! "meet_dealers/meet_dealer", meet_dealer: @meet_dealer

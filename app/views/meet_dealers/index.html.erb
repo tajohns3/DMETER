@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meet Dealers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Purpose</th>
+      <th>Other</th>
+      <th>Sr activity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meet_dealers.each do |meet_dealer| %>
+      <tr>
+        <td><%= meet_dealer.purpose %></td>
+        <td><%= meet_dealer.other %></td>
+        <td><%= meet_dealer.sr_activity_id %></td>
+        <td><%= link_to 'Show', meet_dealer %></td>
+        <td><%= link_to 'Edit', edit_meet_dealer_path(meet_dealer) %></td>
+        <td><%= link_to 'Destroy', meet_dealer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meet dealer', new_meet_dealer_path %>

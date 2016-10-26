@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :meet_sr_farmers
+  resources :meet_fas
+  resources :meet_dealers
+  resources :meet_state_managers
   resources :business_developments
   resources :sr_activities
   resources :post_demonstrations

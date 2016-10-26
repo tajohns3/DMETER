@@ -1,0 +1,22 @@
+<div class="field" id="state_mana_div">
+  <%= f.label :purpose, 'Purpose' %><br>
+  <%= f.select :purpose, options_for_select([["To Identify a Pocket", 'identify_pocket'],["To Identify a Dealer",'identify_dealer'],
+                                                               ["To indentify Field Assistant",'identify_fa'],["Other", 'other']]),{include_blank: ''},
+               {id: 'meet_sm_option'}%>
+</div>
+<div class="field" id="pocked_div">
+  <%= f.label :pocket_id %><br>
+  <%= f.number_field :pocket_id %>
+</div>
+<div class="field" id="dealer_div">
+  <%= f.label :dealer_id %><br>
+  <%= f.number_field :dealer_id %>
+</div>
+<div class="field" id="position_div">
+  <%= f.label :position_id, 'Field Assistant' %><br>
+  <%= f.number_field :position_id %>
+</div>
+<div class="field" id="meet_sm_other_div">
+  <%= f.label :other, 'Other' %><br>
+  <%= f.text_area :other %>
+</div>

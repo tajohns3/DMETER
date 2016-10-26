@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @meet_dealer.purpose %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @meet_dealer.other %>
+</p>
+
+<p>
+  <strong>Sr activity:</strong>
+  <%= @meet_dealer.sr_activity_id %>
+</p>
+
+<%= link_to 'Edit', edit_meet_dealer_path(@meet_dealer) %> |
+<%= link_to 'Back', meet_dealers_path %>
