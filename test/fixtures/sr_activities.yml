@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state_id: 1
+  user_id: 1
+  date: 2016-10-25
+  pactivity: MyString
+  meet_state_manager_option: MyString
+  pocket_id: 1
+  dealer_id: 1
+  position_id: 1
+  meet_sm_other: MyText
+  meet_dealer_option: MyString
+  meet_dealer_other: MyText
+  meet_fa_option: MyString
+  meet_farmer_option: MyString
+  farmer_id: 1
+  crop_id: 1
+  crop_growth_stage: MyString
+  farmer_recommendation: MyText
+  cf_option: MyString
+  business_development_id: 1
+  other: MyText
+
+two:
+  state_id: 1
+  user_id: 1
+  date: 2016-10-25
+  pactivity: MyString
+  meet_state_manager_option: MyString
+  pocket_id: 1
+  dealer_id: 1
+  position_id: 1
+  meet_sm_other: MyText
+  meet_dealer_option: MyString
+  meet_dealer_other: MyText
+  meet_fa_option: MyString
+  meet_farmer_option: MyString
+  farmer_id: 1
+  crop_id: 1
+  crop_growth_stage: MyString
+  farmer_recommendation: MyText
+  cf_option: MyString
+  business_development_id: 1
+  other: MyText

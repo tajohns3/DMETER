@@ -1,0 +1,2 @@
+json.extract! business_development, :id, :pre_demonstration_id, :pocket_id, :option, :sample_request, :numattendees, :a_attendees, :b_attendees, :c_attendees, :created_at, :updated_at
+json.url business_development_url(business_development, format: :json)

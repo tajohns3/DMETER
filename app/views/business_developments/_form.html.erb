@@ -1,0 +1,49 @@
+<%= form_for(@business_development) do |f| %>
+  <% if @business_development.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business_development.errors.count, "error") %> prohibited this business_development from being saved:</h2>
+
+      <ul>
+      <% @business_development.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pre_demonstration_id %><br>
+    <%= f.number_field :pre_demonstration_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pocket_id %><br>
+    <%= f.number_field :pocket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :option %><br>
+    <%= f.text_field :option %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_request %><br>
+    <%= f.check_box :sample_request %>
+  </div>
+  <div class="field">
+    <%= f.label :numattendees %><br>
+    <%= f.number_field :numattendees %>
+  </div>
+  <div class="field">
+    <%= f.label :a_attendees %><br>
+    <%= f.number_field :a_attendees %>
+  </div>
+  <div class="field">
+    <%= f.label :b_attendees %><br>
+    <%= f.number_field :b_attendees %>
+  </div>
+  <div class="field">
+    <%= f.label :c_attendees %><br>
+    <%= f.number_field :c_attendees %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

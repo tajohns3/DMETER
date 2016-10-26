@@ -1,0 +1,138 @@
+<%= form_for(@sr_activity) do |f| %>
+  <% if @sr_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sr_activity.errors.count, "error") %> prohibited this sr_activity from being saved:</h2>
+
+      <ul>
+      <% @sr_activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :state_id %><br>
+    <%= f.collection_select :state_id, State.all,:id, :state, {include_blank: ''} %>
+  </div>
+  <div class="field">
+  <%= f.label :user_id, 'Area Manager' %><br>
+  <%= f.number_field :user_id %>
+</div>
+
+    <div class="field">
+      <%= f.label :user_id %><br>
+      <%= f.number_field :user_id %>
+    </div>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :pactivity, 'Primary Activity' %><br>
+    <%= f.select :pactivity, options_for_select([["Meet with State Manager", 'meet_state_manager'],["Meet with Dealer",'meet_dealer'],
+                                                ["Meet with Field Assistant", 'Meet_fa'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
+                                                ["Business Development", 'business_development'],["Other",'other']]), {include_blank: ''},{id: 'sr_pactivity'} %>
+  </div>
+
+    <div class="container">
+
+      <div class="field" id="state_mana_div">
+        <%= f.label :meet_state_manager_option, 'Purpose' %><br>
+        <%= f.select :meet_state_manager_option, options_for_select([["To Identify a Pocket", 'identify_pocket'],["To Identify a Dealer",'identify_dealer'],
+                                                                     ["To indentify Field Assistant",'identify_fa'],["Other", 'other']]),{include_blank: ''},
+                     {id: 'meet_sm_option'}%>
+      </div>
+      <div class="field" id="pocked_div">
+        <%= f.label :pocket_id %><br>
+        <%= f.number_field :pocket_id %>
+      </div>
+      <div class="field" id="dealer_div">
+        <%= f.label :dealer_id %><br>
+        <%= f.number_field :dealer_id %>
+      </div>
+      <div class="field" id="position_div">
+        <%= f.label :position_id, 'Field Assistant' %><br>
+        <%= f.number_field :position_id %>
+      </div>
+      <div class="field" id="meet_sm_other_div">
+        <%= f.label :meet_sm_other, 'Other' %><br>
+        <%= f.text_area :meet_sm_other %>
+      </div>
+
+    </div>
+
+    <div class="field" id="met_dealer_div">
+      <%= f.label :meet_dealer_option %><br>
+      <%= f.select :meet_dealer_option, options_for_select([["Introduction",'introduction'],["Product Demonstration",'product_demonstration'],
+                                                            ["Order Booking",'order_booking'],["Delivery Confirmation",'delivery_confirmation'],["Inventory Check",'inventory_check'],["Payment Collection",'payment_collection'],
+                                                            ["Competitor Information",'competitor_information'],["Organize Farmer Meeting",'organize_farmer_meeting'],["Other",'other']]),
+                   {include_blank: ''}, {id: 'meet_dealer_option'}%>
+    </div>
+
+    <div class="field" id="meet_dealer_other">
+      <%= f.label :meet_dealer_other %><br>
+      <%= f.text_area :meet_dealer_other %>
+    </div>
+
+
+
+
+
+    <div class="field" id="meet_fa_opt">
+    <%= f.label :meet_fa_option, 'Purpose' %><br>
+    <%= f.select :meet_fa_option, options_for_select([["Task Assignment",'task_assignment'], ["Technical Guidance",'technical_guidance'],
+                                                     ["Reporting Follow-up",'reporting_follow-up']]), {include_blank: ''},{id: 'meet_fa_option'}%>
+  </div>
+    <div class="container">
+      <div class="field" id="meet_farmer_div">
+        <%= f.label :meet_farmer_option %><br>
+        <%= f.select :meet_farmer_option, options_for_select([["Product Information / Company Introduction",'Product Information / Company Introduction'],
+                                                              ["Technical Guidance",'technical_guidance'], ["Recommendation to/from farmers",'recommendation_farmers']]),
+                     {include_blank: ''}, {id: 'meet_farmer_option'}%>
+      </div>
+      <div class="field" id="farmer_div">
+        <%= f.label :farmer_id %><br>
+        <%= f.number_field :farmer_id %>
+      </div>
+      <div class="field" id="crop_id_div">
+        <%= f.label :crop_id %><br>
+        <%= f.number_field :crop_id %>
+      </div>
+
+      <div class="field" id="crop_cod_div">
+        <%=f.label :crop_condition%><br>
+        <%=f.text_field :crop_condition%>
+      </div>
+
+      <div class="field" id="crop_growth_div">
+        <%= f.label :crop_growth_stage %><br>
+        <%= f.text_field :crop_growth_stage %>
+      </div>
+      <div class="field" id="farmer_recommend">
+        <%= f.label :farmer_recommendation %><br>
+        <%= f.text_area :farmer_recommendation %>
+      </div>
+    </div>
+
+
+  <div class="field" id="cf_option">
+    <%= f.label :cf_option, 'C & F' %><br>
+    <%= f.select :cf_option, options_for_select([["Billing",'billing'],["Inventory Check",'inventory_check'],["Deliveries",'deliveries']]),
+                 {include_blank: ''}%>
+  </div>
+
+    <div class="container" id="business_deve_div">
+    <%=f.fields_for :business_developments do |buss|%>
+      <%=render 'business_development_fields', f: buss%>
+          <%end%>
+  </div>
+  <div class="field" id="sr_other">
+    <%= f.label :other %><br>
+    <%= f.text_area :other%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

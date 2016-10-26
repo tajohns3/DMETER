@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sr Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>User</th>
+      <th>Date</th>
+      <th>Pactivity</th>
+      <th>Meet state manager option</th>
+      <th>Pocket</th>
+      <th>Dealer</th>
+      <th>Position</th>
+      <th>Meet sm other</th>
+      <th>Meet dealer option</th>
+      <th>Meet dealer other</th>
+      <th>Meet fa option</th>
+      <th>Meet farmer option</th>
+      <th>Farmer</th>
+      <th>Crop</th>
+      <th>Crop growth stage</th>
+      <th>Farmer recommendation</th>
+      <th>Cf option</th>
+      <th>Other</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sr_activities.each do |sr_activity| %>
+      <tr>
+        <td><%= sr_activity.state_id %></td>
+        <td><%= sr_activity.user_id %></td>
+        <td><%= sr_activity.date %></td>
+        <td><%= sr_activity.pactivity %></td>
+        <td><%= sr_activity.meet_state_manager_option %></td>
+        <td><%= sr_activity.pocket_id %></td>
+        <td><%= sr_activity.dealer_id %></td>
+        <td><%= sr_activity.position_id %></td>
+        <td><%= sr_activity.meet_sm_other %></td>
+        <td><%= sr_activity.meet_dealer_option %></td>
+        <td><%= sr_activity.meet_dealer_other %></td>
+        <td><%= sr_activity.meet_fa_option %></td>
+        <td><%= sr_activity.meet_farmer_option %></td>
+        <td><%= sr_activity.farmer_id %></td>
+        <td><%= sr_activity.crop_id %></td>
+        <td><%= sr_activity.crop_growth_stage %></td>
+        <td><%= sr_activity.farmer_recommendation %></td>
+        <td><%= sr_activity.cf_option %></td>
+        <td><%= sr_activity.other %></td>
+        <td><%= link_to 'Show', sr_activity %></td>
+        <td><%= link_to 'Edit', edit_sr_activity_path(sr_activity) %></td>
+        <td><%= link_to 'Destroy', sr_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sr activity', new_sr_activity_path %>

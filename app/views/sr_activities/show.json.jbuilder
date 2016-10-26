@@ -1,0 +1,1 @@
+json.partial! "sr_activities/sr_activity", sr_activity: @sr_activity

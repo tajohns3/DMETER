@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025041116) do
+ActiveRecord::Schema.define(version: 20161026032048) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -50,6 +50,20 @@ ActiveRecord::Schema.define(version: 20161025041116) do
     t.string   "phone",          limit: 4000
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "business_developments", force: :cascade do |t|
+    t.integer  "pre_demonstration_id", limit: 4
+    t.integer  "pocket_id",            limit: 4
+    t.string   "option",               limit: 4000
+    t.boolean  "sample_request",                    default: false, null: false
+    t.integer  "numattendees",         limit: 4
+    t.integer  "a_attendees",          limit: 4
+    t.integer  "b_attendees",          limit: 4
+    t.integer  "c_attendees",          limit: 4
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.integer  "sr_activity_id",       limit: 4
   end
 
   create_table "crops", force: :cascade do |t|
@@ -323,6 +337,31 @@ ActiveRecord::Schema.define(version: 20161025041116) do
     t.string   "name",       limit: 4000
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "sr_activities", force: :cascade do |t|
+    t.integer  "state_id",                  limit: 4
+    t.integer  "user_id",                   limit: 4
+    t.date     "date"
+    t.string   "pactivity",                 limit: 4000
+    t.string   "meet_state_manager_option", limit: 4000
+    t.integer  "pocket_id",                 limit: 4
+    t.integer  "dealer_id",                 limit: 4
+    t.integer  "position_id",               limit: 4
+    t.text     "meet_sm_other",             limit: 2147483647
+    t.string   "meet_dealer_option",        limit: 4000
+    t.text     "meet_dealer_other",         limit: 2147483647
+    t.string   "meet_fa_option",            limit: 4000
+    t.string   "meet_farmer_option",        limit: 4000
+    t.integer  "farmer_id",                 limit: 4
+    t.integer  "crop_id",                   limit: 4
+    t.string   "crop_growth_stage",         limit: 4000
+    t.text     "farmer_recommendation",     limit: 2147483647
+    t.string   "cf_option",                 limit: 4000
+    t.text     "other",                     limit: 2147483647
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.string   "crop_condition",            limit: 4000
   end
 
   create_table "states", force: :cascade do |t|
