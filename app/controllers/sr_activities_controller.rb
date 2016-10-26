@@ -70,7 +70,7 @@ class SrActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sr_activity_params
-      params.require(:sr_activity).permit(:state_id, :user_id, :date, :pactivity, :meet_state_manager_option, :pocket_id, :dealer_id, :position_id, :meet_sm_other, :meet_dealer_option, :meet_dealer_other, :meet_fa_option, :meet_farmer_option, :farmer_id, :crop_id, :crop_growth_stage, :farmer_recommendation, :cf_option, :other,:crop_condition,
+      params.require(:sr_activity).permit(:state_id, :user_id, :date, :pactivity, :meet_state_manager_option, :pocket_id, :dealer_id, :position_id, :meet_sm_other, :meet_dealer_option, :meet_dealer_other, :meet_fa_option, :meet_farmer_option, :farmer_id, :crop_id, :crop_growth_stage, :farmer_recommendation, :cf_option, :other,:crop_condition,:manager_id,
       business_developments_attributes:[:id,:pre_demonstration_id, :pocket_id, :option, :sample_request, :numattendees, :a_attendees, :b_attendees, :c_attendees,:sr_activity_id,:_destroy])
     end
 end

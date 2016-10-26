@@ -13,21 +13,24 @@
 
   <div class="field">
     <%= f.label :state_id %><br>
-    <%= f.collection_select :state_id, State.all,:id, :state, {include_blank: ''} %>
+    <%= f.collection_select :state_id, State.all,:id, :state, {include_blank: ''},{id: 'sr_state'} %>
   </div>
   <div class="field">
-  <%= f.label :user_id, 'Area Manager' %><br>
-  <%= f.number_field :user_id %>
+  <%= f.label :manager_id, 'Area Manager' %><br>
+    <%=f.grouped_collection_select :manager_id,State.all, :area_managers,:state, :id,:sur_name,{},{id: 'manager'}%>
 </div>
 
     <div class="field">
-      <%= f.label :user_id %><br>
-      <%= f.number_field :user_id %>
+      <%= f.label :user_id, 'Sales Representative' %><br>
+      <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {},{id: 'sale_rep_act_rep'}%>
     </div>
+
+
+
 
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.text_field :date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
   </div>
   <div class="field">
     <%= f.label :pactivity, 'Primary Activity' %><br>

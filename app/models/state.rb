@@ -6,6 +6,7 @@ class State < ActiveRecord::Base
   def area_managers
     users.where(role: 'area_manager')
   end
+
   has_many :prodsamples
   has_many :users
   has_many :pockets

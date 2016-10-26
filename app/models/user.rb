@@ -2,7 +2,11 @@ class User < ActiveRecord::Base
   belongs_to :state
   has_many :dealers
   has_many :fa_activities
+  has_many :sr_activities
+  belongs_to :manager, class_name: "User"
+  has_many :users, class_name: "User", foreign_key: "manager_id"
   scope :area_man, -> { users.where(role: 'area_manager') }
+
 
   before_create :auto_username
   before_create :lower_email
@@ -44,6 +48,10 @@ class User < ActiveRecord::Base
       AdminMailer.new_user_waiting_for_approval(self).deliver
     end
 
+  end
+
+  def sales_rep
+    users.where(role: 'sale_representative')
   end
 
 

@@ -134,4 +134,32 @@ jQuery ->
     else
       $('#business_deve_div').fadeOut()
 
+#filer area managers with states
+jQuery ->
+  $('#manager').parent().hide()
+  users =$('#manager').html()
+  $('#sr_state').change ->
+    state = $('#sr_state :selected').text()
+    escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(users).filter("optgroup[label='#{escaped_state}']").html()
+    if options
+      $('#manager').html(options)
+      $('#manager').parent().show()
+    else
+      $('#manager').empty()
+      $('#manager').parent().hide()
 
+#filter sales reps
+jQuery ->
+  $('#sale_rep_act_rep').parent().hide()
+  users =$('#sale_rep_act_rep').html()
+  $('#manager').change ->
+    manager = $('#manager :selected').text()
+    escaped_manager = manager.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(users).filter("optgroup[label='#{escaped_manager}']").html()
+    if options
+      $('#sale_rep_act_rep').html(options)
+      $('#sale_rep_act_rep').parent().show()
+    else
+      $('#sale_rep_act_rep').empty()
+      $('#sale_rep_act_rep').parent().hide()
