@@ -15,7 +15,11 @@
  *= require_tree .
  *= require_self
  *= require jquery-ui/datepicker
- */
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require dataTables/src/demo_table_jui
+*/
+
 @import "*";
 @import "bootstrap-sprockets";
 @import "bootstrap";

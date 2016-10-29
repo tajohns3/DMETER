@@ -19,6 +19,7 @@
 //= require jquery-ui/datepicker
 //= require bootstrap
 //= require cocoon
+//= require dataTables/jquery.dataTables
 //= require_tree .
 
 $('.dropdown-toggle').dropdown()
