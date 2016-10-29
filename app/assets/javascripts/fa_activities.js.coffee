@@ -9,6 +9,7 @@ jQuery ->
       $('#meet_farm_sele').fadeIn()
     else
       $('#meet_farm_sele').fadeOut()
+      $('#demo_submit').fadeIn()
 
 #meet farmer drop down
 jQuery ->
@@ -150,9 +151,42 @@ jQuery ->
       $('#fa_manager').empty()
       $('#fa_manager').parent().hide()
 
+
 #filter sales reps with area manager
+jQuery ->
+  $('#fa_sales_rep').parent().hide()
+  users =$('#fa_sales_rep').html()
+  $('#fa_manager').change ->
+    manager = $('#fa_manager :selected').text()
+    escaped_manager = manager.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(users).filter("optgroup[label='#{escaped_manager}']").html()
+    if options
+      $('#fa_sales_rep').html(options)
+      $('#fa_sales_rep').parent().show()
+    else
+      $('#fa_sales_rep').empty()
+      $('#fa_sales_rep').parent().hide()
 
+#single toggle
+jQuery ->
+  $(document).on "change",  ->
+    if $('#bulk_sele').val() is "single"
+      $('#single_prod_app').fadeIn()
+      $('#box_prod_app').fadeOut()
+    else if $('#bulk_sele').val() is "box"
+      $('#single_prod_app').fadeOut()
+      $('#box_prod_app').fadeIn()
+    else
+      $('#single_prod_app').fadeOut()
+      $('#box_prod_app').fadeOut()
 
+#demo select toggle submit
+jQuery ->
+  $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
+    if $(this).val() is "demonstration"
+      $('#demo_submit').fadeOut()
+    else
+      $('#demo_submit').fadeIn()
 
 #number of farmers met
 jQuery ->

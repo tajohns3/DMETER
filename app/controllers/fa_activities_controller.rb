@@ -5,6 +5,7 @@ class FaActivitiesController < ApplicationController
   # GET /fa_activities.json
   def index
     @fa_activities = FaActivity.all
+
   end
 
   # GET /fa_activities/1
@@ -22,6 +23,7 @@ class FaActivitiesController < ApplicationController
     pre_demo =@fa_activity.pre_demonstrations.build
     pre_demo.applications.build
     post_demo = @fa_activity.post_demonstrations.build
+
 
 
   end
@@ -96,7 +98,7 @@ class FaActivitiesController < ApplicationController
      assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment, :_destroy],
      pre_demonstrations_attributes: [:id,:farmer_id,:crop_id, :fa_activity_id,:crop_growth,:condition,:demo_code,:_destroy,
      applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment, :_destroy,
-     product_applications_attributes: [:product_id,:application_id,:quantity, :_destroy],],
+     product_applications_attributes: [:product_id,:application_id,:quantity,:single_id,:box_id, :_destroy],],
      demonstrations_attributes: [:pre_demonstration_id, :done_by,:demo_status, :_destroy,
      applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy]]],
       post_demonstrations_attributes: [:demonstration_id, :observation, :contacrsr, :comment, :demo_photo,:fa_activity_id,:_destroy])

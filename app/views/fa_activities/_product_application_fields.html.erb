@@ -4,9 +4,32 @@
     <%= f.collection_select :product_id, Product.all, :id,:name %>
   </div>
 
+  <div>
+    <select name="bulk" id="bulk_sele">
+      <option disabled selected value> ---Pick single or box---</option>
+      <option value="single">Single</option>
+      <option value="box">Box</option>
+    </select>
+  </div>
+
+
+
+
   <div class="field">
     <%= f.label :quantity %><br>
     <%= f.text_field :quantity%>
   </div>
+
+
+
+  <div class="field" id="single_prod_app">
+    <%= f.label :single_id %><br>
+    <%= f.collection_select :single_id, Single.all, :id, :name%>
+  </div>
+
+  <div class="field" id="box_prod_app">
+    <%= f.label :box_id %><br>
+    <%= f.collection_select :box_id, Box.all, :id, :name%>
+  </div><br>
   <%=link_to_remove_association 'Remove product', f, class: 'btn btn-danger' %>
 </div>

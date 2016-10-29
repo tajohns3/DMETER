@@ -69,6 +69,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name)
+      params.require(:product).permit(:name, product_singles_attributes:[:id, :single_id,:product_id, :_destroy], product_boxes_attributes:[:id, :box_id,:product_id, :_destroy])
     end
 end

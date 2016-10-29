@@ -8,7 +8,8 @@ class FaActivity < ActiveRecord::Base
   belongs_to :user
   belongs_to :manager, class_name: "User", foreign_key: "manager_id"
   belongs_to :position
-  belongs_to :crop
+  belongs_to :pocket
+
   accepts_nested_attributes_for :meet_farmers, allow_destroy: true, reject_if: lambda{|a| a[:purpose].blank?}
   accepts_nested_attributes_for :dealer_visits, allow_destroy: true, reject_if: lambda{|b| b[:purpose].blank?}
   accepts_nested_attributes_for :assist_reps, allow_destroy: true, reject_if: lambda{|c| c[:assist].blank?}

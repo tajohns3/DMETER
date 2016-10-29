@@ -4,7 +4,7 @@
 </div>
 <div class="field">
   <%= f.label :crop_id %><br>
-  <%= f.number_field :crop_id %>
+  <%= f.collection_select :crop_id, Crop.all, :id, :crop, {include_blank: ''} %>
 </div>
 <div class="field">
   <%= f.hidden_field :fa_activity_id %>

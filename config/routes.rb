@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :singles
+  resources :boxes
   resources :demonstration_attachments
   resources :meet_sr_farmers
   resources :meet_fas

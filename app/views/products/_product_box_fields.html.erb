@@ -1,0 +1,10 @@
+<div class="nested-field">
+  <div class="field">
+    <%=f.label :box_id, 'Box'%>
+    <%=f.collection_select :box_id, Box.all, :id, :name%>
+  </div>
+
+
+  <%=link_to_remove_association 'Remove Box', f %>
+</div>
+

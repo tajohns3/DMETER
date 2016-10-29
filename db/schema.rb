@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161029104334) do
+ActiveRecord::Schema.define(version: 20161029140206) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(version: 20161029104334) do
     t.string   "phone",          limit: 4000
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "boxes", force: :cascade do |t|
+    t.string   "name",       limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "business_developments", force: :cascade do |t|
@@ -356,6 +362,15 @@ ActiveRecord::Schema.define(version: 20161029104334) do
     t.integer  "quantity",       limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "single_id",      limit: 4
+    t.integer  "box_id",         limit: 4
+  end
+
+  create_table "product_boxes", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "box_id",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "product_prescriptions", force: :cascade do |t|
@@ -373,7 +388,20 @@ ActiveRecord::Schema.define(version: 20161029104334) do
     t.integer  "meet_farmer_id", limit: 4
   end
 
+  create_table "product_singles", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "single_id",  limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
   create_table "products", force: :cascade do |t|
+    t.string   "name",       limit: 4000
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "singles", force: :cascade do |t|
     t.string   "name",       limit: 4000
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false

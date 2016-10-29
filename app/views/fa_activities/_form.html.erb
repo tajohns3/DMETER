@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :pocket_id %><br>
-    <%= f.collection_select :pocket_id,Pocket.all, :id, :pocket_name, {include_blank: ''} %>
+    <%= f.grouped_collection_select :pocket_id,User.all,:pockets,:sur_name, :id, :pocket_name, {include_blank: ''} %>
   </div>
 
     <div class="field">
@@ -89,6 +89,6 @@
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', id: 'demo_submit'%>
   </div>
 <% end %>
