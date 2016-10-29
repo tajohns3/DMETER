@@ -6,7 +6,7 @@
 </div>
 <div class="field" id="pocked_div">
   <%= f.label :pocket_id %><br>
-  <%= f.number_field :pocket_id %>
+  <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {include_blank: ''} %>
 </div>
 <div class="field" id="dealer_div">
   <%= f.label :dealer_id %><br>

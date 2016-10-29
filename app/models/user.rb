@@ -50,6 +50,7 @@ class User < ActiveRecord::Base
 
   end
 
+  ##where im getting sales rep from in sr dropdown code
   def sales_rep
     users.where(role: 'sale_representative')
   end

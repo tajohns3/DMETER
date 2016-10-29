@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026085614) do
+ActiveRecord::Schema.define(version: 20161028193734) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -151,6 +151,7 @@ ActiveRecord::Schema.define(version: 20161026085614) do
     t.datetime "updated_at",                            null: false
     t.string   "activity",           limit: 4000
     t.integer  "position_id",        limit: 4
+    t.integer  "manager_id",         limit: 4
   end
 
   create_table "fa_targets", force: :cascade do |t|

@@ -14,16 +14,16 @@
 
   <div class="field">
     <%= f.label :state_id %><br>
-    <%= f.collection_select :state_id, State.all, :id, :state, {include_blank: ''} %>
+    <%= f.collection_select :state_id, State.all, :id, :state, {include_blank: ''}, {id: 'fa_state'} %>
   </div>
   <div class="field">
     <%= f.label :user_id, 'Area Manager' %><br>
-    <%= f.collection_select :user_id, User.where(role: 'area_manager'), :id, :sur_name,  include_blank: true %>
+    <%= f.grouped_collection_select :user_id, State.all,:area_managers,:state, :id, :sur_name,  {include_blank: true},{id: 'fa_manager'} %>
   </div>
 
     <div class="field">
       <%= f.label :user_id, 'Sales Representative' %><br>
-      <%= f.collection_select :user_id, User.where(role: 'sale_representative'), :id, :sur_name,  include_blank: true %>
+      <%= f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id, :sur_name,  {include_blank: true}, {id: 'fa_sales_rep'} %>
     </div>
 
   <div class="field">
@@ -49,18 +49,18 @@
     </div>
 
     <div>
-      <div id="meet_farm_sele", class="container">
+      <div id="meet_farm_sele" class="container">
       <%= f.fields_for :meet_farmers do |meet|%>
           <%=render 'meet_farmer_fields', f: meet%>
       <%end%>
 
-        <div class="container", id="demo_meeting">
+        <div class="container" id="demo_meeting">
           <%=f.fields_for :pre_demonstrations do |predemo|%>
               <%= render 'pre_demonstration_fields', f: predemo%>
           <%end%>
         </div>
 
-        <div class="container", id="post_demo_meeting">
+        <div class="container" id="post_demo_meeting">
           <%=f.fields_for :post_demonstrations do |postdemo|%>
           <%= render 'post_demonstration_fields', f: postdemo%>
               <%end%>
@@ -69,13 +69,13 @@
       </div>
     </div>
 
-    <div id="dealer_shop", class="container">
+    <div id="dealer_shop" class="container">
       <%= f.fields_for :dealer_visits do |deal|%>
           <%=render 'dealer_visit_fields', f: deal%>
           <%end%>
     </div>
 
-    <div class="container", id="assist_mvc">
+    <div class="container" id="assist_mvc">
       <%=f.fields_for :assist_reps do |assist|%>
       <%=render 'assist_rep_fields', f: assist%>
           <%end%>

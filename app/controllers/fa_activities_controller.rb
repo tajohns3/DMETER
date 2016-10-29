@@ -41,6 +41,14 @@ class FaActivitiesController < ApplicationController
         format.html { redirect_to @fa_activity, notice: 'Fa activity was successfully created.' }
         format.json { render :show, status: :created, location: @fa_activity }
       else
+        meet_farmer =@fa_activity.meet_farmers.build
+        meet_farmer.product_prescriptions.build
+        @fa_activity.dealer_visits.build
+       @fa_activity.assist_reps.build
+        pre_demo =@fa_activity.pre_demonstrations.build
+        pre_demo.applications.build
+        @fa_activity.post_demonstrations.build
+
         format.html { render :new }
         format.json { render json: @fa_activity.errors, status: :unprocessable_entity }
       end

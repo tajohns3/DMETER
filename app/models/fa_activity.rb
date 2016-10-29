@@ -6,6 +6,7 @@ class FaActivity < ActiveRecord::Base
   has_many :post_demonstrations
   belongs_to :state
   belongs_to :user
+  belongs_to :manager, class_name: "User", foreign_key: "manager_id"
   belongs_to :position
   belongs_to :crop
   accepts_nested_attributes_for :meet_farmers, allow_destroy: true, reject_if: lambda{|a| a[:purpose].blank?}
@@ -14,5 +15,7 @@ class FaActivity < ActiveRecord::Base
   accepts_nested_attributes_for :pre_demonstrations, allow_destroy: true, reject_if: lambda{|d| d[:farmer_id].blank?}
   accepts_nested_attributes_for :post_demonstrations, allow_destroy: true, reject_if: lambda{|d| d[:observation].blank?}
 
+
+  validates :state_id, :user_id,:pocket_id, :position_id,:date,:activity, presence: true
 
 end

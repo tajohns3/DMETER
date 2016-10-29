@@ -17,12 +17,12 @@
   </div>
   <div class="field">
   <%= f.label :manager_id, 'Area Manager' %><br>
-    <%=f.grouped_collection_select :manager_id,State.all, :area_managers,:state, :id,:sur_name,{},{id: 'manager'}%>
+    <%=f.grouped_collection_select :manager_id,State.all, :area_managers,:state, :id,:sur_name,{include_blank: ''},{id: 'manager'}%>
 </div>
 
     <div class="field">
       <%= f.label :user_id, 'Sales Representative' %><br>
-      <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {},{id: 'sale_rep_act_rep'}%>
+      <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {include_blank: ''},{id: 'sale_rep_act_rep'}%>
     </div>
 
 

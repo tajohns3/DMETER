@@ -134,6 +134,25 @@ jQuery ->
     else
       $('#business_deve_div').fadeOut()
 
+
+#buss dev demonstration
+jQuery ->
+  $('#buss_development').on "change", ->
+    if $(this).val() is "organize farmer meeting"
+      $('#buss_demo_div').fadeIn()
+    else
+      $('#buss_demo_div').fadeOut()
+
+#organize dealer meeting
+jQuery ->
+  $('#buss_development').on "change", ->
+    if $(this).val() is "organize dealer meeting"
+      $('#attendees_type_div').fadeIn()
+      $('#buss_dev_pocket').fadeIn()
+    else
+      $('#attendees_type_div').fadeOut()
+      $('#buss_dev_pocket').fadeOut()
+
 #filer area managers with states
 jQuery ->
   $('#manager').parent().hide()

@@ -133,6 +133,27 @@ jQuery ->
     else
       $('#inventory_checker').fadeOut()
 
+
+
+#filer area managers with states
+jQuery ->
+  $('#fa_manager').parent().hide()
+  users =$('#fa_manager').html()
+  $('#fa_state').change ->
+    state = $('#fa_state :selected').text()
+    escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(users).filter("optgroup[label='#{escaped_state}']").html()
+    if options
+      $('#fa_manager').html(options)
+      $('#fa_manager').parent().show()
+    else
+      $('#fa_manager').empty()
+      $('#fa_manager').parent().hide()
+
+#filter sales reps with area manager
+
+
+
 #number of farmers met
 jQuery ->
   $('#fa_activity_meet_farmers_attributes_0_number_farmer').on "change", ->
