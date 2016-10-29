@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :demonstration_attachments
   resources :meet_sr_farmers
   resources :meet_fas
   resources :meet_dealers

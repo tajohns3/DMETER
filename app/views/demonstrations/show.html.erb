@@ -21,10 +21,14 @@
 </p>
 
 
-<p>
-  <strong>Upload Results</strong>
-  <%= link_to (image_tag(@demonstration.image_url(:thumb))).to_s, @demonstration.image_url %>
 
+<p>
+  <strong>Nested Results</strong>
+  <%@demonstration.demonstration_attachments.each do |demo_a|%>
+  <%=link_to (image_tag(demo_a.avatar_url(:thumb))).to_s, demo_a.avatar_url%>
+      <%end%>
 </p>
+
+
 <%= link_to 'Edit', edit_demonstration_path(@demonstration) %> |
 <%= link_to 'Back', demonstrations_path %>

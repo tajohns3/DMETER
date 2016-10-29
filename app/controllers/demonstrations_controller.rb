@@ -10,6 +10,7 @@ class DemonstrationsController < ApplicationController
   # GET /demonstrations/1
   # GET /demonstrations/1.json
   def show
+
   end
 
   # GET /demonstrations/new
@@ -17,10 +18,12 @@ class DemonstrationsController < ApplicationController
     @demonstration = Demonstration.new
     @pre_demonstration =PreDemonstration.find(params[:pre_id])
     @demonstration.applications.build
+
   end
 
   # GET /demonstrations/1/edit
   def edit
+    @pre_demonstration = @demonstration.pre_demonstration
   end
 
   # POST /demonstrations
@@ -30,6 +33,7 @@ class DemonstrationsController < ApplicationController
 
     respond_to do |format|
       if @demonstration.save
+
         format.html { redirect_to @demonstration, notice: 'Demonstration was successfully created.' }
         format.json { render :show, status: :created, location: @demonstration }
       else
@@ -71,7 +75,8 @@ class DemonstrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def demonstration_params
-      params.require(:demonstration).permit(:pre_demonstration_id, :appdone_by, :demo_status, :fa_activity_id,:image,:demo_code,:position_id,
-      applications_attributes: [:id,:pre_demonstration_id,:demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy])
+      params.require(:demonstration).permit(:pre_demonstration_id, :appdone_by, :demo_status, :fa_activity_id,:demo_code,:position_id,
+      applications_attributes: [:id,:pre_demonstration_id,:demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy],
+      demonstration_attachments_attributes:[:id, :demonstration_id, :avatar,:_destroy])
     end
 end

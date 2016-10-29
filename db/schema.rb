@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028193734) do
+ActiveRecord::Schema.define(version: 20161029104334) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -96,6 +96,13 @@ ActiveRecord::Schema.define(version: 20161028193734) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "demonstration_attachments", force: :cascade do |t|
+    t.integer  "demonstration_id", limit: 4
+    t.string   "avatar",           limit: 4000
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
   create_table "demonstrations", force: :cascade do |t|
     t.integer  "pre_demonstration_id", limit: 4
     t.string   "appdone_by",           limit: 4000
@@ -103,12 +110,6 @@ ActiveRecord::Schema.define(version: 20161028193734) do
     t.integer  "fa_activity_id",       limit: 4
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
-    t.string   "image",                limit: 4000
-    t.string   "demo_pic",             limit: 4000
-    t.string   "photo_file_name",      limit: 4000
-    t.string   "photo_content_type",   limit: 4000
-    t.integer  "photo_file_size",      limit: 4
-    t.datetime "photo_updated_at"
     t.string   "demo_code",            limit: 4000
     t.integer  "position_id",          limit: 4
   end

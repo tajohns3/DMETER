@@ -22,6 +22,7 @@
 //= require bootstrap-multiselect
 //= require_tree .
 
+//for the ajax call to get demonstration to appear in fa acts
 $('.dropdown-toggle').dropdown()
 
 $(document).on("change","#field_assist",function(){
