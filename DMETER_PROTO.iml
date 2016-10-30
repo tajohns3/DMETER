@@ -30,6 +30,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.2.5.1, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord-sqlserver-adapter (v4.2.15, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.2.5.1, rbenv: 2.1.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ajax-datatables-rails (v0.3.1, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.3, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v6.5.0.2, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, rbenv: 2.1.7) [gem]" level="application" />
@@ -50,12 +51,14 @@
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.2, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.2.0, rbenv: 2.1.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dossier (v2.13.1, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.7, rbenv: 2.1.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.7, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.6.0, rbenv: 2.1.7) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jquery-datatables-rails (v3.4.0@d486b3, rbenv: 2.1.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-datatables-rails (v3.4.0, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.2.1, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-ui-rails (v5.0.5, rbenv: 2.1.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, rbenv: 2.1.7) [gem]" level="application" />

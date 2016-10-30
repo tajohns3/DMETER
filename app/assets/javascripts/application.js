@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require jquery-ui/datepicker
 //= require bootstrap-datepicker
-
-//= require bootstrap
-//= require jquery-ui/datepicker
 //= require bootstrap
 //= require cocoon
 //= require dataTables/jquery.dataTables
