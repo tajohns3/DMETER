@@ -17,7 +17,12 @@
 //= require bootstrap
 //= require cocoon
 //= require dataTables/jquery.dataTables
+//= require underscore
 //= require_tree .
 
 $('.dropdown-toggle').dropdown()
+
+$(document).ready(function() {
+    DependentFields.bind()
+});
 
