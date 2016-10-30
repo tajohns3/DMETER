@@ -13,9 +13,20 @@
   <%= f.text_area :comment %>
 </div>
 <div class="field", id="demo_pictures">
-  <%= f.label :demo_photo, 'Pre Demonstration Upload' %><br>
-  <%= f.file_field :demo_photo%>
+  <div>
+    <%= f.fields_for :demonstration_attachments do |da| %><br>
+        <%=render 'demonstration_attachment_fields', f: da %>
+    <%end%>
+    <div class="links">
+      <%=link_to_add_association 'Add Image', f, :demonstration_attachments%>
+    </div>
+
+  </div>
+
 </div>
+
+
+
 <div class="field">
   <%= f.label :contacrsr, 'Contact Sales Representative' %><br>
   <%= f.check_box :contacrsr %>

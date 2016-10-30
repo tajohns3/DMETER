@@ -101,6 +101,7 @@ class FaActivitiesController < ApplicationController
      product_applications_attributes: [:product_id,:application_id,:quantity,:single_id,:box_id, :_destroy],],
      demonstrations_attributes: [:pre_demonstration_id, :done_by,:demo_status, :_destroy,
      applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy]]],
-      post_demonstrations_attributes: [:demonstration_id, :observation, :contacrsr, :comment, :demo_photo,:fa_activity_id,:_destroy])
+      post_demonstrations_attributes: [:demonstration_id, :observation, :contacrsr, :comment, :demo_photo,:fa_activity_id,:_destroy,
+                                       demonstration_attachments_attributes:[:id,:demonstration_id,:avatar,:post_demonstration_id, :_destroy]])
     end
 end

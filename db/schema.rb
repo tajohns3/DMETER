@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161029140206) do
+ActiveRecord::Schema.define(version: 20161029223208) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -103,10 +103,11 @@ ActiveRecord::Schema.define(version: 20161029140206) do
   end
 
   create_table "demonstration_attachments", force: :cascade do |t|
-    t.integer  "demonstration_id", limit: 4
-    t.string   "avatar",           limit: 4000
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.integer  "demonstration_id",      limit: 4
+    t.string   "avatar",                limit: 4000
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "post_demonstration_id", limit: 4
   end
 
   create_table "demonstrations", force: :cascade do |t|
