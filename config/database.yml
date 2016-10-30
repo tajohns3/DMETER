@@ -11,13 +11,13 @@ default: &default
 
 development:
   adapter: sqlserver
-  host: ELEVEN_FOLD
+  host: 192.168.1.215
   database: DMETERDBPROTO
   username: dmeterlog2
   password: password
   port: 1433
   # default
-  # port: 1433 # default is 1433
+  # port: 1433 # default is 1433t
   # default
   # mode: dblib
   # dataserver: <name from freetds.conf>

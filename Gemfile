@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -16,7 +16,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'cocoon'
 gem 'jquery-ui-rails'
-gem 'rmagick', '~> 2.16.0'
+
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'jquery-ui-rails'
 gem 'bootstrap-datepicker-rails'
@@ -41,7 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 # Use paperclip for attaching photos
-gem "paperclip", "~> 5.0.0"
+gem "paperclip"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

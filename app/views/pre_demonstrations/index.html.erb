@@ -1,37 +1,97 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pre Demonstrations</h1>
+<html lang="en">
 
-<table>
-  <thead>
-    <tr>
-      <th>Farmer</th>
-      <th>Crop</th>
-      <th>Fa activity</th>
-      <th>Crop growth</th>
-      <th>Condition</th>
-      <th>Demo code</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
 
-  <tbody>
-    <% @pre_demonstrations.each do |pre_demonstration| %>
-      <tr>
-        <td><%= pre_demonstration.farmer_id %></td>
-        <td><%= pre_demonstration.crop_id %></td>
-        <td><%= pre_demonstration.fa_activity_id %></td>
-        <td><%= pre_demonstration.crop_growth %></td>
-        <td><%= pre_demonstration.condition %></td>
-        <td><%= pre_demonstration.demo_code %></td>
-        <td><%= link_to 'Show', pre_demonstration %></td>
-        <td><%= link_to 'Edit', edit_pre_demonstration_path(pre_demonstration) %></td>
-        <td><%= link_to 'Destroy', pre_demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<body>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Pre-Demonstrations</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                Farmer
+              </th>
+              <th class="text-center">
+                Crop
+              </th>
+              <th class="text-center">
+                FA Activity
+              </th>
+              <th class="text-center">
+                Crop Growth
+              </th>
+              <th class="text-center">
+                Crop Condition
+              </th>
+              <th class="text-center">
+                Demo Code
+              </th>
+              <td class="text-center">
+                <%= link_to 'New Pre-Demonstration', new_pre_demonstration_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
+              </td>
+            </tr>
+            <tr>
+              <% @pre_demonstrations.each do |pre_demo| %>
+                  <td class="text-center">
+                    <%= pre_demo.farmer_id %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.crop_id %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.fa_activity_id %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.crop_growth %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.demo_code %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View Pre-Demonstrations', pre_demo, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  </tr>
+              <% end %>
+                  </tbody>
+                  </table>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+                  >
+                  </script>
+                  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+                  >
+                  </script>
+                  </body>
+</html>
 
-<br>
-
-<%= link_to 'New Pre demonstration', new_pre_demonstration_path %>
