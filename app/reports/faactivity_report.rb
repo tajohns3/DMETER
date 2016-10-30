@@ -1,5 +1,5 @@
 
-class DealersReport < Dossier::Report
+class FaactivityReport < Dossier::Report
   def sql
     "Select name from farmers"
   end
