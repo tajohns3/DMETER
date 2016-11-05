@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @dealer_blank.dealer_id %>
+</p>
+
+<p>
+  <strong>Blank check:</strong>
+  <%= @dealer_blank.blank_check_id %>
+</p>
+
+<%= link_to 'Edit', edit_dealer_blank_path(@dealer_blank) %> |
+<%= link_to 'Back', dealer_blanks_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank name:</strong>
+  <%= @security_check.bank_name %>
+</p>
+
+<p>
+  <strong>Check number:</strong>
+  <%= @security_check.check_number %>
+</p>
+
+<p>
+  <strong>Bank account:</strong>
+  <%= @security_check.bank_account %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @security_check.amount %>
+</p>
+
+<p>
+  <strong>Issue date:</strong>
+  <%= @security_check.issue_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @security_check.status %>
+</p>
+
+<%= link_to 'Edit', edit_security_check_path(@security_check) %> |
+<%= link_to 'Back', security_checks_path %>

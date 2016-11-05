@@ -4,6 +4,7 @@ class Pocket < ActiveRecord::Base
   belongs_to :state
   has_many :field_assistants
   has_many :positions
+  has_many :dealers
 
   has_many :districts, through: :pocket_districts
   has_many :pocket_districts
@@ -21,5 +22,6 @@ class Pocket < ActiveRecord::Base
   def total_pdeals
     self.type_a + self.type_b + self.type_c + self.type_d
   end
+
 
 end

@@ -1,0 +1,1 @@
+json.array! @dealer_blanks, partial: 'dealer_blanks/dealer_blank', as: :dealer_blank

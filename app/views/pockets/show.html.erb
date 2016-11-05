@@ -1,12 +1,15 @@
-<p id="notice"><%= notice %></p>
+
 
 <body>
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading text-center">
       <h1 class="panel-title text-center">
+        <%= link_to 'Back', pockets_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+        <%= link_to 'Edit', edit_pocket_path(@pocket), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
         <strong>Pocket:</strong>
         <%= @pocket.pocket_name %>
+        <%= link_to 'Delete', pocket_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
       </h1>
     </div>
     <div class="panel-body">
@@ -148,7 +151,7 @@
                         Farmer
                       </th>
                       <th class="text-center">
-                        FA
+                        Field Assistant
                       </th>
                     </tr>
                     <tr>
@@ -164,7 +167,7 @@
                       </th>
                       <th class="text-center">
                         <% @pocket.pocket_dats.each do |pockinfo| %>
-                            <%= pockinfo.taluka %><br><br>
+                            <%= pockinfo.dealer.name %><br><br>
                         <% end %>
                       </th>
                       <th class="text-center">
@@ -174,7 +177,7 @@
                       </th>
                       <th class="text-center">
                         <% @pocket.pocket_dats.each do |pockinfo| %>
-                            <%= pockinfo.taluka %><br><br>
+                            <%= pockinfo.position.fa_name %><br><br>
                         <% end %>
                       </th>
                     </tr>
@@ -187,22 +190,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <%= link_to 'Back', pockets_path, class: "btn btn-danger",:style=>'color:#FFFFFF'%>
-          <%= link_to 'Edit', edit_pocket_path(@pocket), class: "btn btn-primary",:style=>'color:#FFFFFF' %>
-        </div>
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-12">
         </div>
       </div>
     </div>
   </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
->
-</script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
->
-</script>
 </body>

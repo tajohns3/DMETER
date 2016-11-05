@@ -1,0 +1,1 @@
+json.partial! "blank_checks/blank_check", blank_check: @blank_check

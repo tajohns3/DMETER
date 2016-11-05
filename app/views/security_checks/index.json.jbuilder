@@ -1,0 +1,1 @@
+json.array! @security_checks, partial: 'security_checks/security_check', as: :security_check

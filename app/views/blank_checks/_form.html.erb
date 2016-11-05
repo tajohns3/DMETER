@@ -1,0 +1,33 @@
+<%= form_for(@blank_check) do |f| %>
+  <% if @blank_check.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blank_check.errors.count, "error") %> prohibited this blank_check from being saved:</h2>
+
+      <ul>
+      <% @blank_check.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bank_name %><br>
+    <%= f.text_field :bank_name %>
+  </div>
+  <div class="field">
+    <%= f.label :blank_check %><br>
+    <%= f.text_field :blank_check %>
+  </div>
+  <div class="field">
+    <%= f.label :bank_account %><br>
+    <%= f.number_field :bank_account %>
+  </div>
+  <div class="field">
+    <%= f.label :cheque_num %><br>
+    <%= f.number_field :cheque_num %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,43 +1,82 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Dealers</h1>
+<html lang="en">
 
-<table>
-  <thead>
-    <tr>
-      <th>State</th>
-      <th>User</th>
-      <th>Pocket</th>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Atpost</th>
-      <th>Pin code</th>
-      <th>Taluka</th>
-      <th>District</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
 
-  <tbody>
-    <% @dealers.each do |dealer| %>
-      <tr>
-        <td><%= dealer.state_id %></td>
-        <td><%= dealer.user_id %></td>
-        <td><%= dealer.pocket_id %></td>
-        <td><%= dealer.name %></td>
-        <td><%= dealer.address %></td>
-        <td><%= dealer.atpost %></td>
-        <td><%= dealer.pin_code %></td>
-        <td><%= dealer.taluka_id %></td>
-        <td><%= dealer.district_id %></td>
-        <td><%= link_to 'Show', dealer %></td>
-        <td><%= link_to 'Edit', edit_dealer_path(dealer) %></td>
-        <td><%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<body>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Dealers</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+               Dealer Name
+              </th>
+              <th class="text-center">
+                State
+              </th>
+              <th class="text-center">
+                State Manager
+              </th>
+              <th class="text-center">
+                Pocket
+              </th>
+              <td class="text-center">
+                <%= link_to 'New Dealer', new_dealer_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
+              </td>
+            </tr>
+            <tr>
+              <% @dealers.each do |deal| %>
+                  <td class="text-center">
+                    <%= deal.name %>
+                  </td>
+                  <td class="text-center">
+                    <%= deal.state.state%>
+                  </td>
+                  <td class="text-center">
+                    <%= deal.user_id %>
+                  </td>
+                  <td class="text-center">
+                    <%= deal.pocket.pocket_name %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View Dealer', deal, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 
-<br>
-
-<%= link_to 'New Dealer', new_dealer_path %>
+</html>

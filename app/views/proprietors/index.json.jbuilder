@@ -1,0 +1,1 @@
+json.array! @proprietors, partial: 'proprietors/proprietor', as: :proprietor

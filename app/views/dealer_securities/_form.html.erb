@@ -1,0 +1,25 @@
+<%= form_for(@dealer_security) do |f| %>
+  <% if @dealer_security.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dealer_security.errors.count, "error") %> prohibited this dealer_security from being saved:</h2>
+
+      <ul>
+      <% @dealer_security.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dealer_id %><br>
+    <%= f.number_field :dealer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :security_check_id %><br>
+    <%= f.number_field :security_check_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

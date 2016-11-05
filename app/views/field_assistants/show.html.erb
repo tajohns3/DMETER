@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
+
 
 <body>
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading text-center">
       <h1 class="panel-title text-center">
+        <%= link_to 'Back', field_assistants_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+        <%= link_to 'Edit', edit_field_assistant_path(@field_assistant), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+        <%= link_to 'Delete', field_assistant_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
         <strong>Position:</strong>
         <%= @field_assistant.fa_num %>
       </h1>
@@ -170,22 +173,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <%= link_to 'Back', field_assistants_path, class: "btn btn-danger",:style=>'color:#FFFFFF'%>
-          <%= link_to 'Edit', edit_field_assistant_path(@field_assistant), class: "btn btn-primary",:style=>'color:#FFFFFF' %>
-        </div>
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-12">
         </div>
       </div>
     </div>
   </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
->
-</script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
->
-</script>
+
 </body>

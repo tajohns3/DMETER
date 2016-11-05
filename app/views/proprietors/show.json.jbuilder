@@ -1,0 +1,1 @@
+json.partial! "proprietors/proprietor", proprietor: @proprietor

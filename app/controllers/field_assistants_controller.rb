@@ -18,7 +18,7 @@ class FieldAssistantsController < ApplicationController
   # GET /field_assistants/new
   def new
     @field_assistant = FieldAssistant.new
-    50.times{@field_assistant.fa_targets.build}
+    target =@field_assistant.fa_targets.build
   end
 
   # GET /field_assistants/1/edit

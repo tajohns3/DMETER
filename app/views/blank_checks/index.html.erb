@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Blank Checks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bank name</th>
+      <th>Blank check</th>
+      <th>Bank account</th>
+      <th>Cheque num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blank_checks.each do |blank_check| %>
+      <tr>
+        <td><%= blank_check.bank_name %></td>
+        <td><%= blank_check.blank_check %></td>
+        <td><%= blank_check.bank_account %></td>
+        <td><%= blank_check.cheque_num %></td>
+        <td><%= link_to 'Show', blank_check %></td>
+        <td><%= link_to 'Edit', edit_blank_check_path(blank_check) %></td>
+        <td><%= link_to 'Destroy', blank_check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blank check', new_blank_check_path %>

@@ -1,0 +1,1 @@
+json.array! @dealer_props, partial: 'dealer_props/dealer_prop', as: :dealer_prop
