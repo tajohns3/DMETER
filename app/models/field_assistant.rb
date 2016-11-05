@@ -12,4 +12,6 @@ class FieldAssistant < ActiveRecord::Base
     "#{self.state.abbreviation}" + "-" + "#{self.pocket.pocket_name}" + "-" + "0" + "#{self.id}"
   end
 
+
+
 end

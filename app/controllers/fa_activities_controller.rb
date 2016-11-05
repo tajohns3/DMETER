@@ -21,9 +21,8 @@ class FaActivitiesController < ApplicationController
     dealer_visit = @fa_activity.dealer_visits.build
     assist_rep = @fa_activity.assist_reps.build
     pre_demo =@fa_activity.pre_demonstrations.build
-    pre_demo.applications.build
+    prod = pre_demo.applications.build
     post_demo = @fa_activity.post_demonstrations.build
-
 
 
   end
@@ -40,8 +39,12 @@ class FaActivitiesController < ApplicationController
 
     respond_to do |format|
       if @fa_activity.save
+        if params[:source] == 'Next'
+          format.html {redirect_to pre_demonstrations_path(:pending =>@fa_activity.position_id)}
+        else
         format.html { redirect_to @fa_activity, notice: 'Fa activity was successfully created.' }
         format.json { render :show, status: :created, location: @fa_activity }
+        end
       else
         meet_farmer =@fa_activity.meet_farmers.build
         meet_farmer.product_prescriptions.build

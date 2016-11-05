@@ -29,4 +29,9 @@ class Pocket < ActiveRecord::Base
   def pockets
     Pocket.all
   end
+
+  def pock_finder
+   self.field_assistants.collect(&:positions).flatten.uniq
+
+  end
 end

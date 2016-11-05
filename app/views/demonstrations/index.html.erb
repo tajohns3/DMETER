@@ -1,34 +1,66 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Demonstrations</h1>
+<%= will_paginate%>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Demonstrations</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                Pre demonstration
+              </th>
+              <th class="text-center">
+                Appdone by
+              </th>
+              <th class="text-center">
+                Demo status
+              </th>
+              <th class="text-center">
+                Field Assistant
+              </th>
 
-<table>
-  <thead>
-    <tr>
-      <th>Pre demonstration</th>
-      <th>Appdone by</th>
-      <th>Demo status</th>
-      <th>Fa activity</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+            </tr>
+            <tr>
+              <% @demonstrations.each do |demonstration| %>
+                  <td class="text-center">
+                    <%= demonstration.demo_code  %>
+                  </td>
+                  <td class="text-center">
+                    <%= demonstration.appdone_by %>
+                  </td>
+                  <td class="text-center">
+                    <%= demonstration.demo_status %>
+                  </td>
+                  <td class="text-center">
+                    <%= demonstration.position.surname  %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View Demonstration', demonstration, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  <td><%= link_to 'Delete', demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <tbody>
-    <% @demonstrations.each do |demonstration| %>
-      <tr>
-        <td><%= demonstration.pre_demonstration_id %></td>
-        <td><%= demonstration.appdone_by %></td>
-        <td><%= demonstration.demo_status %></td>
-        <td><%= demonstration.fa_activity_id %></td>
-
-        <td><%= link_to 'Show', demonstration %></td>
-        <td><%= link_to 'Edit', edit_demonstration_path(demonstration) %></td>
-        <td><%= link_to 'Destroy', demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Demonstration', new_demonstration_path %>
+<%= will_paginate%>

@@ -35,7 +35,15 @@ class SrActivitiesController < ApplicationController
       if @sr_activity.save
         format.html { redirect_to @sr_activity, notice: 'Sr activity was successfully created.' }
         format.json { render :show, status: :created, location: @sr_activity }
+
       else
+
+        @sr_activity.business_developments.build
+        @sr_activity.meet_state_managers.build
+        @sr_activity.meet_dealers.build
+        @sr_activity.meet_fas.build
+        @sr_activity.meet_sr_farmers.build
+
         format.html { render :new }
         format.json { render json: @sr_activity.errors, status: :unprocessable_entity }
       end

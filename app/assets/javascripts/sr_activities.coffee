@@ -155,7 +155,8 @@ jQuery ->
 
 #filer area managers with states
 jQuery ->
-  $('#manager').parent().hide()
+
+#  $('#manager').parent().hide()
   users =$('#manager').html()
   $('#sr_state').change ->
     state = $('#sr_state :selected').text()
@@ -163,14 +164,14 @@ jQuery ->
     options = $(users).filter("optgroup[label='#{escaped_state}']").html()
     if options
       $('#manager').html(options)
-      $('#manager').parent().show()
+#      $('#manager').parent().show()
     else
       $('#manager').empty()
-      $('#manager').parent().hide()
+#      $('#manager').parent().hide()
 
 #filter sales reps
 jQuery ->
-  $('#sale_rep_act_rep').parent().hide()
+#  $('#sale_rep_act_rep').parent().hide()
   users =$('#sale_rep_act_rep').html()
   $('#manager').change ->
     manager = $('#manager :selected').text()
@@ -178,7 +179,7 @@ jQuery ->
     options = $(users).filter("optgroup[label='#{escaped_manager}']").html()
     if options
       $('#sale_rep_act_rep').html(options)
-      $('#sale_rep_act_rep').parent().show()
+#      $('#sale_rep_act_rep').parent().show()
     else
       $('#sale_rep_act_rep').empty()
-      $('#sale_rep_act_rep').parent().hide()
+#      $('#sale_rep_act_rep').parent().hide()

@@ -12,4 +12,8 @@ class SrActivity < ActiveRecord::Base
   accepts_nested_attributes_for :meet_dealers, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :meet_fas, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :meet_sr_farmers, allow_destroy: true, reject_if: :all_blank
+
+  validates :state_id, :user_id, :manager_id, :date, :pactivity, presence: true
+
+
 end

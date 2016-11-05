@@ -4,8 +4,18 @@ class DemonstrationsController < ApplicationController
   # GET /demonstrations
   # GET /demonstrations.json
   def index
-    @demonstrations = Demonstration.all
+    if params[:active]==nil
+      @demonstrations = Demonstration.where(demo_status: 'active').limit(1).paginate(page: params[:page], per_page: 20)
+    else
+      @demonstrations = Demonstration.paginate(page: params[:page], per_page: 20)
+    end
+
+
+
+
   end
+
+
 
   # GET /demonstrations/1
   # GET /demonstrations/1.json
@@ -62,7 +72,7 @@ class DemonstrationsController < ApplicationController
   def destroy
     @demonstration.destroy
     respond_to do |format|
-      format.html { redirect_to demonstrations_url, notice: 'Demonstration was successfully destroyed.' }
+      format.html { redirect_to demonstrations_url, notice: 'Demonstration was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -75,7 +85,7 @@ class DemonstrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def demonstration_params
-      params.require(:demonstration).permit(:pre_demonstration_id, :appdone_by, :demo_status, :fa_activity_id,:demo_code,:position_id,
+      params.require(:demonstration).permit(:pre_demonstration_id, :demo_status, :fa_activity_id,:demo_code,:position_id,
       applications_attributes: [:id,:pre_demonstration_id,:demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy],
       demonstration_attachments_attributes:[:id, :demonstration_id, :avatar,:_destroy])
     end

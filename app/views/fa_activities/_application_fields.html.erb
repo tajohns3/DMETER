@@ -11,9 +11,9 @@
 
 
 
-  <div class="field">
+  <div>
     <%=f.fields_for :product_applications do |prod|%>
-        <%=render 'product_application_fields', f: :prod%>
+        <%=render 'product_application_fields', f: prod%>
     <%end%>
     <div class="links">
       <%=link_to_add_association 'Add Product ', f, :product_applications, class: 'btn btn-info'%>

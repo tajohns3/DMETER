@@ -1,30 +1,70 @@
-<%@pre_demonstration.applications.each do |date| %>
-    <div class="field">
-      <%=f.label :app_date, 'Application Date'%><br>
-      <%= f.text_field :app_date, value: date.app_date, id: 'app_date',"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}%>
-    </div>
 
-    <label>Changed Date?</label>
-    <label><input type="checkbox" id="chbox1" value="change_app_date">Yes</label><br>
+    <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading ">
+        <h3 class="panel-title ">
+          <b> Product Application Information</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <tbody>
+              <%@pre_demonstration.applications.each do |date| %>
+              <tr>
+                <th class="text-center">
+                  <%=f.label :application_by, 'Application Done By' %>
+                </th>
+                <th class="text-center">
+                  <%=f.label :app_date, 'Application Date'%>
+                </th>
+                <th class="text-center">
+                  <%=f.label :app_comment, 'Application Date Change Reason'%>
+                </th>
+                <th class="text-center">
+                  <%=f.label :follow_date, 'Follow Up Date'%>
+                </th>
+                <th class="text-center">
+                  <%=f.label :follow_comment, 'Follow Up  Date Change Reason'%>
+                </th>
 
-    <div class="field" id="app_comment_field">
-      <%=f.label :app_comment, 'Application Date Change Reason'%><br>
-      <%=f.text_area :app_comment%>
-    </div>
+              </tr>
+              <tr>
 
-
-
-
-
-    <div class="field">
-      <%=f.label :follow_date, 'Follow Up Date'%><br>
-      <%= f.text_field :follow_date, value: date.follow_date, id: 'follow_date',"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}%>
-    </div>
-
-    <label>Changed Date?</label>
-    <label><input type="checkbox" id="chbox2" value="change_follow_date">Yes</label><br>
-    <div class="field" id="follow_comment_field">
-      <%=f.label :follow_comment, 'Follow Up  Date Change Reason'%><br>
-      <%=f.text_area :follow_comment%>
-    </div>
+                    <td class="text-center">
+                      <%=f.select :application_by, options_for_select([["Self",'self'],["Farmer in presence of FA",'Farmer in presence of FA'],
+                                                                       ["Farmer in absence of FA",'Farmer in absence of FA']]),{},{class: 'form-control'}%>
+                    </td>
+                    <td class="text-center">
+                      <%= f.text_field :app_date, value: date.app_date, id: 'app_date',"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control'%>
+                    </td>
+                    <td class="text-center">
+                      <%=f.text_area :app_comment, class: 'form-control'%>
+                    </td>
+                    <td class="text-center">
+                      <%= f.text_field :follow_date, value: date.follow_date, id: 'follow_date',"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control'%>
+                    </td>
+                    <td class="text-center">
+                      <%=f.text_area :follow_comment, class: 'form-control'%>
+                    </td>
+                    </tr>
+                </tbody>
 <%end%>
+
+</table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+

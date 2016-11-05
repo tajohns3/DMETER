@@ -17,6 +17,6 @@ class FaActivity < ActiveRecord::Base
   accepts_nested_attributes_for :post_demonstrations, allow_destroy: true, reject_if: lambda{|d| d[:observation].blank?}
 
 
-  validates :state_id, :user_id,:pocket_id, :position_id,:date,:activity, presence: true
+
 
 end

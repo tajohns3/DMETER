@@ -34,9 +34,14 @@
 #post_demo_meeting{
   display: none;
 }
-#single_prod_app,#box_prod_app{
+//#single_prod_app,#box_prod_app{
+//  display: none;
+//}
+
+#demonstrations_button{
   display: none;
 }
+
 .checkbox input[type="checkbox"]{
 
   list-style: none;

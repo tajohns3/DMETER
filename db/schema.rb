@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161029223208) do
+ActiveRecord::Schema.define(version: 20161103233600) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20161029223208) do
     t.string   "app_comment",          limit: 4000
     t.string   "follow_comment",       limit: 4000
     t.integer  "demonstration_id",     limit: 4
+    t.string   "application_by",       limit: 4000
   end
 
   create_table "assist_reps", force: :cascade do |t|
@@ -112,13 +113,13 @@ ActiveRecord::Schema.define(version: 20161029223208) do
 
   create_table "demonstrations", force: :cascade do |t|
     t.integer  "pre_demonstration_id", limit: 4
-    t.string   "appdone_by",           limit: 4000
     t.string   "demo_status",          limit: 4000
     t.integer  "fa_activity_id",       limit: 4
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "demo_code",            limit: 4000
     t.integer  "position_id",          limit: 4
+    t.string   "image",                limit: 4000
   end
 
   create_table "demoresults", force: :cascade do |t|

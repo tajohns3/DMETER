@@ -1,28 +1,23 @@
 
 <%= form_for @demonstration, :html =>{:multipart => true} do |f| %>
-  <% if @demonstration.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@demonstration.errors.count, "error") %> prohibited this demonstration from being saved:</h2>
+    <% if @demonstration.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@demonstration.errors.count, "error") %> prohibited this demonstration from being saved:</h2>
 
-      <ul>
-      <% @demonstration.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @demonstration.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-    <div class="field">
+    <div class="field" id="hide_pre_demo">
       <%=f.label :pre_demonstration_id%>
       <%=f.text_field :pre_demonstration_id, value: @pre_demonstration.id%>
     </div>
 
 
-    <div class="field">
-      <%=f.label :appdone_by%>
-      <%=f.select :appdone_by, options_for_select([["Self",'self'],["Farmer in presence of FA",'Farmer in presence of FA'],
-                                                                    ["Farmer in absence of FA",'Farmer in absence of FA']])%>
-    </div>
 
 
 
@@ -38,14 +33,34 @@
 
 
 
-    <div>
-      <%=f.fields_for :demonstration_attachments do |demo_a|%>
-      <%=render 'demonstration_attachment_fields', f: demo_a%>
-          <%end%>
-      <div class="links">
-        <%=link_to_add_association 'Upload image', f, :demonstration_attachments%>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center">
+              <b>Pre-Demonstration Photos</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-4">
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <%= link_to_add_association 'Add Image', f, :demonstration_attachments,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+
 
 
     <div>
@@ -53,10 +68,10 @@
     </div>
 
 
-        <%=f.text_field :position_id, value: @pre_demonstration.fa_activity.position.id%>
+    <%=f.text_field :position_id, value: @pre_demonstration.fa_activity.position.id, id: 'hide_pos_id'%>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

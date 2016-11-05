@@ -4,7 +4,14 @@ class PreDemonstrationsController < ApplicationController
   # GET /pre_demonstrations
   # GET /pre_demonstrations.json
   def index
+    if params[:pending]
+      @positions=Position.find(params[:pending])
+
+       @pre_demonstrations= @positions.fa_activities.collect(&:pre_demonstrations).flatten.uniq
+
+    else
     @pre_demonstrations = PreDemonstration.all
+      end
   end
 
   # GET /pre_demonstrations/1

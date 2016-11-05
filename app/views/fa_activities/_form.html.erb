@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= f.label :pocket_id %><br>
-    <%= f.grouped_collection_select :pocket_id,User.all,:pockets,:sur_name, :id, :pocket_name, {include_blank: ''} %>
+    <%= f.grouped_collection_select :pocket_id,User.all,:pockets,:sur_name, :id, :pocket_name, {include_blank: ''}, {id: 'pocket_mon'} %>
   </div>
 
     <div class="field">
       <%= f.label :position_id, 'Field Assistant' %><br>
-      <%= f.collection_select :position_id, Position.all, :id, :surname,{include_blank: ''}, {:id => 'field_assist'} %>
+      <%= f.grouped_collection_select :position_id, Pocket.all,:pock_finder,:pocket_name, :id, :surname,{include_blank: ''}, {:id => 'field_assist'} %>
     </div>
 
   <div class="field">
@@ -91,4 +91,9 @@
   <div class="actions">
     <%= f.submit 'Submit', id: 'demo_submit'%>
   </div>
+
+    <div class="actions" id="demonstrations_button">
+      <%= f.submit 'Next',name: "source", value: "Next"%>
+
+    </div>
 <% end %>
