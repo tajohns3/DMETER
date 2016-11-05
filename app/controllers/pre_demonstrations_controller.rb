@@ -63,7 +63,7 @@ class PreDemonstrationsController < ApplicationController
   def destroy
     @pre_demonstration.destroy
     respond_to do |format|
-      format.html { redirect_to pre_demonstrations_url, notice: 'Pre demonstration was successfully destroyed.' }
+      format.html { redirect_to pre_demonstrations_url, notice: 'Pre demonstration was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -76,7 +76,7 @@ class PreDemonstrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pre_demonstration_params
-      params.require(:pre_demonstration).permit(:farmer_id, :crop_id, :fa_activity, :crop_growth, :condition, :demo_code,
+      params.require(:pre_demonstration).permit(:farmer_id, :crop_id, :fa_activity, :crop_growth, :condition, :status, :demo_code,
                                                 applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,{product_ids: []},:_destroy])
     end
 end

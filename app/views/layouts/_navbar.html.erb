@@ -42,11 +42,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Tools <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#"><%=link_to "Crops", crops_path %></a></li>
-                    <li><a href="#"><%=link_to "Villages", villages_path %></a></li>
-                    <li><a href="#"><%=link_to "Talukas", talukas_path %></a></li>
                     <li><a href="#"><%=link_to "States", states_path %></a></li>
                     <li><a href="#"><%=link_to "Products", products_path %></a></li>
                     <li><a href="#"><%=link_to "Districts", districts_path %></a></li>
+                    <li><%=link_to 'All Users', users_path%></li>
+                    <li><%=link_to 'Approve Users', users_path(:approved=>false)%></li>
                   </ul>
                 </li>
                 <%end%>
@@ -55,10 +55,7 @@
       <ul class="nav navbar-nav navbar-right">
         <%if user_signed_in?%>
         <li><%=link_to current_user.email, edit_user_registration_path%></li>
-            <% if current_user.admin?%>
-            <li><%=link_to 'All Users', users_path%></li>
-                <li><%=link_to 'Approve Users', users_path(:approved=>false)%></li>
-                <%end%>
+
             <li><%=link_to 'Logout', destroy_user_session_path, method: :delete%></li>
             <%else%>
             <li><%= link_to 'Sign Up', new_user_registration_path%></li>

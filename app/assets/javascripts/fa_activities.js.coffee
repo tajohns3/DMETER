@@ -161,7 +161,6 @@ jQuery ->
 
 #filer area managers with states
 jQuery ->
-  $('#fa_manager').parent().hide()
   users =$('#fa_manager').html()
   $('#fa_state').change ->
     state = $('#fa_state :selected').text()
@@ -169,15 +168,13 @@ jQuery ->
     options = $(users).filter("optgroup[label='#{escaped_state}']").html()
     if options
       $('#fa_manager').html(options)
-      $('#fa_manager').parent().show()
     else
       $('#fa_manager').empty()
-      $('#fa_manager').parent().hide()
+
 
 
 #filter sales reps with area manager
 jQuery ->
-  $('#fa_sales_rep').parent().hide()
   users =$('#fa_sales_rep').html()
   $('#fa_manager').change ->
     manager = $('#fa_manager :selected').text()
@@ -185,10 +182,9 @@ jQuery ->
     options = $(users).filter("optgroup[label='#{escaped_manager}']").html()
     if options
       $('#fa_sales_rep').html(options)
-      $('#fa_sales_rep').parent().show()
     else
       $('#fa_sales_rep').empty()
-      $('#fa_sales_rep').parent().hide()
+
 
 ##filter pocket with sales reps
 #jQuery ->
@@ -207,7 +203,6 @@ jQuery ->
 
 #filter field assistants with pocket
 jQuery ->
-  $('#field_assist').parent().hide()
   field_assist =$('#field_assist').html()
   $('#pocket_mon').change ->
     pocket = $('#pocket_mon :selected').text()
@@ -215,10 +210,8 @@ jQuery ->
     options = $(field_assist).filter("optgroup[label='#{escaped_pocket}']").html()
     if options
       $('#field_assist').html(options)
-      $('#field_assist').parent().show()
     else
       $('#field_assist').empty()
-      $('#field_assist').parent().hide()
 
 
 
@@ -249,9 +242,9 @@ jQuery ->
 jQuery ->
   $('#fa_activity_meet_farmers_attributes_0_purpose').on "change", ->
     if $(this).val() is "demonstration"
-      $('#demonstrations_button').fadeIn()
+      $('#demonstrations_button').show()
     else
-      $('#demonstrations_button').fadeOut()
+      $('#demonstrations_button').hide()
 
 #number of farmers met
 jQuery ->

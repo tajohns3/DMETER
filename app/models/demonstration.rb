@@ -7,16 +7,19 @@ class Demonstration < ActiveRecord::Base
   mount_uploader :image, AvatarUploader
   accepts_nested_attributes_for :applications, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :demonstration_attachments, allow_destroy: true, reject_if: :all_blank
-  # before_create :set_status
-  validates :appdone_by, presence: true
+  before_create :set_pre_demo_status
 
-  # def set_status
-  # if self.demonstration_attachments.avatar != nil
-  #     self.demo_status ='complete'
-  #     else
-  #     self.demo_status ='active'
-  #   end
-  #
-  # end
+
+
+   def set_pre_demo_status
+     pre_demo_id = self.pre_demonstration_id
+     pre_demo = PreDemonstration.find(pre_demo_id)
+     pre_demo.update_attribute(:status, 'complete')
+   end
+
+  def set_demo_status
+
+  end
+
 
 end

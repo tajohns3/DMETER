@@ -20,16 +20,14 @@
 
 
 
-
     <div class="field">
+
       <%=f.fields_for :applications do |application| %>
           <div class="field">
             <%=render 'application_fields', f: application%>
           </div>
-
       <%end%>
     </div>
-
 
 
 
@@ -40,6 +38,12 @@
             <h3 class="panel-title text-center">
               <b>Pre-Demonstration Photos</b>
             </h3>
+            <div>
+
+              <%=f.check_box :demo_status, {}, 'complete', 'active'%>
+              <%=f.label :demo_status, 'Complete'%>
+            </div>
+
           </div>
           <div class="panel-body">
             <div class="row">

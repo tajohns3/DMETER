@@ -51,6 +51,7 @@
                   <td class="text-center">
                     <%= link_to 'New Demonstration', new_demonstration_path(:pre_id => pre_demo.id), class: 'btn btn-primary',:style=>'color:#FFFFFF',  id: 'hope'%>
                   </td>
+                  <td><td><%= link_to 'Delete', pre_demo, method: :delete, data: { confirm: 'Are you sure?' } %></td></td>
                   </tr>
               <% end %>
               </tbody>

@@ -7,7 +7,9 @@
 
 <p>
   <strong>Appdone by:</strong>
-  <%= @demonstration.appdone_by %>
+  <% @demonstration.applications.each do |appby|%>
+  <%=appby.application_by%>
+      <%end%>
 </p>
 
 <p>
@@ -30,5 +32,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_demonstration_path(@demonstration) %> |
+<%= link_to 'Edit', edit_demonstration_path(@demonstration) %>
 <%= link_to 'Back', demonstrations_path %>

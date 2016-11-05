@@ -27,7 +27,19 @@ class DemonstrationsController < ApplicationController
   def new
     @demonstration = Demonstration.new
     @pre_demonstration =PreDemonstration.find(params[:pre_id])
-    @demonstration.applications.build
+
+
+
+
+    @pre_demonstration.applications.each  do |app|
+
+
+      @demonstration.applications.build(:app_date =>app.app_date, :follow_date =>app.follow_date)
+
+    end
+
+
+
 
   end
 
@@ -86,7 +98,7 @@ class DemonstrationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def demonstration_params
       params.require(:demonstration).permit(:pre_demonstration_id, :demo_status, :fa_activity_id,:demo_code,:position_id,
-      applications_attributes: [:id,:pre_demonstration_id,:demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment,{product_ids: []},:_destroy],
+      applications_attributes: [:id,:pre_demonstration_id,:demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:application_by,:app_comment,{product_ids: []},:_destroy],
       demonstration_attachments_attributes:[:id, :demonstration_id, :avatar,:_destroy])
     end
 end

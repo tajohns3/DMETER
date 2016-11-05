@@ -14,11 +14,12 @@
             <tbody>
             <tr>
               <th class="text-center">
-                Pre demonstration
+                Demonstration Code
               </th>
               <th class="text-center">
-                Appdone by
+                Application Done by
               </th>
+
               <th class="text-center">
                 Demo status
               </th>
@@ -33,7 +34,9 @@
                     <%= demonstration.demo_code  %>
                   </td>
                   <td class="text-center">
-                    <%= demonstration.appdone_by %>
+                    <% demonstration.applications.each do |appby|%>
+                    <%=appby.application_by%>
+                        <%end%>
                   </td>
                   <td class="text-center">
                     <%= demonstration.demo_status %>

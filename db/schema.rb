@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103233600) do
+ActiveRecord::Schema.define(version: 20161105174839) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -113,10 +113,10 @@ ActiveRecord::Schema.define(version: 20161103233600) do
 
   create_table "demonstrations", force: :cascade do |t|
     t.integer  "pre_demonstration_id", limit: 4
-    t.string   "demo_status",          limit: 4000
+    t.string   "demo_status",          limit: 4000, default: "active"
     t.integer  "fa_activity_id",       limit: 4
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
     t.string   "demo_code",            limit: 4000
     t.integer  "position_id",          limit: 4
     t.string   "image",                limit: 4000
@@ -343,8 +343,9 @@ ActiveRecord::Schema.define(version: 20161103233600) do
     t.string   "crop_growth",    limit: 4000
     t.string   "condition",      limit: 4000
     t.string   "demo_code",      limit: 4000
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.string   "status",         limit: 4000, default: "Active"
   end
 
   create_table "prodsamples", force: :cascade do |t|
