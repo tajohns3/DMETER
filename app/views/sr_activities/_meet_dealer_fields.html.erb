@@ -1,0 +1,14 @@
+<div class="field" id="met_dealer_div">
+  <%= f.label :purpose %><br>
+  <%= f.select :purpose, options_for_select([["Introduction",'introduction'],["Product Demonstration",'product_demonstration'],
+                                                        ["Order Booking",'order_booking'],["Delivery Confirmation",'delivery_confirmation'],["Inventory Check",'inventory_check'],["Payment Collection",'payment_collection'],
+                                                        ["Competitor Information",'competitor_information'],["Organize Farmer Meeting",'organize_farmer_meeting'],["Other",'other']]),
+               {include_blank: ''}, {id: 'meet_dealer_option'}%>
+</div>
+
+<div class="field" id="meet_dealer_other">
+  <%= f.label :other %><br>
+  <%= f.text_area :other %>
+</div>
+
+

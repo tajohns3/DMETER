@@ -1,0 +1,1 @@
+json.array! @meet_state_managers, partial: 'meet_state_managers/meet_state_manager', as: :meet_state_manager

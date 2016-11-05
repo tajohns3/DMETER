@@ -1,0 +1,2 @@
+json.extract! sr_activity, :id, :state_id, :user_id, :date, :pactivity, :meet_state_manager_option, :pocket_id, :dealer_id, :position_id, :meet_sm_other, :meet_dealer_option, :meet_dealer_other, :meet_fa_option, :meet_farmer_option, :farmer_id, :crop_id, :crop_growth_stage, :farmer_recommendation, :cf_option, :business_development_id, :other, :created_at, :updated_at
+json.url sr_activity_url(sr_activity, format: :json)

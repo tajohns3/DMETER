@@ -1,0 +1,2 @@
+module SrActivitiesHelper
+end

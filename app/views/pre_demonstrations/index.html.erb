@@ -1,37 +1,71 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Pre-Demonstrations</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                Farmer
+              </th>
+              <th class="text-center">
+                Crop
+              </th>
+              <th class="text-center">
+                Crop Condition
+              </th>
+              <th class="text-center">
+                Crop Growth
+              </th>
 
-<h1>Listing Pre Demonstrations</h1>
+              <th class="text-center">
+                Demonstration Code
+              </th>
+              <td class="text-center">
 
-<table>
-  <thead>
-    <tr>
-      <th>Farmer</th>
-      <th>Crop</th>
-      <th>Fa activity</th>
-      <th>Crop growth</th>
-      <th>Condition</th>
-      <th>Demo code</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pre_demonstrations.each do |pre_demonstration| %>
-      <tr>
-        <td><%= pre_demonstration.farmer_id %></td>
-        <td><%= pre_demonstration.crop_id %></td>
-        <td><%= pre_demonstration.fa_activity_id %></td>
-        <td><%= pre_demonstration.crop_growth %></td>
-        <td><%= pre_demonstration.condition %></td>
-        <td><%= pre_demonstration.demo_code %></td>
-        <td><%= link_to 'Show', pre_demonstration %></td>
-        <td><%= link_to 'Edit', edit_pre_demonstration_path(pre_demonstration) %></td>
-        <td><%= link_to 'Destroy', pre_demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Pre demonstration', new_pre_demonstration_path %>
+              </td>
+            </tr>
+            <tr>
+              <% @pre_demonstrations.each do |pre_demo| %>
+                  <td class="text-center">
+                    <%= pre_demo.farmer_id %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.crop.crop %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.condition %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.crop_growth %>
+                  </td>
+                  <td class="text-center">
+                    <%= pre_demo.demo_code %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'New Demonstration', new_demonstration_path(:pre_id => pre_demo.id), class: 'btn btn-primary',:style=>'color:#FFFFFF',  id: 'hope'%>
+                  </td>
+                  <td><td><%= link_to 'Delete', pre_demo, method: :delete, data: { confirm: 'Are you sure?' } %></td></td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

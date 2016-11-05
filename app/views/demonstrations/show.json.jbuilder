@@ -1,0 +1,1 @@
+json.partial! "demonstrations/demonstration", demonstration: @demonstration

@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :singles
+  resources :boxes
+  resources :demonstration_attachments
+  resources :meet_sr_farmers
+  resources :meet_fas
+  resources :meet_dealers
+  resources :meet_state_managers
+  resources :business_developments
+  resources :sr_activities
+  resources :post_demonstrations
+  get 'demo_date/populate_dates'
+
+  resources :demonstrations
   resources :positions
   resources :fa_targets
   resources :targets

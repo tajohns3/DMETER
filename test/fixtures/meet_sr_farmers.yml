@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farmer_id: 1
+  crop_id: 1
+  crop_condition: MyString
+  crop_growth: MyString
+  recommendation: MyText
+  purpose: MyString
+  sr_activity_id: 1
+
+two:
+  farmer_id: 1
+  crop_id: 1
+  crop_condition: MyString
+  crop_growth: MyString
+  recommendation: MyText
+  purpose: MyString
+  sr_activity_id: 1

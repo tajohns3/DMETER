@@ -1,0 +1,1 @@
+json.array! @demonstration_attachments, partial: 'demonstration_attachments/demonstration_attachment', as: :demonstration_attachment

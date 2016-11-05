@@ -2,7 +2,6 @@ class FieldAssistant < ActiveRecord::Base
   belongs_to :state
   belongs_to :pocket
   has_many :positions
-
   has_many :fa_targets, :dependent => :destroy
   accepts_nested_attributes_for :fa_targets, allow_destroy: true, reject_if: :all_blank
 
@@ -12,5 +11,7 @@ class FieldAssistant < ActiveRecord::Base
   def fa_num
     "#{self.state.abbreviation}" + "-" + "#{self.pocket.pocket_name}" + "-" + "0" + "#{self.id}"
   end
+
+
 
 end

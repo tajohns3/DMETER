@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Demonstration:</strong>
+  <%= @demonstration_attachment.demonstration_id %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @demonstration_attachment.avatar %>
+</p>
+
+<%= link_to 'Edit', edit_demonstration_attachment_path(@demonstration_attachment) %> |
+<%= link_to 'Back', demonstration_attachments_path %>

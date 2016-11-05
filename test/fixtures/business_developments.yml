@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pre_demonstration_id: 1
+  pocket_id: 1
+  option: MyString
+  sample_request: false
+  numattendees: 1
+  a_attendees: 1
+  b_attendees: 1
+  c_attendees: 1
+
+two:
+  pre_demonstration_id: 1
+  pocket_id: 1
+  option: MyString
+  sample_request: false
+  numattendees: 1
+  a_attendees: 1
+  b_attendees: 1
+  c_attendees: 1

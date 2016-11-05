@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pre demonstration:</strong>
+  <%= @demonstration.pre_demonstration_id %>
+</p>
+
+<p>
+  <strong>Appdone by:</strong>
+  <% @demonstration.applications.each do |appby|%>
+  <%=appby.application_by%>
+      <%end%>
+</p>
+
+<p>
+  <strong>Demo status:</strong>
+  <%= @demonstration.demo_status %>
+</p>
+
+<p>
+  <strong>Fa activity:</strong>
+  <%= @demonstration.fa_activity_id %>
+</p>
+
+
+
+<p>
+  <strong>Nested Results</strong>
+  <%@demonstration.demonstration_attachments.each do |demo_a|%>
+  <%=link_to (image_tag(demo_a.avatar_url(:thumb))).to_s, demo_a.avatar_url%>
+      <%end%>
+</p>
+
+
+<%= link_to 'Edit', edit_demonstration_path(@demonstration) %>
+<%= link_to 'Back', demonstrations_path %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Business Developments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pre demonstration</th>
+      <th>Pocket</th>
+      <th>Option</th>
+      <th>Sample request</th>
+      <th>Numattendees</th>
+      <th>A attendees</th>
+      <th>B attendees</th>
+      <th>C attendees</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business_developments.each do |business_development| %>
+      <tr>
+        <td><%= business_development.pre_demonstration_id %></td>
+        <td><%= business_development.pocket_id %></td>
+        <td><%= business_development.option %></td>
+        <td><%= business_development.sample_request %></td>
+        <td><%= business_development.numattendees %></td>
+        <td><%= business_development.a_attendees %></td>
+        <td><%= business_development.b_attendees %></td>
+        <td><%= business_development.c_attendees %></td>
+        <td><%= link_to 'Show', business_development %></td>
+        <td><%= link_to 'Edit', edit_business_development_path(business_development) %></td>
+        <td><%= link_to 'Destroy', business_development, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Business development', new_business_development_path %>

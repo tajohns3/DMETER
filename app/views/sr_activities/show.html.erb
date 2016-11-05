@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @sr_activity.state_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sr_activity.user_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sr_activity.date %>
+</p>
+
+<p>
+  <strong>Pactivity:</strong>
+  <%= @sr_activity.pactivity %>
+</p>
+
+<p>
+  <strong>Cf option:</strong>
+  <%= @sr_activity.cf_option %>
+</p>
+
+
+<p>
+  <strong>Other:</strong>
+  <%= @sr_activity.other %>
+</p>
+
+<%= link_to 'Edit', edit_sr_activity_path(@sr_activity) %> |
+<%= link_to 'Back', sr_activities_path %>

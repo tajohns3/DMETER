@@ -69,6 +69,6 @@ class ApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
-      params.require(:application).permit(:pre_demonstration_id, :app_area, :app_date, :competitor, :app_type, :follow_date, product_ids: [])
+      params.require(:application).permit(:pre_demonstration_id, :app_area, :app_date, :competitor, :app_type, :follow_date,:application_by, product_ids: [])
     end
 end

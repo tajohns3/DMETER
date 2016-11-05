@@ -1,0 +1,69 @@
+
+<%= will_paginate%>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Demonstrations</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                Demonstration Code
+              </th>
+              <th class="text-center">
+                Application Done by
+              </th>
+
+              <th class="text-center">
+                Demo status
+              </th>
+              <th class="text-center">
+                Field Assistant
+              </th>
+
+            </tr>
+            <tr>
+              <% @demonstrations.each do |demonstration| %>
+                  <td class="text-center">
+                    <%= demonstration.demo_code  %>
+                  </td>
+                  <td class="text-center">
+                    <% demonstration.applications.each do |appby|%>
+                    <%=appby.application_by%>
+                        <%end%>
+                  </td>
+                  <td class="text-center">
+                    <%= demonstration.demo_status %>
+                  </td>
+                  <td class="text-center">
+                    <%= demonstration.position.surname  %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View Demonstration', demonstration, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  <td><%= link_to 'Delete', demonstration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= will_paginate%>

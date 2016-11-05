@@ -1,0 +1,1 @@
+json.array! @business_developments, partial: 'business_developments/business_development', as: :business_development

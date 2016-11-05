@@ -15,6 +15,24 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
+    <div class="field">
+      <%= f.fields_for :product_singles do |ps|%>
+      <%= render 'product_single_fields', f: ps%>
+          <%end%>
+    </div>
+    <div class="links">
+      <%=link_to_add_association 'Add single ', f, :product_singles%>
+    </div>
+
+    <div class="field">
+      <%=f.fields_for :product_boxes do |pb|%>
+      <%=render 'product_box_fields', f: pb%>
+          <%end%>
+      <div class="links">
+        <%=link_to_add_association 'Add box ', f, :product_boxes%>
+      </div>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,0 +1,1 @@
+json.array! @meet_fas, partial: 'meet_fas/meet_fa', as: :meet_fa

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= @meet_sr_farmer.farmer_id %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @meet_sr_farmer.crop_id %>
+</p>
+
+<p>
+  <strong>Crop condition:</strong>
+  <%= @meet_sr_farmer.crop_condition %>
+</p>
+
+<p>
+  <strong>Crop growth:</strong>
+  <%= @meet_sr_farmer.crop_growth %>
+</p>
+
+<p>
+  <strong>Recommendation:</strong>
+  <%= @meet_sr_farmer.recommendation %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @meet_sr_farmer.purpose %>
+</p>
+
+<p>
+  <strong>Sr activity:</strong>
+  <%= @meet_sr_farmer.sr_activity_id %>
+</p>
+
+<%= link_to 'Edit', edit_meet_sr_farmer_path(@meet_sr_farmer) %> |
+<%= link_to 'Back', meet_sr_farmers_path %>

@@ -5,7 +5,7 @@
 
 <div class="field">
   <%= f.label :village_id %><br>
-  <%= f.number_field :village_id %>
+  <%= f.collection_select :village_id, Village.all, :id, :village, {include_blank: ''}%>
 </div>
 
 
@@ -69,7 +69,7 @@
 
 <div class="field">
   <%= f.label :purpose %><br>
-  <%= f.select :purpose, options_for_select([["Introduction", 'introduction'],["Pre Demonstration",'pre_demonstration'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
+  <%= f.select :purpose, options_for_select([["Introduction", 'introduction'],["Pre Demonstration",'pre_demonstration'],["Demonstration",'demonstration'],["Post Demonstration", 'post_demonstration'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
                   {include_blank: ''}%>
 </div>
 <div class="field", id="meet_farmer_consultation_div">
@@ -84,4 +84,8 @@
   <%=f.fields_for :product_prescriptions do |prod|%>
       <%=render 'product_prescription_fields', f: prod%>
   <%end%>
+</div>
+
+<div id="pop_forms" class="container">
+
 </div>
