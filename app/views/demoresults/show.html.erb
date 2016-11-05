@@ -21,17 +21,17 @@
                   </div>
                   <div>
                     <strong>Sales Representative:</strong>
-                    <%= @demoresult.user.user_name %>
+                    <%= @demoresult.srid %>
                   </div>
                   <br>
                   <div>
                     <strong>Field Agent:</strong>
-                    <%= @demoresult.user.user_name %>
+                    <%= @demoresult.faid %>
                   </div>
                   <br>
                   <div>
                     <strong>Pocket:</strong>
-                    <%= @demoresult.pocket.pocket_name %>
+                    <%= @demoresult.pocketid %>
                   </div>
                 </div>
               </div>
@@ -51,8 +51,10 @@
                     <%= @demoresult.demostatus %>
                   </div>
                   <div>
-                    <strong>Demo result:</strong><br>
-                    <%=link_to image_tag(@demoresult.photo.url(:thumb)), @demoresult.photo.url(:original), :popup=>['original_image', 'height=700,width=900'], :target=> '_blank' %>
+                    <strong>Demo result photos:</strong><br>
+                    <% @demoresult.resultphotos.each do |resultphoto| %>
+                        <br><%=link_to image_tag(resultphoto.photo.url(:thumb)), resultphoto.photo.url(:original), :popup=>['original_image', 'height=700,width=900'], :target=> '_blank' %><br><br>
+                    <% end %>
                   </div>
                 </div>
               </div>

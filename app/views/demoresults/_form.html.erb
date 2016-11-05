@@ -83,7 +83,30 @@
                         <%= f.label 'Select Demo' %><br>
                         <%= f.collection_select :demoid, Demo.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
                       </div>
-                      <%= f.file_field :photo %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title text-center">
+                        <b>Photos</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4 text-center">
+                              <%= link_to_add_association "Add Photo", f, :resultphotos ,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

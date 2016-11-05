@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024001947) do
+ActiveRecord::Schema.define(version: 20161104232150) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -326,6 +326,18 @@ ActiveRecord::Schema.define(version: 20161024001947) do
     t.datetime "updated_at",              null: false
   end
 
+  create_table "resultphotos", force: :cascade do |t|
+    t.integer  "demoresult_id",      limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "photo_file_name",    limit: 4000
+    t.string   "photo_content_type", limit: 4000
+    t.integer  "photo_file_size",    limit: 4
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "resultphotos", ["demoresult_id"], name: "index_resultphotos_on_demoresult_id"
+
   create_table "states", force: :cascade do |t|
     t.string   "state",        limit: 4000
     t.datetime "created_at",                null: false
@@ -382,4 +394,5 @@ ActiveRecord::Schema.define(version: 20161024001947) do
   end
 
   add_foreign_key "farmcrops", "farmers"
+  add_foreign_key "resultphotos", "demoresults"
 end

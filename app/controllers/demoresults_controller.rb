@@ -69,6 +69,7 @@ class DemoresultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def demoresult_params
-      params.require(:demoresult).permit(:amid, :srid, :pocketid, :faid, :demostatus, :photo, :demoid)
+      params.require(:demoresult).permit(:amid, :srid, :pocketid, :faid, :demostatus, :photo, :demoid, resultphotos_attributes: [:id, :photo, :done, :_destroy],
+                                         )
     end
 end
