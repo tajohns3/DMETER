@@ -56,7 +56,7 @@ class CropsController < ApplicationController
   def destroy
     @crop.destroy
     respond_to do |format|
-      format.html { redirect_to crops_url, notice: 'Crop was successfully destroyed.' }
+      format.html { redirect_to crops_url, notice: 'Crop was successfully deleted.' }
       format.json { head :no_content }
     end
   end

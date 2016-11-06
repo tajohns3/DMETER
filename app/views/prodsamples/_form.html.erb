@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select FA' %><br>
+                        <%= f.label 'Select Field Staff' %><br>
                         <%= f.collection_select :faid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
@@ -58,7 +58,7 @@
                           </div>
                           <div class="field" id="active_demo">
                             <%= f.label 'Select Active Demo' %><br>
-                            <%= f.collection_select :demoid, PreDemonstration.all, :id, :democode, {:include_blank => true}, {class: "form-control"} %>
+                            <%= f.collection_select :demoid, PreDemonstration.all, :id, :demo_code, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
                       </div>
