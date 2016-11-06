@@ -7,6 +7,8 @@ class Prodsample < ActiveRecord::Base
 #    "#(self.state.state)" + "-" + "#(self.pocket.pocket_name)" + "-" + "#(self.id)"
 #  end
 
+#validates :stid, :faid, :sample_purp, :sampletype, presence: true
+
 end
 
 
