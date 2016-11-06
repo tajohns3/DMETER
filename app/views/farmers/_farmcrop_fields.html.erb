@@ -1,0 +1,46 @@
+<div class="nested-fields">
+  <table class="table table-bordered">
+    <tbody>
+    </tbody>
+    <thead>
+    <tr>
+      <th class="text-center">
+        Crop
+      </th>
+      <th class="text-center">
+        Acreage
+      </th>
+      <th class="text-center">
+        Unit
+      </th>
+      <th class="text-center">
+        Irrigation Source
+      </th>
+    </tr>
+    <tr>
+      <th class="text-center">
+        <div class="form-group">
+          <%= f.collection_select :id, Crop.all, :id, :cropid, {:include_blank => true}, {class: "form-control"} %>
+        </div>
+      </th>
+      <th class="text-center">
+        <div class="form-group">
+          <%= f.text_field :acreage, class: "form-control" %>
+        </div>
+      </th>
+      <th class="text-center">
+        <div class="form-group">
+          <%= f.text_field :unit, class: "form-control" %>
+        </div>
+      </th>
+      <th class="text-center">
+        <div class="form-group">
+          <%= f.text_field :irr_source, {class: "form-control"} %>
+        </div>
+      </th>
+    </tr>
+    </thead>
+  </table>
+  <%= link_to_remove_association "Remove", f, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF'%>
+</table>
+</div>

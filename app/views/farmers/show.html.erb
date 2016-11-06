@@ -1,0 +1,156 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1 class="panel-title text-center">
+        <b> Farmer Information </b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <b>Geographic Information</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <strong>State:</strong>
+                    <%= @farmer.stid %>
+                  </div>
+                  <div>
+                    <strong>Sales Representative:</strong>
+                    <%= @farmer.useridstmgr %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Field Agent:</strong>
+                    <%= @farmer.useridsr %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Pocket:</strong>
+                    <%= @farmer.pocketid %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Dealer:</strong>
+                    <%= @farmer.dealerid %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <b>Farmer Information</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="form-group">
+                    <strong>Farmer Name:</strong>
+                    <%= @farmer.name %>
+                  </div>
+                  <div>
+                    <strong>Village:</strong>
+                    <%= @farmer.villageid %>
+                  </div>
+                  <br>
+                  <div>
+                    <strong>Phone Number:</strong>
+                    <%= @farmer.phnumber %>
+                  </div>
+                  <br>
+                  <div>
+                  <div>
+                    <strong>Introductory Call to Farmer:</strong>
+                    <%= @farmer.introcall %>
+                  </div>
+                    <br>
+                  <div>
+                    <strong>Farmer information verified:</strong>
+                    <%= @farmer.callverified %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                      <h3 class="panel-title">
+                        <b>Crop Information</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <table class="table table-bordered">
+                            <tbody>
+                            </tbody>
+                            <thead>
+                            <tr>
+                              <th class="text-center">
+                                Crop
+                              </th>
+                              <th class="text-center">
+                                Acreage
+                              </th>
+                              <th class="text-center">
+                                Unit
+                              </th>
+                              <th class="text-center">
+                                Irrigation Source
+                              </th>
+                            </tr>
+                            <tr>
+                              <th class="text-center">
+                                <% @farmer.farmcrops.each do |farmcrop| %>
+                                    <%= farmcrop.cropid %><br><br>
+                                <% end %>
+                              </th>
+                              <th class="text-center">
+                                <% @farmer.farmcrops.each do |farmcrop| %>
+                                    <%= farmcrop.acreage %><br><br>
+                                <% end %>
+                              </th>
+                              <th class="text-center">
+                                <% @farmer.farmcrops.each do |farmcrop| %>
+                                    <%= farmcrop.unit %><br><br>
+                                <% end %>
+                              </th>
+                              <th class="text-center">
+                                <% @farmer.farmcrops.each do |farmcrop| %>
+                                    <%= farmcrop.irr_source %><br><br>
+                                <% end %>
+                              </th>
+                            </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="actions">
+            <%= link_to "Edit", edit_farmer_path(@farmer), class: "btn btn-primary pull-right"%>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="actions">
+            <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

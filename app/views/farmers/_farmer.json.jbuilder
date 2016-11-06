@@ -1,0 +1,2 @@
+json.extract! farmer, :id, :stid, :useridstmgr, :useridamgr, :useridsr, :pocketid, :dealerid, :name, :villageid, :phnumber, :cropid, :acreage, :unit, :irr_source, :introcall, :callverified, :created_at, :updated_at
+json.url farmer_url(farmer, format: :json)
