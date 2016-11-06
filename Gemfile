@@ -20,8 +20,10 @@ gem 'rmagick', '~> 2.16.0'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'jquery-ui-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'jquery-datatables-rails'
+gem 'ajax-datatables-rails'
+gem 'dossier'
 
-gem 'bootstrap-multiselect-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -43,7 +45,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 # Use paperclip for attaching photos
-
+gem "paperclip", "~> 5.0.0"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
