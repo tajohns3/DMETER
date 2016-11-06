@@ -49,8 +49,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.6.4.1)
       railties (>= 3.0)
-    bootstrap-multiselect-rails (0.9.9)
-      rails (>= 4.0.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -62,6 +60,10 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     cocoon (1.2.9)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -119,6 +121,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
     multi_json (1.12.1)
@@ -127,6 +130,12 @@ GEM
     nokogiri (1.6.8.1-x86-mingw32)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    paperclip (5.0.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -213,7 +222,6 @@ DEPENDENCIES
   activerecord-sqlserver-adapter
   ajax-datatables-rails
   bootstrap-datepicker-rails
-  bootstrap-multiselect-rails
   bootstrap-sass
   bootstrap-will_paginate
   byebug
@@ -227,6 +235,7 @@ DEPENDENCIES
   jquery-datatables-rails
   jquery-rails
   jquery-ui-rails
+  paperclip (~> 5.0.0)
   rails (= 4.2.5.1)
   rmagick (~> 2.16.0)
   sass-rails (~> 5.0)

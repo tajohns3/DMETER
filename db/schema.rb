@@ -12,9 +12,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20161105174839) do
-ActiveRecord::Schema.define(version: 20161024001947) do
-ActiveRecord::Schema.define(version: 20161104232150) do
-ActiveRecord::Schema.define(version: 20161105013058) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -191,7 +188,6 @@ ActiveRecord::Schema.define(version: 20161105013058) do
     t.datetime "updated_at",                                           null: false
     t.string   "demo_code",            limit: 4000
     t.integer  "position_id",          limit: 4
-    t.string   "image",                limit: 4000
   end
 
   create_table "demoresults", force: :cascade do |t|
@@ -234,18 +230,6 @@ ActiveRecord::Schema.define(version: 20161105013058) do
     t.string   "activity",           limit: 4000
     t.integer  "position_id",        limit: 4
     t.integer  "manager_id",         limit: 4
-  end
-
-  create_table "fa_activities", force: :cascade do |t|
-    t.integer  "field_assistant_id", limit: 4
-    t.integer  "state_id",           limit: 4
-    t.integer  "user_id",            limit: 4
-    t.integer  "pocket_id",          limit: 4
-    t.date     "date"
-    t.text     "comment",            limit: 2147483647
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
-    t.string   "activity",           limit: 4000
   end
 
   create_table "fa_targets", force: :cascade do |t|
@@ -455,25 +439,6 @@ ActiveRecord::Schema.define(version: 20161105013058) do
     t.integer  "fa_activity_id",   limit: 4
   end
 
-  create_table "positions", force: :cascade do |t|
-    t.string   "fa_number",          limit: 4000
-    t.string   "first_name",         limit: 4000
-    t.string   "surname",            limit: 4000
-    t.string   "address",            limit: 4000
-    t.string   "taluka",             limit: 4000
-    t.string   "district",           limit: 4000
-    t.string   "pin_code",           limit: 4000
-    t.string   "contact_number",     limit: 4000
-    t.string   "form",               limit: 4000
-    t.boolean  "yes"
-    t.boolean  "no"
-    t.integer  "dealer_id",          limit: 4
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.integer  "state_id",           limit: 4
-    t.integer  "field_assistant_id", limit: 4
-  end
-
   create_table "pre_demonstrations", force: :cascade do |t|
     t.integer  "farmer_id",      limit: 4
     t.integer  "crop_id",        limit: 4
@@ -553,15 +518,6 @@ ActiveRecord::Schema.define(version: 20161105013058) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "security_checks", force: :cascade do |t|
-    t.string   "bank_name",    limit: 4000
-    t.integer  "check_number", limit: 4
-    t.integer  "bank_account", limit: 4
-    t.integer  "amount",       limit: 4
-    t.date     "issue_date"
-    t.string   "status",       limit: 4000
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
   create_table "resultphotos", force: :cascade do |t|
     t.integer  "demoresult_id",      limit: 4
     t.datetime "created_at",                      null: false
@@ -573,6 +529,17 @@ ActiveRecord::Schema.define(version: 20161105013058) do
   end
 
   add_index "resultphotos", ["demoresult_id"], name: "index_resultphotos_on_demoresult_id"
+
+  create_table "security_checks", force: :cascade do |t|
+    t.string   "bank_name",    limit: 4000
+    t.integer  "check_number", limit: 4
+    t.integer  "bank_account", limit: 4
+    t.integer  "amount",       limit: 4
+    t.date     "issue_date"
+    t.string   "status",       limit: 4000
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "singles", force: :cascade do |t|
     t.string   "name",       limit: 4000
