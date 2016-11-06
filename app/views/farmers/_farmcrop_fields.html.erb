@@ -20,7 +20,7 @@
     <tr>
       <th class="text-center">
         <div class="form-group">
-          <%= f.collection_select :id, Crop.all, :id, :cropid, {:include_blank => true}, {class: "form-control"} %>
+          <%= f.collection_select :cropid, Crop.all, :id, :crop, {:include_blank => true}, {class: "form-control"} %>
         </div>
       </th>
       <th class="text-center">

@@ -1,5 +1,6 @@
 class DemoresultsController < ApplicationController
   before_action :set_demoresult, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /demoresults
   # GET /demoresults.json
