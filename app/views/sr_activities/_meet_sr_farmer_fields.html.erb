@@ -2,15 +2,15 @@
   <%= f.label :purpose %><br>
   <%= f.select :purpose, options_for_select([["Product Information / Company Introduction",'Product Information / Company Introduction'],
                                                         ["Technical Guidance",'technical_guidance'], ["Recommendation to/from farmers",'recommendation_farmers']]),
-               {include_blank: ''}, {id: 'meet_farmer_option'}%>
+               {include_blank: ''}, {id: 'meet_farmer_option',class:"form-control", :style => "width:250px"}%>
 </div>
 <div class="field" id="farmer_div">
   <%= f.label :farmer_id %><br>
-  <%= f.number_field :farmer_id %>
+  <%= f.number_field :farmer_id,class:"form-control", :style => "width:200px" %>
 </div>
 <div class="field" id="crop_id_div">
   <%= f.label :crop_id %><br>
-  <%= f.collection_select :crop_id, Crop.all, :id, :crop, {include_blank: ''} %>
+  <%= f.collection_select :crop_id, Crop.all, :id, :crop, {include_blank: ''}, {class:"form-control", :style => "width:200px"} %>
 </div>
 
 <div class="field" id="crop_cod_div">
@@ -19,7 +19,7 @@
                                                    ["Infestation - Bacterial", 'bacterial_infest'], ["Infestation - Fungal",'fungal_infest'], ["Infestation - Mite", 'mite_infest'],
                                                    ["Infestation - Nematode", 'nematode_infest'],["Infestation - Suck Pest",'suck_pest_infest'], ["Infestation - Viral",'viral_infest'],
                                                    ["Infestation - Other",'other_infest'], ["Leaf Curling", 'leaf_curling'], ["Root Rot",'root_rot'],["Root Wilt", 'root_wilt'],
-                                                   ["Salt Stress", 'salt_stress'], ["Water Stress",'water_stress']]), {include_blank: ''}%>
+                                                   ["Salt Stress", 'salt_stress'], ["Water Stress",'water_stress']]), {include_blank: ''}, {class:"form-control", :style => "width:200px"}%>
 </div>
 
 <div class="field" id="crop_growth_div">
@@ -33,9 +33,9 @@
                                                  ["During vegetative stage",'during_vegetative_stage'],["Immediately after pruning",'immediately_after_pruning'],["20 - 30 days after breaking dormancy",
                                                                                                                                                                   '20_30_days_after_breaking_dormancy'],["After bunch formation",'after_bunch_formation'],["After Flowering - Before Fruit / Grain Setting", 'after_flower_before_fruit_grain_setting'],
                                                  ["At Fruit / Grain Setting", 'at_fruit_grain_setting'],["After Fruit / Grain Setting",'after_fruit_grain_setting'],[" Boll / Bulb / Pod Formation",'boll_pod_formation'],
-                                                 ["After Plucking",'after_plucking'],["After 2-3 plucking",'2-3_after_plucking']]), {include_blank: ''} %>
+                                                 ["After Plucking",'after_plucking'],["After 2-3 plucking",'2-3_after_plucking']]), {include_blank: ''},{class:"form-control", :style => "width:320px"} %>
 </div>
 <div class="field" id="farmer_recommend">
   <%= f.label :recommendation, 'Recommendation' %><br>
-  <%= f.text_area :recommendation %>
+  <%= f.text_area :recommendation,class:"form-control", :style => "width:200px" %>
 </div>

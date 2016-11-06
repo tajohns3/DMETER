@@ -1,5 +1,5 @@
 <div class="field" id="meet_fa_opt">
   <%= f.label :purpose, 'Purpose' %><br>
   <%= f.select :purpose, options_for_select([["Task Assignment",'task_assignment'], ["Technical Guidance",'technical_guidance'],
-                                                    ["Reporting Follow-up",'reporting_follow-up']]), {include_blank: ''},{id: 'meet_fa_option'}%>
+                                                    ["Reporting Follow-up",'reporting_follow-up']]), {include_blank: ''},{id: 'meet_fa_option', class:"form-control", :style => "width:200px"}%>
 </div>
