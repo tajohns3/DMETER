@@ -10,3 +10,13 @@
 #      $('#prodsample_faid').html(options)
 #    else
 #      $('#prodsample_faid').empty()
+
+jQuery ->
+  $("#active_demo").hide();
+
+jQuery ->
+  $('#prodsample_sample_purp').on "change",  ->
+    if ($(this).val() is "Active Field Demonstration" || $(this).val() is "Farmer Meeting")
+      $('#active_demo').fadeIn()
+    else
+      $('#active_demo').fadeOut()

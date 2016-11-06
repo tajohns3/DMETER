@@ -1,10 +1,5 @@
-class Demoresult < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :state
-  belongs_to :pocket
-
-  has_many :resultphotos
-  accepts_nested_attributes_for :resultphotos, reject_if: :all_blank, allow_destroy: true
+class Resultphoto < ActiveRecord::Base
+  belongs_to :demoresult
 
   has_attached_file :photo, :styles => {  :thumb =>  "100x100#",
                                           :medium => "300x300>" }

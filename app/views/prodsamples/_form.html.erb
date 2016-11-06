@@ -52,8 +52,14 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <div>
-                          <%=	f.label 'Select Sample Purpose' %><br>
-                          <%= f.select :sample_purp, [['Active Field Demonstration'],['Dealer Introduction'],['Farmer Meeting'],['Organize Dealer Meeting'],['Complimentary']], {:include_blank => true}, {class: "form-control"}   %>
+                          <div class="field">
+                            <%= f.label 'Select Sample Purpose' %><br>
+                            <%= f.select :sample_purp, [['Active Field Demonstration'],['Dealer Introduction'],['Farmer Meeting'],['Organize Dealer Meeting'],['Complimentary']], {:include_blank => true}, {class: "form-control"}   %>
+                          </div>
+                          <div class="field" id="active_demo">
+                            <%= f.label 'Select Active Demo' %><br>
+                            <%= f.collection_select :demoid, PreDemonstration.all, :id, :democode, {:include_blank => true}, {class: "form-control"} %>
+                          </div>
                         </div>
                       </div>
                     </div>
