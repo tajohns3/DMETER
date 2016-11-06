@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bank_name: MyString
+  blank_check: MyString
+  bank_account: 1
+  cheque_num: 1
+
+two:
+  bank_name: MyString
+  blank_check: MyString
+  bank_account: 1
+  cheque_num: 1

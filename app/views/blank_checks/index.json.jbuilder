@@ -1,0 +1,1 @@
+json.array! @blank_checks, partial: 'blank_checks/blank_check', as: :blank_check

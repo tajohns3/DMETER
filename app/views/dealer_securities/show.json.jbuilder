@@ -1,0 +1,1 @@
+json.partial! "dealer_securities/dealer_security", dealer_security: @dealer_security

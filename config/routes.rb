@@ -13,6 +13,12 @@ Rails.application.routes.draw do
 
   resources :demonstrations
   resources :farmers
+  resources :dealer_blanks
+  resources :blank_checks
+  resources :dealer_securities
+  resources :security_checks
+  resources :dealer_props
+  resources :proprietors
   resources :positions
   resources :fa_targets
   resources :targets

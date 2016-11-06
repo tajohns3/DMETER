@@ -11,64 +11,632 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :state_id %><br>
-    <%= f.collection_select :state_id, State.all, :id, :state, include_blank: true %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id, 'Area Manager' %><br>
+    <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <%= link_to 'Back', dealers_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <h1 class="panel-title text-center">
+                <b>Register New Dealer</b>
+              </h1>
+            </div>
+            <div class="panel-body">
+              <h4><b>Sections I-VIII Mandatory</b> </h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>I. Geographic Information</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <%= f.label :state_id %><br>
+                            <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>
+                              State Manager
+                            </label>
+                            <select class="form-control">
+                              <option value="pizza">
+                                Pizza
+                              </option>
+                              <option value="salad">
+                                Salad
+                              </option>
+                              <option value="pizzasalad">
+                                Pizza and Salad
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>
+                              Area Manager
+                            </label>
+                            <select class="form-control">
+                              <option value="pizza">
+                                Pizza
+                              </option>
+                              <option value="salad">
+                                Salad
+                              </option>
+                              <option value="pizzasalad">
+                                Pizza and Salad
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>
+                              Sales Representative
+                            </label>
+                            <select class="form-control">
+                              <option value="pizza">
+                                Pizza
+                              </option>
+                              <option value="salad">
+                                Salad
+                              </option>
+                              <option value="pizzasalad">
+                                Pizza and Salad
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <%= f.label :pocket_id %><br>
+                            <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b> II. Dealer Information</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <%= f.label :name, "Dealership / Agency Name" %><br>
+                            <%= f.text_field :name, {class: "form-control"} %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <%= f.label :address, "Street Address" %><br>
+                            <%= f.text_field :address, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md4 col-md-4" style="display: block;">
+                          <div class="form-group">
+                            <%= f.label :atpost, "At & Post" %><br>
+                            <%= f.text_field :atpost, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md3 col-md-3" style="display: block;">
+                          <div class="form-group">
+                            <%= f.label :pin_code, "Pin Code" %><br>
+                            <%= f.text_field :pin_code, {class: "form-control"} %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :taluka, "Taluka / Tehsil" %><br>
+                            <%= f.text_field :taluka, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :district, "District" %><br>
+                            <%= f.text_field :district, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :state_id %><br>
+                            <%= f.text_field :state_id,:disabled => true, class: "form-control" %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    <%= f.grouped_collection_select :user_id, State.all, :area_managers, :state, :id, :sur_name,  include_blank: true%>
-  </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>III. Warehouse / Godown Address</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <%= f.label :whaddress, "Street Address" %><br>
+                            <%= f.text_field :whaddress, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md4 col-md-4" style="display: block;">
+                          <div class="form-group">
+                            <%= f.label :whatpost, "At & Post" %><br>
+                            <%= f.text_field :whatpost, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md3 col-md-3" style="display: block;">
+                          <div class="form-group">
+                            <%= f.label :whpincode, "Pin Code" %><br>
+                            <%= f.text_field :whpincode, {class: "form-control"} %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :whtaluka, "Taluka / Tehsil" %><br>
+                            <%= f.text_field :whtaluka, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :whdistrict, "District" %><br>
+                            <%= f.text_field :whdistrict, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :state_id %><br>
+                            <%= f.text_field :state_id,:disabled => true, class: "form-control" %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>IV. Logistics Details&nbsp;</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :transportname, "Transporter Name" %><br>
+                            <%= f.text_field :transportname, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :transportbranch, "Branch Name" %><br>
+                            <%= f.text_field :transportbranch, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :transportadd, "Address" %><br>
+                            <%= f.text_field :transportadd, {class: "form-control"} %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <%= f.label :transportacct, "Account Number" %><br>
+                            <%= f.text_field :transportacct, {class: "form-control"} %>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <%= f.label :transportph, "Phone Number" %><br>
+                            <%= f.text_field :transportph, {class: "form-control"} %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>V. Proprietor Information</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div>
+                      <%= f.fields_for :proprietors do |prop|%>
+                          <%=render 'proprietor_fields', f: prop%>
+                      <%end%>
 
+                      <div class="links">
+                        <%=link_to_add_association 'Add Proprietor', f, :proprietors,class: "btn btn-primary",:style=>'color:#FFFFFF'%>
+                      </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>VI. Bank Information</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div>
+                        <%= f.fields_for :banks do |bank|%>
+                            <%=render 'bank_fields', f: bank%>
+                        <%end%>
 
-    <%=@dealer.user%>
+                        <div class="links">
+                          <%=link_to_add_association 'Add Bank Account', f, :banks,class: "btn btn-success",:style=>'color:#FFFFFF'%>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>VII. Security Check Details</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <%= f.fields_for :security_checks do |sec|%>
+                          <%=render 'security_check_fields', f: sec%>
+                      <%end%>
 
-    <div class="field">
-      <%= f.label :user_id, 'Sales Representative' %><br>
-      <%= f.collection_select :user_id, User.where(role: 'sale_representative'), :id, :sur_name,  include_blank: true%>
-    </div>
+                      <div class="links">
+                        <%=link_to_add_association 'Add Security Check', f, :security_checks,class: "btn btn-primary",:style=>'color:#FFFFFF'%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>VIII. Blank Check Details</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <%= f.fields_for :blank_checks do |sec|%>
+                          <%=render 'blank_check_fields', f: sec%>
+                      <%end%>
 
-  <div class="field">
-    <%= f.label :pocket_id %><br>
-    <%= f.number_field :pocket_id %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :atpost %><br>
-    <%= f.text_field :atpost %>
-  </div>
-  <div class="field">
-    <%= f.label :pin_code %><br>
-    <%= f.text_field :pin_code %>
-  </div>
-  <div class="field">
-    <%= f.label :taluka_id %><br>
-    <%= f.number_field :taluka_id %>
-  </div>
-  <div class="field">
-    <%= f.label :district_id %><br>
-    <%= f.number_field :district_id %>
-  </div>
-    <div>
-      <%= f.fields_for :banks do |bank|%>
-          <%=render 'bank_fields', f: bank%>
-      <%end%>
-      <div class="links">
-        <%=link_to_add_association 'Add Bank Account', f, :banks%>
+                      <div class="links">
+                        <%=link_to_add_association 'Add Blank Check', f, :blank_checks,class: "btn btn-success",:style=>'color:#FFFFFF'%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <b>Dealer Business Profile</b>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                Dealer Particulars
+                              </h3>
+                            </div>
+                            <div class="panel-body">
+                              <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                  <th class="text-center">
+                                    Check If Photocopy was Provided.&nbsp;
+                                  </th>
+                                  <th class="text-center">
+                                    Date Issued:
+                                  </th>
+                                  <th class="text-center">
+                                    Experiation Date:
+                                  </th>
+                                  <th class="text-center">
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">
+                                    <%= f.label :fert_license, "Fertilizer License" %><br>
+                                    <%= f.check_box :fert_license %>
+                                  </th>
+                                  <th class="text-center">
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :fl_issdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+
+                                  </th>
+                                  <th>
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :fl_expdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+
+                                  </th>
+                                  <th class="text-center">
+                                    <label class="btn btn-success btn-file">
+                                      Upload Photocopy <%= f.file_field :fl_photo %>
+                                    </label>
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">
+                                    <%= f.label :cent_stax, "Central Sales Tax" %><br>
+                                    <%= f.check_box :cent_stax %>
+                                  </th>
+                                  <th class="text-center">
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :cst_issdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+
+                                  </th>
+                                  <th>
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :cst_expdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+                                  </th>
+                                  <th class="text-center">
+                                    <label class="btn btn-success btn-file">
+                                      Upload Photocopy <%= f.file_field :cst_photo %>
+                                    </label>
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">
+                                    <%= f.label :state_stax, "State Sales Tax"  %><br>
+                                    <%= f.check_box :state_stax %>
+                                  </th>
+                                  <th>
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :sst_issdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+                                  </th>
+                                  <th>
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :sst_expdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+                                  </th>
+                                  <th class="text-center">
+                                    <label class="btn btn-success btn-file">
+                                      Upload Photocopy <%= f.file_field :sst_photo %>
+                                    </label>
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">
+                                    <%= f.label :vat, "VAT" %><br>
+                                    <%= f.check_box :vat %>
+                                  </th>
+                                  <th class="text-center">
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :vat_issdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+                                  </th>
+                                  <th>
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :vat_expdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+
+                                  </th>
+                                  <th class="text-center">
+                                    <label class="btn btn-success btn-file">
+                                      Upload Photocopy <%= f.file_field :vat_photo %>
+                                    </label>
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">
+                                    <%= f.label :pancard, "Pan Card" %><br>
+                                    <%= f.check_box :pancard %>
+                                  </th>
+                                  <th class="text-center">
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :pc_issdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+                                  </th>
+                                  <th>
+
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <%= f.text_field :pc_expdate, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                      </div>
+                                  </th>
+                                  <th class="text-center">
+                                    <label class="btn btn-success btn-file">
+                                      Upload Photocopy <%= f.file_field :pc_photo %>
+                                    </label>
+                                  </th>
+                                </tr>
+                                </thead>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                Dealer Particulars
+                              </h3>
+                            </div>
+                            <div class="panel-body">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <%= f.label :annturnover, "Annual Turnover" %><br>
+                                    <%= f.text_field :annturnover, placeholder: "Rupees", class: "form-control" %>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <%= f.label :bioturnover, "Bio Products Turnover" %><br>
+                                    <%= f.text_field :bioturnover, placeholder: "Rupees", class: "form-control" %>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <%= f.label :custbase, "Customer Base" %><br>
+                                    <%= f.text_field :custbase, placeholder: "Number Of Farmers", class: "form-control" %>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <label class="btn btn-primary btn-file">
+                                    Upload Dealer Registration Form <%= f.file_field :dealerreqform %>
+                                  </label>
+                                </div>
+                                <div class="col-md-6">
+                                  <label class="btn btn-success btn-file pull-right">
+                                    Upload Dealer Photograph <%= f.file_field :dealerphoto %>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <b>Introductory Call to Dealer</b>
+                              </h3>
+                            </div>
+                            <div class="panel-body">
+                              <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                  <%= f.text_field :introcall, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                                  <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <b>Check If Data was Verified with Dealer</b>
+                              </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <%= f.label :call, "Data Verified the Dealer?" %><br>
+                              <%= f.check_box :call %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 text-right">
+              <div class="actions">
+                <%= f.submit "Submit", class: "btn btn-primary pull-right", id:"sub_stuff"%>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    </body>
 
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    </html>
 <% end %>

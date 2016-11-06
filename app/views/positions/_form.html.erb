@@ -13,7 +13,10 @@
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h1 class="panel-title text-center">
-          <b>Register New Field Assistant</b>
+          <%= link_to 'Back', positions_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+          <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-left",:style=>'color:#FFFFFF' %>
+          <b>Register New Field Assistant (Fullfill Position)</b>
+          <%= link_to 'Create Position', new_field_assistant_path, class: "btn btn-success pull-right",:style=>'color:#FFFFFF' %>
         </h1>
       </div>
       <div class="panel-body">
@@ -107,13 +110,9 @@
                               </div>
                               <div class="panel-body">
                                 <div class="row">
-                                  <div class="col-md-6">
-                                    <%= f.label :yes %><br>
+                                  <div class="col-md-12">
+                                    <%= f.label :yes, "Check if FA has experience" %><br>
                                     <%= f.check_box :yes %>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <%= f.label :no %><br>
-                                    <%= f.check_box :no %>
                                   </div>
                                 </div>
                               </div>
@@ -126,17 +125,7 @@
                               </div>
                               <div class="panel-body">
                                 <div class="form-group">
-                                  <select class="form-control">
-                                    <option value="pizza">
-                                      Pizza
-                                    </option>
-                                    <option value="salad">
-                                      Salad
-                                    </option>
-                                    <option value="pizzasalad">
-                                      Pizza and Salad
-                                    </option>
-                                  </select>
+                                  <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {:include_blank => true},{class: "form-control"}  %>
                                 </div>
                               </div>
                             </div>
@@ -164,8 +153,6 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <%= link_to 'Back', new_field_assistant_path, class: "btn btn-success",:style=>'color:#FFFFFF' %>
-            <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
           </div>
           <div class="col-md-4">
           </div>

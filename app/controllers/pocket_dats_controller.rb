@@ -69,6 +69,6 @@ class PocketDatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pocket_dat_params
-      params.require(:pocket_dat).permit(:pocket_id, :pocket_info_id)
+      params.require(:pocket_dat).permit(:pocket_id, :pocket_info_id, :taluka_id, :taluka)
     end
 end

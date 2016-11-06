@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank name:</strong>
+  <%= @blank_check.bank_name %>
+</p>
+
+<p>
+  <strong>Blank check:</strong>
+  <%= @blank_check.blank_check %>
+</p>
+
+<p>
+  <strong>Bank account:</strong>
+  <%= @blank_check.bank_account %>
+</p>
+
+<p>
+  <strong>Cheque num:</strong>
+  <%= @blank_check.cheque_num %>
+</p>
+
+<%= link_to 'Edit', edit_blank_check_path(@blank_check) %> |
+<%= link_to 'Back', blank_checks_path %>

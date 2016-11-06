@@ -16,6 +16,8 @@
       <div class="panel panel-primary">
         <div class="panel-heading text-center">
           <h1 class="panel-title text-center">
+            <%= link_to 'Back', pockets_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+            <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
             <b> Register New Pocket</b>
           </h1>
         </div>
@@ -161,17 +163,13 @@
                   </h3>
                 </div>
                 <div class="panel-body">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="row">
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-4 text-center">
-                          <%= link_to_add_association "Add Pocket Information", f, :pocket_dats,class: "btn btn-info",:style=>'color:#FFFFFF'%>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                      </div>
+                  <div>
+                    <%= f.fields_for :pocket_dats do |prop|%>
+                        <%=render 'pocket_dat_fields', f: prop%>
+                    <%end%>
+
+                    <div class="links ">
+                      <%=link_to_add_association 'Add Pocket Info', f, :pocket_dats,class: "btn btn-success",:style=>'color:#FFFFFF'%>
                     </div>
                   </div>
                 </div>
@@ -180,7 +178,6 @@
           </div>
           <div class="row">
             <div class="col-md-4">
-              <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
             </div>
             <div class="col-md-4">
             </div>
@@ -193,16 +190,7 @@
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
-    >
-    </script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
-    >
-    </script>
+
     </body>
-    <script>
-      $('.dropdown-toggle').dropdown()
-    </script>
+
 <% end %>

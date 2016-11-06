@@ -1,0 +1,1 @@
+json.partial! "dealer_props/dealer_prop", dealer_prop: @dealer_prop

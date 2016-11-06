@@ -1,0 +1,25 @@
+<%= form_for(@dealer_prop) do |f| %>
+  <% if @dealer_prop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dealer_prop.errors.count, "error") %> prohibited this dealer_prop from being saved:</h2>
+
+      <ul>
+      <% @dealer_prop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dealer_id %><br>
+    <%= f.number_field :dealer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :proprietor_id %><br>
+    <%= f.number_field :proprietor_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

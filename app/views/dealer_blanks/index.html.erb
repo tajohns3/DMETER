@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dealer Blanks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dealer</th>
+      <th>Blank check</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dealer_blanks.each do |dealer_blank| %>
+      <tr>
+        <td><%= dealer_blank.dealer_id %></td>
+        <td><%= dealer_blank.blank_check_id %></td>
+        <td><%= link_to 'Show', dealer_blank %></td>
+        <td><%= link_to 'Edit', edit_dealer_blank_path(dealer_blank) %></td>
+        <td><%= link_to 'Destroy', dealer_blank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dealer blank', new_dealer_blank_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @proprietor.fname %>
+</p>
+
+<p>
+  <strong>Sname:</strong>
+  <%= @proprietor.sname %>
+</p>
+
+<p>
+  <strong>Mname:</strong>
+  <%= @proprietor.mname %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @proprietor.designation %>
+</p>
+
+<p>
+  <strong>Staddress:</strong>
+  <%= @proprietor.staddress %>
+</p>
+
+<p>
+  <strong>Phnumber:</strong>
+  <%= @proprietor.phnumber %>
+</p>
+
+<%= link_to 'Edit', edit_proprietor_path(@proprietor) %> |
+<%= link_to 'Back', proprietors_path %>

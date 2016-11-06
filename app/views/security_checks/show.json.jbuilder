@@ -1,0 +1,1 @@
+json.partial! "security_checks/security_check", security_check: @security_check

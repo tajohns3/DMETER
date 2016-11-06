@@ -1,56 +1,515 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <%= link_to 'Back', dealers_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+          <%= link_to 'Edit', edit_dealer_path(@dealer), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+          <b>Dealer: </b>
+          <%= @dealer.name %>
+          <%= link_to 'Delete', dealer_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Dealer Information
+                </h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Dealer Name:</strong>
+                  <%= @dealer.name %>
+                </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @dealer.state_id %>
-</p>
+                <p>
+                  <strong>Address:</strong>
+                  <%= @dealer.address %>
+                </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @dealer.user_id %>
-</p>
+                <p>
+                  <strong>Atpost:</strong>
+                  <%= @dealer.atpost %>
+                </p>
 
-<p>
-  <strong>Pocket:</strong>
-  <%= @dealer.pocket_id %>
-</p>
+                <p>
+                  <strong>Pin code:</strong>
+                  <%= @dealer.pin_code %>
+                </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @dealer.name %>
-</p>
+                <p>
+                  <strong>Taluka:</strong>
+                  <%= @dealer.taluka %>
+                </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @dealer.address %>
-</p>
+                <p>
+                  <strong>State:</strong>
+                  <%= @dealer.state.state %>
+                </p>
+                <p>
+                  <strong>District:</strong>
+                  <%= @dealer.district %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Geographic Information
+                </h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>State:</strong>
+                  <%= @dealer.state.state %>
+                </p>
+                <p>
+                  <strong>State Manager:</strong>
+                  <%= @dealer.user_id %>
+                </p>
+                <p>
+                  <strong>Area Manager:</strong>
+                  <%= @dealer.user_id %>
+                </p>
+                <p>
+                  <strong>Sales Representative:</strong>
+                  <%= @dealer.user_id %>
+                </p>
+                <p>
+                  <strong>Pocket:</strong>
+                  <%= @dealer.pocket.pocket_name %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Warehouse Information
+                </h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Address:</strong>
+                  <%= @dealer.whaddress %>
+                </p>
 
-<p>
-  <strong>Atpost:</strong>
-  <%= @dealer.atpost %>
-</p>
+                <p>
+                  <strong>Atpost:</strong>
+                  <%= @dealer.whatpost %>
+                </p>
 
-<p>
-  <strong>Pin code:</strong>
-  <%= @dealer.pin_code %>
-</p>
+                <p>
+                  <strong>Pin Code:</strong>
+                  <%= @dealer.whpincode %>
+                </p>
 
-<p>
-  <strong>Taluka:</strong>
-  <%= @dealer.taluka_id %>
-</p>
+                <p>
+                  <strong>District:</strong>
+                  <%= @dealer.whdistrict %>
+                </p>
 
-<p>
-  <strong>District:</strong>
-  <%= @dealer.district_id %>
-</p>
-<p>
-  <strong>Bank Account:</strong>
-  <% @dealer.banks.each do |bank| %>
-  <li><%=bank.name%></li>
-    <li><%=bank.account_number%></li>
-    <%end%>
-</p>
+                <p>
+                  <strong>Taluka:</strong>
+                  <%= @dealer.whtaluka %>
+                </p>
 
-<%= link_to 'Edit', edit_dealer_path(@dealer) %> |
-<%= link_to 'Back', dealers_path %>
+                <p>
+                  <strong>State:</strong>
+                  <%= @dealer.state.state %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Logistic Details
+                </h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Address:</strong>
+                  <%= @dealer.transportadd %>
+                </p>
+
+                <p>
+                  <strong>Transport Name:</strong>
+                  <%= @dealer.transportname %>
+                </p>
+
+                <p>
+                  <strong>Transport Branch:</strong>
+                  <%= @dealer.transportbranch %>
+                </p>
+
+                <p>
+                  <strong>Transport Account:</strong>
+                  <%= @dealer.transportacct %>
+                </p>
+
+                <p>
+                  <strong>Transport Phone:</strong>
+                  <%= @dealer.transportph %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>Proprietor Information</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <% @dealer.proprietors.each do |ban| %>
+                <div class="row">
+                  <div class="col-md-6">
+                        <strong><u>Proprietor: <%=ban.fname%> <%=ban.sname%> </u></strong>
+                        <li><b>First Name: </b><%=ban.fname%></li>
+                        <li><b>Surname: </b><%=ban.sname%></li>
+                        <li><b>Middle Name: </b><%=ban.mname%></li>
+                  </div>
+                  <div class="col-md-6">
+                    <br>
+                    <li><b>Designation: </b><%=ban.designation%></li>
+                    <li><b>Address: </b><%=ban.staddress%></li>
+                    <li><b>Contact Number: </b><%=ban.phnumber%></li>
+                    <br>
+                  </div>
+                </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>Bank Account Information</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <% @dealer.banks.each do |bank| %>
+                <div class="row">
+                  <div class="col-md-6">
+                        <strong><u>Bank: <%=bank.name%> Branch: <%=bank.branch%></u></strong>
+                        <li><b>Bank Name: </b><%=bank.name%></li>
+                        <li><b>Branch Name: </b><%=bank.branch%></li>
+                        <li><b>Account Number: </b><%=bank.account_number%></li>
+                  </div>
+                  <div class="col-md-6">
+                    <br>
+                    <li><b>Address: </b><%=bank.address%></li>
+                    <li><b>Phone Number: </b><%=bank.phone%></li>
+                    <br>
+                    <br>
+                  </div>
+                </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>Security Check Details</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <% @dealer.security_checks.each do |sec| %>
+                <div class="row">
+                  <div class="col-md-6">
+                      <strong><u>Security Check: <%=sec.check_number%> </u></strong>
+                        <li><b>Bank Name: </b><%=sec.bank_name%></li>
+                        <li><b>Cheque Number: </b><%=sec.check_number%></li>
+                        <li><b>Bank Account: </b><%=sec.bank_account%></li>
+                  </div>
+                  <div class="col-md-6">
+                    <br>
+                    <li><b>Amount: </b><%=sec.amount%></li>
+                    <li><b>Issue Date: </b><%=sec.issue_date%></li>
+                    <li><b>Status: </b><%=sec.status%></li>
+                    <br>
+                  </div>
+                </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>Blank Check Details</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <% @dealer.blank_checks.each do |blank| %>
+                <div class="row">
+                  <div class="col-md-6">
+                        <strong><u>Blank Check: <%=blank.cheque_num%></u></strong>
+                        <li><b>Bank Name: </b><%=blank.bank_name%></li>
+                        <li><b>Blank Checks Received: </b><%=blank.blank_check%></li>
+                  </div>
+                  <div class="col-md-6">
+                    <br>
+                    <li><b>Account Number: </b><%=blank.bank_account%></li>
+                    <li><b>Cheque Number: </b><%=blank.cheque_num%></li>
+                        <br>
+                  </div>
+                </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>Dealer Business Profile</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Dealer Particulars
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <table class="table table-bordered">
+                          <tbody>
+                          <tr>
+                          </tr>
+                          </tbody>
+                          <thead>
+                          <tr>
+                            <th class="text-center">
+                              Photocopy Provided:
+                            </th>
+                            <th class="text-center">
+                              Date Issued:
+                            </th>
+                            <th class="text-center">
+                              Experiation Date:
+                            </th>
+                            <th class="text-center">
+                            </th>
+                          </tr>
+                          <tr>
+                            <th class="text-center">
+                              <p>
+                                <strong>Fertilizer License:</strong>
+                                <%= @dealer.fert_license%>
+                              </p>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.fl_issdate %>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.fl_expdate %>
+                            </th>
+                            <th class="text-center">
+                              <p>
+                                <strong>Fertilizer License Form:</strong><br>
+                                <%= link_to (image_tag(@dealer.fl_photo_url(:thumb))), @dealer.fl_photo_url %>
+                              </p>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th class="text-center">
+                              <p>
+                                <strong>Central Sales Tax:</strong>
+                                <%= @dealer.cent_stax %>
+                              </p>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.cst_issdate %>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.cst_expdate %>
+                            </th>
+                            <th class="text-center">
+                              <p>
+                                <strong>Central Sales Tax Form:</strong><br>
+                                <%= link_to (image_tag(@dealer.cst_photo_url(:thumb))), @dealer.cst_photo_url %>
+                              </p>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th class="text-center">
+                              <p>
+                                <strong>State Sales Tax:</strong>
+                                <%= @dealer.state_stax %>
+                              </p>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.sst_issdate %>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.sst_expdate %>
+                            </th>
+                            <th class="text-center">
+                              <p>
+                                <strong>State Sales Tax Form:</strong><br>
+                                <%= link_to (image_tag(@dealer.sst_photo_url(:thumb))), @dealer.sst_photo_url %>
+                              </p>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th class="text-center">
+                              <p>
+                                <strong>VAT:</strong>
+                                <%= @dealer.vat %>
+                              </p>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.vat_issdate %>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.vat_expdate %>
+                            </th>
+                            <th class="text-center">
+                              <p>
+                                <strong>VAT Form:</strong><br>
+                                <%= link_to (image_tag(@dealer.vat_photo_url(:thumb))), @dealer.vat_photo_url %>
+                              </p>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th class="text-center">
+                              <p>
+                                <strong>Pan Card:</strong>
+                                <%= @dealer.pancard %>
+                              </p>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.pc_issdate %>
+                            </th>
+                            <th class="text-center">
+                                <%= @dealer.pc_expdate%>
+                            </th>
+                            <th class="text-center">
+                              <p>
+                                <strong>Pan Card Form:</strong><br>
+                                <%= link_to (image_tag(@dealer.pc_photo_url(:thumb))), @dealer.pc_photo_url %>
+                              </p>
+                            </th>
+                          </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Dealer Particulars
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <p>
+                                <strong>Annual Turnover:</strong>
+                                <%= @dealer.annturnover %>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <p>
+                                <strong>Bio Products Turnover:</strong>
+                                <%= @dealer.bioturnover %>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <p>
+                                <strong>Customer Base:</strong>
+                                <%= @dealer.custbase %>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p>
+                              <strong>Dealer Registration Form:</strong>
+                              <%= link_to (image_tag(@dealer.dealerreqform_url(:thumb))), @dealer.dealerreqform_url %>
+                            </p>
+                          </div>
+                          <div class="col-md-6">
+                            <p>
+                              <strong>Dealer Photograph:</strong>
+                              <%= link_to (image_tag(@dealer.dealerphoto_url(:thumb))), @dealer.dealerphoto_url %>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          <b>Introductory Call to Dealer</b>
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <p>
+                            <strong>Date of Intro Call:</strong>
+                            <%= @dealer.introcall %>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          <b>Check If Data was Verified with Dealer</b>
+                        </h3>
+                      </div>
+                      <div class="panel-body text-center">
+                        <p>
+                          <strong>Data Verified:</strong>
+                          <%= @dealer.call %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

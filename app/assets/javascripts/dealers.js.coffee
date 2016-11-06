@@ -14,3 +14,4 @@ jQuery ->
       else
        $('#dealer_user_id').empty()
        $('#dealer_user_id').parent().hide()
+

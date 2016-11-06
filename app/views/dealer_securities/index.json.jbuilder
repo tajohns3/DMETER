@@ -1,0 +1,1 @@
+json.array! @dealer_securities, partial: 'dealer_securities/dealer_security', as: :dealer_security

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @dealer_prop.dealer_id %>
+</p>
+
+<p>
+  <strong>Proprietor:</strong>
+  <%= @dealer_prop.proprietor_id %>
+</p>
+
+<%= link_to 'Edit', edit_dealer_prop_path(@dealer_prop) %> |
+<%= link_to 'Back', dealer_props_path %>

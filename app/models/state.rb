@@ -8,6 +8,7 @@ class State < ActiveRecord::Base
   has_many :pockets
   has_many :field_assistants
   has_many :positions
+  has_many :dealers
   has_many :demoresults
   has_many :farmers
 
