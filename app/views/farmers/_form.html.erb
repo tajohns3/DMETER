@@ -21,18 +21,24 @@
         </div>
     <% end %>
     <div class="container">
-      <div class="panel panel-primary">
-        <div class="panel-heading text-center">
-          <h1 class="panel-title text-center">
-            <b> Add new farmer</b>
-          </h1>
-        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <%= link_to 'Back', farmers_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <h1 class="panel-title text-center">
+                <b>Register New Farmer</b>
+              </h1>
+            </div>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-6">
               <div class="panel panel-default">
-                <div class="panel-heading text-center">
+                <div class="panel-heading">
+                  <div class="panel-title">
                   <b>Geographic Information</b>
+                  </div>
                 </div>
                 <div class="panel-body">
                   <div class="row">
@@ -78,13 +84,15 @@
             </div>
             <div class="col-md-6">
               <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                  <b>Farmer Information</b>
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <b>Farmer Information</b>
+                  </div>
                 </div>
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-8">
-                      <div class="form-group">
+                      <div class="form-group has-error">
                         <div>
                           <%= f.label 'Farmer Name' %><br>
                           <%= f.text_field :name, {class: "form-control"} %>
@@ -139,8 +147,11 @@
             <div class="col-md-12">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h3 class="panel-title text-center">
-                    <b>Crop Information</b>
+                  <h3 class="panel-title">
+                    <div class="panel-title">
+                      <b>Crop Information</b>
+                    </div>
+                </div>
                   </h3>
                 </div>
                 <div class="panel-body">
@@ -161,19 +172,20 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
-            </div>
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-              <div class="actions">
-                <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+   </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 text-right">
+          <div class="actions">
+            <%= f.submit "Submit", class: "btn btn-primary pull-right", id:"sub_stuff"%>
+          </div>
+        </div>
+      </div>
+  </div>
 <% end %>
