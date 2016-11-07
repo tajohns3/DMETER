@@ -23,6 +23,7 @@ class FaActivitiesController < ApplicationController
     pre_demo =@fa_activity.pre_demonstrations.build
     prod = pre_demo.applications.build
     post_demo = @fa_activity.post_demonstrations.build
+    10.times{meet_farmer.activity_farmers.build}
   end
 
   # GET /fa_activities/1/edit
@@ -92,6 +93,7 @@ class FaActivitiesController < ApplicationController
     def fa_activity_params
       params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,:activity,:position_id,
       meet_farmers_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:dealer_id,:village_id,:number_farmer,:consultation,
+      activity_farmers_attributes:[:id,:meet_farmer_id, :farmer_id ,:_destroy],
       product_prescriptions_attributes:[:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
      :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]],
      dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy,

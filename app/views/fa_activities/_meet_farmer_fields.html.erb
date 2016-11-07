@@ -13,56 +13,22 @@
   <%= f.label :number_farmer, 'Number of farmers Met: '%>
   <%=f.select :number_farmer, (1..10), {include_blank: ''}%>
 </div>
+
+
+
 <div class="container" id="met_farmers">
-  <div class="field", id="farm_met_1">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
-  <div class="field", id="farm_met_2">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
+    <%=f.fields_for :activity_farmers do |no|%>
 
-  <div class="field", id="farm_met_3">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
-  <div class="field", id="farm_met_4">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
+              <table><%=no.collection_select :farmer_id, Farmer.all, :id, :name, {include_blank: ''}%></table>
 
-  <div class="field", id="farm_met_5">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
-  <div class="field", id="farm_met_6">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
+        <%end%>
 
-  <div class="field", id="farm_met_7">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
-  <div class="field", id="farm_met_8">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
-  <div class="field", id="farm_met_9">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
-  <div class="field", id="farm_met_10">
-    <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
-  </div>
 
 </div>
 
