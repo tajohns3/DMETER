@@ -4,7 +4,7 @@ class Farmer < ActiveRecord::Base
   belongs_to :pocket
   belongs_to :village
   belongs_to :crop
-
+  belongs_to :meet_sr_farmer
   has_many :farmcrops
   accepts_nested_attributes_for :farmcrops, reject_if: :all_blank, allow_destroy: true
 end

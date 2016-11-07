@@ -15,15 +15,21 @@ class SrActivitiesController < ApplicationController
   # GET /sr_activities/new
   def new
     @sr_activity = SrActivity.new
-    @sr_activity.business_developments.build
-    @sr_activity.meet_state_managers.build
-    @sr_activity.meet_dealers.build
-    @sr_activity.meet_fas.build
-    @sr_activity.meet_sr_farmers.build
+    @sr_activity.build_business_development
+    @sr_activity.build_meet_state_manager
+    @sr_activity.build_meet_dealer
+    @sr_activity.build_meet_fa
+    @sr_activity.build_meet_sr_farmer
+
   end
 
   # GET /sr_activities/1/edit
   def edit
+    @sr_activity.build_business_development
+    @sr_activity.build_meet_state_manager
+    @sr_activity.build_meet_dealer
+    @sr_activity.build_meet_fa
+    @sr_activity.build_meet_sr_farmer
   end
 
   # POST /sr_activities
@@ -37,12 +43,11 @@ class SrActivitiesController < ApplicationController
         format.json { render :show, status: :created, location: @sr_activity }
 
       else
-
-        @sr_activity.business_developments.build
-        @sr_activity.meet_state_managers.build
-        @sr_activity.meet_dealers.build
-        @sr_activity.meet_fas.build
-        @sr_activity.meet_sr_farmers.build
+        @sr_activity.build_business_development
+        @sr_activity.build_meet_state_manager
+        @sr_activity.build_meet_dealer
+        @sr_activity.build_meet_fa
+        @sr_activity.build_meet_sr_farmer
 
         format.html { render :new }
         format.json { render json: @sr_activity.errors, status: :unprocessable_entity }
@@ -83,10 +88,10 @@ class SrActivitiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sr_activity_params
       params.require(:sr_activity).permit(:state_id, :user_id, :date, :pactivity, :cf_option, :other,:manager_id,
-      business_developments_attributes:[:id,:pre_demonstration_id, :pocket_id, :option, :sample_request, :numattendees, :a_attendees, :b_attendees, :c_attendees,:sr_activity_id,:_destroy],
-      meet_state_managers_attributes:[:pocket_id, :dealer_id, :position_id, :purpose, :other, :sr_activity_id,:_destroy],
-      meet_dealers_attributes:[:id,:purpose, :other, :sr_activity_id, :_destroy],
-      meet_fas_attributes:[:sr_activity_id, :purpose, :_destroy],
-      meet_sr_farmers_attributes:[:farmer_id, :crop_id, :crop_condition, :crop_growth, :recommendation, :purpose, :sr_activity_id,:_destroy])
+      business_development_attributes:[:id,:pre_demonstration_id, :pocket_id, :option, :sample_request, :numattendees, :a_attendees, :b_attendees, :c_attendees,:sr_activity_id,:_destroy],
+      meet_state_manager_attributes:[:id,:pocket_id, :dealer_id, :position_id, :purpose, :other, :sr_activity_id,:_destroy],
+      meet_dealer_attributes:[:id,:purpose, :other, :sr_activity_id, :_destroy],
+      meet_fa_attributes:[:id,:sr_activity_id, :purpose, :_destroy],
+      meet_sr_farmer_attributes:[:id,:farmer_id, :crop_id, :crop_condition, :crop_growth, :recommendation, :purpose, :sr_activity_id,:_destroy])
     end
 end

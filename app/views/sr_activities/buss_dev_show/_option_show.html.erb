@@ -1,0 +1,7 @@
+<p>
+  <strong>Option:</strong>
+  <%=@sr_activity.business_development.option.humanize.titleize %>
+</p>
+
+<%= render 'sr_activities/buss_dev_show/org_farm_show' if @sr_activity.business_development.option=='organize_farmer_meeting'%>
+<%= render 'sr_activities/buss_dev_show/org_dealer_show' if @sr_activity.business_development.option=='organize_dealer_meeting'%>

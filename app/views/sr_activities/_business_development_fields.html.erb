@@ -2,14 +2,14 @@
 
 <div class="field">
   <%= f.label :option %><br>
-  <%= f.select :option, options_for_select([["Organize Farmer Meeting", 'organize farmer meeting'],["Organize Dealer Meeting", 'organize dealer meeting'],["Brand Awareness/Marketing",'brand awareness/marketing'],
-  ["Home Office Interaction", 'home office interaction']]), {include_blank: ''}, {id: 'buss_development'}%>
+  <%= f.select :option, options_for_select([["Organize Farmer Meeting", 'organize_farmer_meeting'],["Organize Dealer Meeting", 'organize_dealer_meeting'],["Brand Awareness/Marketing",'brand_awareness/marketing'],
+  ["Home Office Interaction", 'home_office_interaction']]), {include_blank: ''}, {id: 'buss_development'}%>
 </div>
 
 <div class="container" id="buss_demo_div">
   <div class="field">
     <%= f.label :pre_demonstration_id %><br>
-    <%= f.number_field :pre_demonstration_id %>
+    <%= f.collection_select :pre_demonstration_id, PreDemonstration.all, :id, :demo_code %>
   </div>
 
   <div class="field">
@@ -18,8 +18,10 @@
   </div>
 
   <div class="field">
-    <%= f.label :sample_request %><br>
-    <%= f.check_box :sample_request %>
+    <label>Sample Request
+
+    <%= f.check_box :sample_request,{}, 'Yes', 'No' %>
+    </label>
   </div>
 
 </div>

@@ -2,6 +2,7 @@ class PreDemonstration < ActiveRecord::Base
   belongs_to :fa_activity
   has_many :applications
   has_many :demonstrations
+  has_many :business_developments
   belongs_to :crop
   accepts_nested_attributes_for :applications, allow_destroy: true, reject_if: lambda{|a| a[:app_area].blank?}
   before_create :pre_demo_code_maker

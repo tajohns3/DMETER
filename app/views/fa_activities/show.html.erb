@@ -2,22 +2,27 @@
 
 <p>
   <strong>Field assistant:</strong>
-  <%= @fa_activity.field_assistant_id %>
+  <%= @fa_activity.position.surname %>
 </p>
 
 <p>
   <strong>State:</strong>
-  <%= @fa_activity.state_id %>
+  <%= @fa_activity.state.state %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @fa_activity.user_id %>
+  <strong>Area Manager:</strong>
+  <%= @fa_activity.user.manager.sur_name %>
+</p>
+
+<p>
+  <strong>Sales Representative:</strong>
+  <%= @fa_activity.user.sur_name %>
 </p>
 
 <p>
   <strong>Pocket:</strong>
-  <%= @fa_activity.pocket_id %>
+  <%= @fa_activity.pocket.pocket_name %>
 </p>
 
 <p>
@@ -31,4 +36,4 @@
 </p>
 
 <%= link_to 'Edit', edit_fa_activity_path(@fa_activity) %> |
-<%= link_to 'Back', fa_activities_path %>
+<%= link_to 'Back', root_path %>

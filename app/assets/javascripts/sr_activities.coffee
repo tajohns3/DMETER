@@ -32,7 +32,7 @@ jQuery ->
 #id fa
 jQuery ->
   $('#meet_sm_option').on "change", ->
-    if $(this).val() is "identify_fa"
+    if $(this).val() is "identify_field_assistant"
       $('#dealer_div').fadeIn()
       $('#pocked_div').fadeIn()
       $('#position_div').fadeIn()
@@ -67,7 +67,7 @@ jQuery ->
 #meet with fa
 jQuery ->
   $('#sr_pactivity').on "change", ->
-    if $(this).val() is "Meet_fa"
+    if $(this).val() is "Meet_field_assistant"
       $('#meet_fa_opt').fadeIn()
     else
       $('#meet_fa_opt').fadeOut()
@@ -138,7 +138,7 @@ jQuery ->
 #buss dev demonstration
 jQuery ->
   $('#buss_development').on "change", ->
-    if $(this).val() is "organize farmer meeting"
+    if $(this).val() is "organize_farmer_meeting"
       $('#buss_demo_div').fadeIn()
     else
       $('#buss_demo_div').fadeOut()
@@ -146,7 +146,7 @@ jQuery ->
 #organize dealer meeting
 jQuery ->
   $('#buss_development').on "change", ->
-    if $(this).val() is "organize dealer meeting"
+    if $(this).val() is "organize_dealer_meeting"
       $('#attendees_type_div').fadeIn()
       $('#buss_dev_pocket').fadeIn()
     else

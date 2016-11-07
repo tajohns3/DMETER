@@ -1,0 +1,7 @@
+<p>
+  <strong>Purpose:</strong>
+  <%= @sr_activity.meet_sr_farmer.purpose.humanize.titleize%>
+</p>
+
+<%= render 'sr_activities/meet_farmer_show/tech_guide_show' if @sr_activity.meet_sr_farmer.purpose=='technical_guidance'%>
+<%= render 'sr_activities/meet_farmer_show/recommendation_show' if @sr_activity.meet_sr_farmer.purpose=='recommendation_farmers'%>
