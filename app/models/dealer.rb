@@ -7,6 +7,7 @@ class Dealer < ActiveRecord::Base
   has_many :accounts
   has_many :banks, through: :accounts
   has_many :meet_state_managers
+  has_many :meet_farmers
   belongs_to :user
   accepts_nested_attributes_for :banks, allow_destroy: true, reject_if: :all_blank
 

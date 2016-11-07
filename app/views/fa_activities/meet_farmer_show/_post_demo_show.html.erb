@@ -1,0 +1,8 @@
+<p>
+  <strong>Observation:</strong>
+  <% @fa_activity.post_demonstrations.each do |post|%>
+      <%=post.observation%>
+         </p>
+      <%= render 'fa_activities/meet_farmer_show/expected_results_show' if post.observation=='expected' %>
+      <%= render 'fa_activities/meet_farmer_show/unexpected_results' if post.observation=='unexpected' %>
+<%end%>

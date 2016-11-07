@@ -29,9 +29,16 @@
 </p>
 
 <p>
-  <strong>Comment:</strong>
-  <%= @fa_activity.comment %>
+  <strong>Activity:</strong>
+  <%= @fa_activity.activity.humanize.titleize %>
 </p>
+
+
+<%= render 'fa_activities/fa_act_show/fa_act_other' if @fa_activity.activity=='other' %>
+<%= render 'fa_activities/meet_farmer_show/purpose_show' if @fa_activity.activity=='meet_farmers' %>
+<%= render 'fa_activities/visit_dealer_show/purpose_dealer_' if @fa_activity.activity=='visit_dealer' %>
+<%= render 'fa_activities/assist_sr_show/assist_show' if @fa_activity.activity=='assist_sr' %>
+
 
 <%= link_to 'Edit', edit_fa_activity_path(@fa_activity) %> |
 <%= link_to 'Back', root_path %>

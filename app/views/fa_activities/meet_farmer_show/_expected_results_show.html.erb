@@ -1,0 +1,12 @@
+<p>
+  <strong>Post Demonstration Photos:</strong>
+  <% @fa_activity.post_demonstrations.each do |post|%>
+      <%post.demonstration_attachments.each do |demo_a|%>
+          <%=link_to (image_tag(demo_a.avatar_url(:thumb))).to_s, demo_a.avatar_url%>
+      <%end%>
+      </p>
+<p>
+  <strong>Contacted Sales Representative</strong>
+  <%=post.contacrsr%>
+  <%end%>
+</p>

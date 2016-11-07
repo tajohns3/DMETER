@@ -1,0 +1,10 @@
+<p>
+  <strong>Unexpected Results:</strong>
+  <% @fa_activity.post_demonstrations.each do |post|%>
+      <%=post.comment%>
+      </p>
+      <p>
+        <strong>Contacted Sales Representative</strong>
+        <%=post.contacrsr%>
+  <%end%>
+  </p>

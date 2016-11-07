@@ -44,13 +44,13 @@
     <div class="field">
       <%= f.label :activity %><br>
       <%= f.select :activity, options_for_select([["Meet Farmer(s)", 'meet_farmers'], ["Visit Dealer Shop", 'visit_dealer'], ["Assist Sales Representative", 'assist_sr'],
-                                                  ["Met Sales Representative", 'meet_sr'], ["Other", 'misc']]),
+                                                  ["Met Sales Representative", 'meet_sr'], ["Other", 'other']]),
                    {include_blank: ''}%>
     </div>
 
     <div>
       <div id="meet_farm_sele" class="container">
-      <%= f.fields_for :meet_farmers do |meet|%>
+      <%= f.fields_for :meet_farmer do |meet|%>
           <%=render 'meet_farmer_fields', f: meet%>
       <%end%>
 
