@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :fa_activities
   has_many :sr_activities
   has_many :pockets
+  has_many :demoresults
   belongs_to :manager, class_name: "User"
   has_many :users, class_name: "User", foreign_key: "manager_id"
   scope :area_man, -> { users.where(role: 'area_manager') }

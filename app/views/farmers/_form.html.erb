@@ -39,7 +39,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :State %><br>
-                        <%= f.collection_select :stid, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -63,13 +63,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Pocket' %><br>
-                        <%= f.collection_select :pocketid, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Dealer' %><br>
-                        <%= f.collection_select :dealerid, Dealer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -94,7 +94,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Village' %>
-                        <%= f.collection_select :villageid, Village.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :village_id, Village.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-8">

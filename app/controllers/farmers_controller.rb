@@ -6,7 +6,6 @@ class FarmersController < ApplicationController
   # GET /farmers.json
   def index
     @farmers = Farmer.all
-    @farmers = Farmer.includes(:crop).all
   end
 
   # GET /farmers/1
@@ -71,6 +70,6 @@ class FarmersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def farmer_params
-      params.require(:farmer).permit( :stid, :useridstmgr, :useridamgr, :useridsr, :pocketid, :dealerid, :name, :villageid, :phnumber, :cropid, :acreage, :unit, :irr_source, :introcall, :callverified, farmcrops_attributes: [:id, :cropid, :acreage, :unit, :irr_source, :done, :_destroy], crops_attributes: [:id, :crop, :done, :_destroy])
+      params.require(:farmer).permit( :state_id, :useridstmgr, :useridamgr, :useridsr, :pocket_id, :dealer_id, :name, :village_id, :phnumber, :crop_id, :acreage, :unit, :irr_source, :introcall, :callverified, farmcrops_attributes: [:id, :crop_id, :acreage, :unit, :irr_source, :done, :_destroy], crops_attributes: [:id, :crop, :done, :_destroy])
     end
 end

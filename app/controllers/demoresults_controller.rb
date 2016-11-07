@@ -6,11 +6,13 @@ class DemoresultsController < ApplicationController
   # GET /demoresults.json
   def index
     @demoresults = Demoresult.all
+
   end
 
   # GET /demoresults/1
   # GET /demoresults/1.json
   def show
+
   end
 
   # GET /demoresults/new
@@ -70,7 +72,7 @@ class DemoresultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def demoresult_params
-      params.require(:demoresult).permit(:amid, :srid, :pocketid, :faid, :demostatus, :photo, :demoid, resultphotos_attributes: [:id, :photo, :done, :_destroy],
+      params.require(:demoresult).permit(:state_id, :amid, :srid, :pocket_id, :faid, :demostatus, :photo, :demoid, resultphotos_attributes: [:id, :photo, :done, :_destroy],
                                          )
     end
 end

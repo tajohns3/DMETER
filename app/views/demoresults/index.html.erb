@@ -55,7 +55,7 @@
             <tr>
               <% @demoresults.each do |demoresult| %>
                   <td class="text-center">
-                    <%= demoresult.stid %>
+                    <%= demoresult.state.state %>
                   </td>
                   <td class="text-center">
                     <%= demoresult.amid %>
@@ -67,13 +67,13 @@
                     <%= demoresult.faid %>
                   </td>
                   <td class="text-center">
-                    <%= demoresult.pocketid %>
+                    <%= demoresult.pocket.pocket_name %>
                   </td>
                   <td class="text-center">
                     <%= demoresult.demostatus %>
                   </td>
                   <td class="text-center">
-                    <%= demoresult.demoid %>
+                    <%= demoresult.demo_id %>
                   </td>
                   <td class="text-center">
                     <%= link_to 'View Demo Results', demoresult, class: "btn btn-primary",:style=>'color:#FFFFFF' %>

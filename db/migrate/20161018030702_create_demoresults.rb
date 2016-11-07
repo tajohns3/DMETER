@@ -3,7 +3,7 @@ class CreateDemoresults < ActiveRecord::Migration
     create_table :demoresults do |t|
       t.integer :amid
       t.integer :srid
-      t.integer :pocketid
+      t.integer :pocket_id
       t.integer :faid
       t.string :demostatus
 
