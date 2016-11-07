@@ -55,7 +55,7 @@
                     <%= sr_activity.state.state %>
                   </td>
                   <td class="text-center">
-                    <%= sr_activity.pactivity %>
+                    <%= sr_activity.pactivity.humanize.titleize %>
                   </td>
                   <td class="text-center">
                     <%= link_to 'View SR Activity', sr_activity, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
