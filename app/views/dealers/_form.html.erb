@@ -383,6 +383,7 @@
                                     Experiation Date:
                                   </th>
                                   <th class="text-center">
+                                    Upload Photocopy:
                                   </th>
                                 </tr>
                                 <tr>
@@ -411,9 +412,13 @@
 
                                   </th>
                                   <th class="text-center">
-                                    <label class="btn btn-success btn-file">
-                                      Upload Photocopy <%= f.file_field :fl_photo %>
-                                    </label>
+                                    <div class="picture-container1">
+                                      <div class="picture1">
+                                        <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                             class="picture-src2" id="wizardPicturePreview2" title="">
+                                        <%= f.file_field :fl_photo, id:"wizard-picture2" %>
+                                      </div>
+                                    </div>
                                   </th>
                                 </tr>
                                 <tr>
@@ -441,9 +446,13 @@
                                       </div>
                                   </th>
                                   <th class="text-center">
-                                    <label class="btn btn-success btn-file">
-                                      Upload Photocopy <%= f.file_field :cst_photo %>
-                                    </label>
+                                    <div class="picture-container1">
+                                      <div class="picture1">
+                                        <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                             class="picture-src2" id="wizardPicturePreview3" title="">
+                                        <%= f.file_field :cst_photo, id:"wizard-picture3" %>
+                                      </div>
+                                    </div>
                                   </th>
                                 </tr>
                                 <tr>
@@ -469,9 +478,13 @@
                                       </div>
                                   </th>
                                   <th class="text-center">
-                                    <label class="btn btn-success btn-file">
-                                      Upload Photocopy <%= f.file_field :sst_photo %>
-                                    </label>
+                                    <div class="picture-container1">
+                                      <div class="picture1">
+                                        <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                             class="picture-src2" id="wizardPicturePreview4" title="">
+                                        <%= f.file_field :sst_photo, id:"wizard-picture4" %>
+                                      </div>
+                                    </div>
                                   </th>
                                 </tr>
                                 <tr>
@@ -499,9 +512,13 @@
 
                                   </th>
                                   <th class="text-center">
-                                    <label class="btn btn-success btn-file">
-                                      Upload Photocopy <%= f.file_field :vat_photo %>
-                                    </label>
+                                    <div class="picture-container1">
+                                      <div class="picture1">
+                                        <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                             class="picture-src2" id="wizardPicturePreview5" title="">
+                                        <%= f.file_field :vat_photo, id:"wizard-picture5" %>
+                                      </div>
+                                    </div>
                                   </th>
                                 </tr>
                                 <tr>
@@ -528,9 +545,13 @@
                                       </div>
                                   </th>
                                   <th class="text-center">
-                                    <label class="btn btn-success btn-file">
-                                      Upload Photocopy <%= f.file_field :pc_photo %>
-                                    </label>
+                                    <div class="picture-container1">
+                                      <div class="picture1">
+                                        <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                             class="picture-src2" id="wizardPicturePreview6" title="">
+                                        <%= f.file_field :pc_photo, id:"wizard-picture6" %>
+                                      </div>
+                                    </div>
                                   </th>
                                 </tr>
                                 </thead>
@@ -572,14 +593,26 @@
                               </div>
                               <div class="row">
                                 <div class="col-md-6">
-                                  <label class="btn btn-primary btn-file">
-                                    Upload Dealer Registration Form <%= f.file_field :dealerreqform %>
-                                  </label>
+                                  <div class="picture-container">
+                                    <div class="picture">
+                                      <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                           class="picture-src" id="wizardPicturePreview" title="">
+                                      <%= f.file_field :dealerreqform, id:"wizard-picture" %>
+                                    </div>
+                                    <h5 class=""><b>Upload Dealer Registration Form</b></h5>
+
+                                  </div>
                                 </div>
                                 <div class="col-md-6">
-                                  <label class="btn btn-success btn-file pull-right">
-                                    Upload Dealer Photograph <%= f.file_field :dealerphoto %>
-                                  </label>
+                                  <div class="picture-container">
+                                    <div class="picture">
+                                      <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                           class="picture-src" id="wizardPicturePreview1" title="">
+                                      <%= f.file_field :dealerphoto, id:"wizard-picture1" %>
+                                    </div>
+                                    <h5 class=""><b>Upload Dealer Photograph</b></h5>
+
+                                  </div>
                                 </div>
                               </div>
                             </div>
