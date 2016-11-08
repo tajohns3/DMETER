@@ -10,104 +10,140 @@
           </ul>
         </div>
     <% end %>
-
-    <div class="field">
-      <div class="form-group">
-        <%=f.label :first_name%>
-        <%=f.text_field :first_name, class: 'form-control'%>
+    <div class="row">
+      <div class="col-md-2">
       </div>
-    </div>
+      <div class="col-md6 col-md-8" style="display: block;">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1 class="panel-title text-center">
+              <%= link_to 'Back', users_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <b>New User</b>
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>User Information</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>
+                        First Name
+                      </label>
+                      <%=f.text_field :first_name, class: 'form-control'%>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>
+                        Surname
+                      </label>
+                      <%=f.text_field :sur_name, class: 'form-control'%>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>
+                        Contact Number
+                      </label>
+                      <%=f.text_field :phone, class: 'form-control'%>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>
+                        Location
+                      </label>
+                      <%=f.select :location, options_for_select([["Home Office",'home_office'],["Field Staff",'field_staff']]),{:include_blank => ''}, class: 'form-control'%>
+                      <div class="field" id="role_select">
+                        <div class="form-group">
+                          <div class="field">
+                            <div class="form-group">
+                              <%=f.label :state_id%>
+                              <%=f.collection_select :state_id, State.all, :id, :state, {include_blank: ''}, {class: 'form-control'}%>
+                            </div>
+                          </div>
 
-    <div class="field">
-      <div class="form-group">
-        <%=f.label :sur_name, 'surname'%>
-        <%=f.text_field :sur_name, class: 'form-control'%>
-      </div>
-    </div>
+                          <%=f.label :role, 'Position'%>
+                          <%=f.select :role, options_for_select([["Sales Representative", 'sale_representative'],["Area Manager",'area_manager'],["State Manager",'state_manager']]),
+                                      {:include_blank => ''},
+                                      class: 'form-control', id: 'kaman'%>
+                          <div class="field" id="mana_tan">
+                            <%=f.label :manager_id, 'Assign Area Manager'%>
+                            <%=f.collection_select :manager_id, User.where(role: 'area_manager'), :id,:sur_name,{include_blank: ''},{class: 'form-control'}%>
+                          </div>
 
 
-    <div class="field">
-      <div class="form-group">
-        <%=f.label :phone%>
-        <%=f.text_field :phone, class: 'form-control'%>
-      </div>
-    </div>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <div class="form-group">
 
-    <div class="field">
-      <div class="form-group" >
-        <%=f.label :location%>
-        <%=f.select :location, options_for_select([["Home Office",'home_office'],["Field Staff",'field_staff']]),{:include_blank => ''}, class: 'form-control'%>
-      </div>
-    </div>
+                          <%=f.hidden_field :user_name, class: 'form-control'%>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>
+                        Email
+                      </label>
+                      <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <%=f.label :approved, 'Deny Account'%>
+                    <%=f.radio_button :approved, false, :checked => !@user.approved, :value=> false%>
+                  </div>
+                  <div class="col-md-4">
+                    <%=f.label :approved, 'Approve Account'%>
+                    <%=f.radio_button :approved, true, :checked => @user.approved, :value=> true%>
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <%=f.label :access, 'Read Access'%>
+                    <%=f.radio_button :access, false, :checked => @user.access, :value=> false%>
+                  </div>
+                  <div class="col-md-4">
+                    <%=f.label :access, 'Input Access'%>
+                    <%=f.radio_button :access, true, :checked => @user.access, :value=> true%>
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+                  <div class="col-md-4">
 
-    <div class="field" id="role_select">
-      <div class="form-group">
-        <div class="field">
-          <div class="form-group">
-            <%=f.label :state_id%>
-            <%=f.collection_select :state_id, State.all, :id, :state, {include_blank: ''}, {class: 'form-control'}%>
+                    <div class="actions">
+                      <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <%=f.label :role, 'Position'%>
-        <%=f.select :role, options_for_select([["Sales Representative", 'sale_representative'],["Area Manager",'area_manager'],["State Manager",'state_manager']]),
-                    {:include_blank => ''},
-                    class: 'form-control', id: 'kaman'%>
-        <div class="field" id="mana_tan">
-          <%=f.label :manager_id, 'Assign Area Manager'%>
-          <%=f.collection_select :manager_id, User.where(role: 'area_manager'), :id,:sur_name,{include_blank: ''},{class: 'form-control'}%>
-        </div>
-
-
       </div>
-    </div>
-    <div class="field">
-      <div class="form-group">
-
-        <%=f.hidden_field :user_name, class: 'form-control'%>
+      <div class="col-md2 col-md-2" style="display: block;">
       </div>
     </div>
 
-
-    <div class="field">
-      <div class="form-group">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-      </div>
-    </div>
-
-
-    <div>
-      <div>
-        <%=f.label :approved, 'Deny Account'%>
-        <%=f.radio_button :approved, false, :checked => !@user.approved, :value=> false%>
-      </div>
-
-      <div>
-        <%=f.label :approved, 'Approve Account'%>
-        <%=f.radio_button :approved, true, :checked => @user.approved, :value=> true%>
-      </div>
-    </div>
-
-    <br>
-
-    <div>
-      <div>
-        <%=f.label :access, 'Read Access'%>
-        <%=f.radio_button :access, false, :checked => @user.access, :value=> false%>
-      </div>
-
-      <div>
-        <%=f.label :access, 'Input Access'%>
-        <%=f.radio_button :access, true, :checked => @user.access, :value=> true%>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
 <% end %>

@@ -11,11 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1 class="panel-title text-center">
+              <%= link_to 'Back', boxes_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <b>New Box</b>
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div class="field">
+              <%= f.label :name, "Box Name" %><br>
+              <%= f.text_field :name,{class: "form-control"} %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+            </div>
 <% end %>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+
+</div>
+</div>
+

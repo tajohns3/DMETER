@@ -11,29 +11,49 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
 
-    <div class="field">
-      <%= f.fields_for :product_singles do |ps|%>
-      <%= render 'product_single_fields', f: ps%>
-          <%end%>
-    </div>
-    <div class="links">
-      <%=link_to_add_association 'Add single ', f, :product_singles%>
-    </div>
-
-    <div class="field">
-      <%=f.fields_for :product_boxes do |pb|%>
-      <%=render 'product_box_fields', f: pb%>
-          <%end%>
-      <div class="links">
-        <%=link_to_add_association 'Add box ', f, :product_boxes%>
       </div>
-    </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1 class="panel-title text-center">
+              <%= link_to 'Back', products_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <b>New Product</b>
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div class="field">
+              <%= f.label :name, "Product Name" %><br>
+              <%= f.text_field :name,{class: "form-control"} %>
+            </div>
+            <div class="field">
+              <%= f.fields_for :product_singles do |ps|%>
+                  <%= render 'product_single_fields', f: ps%>
+              <%end%>
+            </div>
+            <div class="links">
+              <%=link_to_add_association 'Add single ', f, :product_singles%>
+            </div>
+            <div class="field">
+              <%=f.fields_for :product_boxes do |pb|%>
+                  <%=render 'product_box_fields', f: pb%>
+              <%end%>
+              <div class="links">
+                <%=link_to_add_association 'Add box ', f, :product_boxes%>
+              </div>
+            </div>
+            <div class="actions">
+              <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+            </div>
 <% end %>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+
+</div>
+</div>
+

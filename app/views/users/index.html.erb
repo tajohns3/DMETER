@@ -1,15 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-<ul class="users">
-  <% @users.each do |u|%>
-      <li>
-        <%=u.sur_name%>
-        <%=link_to u.user_name,u%> <br><br>
+<html lang="en">
 
-      </li>
-  <%end%>
-</ul>
-<br>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
 
-<%= link_to 'New User', new_user_path %>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading ">
+          <h1 class="panel-title ">
+            <%= link_to 'New User', new_user_path, 'data-no-turbolink' => true, class: "btn btn-success pull-right",:style=>'color:#FFFFFF'%>
+            <b> Users</b>
+          </h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table table-bordered">
+                <tbody>
+                <tr>
+                </tr>
+                <tr>
+                  <% @users.each do |u| %>
+                      <td class="text-center">
+                        <b> <%=u.first_name%></b>
+                        <b> <%=u.sur_name%></b>
+                      </td>
+                      <td class="text-center">
+                        <%= link_to 'Edit', edit_user_path(u),class: "btn btn-info",:style=>'color:#FFFFFF' %>
+                        <%= link_to 'Delete', u, class: "btn btn-danger",:style=>'color:#FFFFFF', method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+

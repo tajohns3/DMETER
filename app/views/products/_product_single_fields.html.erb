@@ -1,7 +1,7 @@
 <div class="nested-field">
   <div class="field">
     <%=f.label :single_id, 'Single'%>
-    <%=f.collection_select :single_id, Single.all, :id, :name%>
+    <%=f.collection_select :single_id, Single.all, :id, :name,{include_blank: ''}, {class: 'form-control'}%>
   </div>
 
 

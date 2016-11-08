@@ -70,7 +70,7 @@
                 <div class="field">
                   <div class="form-group">
                     <%=f.label :state_id%>
-                    <%=f.collection_select :state_id, State.all, :id, :state%>
+                    <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
                   </div>
                 </div>
 
