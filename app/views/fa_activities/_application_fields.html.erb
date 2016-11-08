@@ -2,11 +2,11 @@
 
 <div class="field">
   <%= f.label :app_area, 'Area of application' %><br>
-  <%= f.text_field :app_area %>
+  <%= f.text_field :app_area,{class:"form-control", :style => "width:200px"} %>
 </div>
 <div class="field">
   <%= f.label :app_date, 'Application Date' %><br>
-  <%= f.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
+  <%= f.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd',class:"form-control", :style => "width:200px"} %>
 </div>
 
 

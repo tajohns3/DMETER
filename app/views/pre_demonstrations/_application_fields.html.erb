@@ -1,11 +1,11 @@
 <div class="nested-fields">
 <div class="field">
   <%= f.label :pre_demonstration_id %><br>
-  <%= f.number_field :pre_demonstration_id %>
+  <%= f.number_field :pre_demonstration_id,{class:"form-control", :style => "width:200px"} %>
 </div>
 <div class="field">
   <%= f.label :app_area, 'Area of application' %><br>
-  <%= f.text_field :app_area %>
+  <%= f.text_field :app_area,{class:"form-control", :style => "width:200px"} %>
 </div>
 <div class="field">
   <%= f.label :app_date, 'Application Date' %><br>
@@ -20,17 +20,17 @@
 
 <div class="field">
   <%= f.label :app_type, 'Application Type' %><br>
-  <%= f.select :app_type, options_for_select([["Foliar", 'foliar'],["Soil",'soil'],["Drip",'drip'],["Flood",'flood']]),{include_blank: ''} %>
+  <%= f.select :app_type, options_for_select([["Foliar", 'foliar'],["Soil",'soil'],["Drip",'drip'],["Flood",'flood']]),{include_blank: ''},{class:"form-control", :style => "width:80px"} %>
 </div>
 
 <div class="field">
   <%= f.label :competitor, 'Competitors product' %><br>
-  <%= f.text_field :competitor %>
+  <%= f.text_field :competitor,{class:"form-control",:style => "width:200px"} %>
 </div>
 
 <div class="field">
   <%= f.label :follow_date, 'Follow up Date' %><br>
-  <%= f.date_select :follow_date %>
+  <%= f.date_select :follow_date,{class:"form-control",:style => "width:200px"} %>
 </div>
 
 <%=link_to_remove_association 'Remove Product Application', f %>

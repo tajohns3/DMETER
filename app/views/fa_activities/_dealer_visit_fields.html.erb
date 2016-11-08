@@ -1,6 +1,6 @@
 <div class="field">
   <%= f.label :dealer_id %><br>
-  <%= f.number_field :dealer_id %>
+  <%= f.number_field :dealer_id,{class:"form-control",:style => "width:200px"} %>
 </div>
 <div class="field">
   <%= f.hidden_field :fa_activity_id %>
@@ -9,7 +9,7 @@
 <div class="field">
   <%= f.label :purpose %><br>
   <%= f.select :purpose, options_for_select([["Inventory Check", 'inventory_check'],["Interact With Farmers", 'interact_farmers'],
-                                                ["Collect Competitor Product Information",'competitor_product']]), {include_blank: ''} %>
+                                                ["Collect Competitor Product Information",'competitor_product']]), {include_blank: ''},{class:"form-control", :style => "width:275px"} %>
 </div>
 
 <div class="container" id="interact-farm">

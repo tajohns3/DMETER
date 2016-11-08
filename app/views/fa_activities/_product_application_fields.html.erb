@@ -13,15 +13,15 @@
     </thead>
     <tbody>
     <tr>
-      <td><%= f.collection_select :product_id, Product.all, :id,:name %></td>
+      <td><%= f.collection_select :product_id, Product.all, :id,:name,{class:"form-control",:style => "width:80px"} %></td>
       <td><select name="bulk" id="bulk_sele">
         <option disabled selected value> ---Pick single or box---</option>
         <option value="single">Single</option>
         <option value="box">Box</option>
       </select></td>
       <td><%= f.text_field :quantity%></td>
-      <td><%= f.collection_select :single_id, Single.all, :id, :name%></td>
-      <td><%= f.collection_select :box_id, Box.all, :id, :name%></td>
+      <td><%= f.collection_select :single_id, Single.all, :id, :name,{class:"form-control",:style => "width:70px"}%></td>
+      <td><%= f.collection_select :box_id, Box.all, :id, :name,{class:"form-control",:style => "width:70px"}%></td>
       <td><%=link_to_remove_association 'Remove product', f, class: 'btn btn-danger' %></td>
     </tr>
     </tbody>

@@ -1,67 +1,67 @@
 <div class="field">
   <%= f.label :dealer_id %><br>
-  <%= f.number_field :dealer_id %>
+  <%= f.number_field :dealer_id,{class:"form-control",:style => "width:200px"} %>
 </div>
 
 <div class="field">
   <%= f.label :village_id %><br>
-  <%= f.collection_select :village_id, Village.all, :id, :village, {include_blank: ''}%>
+  <%= f.collection_select :village_id, Village.all, :id, :village, {include_blank: ''},{class:"form-control", :style => "width:200px"}%>
 </div>
 
 
 <div class="field">
   <%= f.label :number_farmer, 'Number of farmers Met: '%>
-  <%=f.select :number_farmer, (1..10), {include_blank: ''}%>
+  <%=f.select :number_farmer, (1..10), {include_blank: ''},{class:"form-control", :style => "width:60px"}%>
 </div>
 <div class="container" id="met_farmers">
   <div class="field", id="farm_met_1">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_2">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_3">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_4">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_5">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_6">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_7">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_8">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_9">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
   <div class="field", id="farm_met_10">
     <%= f.label :farmer_id %><br>
-    <%= f.number_field :farmer_id %>
+    <%= f.number_field :farmer_id,{class:"form-control", :style => "width:200px"} %>
   </div>
 
 </div>
@@ -70,13 +70,13 @@
 <div class="field">
   <%= f.label :purpose %><br>
   <%= f.select :purpose, options_for_select([["Introduction", 'introduction'],["Pre Demonstration",'pre_demonstration'],["Demonstration",'demonstration'],["Post Demonstration", 'post_demonstration'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
-                  {include_blank: ''}%>
+                  {include_blank: ''},{class:"form-control", :style => "width:200px"}%>
 </div>
 <div class="field", id="meet_farmer_consultation_div">
   <%= f.label :consultation %><br>
   <%= f.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
                                                      ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
-                  {include_blank: ''}%>
+                  {include_blank: ''},{class:"form-control", :style => "width:130px"}%>
 </div>
 
 
