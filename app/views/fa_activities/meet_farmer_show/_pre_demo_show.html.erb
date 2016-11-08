@@ -1,12 +1,12 @@
 <p>
   <strong>Farmer:</strong>
   <% @fa_activity.pre_demonstrations.each do |pre|%>
-  <%=pre.farmer_id%>
+  <%=pre.farmer.name%>
 </p>
 
 <p>
   <strong>Crop:</strong>
-  <%= pre.crop_id %>
+  <%= pre.crop.crop %>
 </p>
 
 <p>
@@ -42,7 +42,7 @@
 
         <p>
           <strong>Application Type:</strong>
-          <%=app.app_type%>
+          <%=app.app_type.humanize.titleize%>
         </p>
 
 

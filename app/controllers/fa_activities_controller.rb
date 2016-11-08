@@ -30,6 +30,13 @@ class FaActivitiesController < ApplicationController
   # GET /fa_activities/1/edit
   def edit
     meet_farmer =@fa_activity.build_meet_farmer
+    meet_farmer.product_prescriptions.build
+    dealer_visit = @fa_activity.dealer_visits.build
+    assist_rep = @fa_activity.assist_reps.build
+    pre_demo =@fa_activity.pre_demonstrations.build
+    prod = pre_demo.applications.build
+    post_demo = @fa_activity.post_demonstrations.build
+
     10.times{meet_farmer.activity_farmers.build}
   end
 
@@ -51,11 +58,10 @@ class FaActivitiesController < ApplicationController
         meet_farmer =@fa_activity.meet_farmers.build
         meet_farmer.product_prescriptions.build
         @fa_activity.dealer_visits.build
-       @fa_activity.assist_reps.build
+        @fa_activity.assist_reps.build
         pre_demo =@fa_activity.pre_demonstrations.build
         pre_demo.applications.build
         @fa_activity.post_demonstrations.build
-
 
         format.html { render :new }
         format.json { render json: @fa_activity.errors, status: :unprocessable_entity }

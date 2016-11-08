@@ -4,7 +4,12 @@ class PositionsController < ApplicationController
   # GET /positions
   # GET /positions.json
   def index
-    @positions = Position.all
+    if params[:active]=='checkem'
+      @positions = Position.where(form: nil)
+    else
+      @positions = Position.all
+    end
+
   end
 
   # GET /positions/1

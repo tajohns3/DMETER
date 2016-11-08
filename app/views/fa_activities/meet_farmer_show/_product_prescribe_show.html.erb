@@ -1,17 +1,17 @@
 <%@fa_activity.meet_farmer.product_prescriptions.each do |prod_presc|%>
 <p>
   <strong>Dealer:</strong>
-  <%= prod_presc.dealer_id %>
+  <%= prod_presc.dealer.name %>
 </p>
 
 <p>
   <strong>Farmer:</strong>
-  <%= prod_presc.farmer_id %>
+  <%= prod_presc.farmer.name %>
 </p>
 
 <p>
   <strong>Crop:</strong>
-  <%= prod_presc.crop_id %>
+  <%= prod_presc.crop.crop %>
 </p>
 
 
@@ -27,11 +27,11 @@
 
 <p>
   <strong>Acreage:</strong>
-  <%= prod_presc.acreage %> <%=prod_presc.units%>
+  <%= prod_presc.acreage %> <%=prod_presc.units.humanize%>
 </p>
 
 <p>
   <strong>Prescribe:</strong>
-  <%= prod_presc.prescribe %>
+  <%= prod_presc.prescribe ? 'Yes' : 'No' %>
 </p>
 <%end%>

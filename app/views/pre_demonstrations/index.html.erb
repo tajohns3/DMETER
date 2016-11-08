@@ -34,16 +34,16 @@
             <tr>
               <% @pre_demonstrations.each do |pre_demo| %>
                   <td class="text-center">
-                    <%= pre_demo.farmer_id %>
+                    <%= pre_demo.farmer.name %>
                   </td>
                   <td class="text-center">
                     <%= pre_demo.crop.crop %>
                   </td>
                   <td class="text-center">
-                    <%= pre_demo.condition %>
+                    <%= pre_demo.condition.humanize.titleize %>
                   </td>
                   <td class="text-center">
-                    <%= pre_demo.crop_growth %>
+                    <%= pre_demo.crop_growth.humanize.titleize %>
                   </td>
                   <td class="text-center">
                     <%= pre_demo.demo_code %>
@@ -51,7 +51,7 @@
                   <td class="text-center">
                     <%= link_to 'New Demonstration', new_demonstration_path(:pre_id => pre_demo.id), class: 'btn btn-primary',:style=>'color:#FFFFFF',  id: 'hope'%>
                   </td>
-                  <td><td><%= link_to 'Delete', pre_demo, method: :delete, data: { confirm: 'Are you sure?' } %></td></td>
+
                   </tr>
               <% end %>
               </tbody>

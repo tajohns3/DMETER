@@ -19,31 +19,34 @@
 
 
 
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading ">
+          <h3 class="panel-title ">
+            <b> Product Application Information</b>
+          </h3>
 
-    <div class="field">
+        </div>
+        <%=f.fields_for :applications do |application| %>
 
-      <%=f.fields_for :applications do |application| %>
-          <div class="field">
             <%=render 'application_fields', f: application%>
-          </div>
-      <%end%>
-    </div>
+
+        <%end%>
+   </div>
+      </div>
 
 
 
+    <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading">
+            <%=f.check_box :demo_status, {}, 'complete', 'active'%>
+            <%=f.label :demo_status, 'Complete'%>
             <h3 class="panel-title text-center">
               <b>Pre-Demonstration Photos</b>
             </h3>
-            <div>
-
-              <%=f.check_box :demo_status, {}, 'complete', 'active'%>
-              <%=f.label :demo_status, 'Complete'%>
-            </div>
-
           </div>
           <div class="panel-body">
             <div class="row">
@@ -52,7 +55,11 @@
                   <div class="col-md-4">
                   </div>
                   <div class="col-md-4 text-center">
+                    <th class="text-center">
+                      <div class="form-group">
                     <%= link_to_add_association 'Add Image', f, :demonstration_attachments,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+
+                    </div>
                   </div>
                   <div class="col-md-4">
                   </div>
@@ -63,7 +70,7 @@
         </div>
       </div>
     </div>
-
+</div>
 
 
 

@@ -13,7 +13,7 @@ class FaActivity < ActiveRecord::Base
   accepts_nested_attributes_for :meet_farmer, allow_destroy: true, reject_if: lambda{|a| a[:purpose].blank?}
   accepts_nested_attributes_for :dealer_visits, allow_destroy: true, reject_if: lambda{|b| b[:purpose].blank?}
   accepts_nested_attributes_for :assist_reps, allow_destroy: true, reject_if: lambda{|c| c[:assist].blank?}
-  accepts_nested_attributes_for :pre_demonstrations, allow_destroy: true, reject_if: lambda{|d| d[:farmer_id].blank?}
+  accepts_nested_attributes_for :pre_demonstrations, allow_destroy: true, reject_if: lambda{|d| d[:crop_id].blank?}
   accepts_nested_attributes_for :post_demonstrations, allow_destroy: true, reject_if: lambda{|d| d[:observation].blank?}
 
 

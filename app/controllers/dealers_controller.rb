@@ -4,7 +4,11 @@ class DealersController < ApplicationController
   # GET /dealers
   # GET /dealers.json
   def index
-    @dealers = Dealer.all
+    if params[:active]=='checkem'
+    @dealers = Dealer.where(call: false)
+    else
+      @dealers = Dealer.all
+      end
   end
 
   # GET /dealers/1

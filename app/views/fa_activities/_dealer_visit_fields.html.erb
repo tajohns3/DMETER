@@ -1,6 +1,6 @@
 <div class="field">
   <%= f.label :dealer_id %><br>
-  <%= f.number_field :dealer_id %>
+  <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {include_blank: ''} %>
 </div>
 <div class="field">
   <%= f.hidden_field :fa_activity_id %>

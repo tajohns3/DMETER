@@ -1,6 +1,6 @@
 <div class="field">
   <%= f.label :farmer_id %><br>
-  <%= f.number_field :farmer_id %>
+  <%= f.collection_select :farmer_id, Farmer.all, :id, :name,{include_blank: ''} %>
 </div>
 <div class="field">
   <%= f.label :crop_id %><br>

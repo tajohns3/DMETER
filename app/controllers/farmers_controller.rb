@@ -4,7 +4,12 @@ class FarmersController < ApplicationController
   # GET /farmers
   # GET /farmers.json
   def index
-    @farmers = Farmer.all
+    if params[:active]=='checkem'
+      @farmers = Farmer.where(callverified: nil)
+    else
+      @farmers = Farmer.all
+    end
+
   end
 
   # GET /farmers/1

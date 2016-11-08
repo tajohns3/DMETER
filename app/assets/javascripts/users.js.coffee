@@ -12,3 +12,5 @@ jQuery ->
       $('#mana_tan').show()
     else
       $('#mana_tan').hide()
+
+

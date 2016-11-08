@@ -2,23 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63463788-a095-4025-9439-05ec028f5dae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/demonstration_attachment/avatar/6/thumb_1000_rows.PNG" afterPath="$PROJECT_DIR$/public/uploads/demonstration_attachment/avatar/6/thumb_1000_rows.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/demonstration_attachment/avatar/7/thumb_1000_rows_data.PNG" afterPath="$PROJECT_DIR$/public/uploads/demonstration_attachment/avatar/7/thumb_1000_rows_data.PNG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/demonstration_attachment/avatar/15/thumb_1000_rows.PNG" afterPath="$PROJECT_DIR$/public/uploads/demonstration_attachment/avatar/15/thumb_1000_rows.PNG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/fa_activities.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/fa_activities.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dealers.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/dealers.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/users.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dealers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dealers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/demonstrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/demonstrations_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/fa_activities_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/fa_activities_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pre_demonstrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pre_demonstrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/farmers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/farmers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/positions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/positions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/crop.rb" afterPath="$PROJECT_DIR$/app/models/crop.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/dealer.rb" afterPath="$PROJECT_DIR$/app/models/dealer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/dealer_visit.rb" afterPath="$PROJECT_DIR$/app/models/dealer_visit.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/fa_activity.rb" afterPath="$PROJECT_DIR$/app/models/fa_activity.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/farmer.rb" afterPath="$PROJECT_DIR$/app/models/farmer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/meet_farmer.rb" afterPath="$PROJECT_DIR$/app/models/meet_farmer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/post_demonstration.rb" afterPath="$PROJECT_DIR$/app/models/post_demonstration.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/pre_demonstration.rb" afterPath="$PROJECT_DIR$/app/models/pre_demonstration.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product_prescription.rb" afterPath="$PROJECT_DIR$/app/models/product_prescription.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/state.rb" afterPath="$PROJECT_DIR$/app/models/state.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dealers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/dealers/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dealers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/dealers/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dealers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/dealers/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/demonstrations/_application_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/demonstrations/_application_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/demonstrations/_demonstration_attachment_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/demonstrations/_demonstration_attachment_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/demonstrations/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/demonstrations/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_product_application_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_product_application_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/index.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/show.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product_prescriptions/show.html.erb" afterPath="$PROJECT_DIR$/app/views/product_prescriptions/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_expected_results_show.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_expected_results_show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_post_demo_show.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_post_demo_show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_pre_demo_show.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_pre_demo_show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_product_prescribe_show.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_product_prescribe_show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_unexpected_results.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_unexpected_results.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_purpose_dealer_.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_purpose_dealer_.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/farmers/_farmcrop_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/farmers/_farmcrop_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/farmers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/farmers/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prodsamples/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/prodsamples/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
     </list>
     <ignored path="DMETER_PROTO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,101 +90,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_purpose_dealer_.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_purpose_dealer_.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_assist_show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/assist_sr_show/_assist_show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_other.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/assist_sr_show/_other.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="1518">
+              <caret line="122" column="31" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1661">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="45" column="88" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="46" column="107" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="107" />
+            <state relative-caret-position="88">
+              <caret line="76" column="62" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_assist_rep_fields.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_assist_rep_fields.html.erb">
+      <file leaf-file-name="positions_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/positions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="22">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_dealer_visit_fields.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb">
+      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_product_prescription_fields.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="37" column="49" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fa_activities_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/fa_activities_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_purpose_show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_purpose_show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="112" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="112" />
+            <state relative-caret-position="198">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -189,57 +208,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/sr_activities/buss_dev_show/_option_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/buss_dev_show/_org_dealer_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/pre_demonstration.rb" />
-        <option value="$PROJECT_DIR$/app/models/pocket.rb" />
-        <option value="$PROJECT_DIR$/app/models/business_development.rb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/buss_dev_show/_org_farm_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/_meet_state_manager_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/_meet_sr_farmer_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/meet_sr_farmer.rb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/meet_farmer_show/_tech_guide_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/meet_farmer_show/_recommendation_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/_business_development_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sr_activities/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/demonstrations/_demonstration_attachment_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/farmer.rb" />
-        <option value="$PROJECT_DIR$/app/models/activity_farmer.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20161107041601_remove_fa_id_from_activity_farmers.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20161107042059_add_meet_farmer_id_to_activity_farmers.rb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/_activity_farmer_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/fa_act_show/_fa_act_other.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/fa_activities.scss" />
-        <option value="$PROJECT_DIR$/app/models/meet_farmer.rb" />
-        <option value="$PROJECT_DIR$/app/models/dealer.rb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/_product_application_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_single_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/fa_activity.rb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/pre_demonstrations_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_pre_demo_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/positions/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/post_demonstration.rb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_post_demo_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_unexpected_results.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_expected_results_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/product_prescriptions/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_product_prescribe_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_consultation_show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_inventory_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/fa_activities_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_purpose_show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_interact_farmer_show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_purpose_dealer_.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/assist_sr_show/_assist_show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/assist_sr_show/_other.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/users.scss" />
+        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dealers/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/state.rb" />
+        <option value="$PROJECT_DIR$/app/views/dealers/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dealers.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/farmers/_farmcrop_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/demonstrations/_application_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/demonstrations/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/demonstrations/_demonstration_attachment_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/farmer.rb" />
+        <option value="$PROJECT_DIR$/app/models/crop.rb" />
+        <option value="$PROJECT_DIR$/app/models/product_prescription.rb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/pre_demonstration.rb" />
+        <option value="$PROJECT_DIR$/app/models/meet_farmer.rb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/farmers/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/fa_activities_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/fa_activity.rb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_pre_demo_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_expected_results_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_post_demo_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_purpose_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_unexpected_results.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_product_prescribe_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/dealer_visit.rb" />
+        <option value="$PROJECT_DIR$/app/models/dealer.rb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_purpose_dealer_.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dealers/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/dealers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/demonstrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/prodsamples/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/positions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/farmers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/users.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -295,7 +314,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,185 +332,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="visit_dealer_show" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meet_farmer_show" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa_act_show" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assist_sr_show" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -507,18 +350,18 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="set_bool&#9;null&#9;null&#10;meet_state&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/meet_state_manager.rb&#10;poc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;gem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/Gemfile&#10;datab&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;schema&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;pocket_dats&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161009204836_create_pocket_dats.rb&#10;pocket_da&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/test/controllers/pocket_dats_controller_test.rb&#10;pre&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/pre_demonstrations_controller.rb&#10;form&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/dealers/_form.html.erb&#10;fa&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/fa_activities_controller.rb&#10;dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;fa_ac&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/fa_activities.js.coffee&#10;dea&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/dealer.rb&#10;sche&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;demons&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;schem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;application&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/applications_controller.rb&#10;d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;hom&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/home_controller.rb&#10;pre_d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;sch&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;remove_de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161029104334_remove_columns_from_demonstration.rb&#10;create_demo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161023235315_create_demonstrations.rb&#10;sc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;fo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;sr_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;po&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/sr_activity.rb&#10;home&#9;null&#9;null&#10;fa_act&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/fa_activity.rb&#10;demonstration_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;f&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;demonstration_c&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;demonstra&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;application.&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/application.js&#10;post_dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;demonstration&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;post_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;crop&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/crop.rb&#10;field&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/field_assistant.rb&#10;index&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/positions/index.html.erb&#10;p&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;position&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;area_ma&#9;null&#9;null&#10;use&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb&#10;pocke&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb" />
+    <property name="SearchEverywhereHistoryKey" value="schem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;sch&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;farmer&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/farmer.rb&#10;pre_demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;set_bool&#9;null&#9;null&#10;meet_state&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/meet_state_manager.rb&#10;poc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;gem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/Gemfile&#10;datab&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;schema&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;pocket_dats&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161009204836_create_pocket_dats.rb&#10;pocket_da&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/test/controllers/pocket_dats_controller_test.rb&#10;pre&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/pre_demonstrations_controller.rb&#10;form&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/dealers/_form.html.erb&#10;fa&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/fa_activities_controller.rb&#10;dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;fa_ac&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/fa_activities.js.coffee&#10;dea&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/dealer.rb&#10;sche&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;demons&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;application&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/applications_controller.rb&#10;d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;hom&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/home_controller.rb&#10;pre_d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;remove_de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161029104334_remove_columns_from_demonstration.rb&#10;create_demo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161023235315_create_demonstrations.rb&#10;sc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;fo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;sr_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;po&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/sr_activity.rb&#10;home&#9;null&#9;null&#10;fa_act&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/fa_activity.rb&#10;demonstration_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;f&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;demonstration_c&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;demonstra&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;application.&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/application.js&#10;post_dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;demonstration&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;post_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;crop&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/crop.rb&#10;field&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/field_assistant.rb&#10;index&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/positions/index.html.erb&#10;p&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;position&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;area_ma&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajaxdemo" />
     <property name="full.screen.before.presentation.mode" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
-      <recent name="C:\Users\Christopher\Documents\DMETER_PROTO\app\assets\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Eleven Fold\IdeaProjects\DMETER-Prototype\app\views\fa_activities\fa_act_show" />
       <recent name="C:\Users\Eleven Fold\IdeaProjects\DMETER-Prototype\app\views\sr_activities\show_pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
+      <recent name="C:\Users\Christopher\Documents\DMETER_PROTO\app\assets\images" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.1">
@@ -1396,7 +1239,9 @@
       <workItem from="1478394739213" duration="5000" />
       <workItem from="1478395068419" duration="1184000" />
       <workItem from="1478466426839" duration="29599000" />
-      <workItem from="1478501050907" duration="14526000" />
+      <workItem from="1478501050907" duration="15019000" />
+      <workItem from="1478541304208" duration="28653000" />
+      <workItem from="1478641333088" duration="4036000" />
     </task>
     <task id="LOCAL-00001" summary="Created new branch">
       <created>1476566626592</created>
@@ -1478,7 +1323,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407151000" />
+    <option name="totallyTimeSpent" value="440333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1491,7 +1336,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1499,18 +1344,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25454545" sideWeight="0.50677085" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25454545" sideWeight="0.49322918" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16363636" sideWeight="0.49322918" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1569,410 +1414,373 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161107042059_add_meet_farmer_id_to_activity_farmers.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/pockets/_pocket_dat_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="393">
+          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="106" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/activity_farmer.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/demonstrations/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="352">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_activity_farmer_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sr_activities/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/fa_act_show/_fa_act_other.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sr_activities_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fa_activities.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/dealer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/meet_farmer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/pre_demonstration.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_single_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_product_application_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_application_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="241" column="48" selection-start-line="241" selection-start-column="48" selection-end-line="241" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/positions/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="67" column="43" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pre_demonstrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/fa_activity.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_pre_demo_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sr_activities/meet_farmer_show/_tech_guide_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sr_activities/meet_farmer_show/_recommendation_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sr_activities/meet_fa_show/_fa_purpose_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sr_activities/meet_dealer_show/_purpose_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/post_demonstrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/business_development.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/demonstrations/_demonstration_attachment_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="9" selection-end-column="5" />
-          <folding />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_post_demonstration_fields.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="814">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sr_activities/buss_dev_show/_org_farm_show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/farmer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sr_activity.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/crop.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="176">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product_prescription.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/post_demonstration.rb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/demonstration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/demonstrations/_application_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/farmers/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3344">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="80" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/meet_farmer.rb">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="14" />
-          <folding />
+          <caret line="7" column="111" selection-start-line="7" selection-start-column="111" selection-end-line="7" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/pre_demonstration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/fa_activities_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_pre_demo_show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_post_demo_show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_purpose_show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_expected_results_show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_unexpected_results.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_expected_results_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_post_demo_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/demonstrations/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product_prescriptions/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_product_prescribe_show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_consultation_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_inventory_show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_interact_farmer_show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/dealer_visit.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="154">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/dealer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/fa_activity.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="106" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="37" />
+        <state relative-caret-position="44">
+          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/demoresults_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="49" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/business_development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/meet_farmer_show/_purpose_show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/demonstrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="112" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="112" />
+        <state relative-caret-position="132">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/prodsamples/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="116" selection-start-line="56" selection-start-column="116" selection-end-line="56" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/field_assistants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dealers/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11022">
+          <caret line="501" column="57" selection-start-line="501" selection-start-column="57" selection-end-line="501" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dealers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/farmers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fa_activities/visit_dealer_show/_purpose_dealer_.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/fa_activities_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="198">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_assist_rep_fields.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="1518">
+          <caret line="122" column="31" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/assist_sr_show/_assist_show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/positions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1661">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="76" column="62" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="45" column="88" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/application-4e7b3b694dde5df293f36fea70eb42af3dd46dd977663a51b7f71d60afb16d5b.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="46" column="107" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="107" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/public/assets/OA-f39ad99a7f0bacaf8c4c73a069fa9811afae3e927de12c5b0c4e1eeded383d46.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/assist_sr_show/_other.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="393">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -2006,7 +1814,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>actionmailer (v4.2.5.1, ruby-2.1.7-p400 (1)) [gem]</last-edited>
+          <last-edited>actionmailer (v4.2.5, ruby-2.1.7-p400) [gem]</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2035,7 +1843,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

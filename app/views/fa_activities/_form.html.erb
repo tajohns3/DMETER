@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :pocket_id %><br>
-    <%= f.grouped_collection_select :pocket_id,User.all,:pockets,:sur_name, :id, :pocket_name, {include_blank: ''}, {id: 'pocket_mon'} %>
+    <%= f.collection_select :pocket_id,Pocket.all,:id, :pocket_name, {include_blank: ''}, {id: 'pocket_mon'} %>
   </div>
 
     <div class="field">

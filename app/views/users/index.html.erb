@@ -1,15 +1,86 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-<ul class="users">
-  <% @users.each do |u|%>
-      <li>
-        <%=u.sur_name%>
-        <%=link_to u.user_name,u%> <br><br>
 
-      </li>
-  <%end%>
-</ul>
-<br>
+<html lang="en">
 
-<%= link_to 'New User', new_user_path %>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+</head>
+
+<body>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Users</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                Surname
+              </th>
+              <th class="text-center">
+                Username
+              </th>
+              <th class="text-center">
+                Email
+              </th>
+              <th class="text-center">
+                Role
+              </th>
+              <th class="text-center">
+                Active
+              </th>
+              <td class="text-center">
+
+              </td>
+            </tr>
+            <tr>
+              <% @users.each do |user| %>
+                  <td class="text-center">
+                    <%= user.sur_name %>
+                  </td>
+                  <td class="text-center">
+                    <%= user.user_name %>
+                  </td>
+                  <td class="text-center">
+                    <%= user.email %>
+                  </td>
+                  <td class="text-center">
+                    <%= user.role.humanize.titleize %>
+                  </td>
+                  <td class="text-center">
+                    <%= user.access ? 'Yes' : 'No' %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View User', user, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

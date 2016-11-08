@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
     self.email = email.downcase
   end
 
+
+
   def auto_username
     number=0
     number =User.where(:first_name=>self.first_name).where(:sur_name=>self.sur_name).count
@@ -54,6 +56,10 @@ class User < ActiveRecord::Base
   ##where im getting sales rep from in sr dropdown code
   def sales_rep
     users.where(role: 'sale_representative')
+  end
+
+  def state_manager
+    users.where(role: 'state_manager')
   end
 
 
