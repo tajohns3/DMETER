@@ -1,0 +1,7 @@
+<%@fa_activity.assist_reps.each do |assist|%>
+<p>
+  <strong>Assist</strong>
+<%=assist.assist.humanize.titleize%>
+</p>
+<%= render 'fa_activities/assist_sr_show/other' if assist.assist=='other' %>
+<%end%>

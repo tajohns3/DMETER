@@ -1,0 +1,8 @@
+<%@fa_activity.dealer_visits.each do |deal|%>
+    <p>
+      <strong>Products</strong>
+      <%deal.products.each do |prod|%>
+          <%=prod.name%>
+          </p>
+      <%end%>
+<%end%>

@@ -1,0 +1,68 @@
+<p>
+  <strong>Farmer:</strong>
+  <% @fa_activity.pre_demonstrations.each do |pre|%>
+  <%=pre.farmer.name%>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= pre.crop.crop %>
+</p>
+
+<p>
+  <strong>Crop Growth:</strong>
+  <%= pre.crop_growth.humanize.titleize %>
+</p>
+
+<p>
+  <strong>Crop Condition:</strong>
+  <%= pre.condition.humanize.titleize %>
+</p>
+
+<p>
+  <strong>Area of Application:</strong>
+  <% pre.applications.each do |app| %>
+  <%=app.app_area%>
+</p>
+
+<p>
+  <strong>Application Date:</strong>
+  <%=app.app_date%>
+      </p>
+
+
+      <p>
+        <strong>Products:</strong>
+        <%app.product_applications.each do |prodapp|%>
+            <%=prodapp.product.name%>
+      </p>
+
+          <%end%>
+
+
+        <p>
+          <strong>Application Type:</strong>
+          <%=app.app_type.humanize.titleize%>
+        </p>
+
+
+        <p>
+          <strong>Competitor:</strong>
+          <%=app.competitor%>
+        </p>
+
+
+        <p>
+          <strong>Follow Up Date:</strong>
+          <%=app.follow_date%>
+        </p>
+<%end%>
+
+
+
+  <%end%>
+
+
+
+
+

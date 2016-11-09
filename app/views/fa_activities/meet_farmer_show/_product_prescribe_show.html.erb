@@ -1,0 +1,37 @@
+<%@fa_activity.meet_farmer.product_prescriptions.each do |prod_presc|%>
+<p>
+  <strong>Dealer:</strong>
+  <%= prod_presc.dealer.name %>
+</p>
+
+<p>
+  <strong>Farmer:</strong>
+  <%= prod_presc.farmer.name %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= prod_presc.crop.crop %>
+</p>
+
+
+<p>
+  <strong>Crop growth:</strong>
+  <%= prod_presc.crop_growth.humanize.titleize %>
+</p>
+
+<p>
+  <strong>Crop cond:</strong>
+  <%= prod_presc.crop_cond.humanize.titleize %>
+</p>
+
+<p>
+  <strong>Acreage:</strong>
+  <%= prod_presc.acreage %> <%=prod_presc.units.humanize%>
+</p>
+
+<p>
+  <strong>Prescribe:</strong>
+  <%= prod_presc.prescribe ? 'Yes' : 'No' %>
+</p>
+<%end%>

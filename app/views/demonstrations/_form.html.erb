@@ -12,22 +12,37 @@
         </div>
     <% end %>
 
+    <body>
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h1 class="panel-title text-center">
+            <%= link_to 'Back', demonstrations_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+            <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+            <b>Demonstration</b>
+          </h1>
+        </div>
+
+
     <div class="field" id="hide_pre_demo">
       <%=f.label :pre_demonstration_id%>
       <%=f.text_field :pre_demonstration_id, value: @pre_demonstration.id%>
     </div>
 
-
-
-
-    <div class="field">
-
-      <%=f.fields_for :applications do |application| %>
-          <div class="field">
-            <%=render 'application_fields', f: application%>
+        <div class="panel-body">
+      <div class="panel panel-default">
+          <div class="panel-heading text-center">
+            <b>Product Application Information</b>
           </div>
-      <%end%>
-    </div>
+
+
+        <%=f.fields_for :applications do |application| %>
+
+            <%=render 'application_fields', f: application%>
+
+        <%end%>
+   </div>
+
 
 
 
@@ -35,16 +50,13 @@
       <div class="col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading">
+            <%=f.check_box :demo_status, {}, 'complete', 'active'%>
+            <%=f.label :demo_status, 'Complete'%>
             <h3 class="panel-title text-center">
               <b>Pre-Demonstration Photos</b>
             </h3>
-            <div>
-
-              <%=f.check_box :demo_status, {}, 'complete', 'active'%>
-              <%=f.label :demo_status, 'Complete'%>
-            </div>
-
           </div>
+
           <div class="panel-body">
             <div class="row">
               <div class="col-md-12">
@@ -52,20 +64,33 @@
                   <div class="col-md-4">
                   </div>
                   <div class="col-md-4 text-center">
+                    <th class="text-center">
+                      <div class="form-group">
                     <%= link_to_add_association 'Add Image', f, :demonstration_attachments,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+
+                    </div>
                   </div>
                   <div class="col-md-4">
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
+
+        </div>
+        <div class="actions">
+          <%= f.submit class: "btn btn-primary pull-right" %>
         </div>
       </div>
+
     </div>
 
+          </div>
+      </div>
+      </div>
 
-
+</body>
 
     <div>
       <%=f.hidden_field :demo_code, value: @pre_demonstration.demo_code %>
@@ -75,7 +100,6 @@
     <%=f.text_field :position_id, value: @pre_demonstration.fa_activity.position.id, id: 'hide_pos_id'%>
 
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+
+
 <% end %>

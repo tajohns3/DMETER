@@ -1,10 +1,4 @@
-<div class="container">
-    <div class="panel panel-default">
-      <div class="panel-heading ">
-        <h3 class="panel-title ">
-          <b> Product Application Information</b>
-        </h3>
-      </div>
+
       <div class="panel-body">
         <div class="row">
           <div class="col-md-12">
@@ -13,19 +7,28 @@
 
               <tr>
                 <th class="text-center">
+
                   <%=f.label :application_by, 'Application Done By' %>
                 </th>
                 <th class="text-center">
                   <%=f.label :app_date, 'Application Date'%>
                 </th>
                 <th class="text-center">
-                  <%=f.label :app_comment, 'Application Date Change Reason'%>
+                  <label>
+                    <input type="checkbox" name="change_app" value="app_date">
+                    Application Date Change Reason
+                  </label>
+
                 </th>
                 <th class="text-center">
                   <%=f.label :follow_date, 'Follow Up Date'%>
                 </th>
                 <th class="text-center">
-                  <%=f.label :follow_comment, 'Follow Up  Date Change Reason'%>
+                  <label>
+                    <input type="checkbox" name="change_app" value="app_date">
+                    Follow Up  Date Change Reason
+                  </label>
+
                 </th>
 
               </tr>
@@ -65,5 +68,3 @@
           </div>
         </div>
       </div>
-    </div>
-    </div>

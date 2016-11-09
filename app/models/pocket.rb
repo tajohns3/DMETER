@@ -3,21 +3,19 @@ class Pocket < ActiveRecord::Base
   belongs_to :crop
   belongs_to :state
   has_many :field_assistants
-
   has_many :positions
   has_many :dealers
-
   has_many :districts, through: :pocket_districts
   has_many :pocket_districts
-
   has_many :districts, through: :pocket_districts
   has_many :pocket_districts
   has_many :demoresults
   has_many :farmers
-
   has_many :crops, through: :pocket_crops
   has_many :pocket_crops
   has_many :fa_activities
+  has_many :meet_state_managers
+  has_many :business_developments
   belongs_to :user
   has_many :pocket_dats, :dependent => :destroy
   accepts_nested_attributes_for :pocket_dats, allow_destroy: true, reject_if: :all_blank

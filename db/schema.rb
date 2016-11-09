@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105174839) do
+ActiveRecord::Schema.define(version: 20161107042059) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
     t.integer  "dealer_id",  limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "activity_farmers", force: :cascade do |t|
+    t.integer  "farmer_id",      limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "meet_farmer_id", limit: 4
   end
 
   create_table "applications", force: :cascade do |t|

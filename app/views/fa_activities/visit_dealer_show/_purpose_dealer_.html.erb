@@ -1,0 +1,13 @@
+<%@fa_activity.dealer_visits.each do |deal|%>
+<p>
+  <strong>Dealer</strong>
+  <%=deal.dealer.name%>
+</p>
+
+<p>
+  <strong>Purpose</strong>
+  <%=deal.purpose.humanize.titleize%>
+</p>
+    <%= render 'fa_activities/visit_dealer_show/inventory_show' if deal.purpose=='inventory_check' %>
+    <%= render 'fa_activities/visit_dealer_show/interact_farmer_show' if deal.purpose=='interact_farmers' %>
+<%end%>

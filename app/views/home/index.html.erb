@@ -69,7 +69,7 @@
                 <label class="text-center">
                   Dealer Registration Form
                 </label>
-                <input class="form-control" id="disabledInput" disabled="" type="text">
+                <%=link_to @dealers.count, dealers_path(:active=>'checkem') %>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
                 <label>
                   Farmer Registration Form
                 </label>
-                <input class="form-control" id="disabledInput" disabled="" type="text">
+                <%=link_to @farmers.count, farmers_path(:active=>'checkem') %>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
                 <label class="text-left">
                   Activity Demo
                 </label>
-                <%=link_to @demos.count, demonstrations_path(:active=>nil) %>
+                <%=link_to @demos.count, demonstrations_path(:active=>'checkem') %>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 <label>
                   Product Sample Order
                 </label>
-                <input class="form-control" id="disabledInput" disabled="" type="text">
+                <%=link_to @prodsample.count, prodsamples_path %>
               </div>
             </div>
             <div class="col-md-6" style="display: none;">
@@ -111,7 +111,7 @@
                 <label class="text-center">
                   Field Assistant Registration
                 </label>
-                <input class="form-control" id="disabledInput" disabled="" type="text">
+                <%=link_to @fieldassistants.count, positions_path(:active=>'checkem') %>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
                 <label class="text-center">
                   Field Assistant Activity
                 </label>
-                <input class="form-control" id="disabledInput" disabled="" type="text">
+                <%=link_to "0", root_path %>
               </div>
             </div>
           </div>

@@ -3,34 +3,29 @@
     <thead>
     <tr>
       <th><%= f.label :product_id, 'Product' %></th>
-      <th>Select Quantity</th>
-      <th> <%= f.label :quantity %></th>
-      <th><%= f.label :single_id %></th>
-      <th><%= f.label :box_id %></th>
+      <!--<th>Select Quantity</th>-->
+      <th><%= f.label :single_id, 'Single Quantity' %></th>
+      <th><%= f.label :box_id, 'Single Box' %></th>
 
       <th colspan="3"></th>
     </tr>
     </thead>
     <tbody>
     <tr>
-      <td><%= f.collection_select :product_id, Product.all, :id,:name %></td>
-      <td><select name="bulk" id="bulk_sele">
-        <option disabled selected value> ---Pick single or box---</option>
-        <option value="single">Single</option>
-        <option value="box">Box</option>
-      </select></td>
-      <td><%= f.text_field :quantity%></td>
-      <td><%= f.collection_select :single_id, Single.all, :id, :name%></td>
-      <td><%= f.collection_select :box_id, Box.all, :id, :name%></td>
+      <td><%= f.collection_select :product_id, Product.all, :id,:name, {include_blank: ''} %></td>
+      <!--<td><select name="bulk" id="bulk_sele">-->
+        <!--<option disabled selected value> -&#45;&#45;Pick single or box-&#45;&#45;</option>-->
+        <!--<option value="single">Single</option>-->
+        <!--<option value="box">Box</option>-->
+      <!--</select></td>-->
+      <td><%= f.collection_select :single_id, Single.all, :id, :name, {include_blank: ''}%></td>
+      <td><%= f.collection_select :box_id, Box.all, :id, :name, {include_blank: ''}%></td>
       <td><%=link_to_remove_association 'Remove product', f, class: 'btn btn-danger' %></td>
     </tr>
     </tbody>
     </table>
 
 
-  <div>
-
-  </div>
 
 
 

@@ -38,63 +38,27 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <%= f.label :state_id %><br>
-                            <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                            <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control",id: 'sr_state'} %>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label>
-                              State Manager
-                            </label>
-                            <select class="form-control">
-                              <option value="pizza">
-                                Pizza
-                              </option>
-                              <option value="salad">
-                                Salad
-                              </option>
-                              <option value="pizzasalad">
-                                Pizza and Salad
-                              </option>
-                            </select>
+                            <%=f.label :user_id, 'State Manager'%><br>
+                            <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label>
-                              Area Manager
-                            </label>
-                            <select class="form-control">
-                              <option value="pizza">
-                                Pizza
-                              </option>
-                              <option value="salad">
-                                Salad
-                              </option>
-                              <option value="pizzasalad">
-                                Pizza and Salad
-                              </option>
-                            </select>
+                            <%=f.label :user_id, 'Area Manager'%><br>
+                            <%= f.grouped_collection_select :user_id, State.all, :area_managers,:state,:id, :sur_name, {:include_blank => true}, {class: "form-control", id: 'manager'}  %>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label>
-                              Sales Representative
-                            </label>
-                            <select class="form-control">
-                              <option value="pizza">
-                                Pizza
-                              </option>
-                              <option value="salad">
-                                Salad
-                              </option>
-                              <option value="pizzasalad">
-                                Pizza and Salad
-                              </option>
-                            </select>
+                            <%=f.label :user_id, 'Sales Representative'%><br>
+                            <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {include_blank: ''},{class: "form-control", id: 'sale_rep_act_rep'}%>
                           </div>
                         </div>
                       </div>

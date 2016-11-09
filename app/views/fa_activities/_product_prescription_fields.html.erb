@@ -1,14 +1,14 @@
 <div class="field">
   <%= f.label :dealer_id %><br>
-  <%= f.number_field :dealer_id %>
+  <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {include_blank: ''} %>
 </div>
 <div class="field">
   <%= f.label :farmer_id %><br>
-  <%= f.number_field :farmer_id %>
+  <%= f.collection_select :farmer_id, Farmer.all, :id, :name,{include_blank: ''} %>
 </div>
 <div class="field">
   <%= f.label :crop_id %><br>
-  <%= f.number_field :crop_id %>
+  <%= f.collection_select :crop_id, Crop.all, :id, :crop,{include_blank: ''} %>
 </div>
 
 <div class="field">
@@ -23,7 +23,7 @@
                                                                                                                                                                      '20_30_days_after_breaking_dormancy'],["After bunch formation",'after_bunch_formation'],["After Flowering - Before Fruit / Grain Setting", 'after_flower_before_fruit_grain_setting'],
                                                     ["At Fruit / Grain Setting", 'at_fruit_grain_setting'],["After Fruit / Grain Setting",'after_fruit_grain_setting'],[" Boll / Bulb / Pod Formation",'boll_pod_formation'],
                                                     ["After Plucking",'after_plucking'],["After 2-3 plucking",'2-3_after_plucking']]),
-                  {include_blank:''}%>
+               {include_blank: ''}%>
 </div>
 <div class="field">
   <%= f.label :crop_cond, 'Crop Condition' %><br>

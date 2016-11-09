@@ -4,9 +4,9 @@ class Position < ActiveRecord::Base
   belongs_to :field_assistant
   has_many :fa_activities
   has_many :demonstrations
-  belongs_to :dealer
+  has_many :meet_state_managers
   has_many :pocket_dats
-
+  belongs_to :dealer
 
   mount_uploader :form, ImageUploader
 
@@ -14,6 +14,8 @@ class Position < ActiveRecord::Base
     "#{self.first_name}" + " " + "#{self.surname.titlecase}"
   end
 
-
+  def fullname
+    "#{first_name} #{surname}"
+  end
 
 end

@@ -4,7 +4,7 @@ class DemonstrationsController < ApplicationController
   # GET /demonstrations
   # GET /demonstrations.json
   def index
-    if params[:active]==nil
+    if params[:active]=='checkem'
       @demonstrations = Demonstration.where(demo_status: 'active').limit(1).paginate(page: params[:page], per_page: 20)
     else
       @demonstrations = Demonstration.paginate(page: params[:page], per_page: 20)

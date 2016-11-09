@@ -1,13 +1,16 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>State:</strong>
-  <%= @sr_activity.state_id %>
+  <%= @sr_activity.state.state %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @sr_activity.user_id %>
+  <strong>Area Manager:</strong>
+  <%= @sr_activity.user.manager.sur_name %>
+</p>
+
+<p>
+  <strong>Area Manager:</strong>
+  <%= @sr_activity.user.sur_name %>
 </p>
 
 <p>
@@ -16,20 +19,22 @@
 </p>
 
 <p>
-  <strong>Pactivity:</strong>
-  <%= @sr_activity.pactivity %>
-</p>
-
-<p>
-  <strong>Cf option:</strong>
-  <%= @sr_activity.cf_option %>
+  <strong>Activity:</strong>
+  <%= @sr_activity.pactivity.humanize.titleize %>
 </p>
 
 
-<p>
-  <strong>Other:</strong>
-  <%= @sr_activity.other %>
-</p>
+
+
+
+<%= render 'sr_activities/sr_acts_show/cf_show' if @sr_activity.pactivity=='C&F' %>
+<%= render 'sr_activities/sr_acts_show/other' if @sr_activity.pactivity=='other' %>
+<%= render 'sr_activities/meet_state_manager_show/statemanager_show' if @sr_activity.pactivity=='meet_state_manager' %>
+<%= render 'sr_activities/meet_dealer_show/purpose_show' if @sr_activity.pactivity=='meet_dealer' %>
+<%= render 'sr_activities/meet_fa_show/fa_purpose_show' if @sr_activity.pactivity=='Meet_field_assistant'%>
+<%= render 'sr_activities/meet_farmer_show/purpose' if @sr_activity.pactivity=='meet_farmer'%>
+<%= render 'sr_activities/buss_dev_show/option_show' if @sr_activity.pactivity=='business_development'%>
+
 
 <%= link_to 'Edit', edit_sr_activity_path(@sr_activity) %> |
-<%= link_to 'Back', sr_activities_path %>
+<%= link_to 'Back', root_path %>

@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :users, class_name: "User", foreign_key: "manager_id"
   scope :area_man, -> { users.where(role: 'area_manager') }
 
+  validates :phone, :length => {minimum: 12, maximum: 12},
+            format:{with:/\d{3}-\d{3}-\d{4}/, message: "Please enter a phone number in xxx-xxx-xxxx format"}
 
   before_create :auto_username
   before_create :lower_email
@@ -20,6 +22,10 @@ class User < ActiveRecord::Base
 
   def lower_email
     self.email = email.downcase
+  end
+
+  def fullname
+    "#{first_name} #{sur_name}"
   end
 
   def auto_username
@@ -54,6 +60,10 @@ class User < ActiveRecord::Base
   ##where im getting sales rep from in sr dropdown code
   def sales_rep
     users.where(role: 'sale_representative')
+  end
+
+  def state_manager
+    users.where(role: 'state_manager')
   end
 
 

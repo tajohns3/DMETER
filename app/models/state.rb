@@ -15,4 +15,14 @@ class State < ActiveRecord::Base
   def area_managers
     users.where(role: 'area_manager')
   end
+
+  def sales_rep
+    users.where(role: 'sale_representative')
+  end
+
+  def state_manager
+    users.where(role: 'state_manager')
+  end
+
+
 end
