@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63463788-a095-4025-9439-05ec028f5dae" name="Default" comment="">
+    <list default="true" id="63463788-a095-4025-9439-05ec028f5dae" name="Default" comment="new_form_users_faactivities_predemo">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DMETER_PROTO.iml" afterPath="$PROJECT_DIR$/DMETER_PROTO.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_application_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_application_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_assist_rep_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_assist_rep_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_meet_farmer_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_product_application_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_product_application_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/_product_prescription_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/index.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/new.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pre_demonstrations/_application_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/pre_demonstrations/_application_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pre_demonstrations/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/pre_demonstrations/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fa_activities/show.html.erb" afterPath="$PROJECT_DIR$/app/views/fa_activities/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pre_demonstrations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pre_demonstrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/pre_demonstrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/prodsamples/show.html.erb" afterPath="$PROJECT_DIR$/app/views/prodsamples/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
     </list>
     <ignored path="DMETER_PROTO.iws" />
@@ -67,31 +53,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.625">
-              <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.5338078">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <file leaf-file-name="fa_activities.js.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5960265">
-              <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="201" column="39" selection-start-line="201" selection-start-column="39" selection-end-line="201" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_pre_demonstration_fields.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb">
+      <file leaf-file-name="database.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.7083335">
-              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dealers.js.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dealers.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,9 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/demonstrations.scss" />
-        <option value="$PROJECT_DIR$/db/migrate/20161103192123_add_demo_status_to_demonstrations.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20161103230420_add_application_by_to_applications.rb" />
         <option value="$PROJECT_DIR$/app/controllers/applications_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20161103233600_remove_appdone_by_from_demonstrations.rb" />
@@ -153,9 +146,7 @@
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20161105013058_add_taluka_to_pocket_dats.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/prodsamples/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/new.html.erb" />
@@ -174,8 +165,13 @@
         <option value="$PROJECT_DIR$/app/views/pre_demonstrations/_application_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/_application_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/prodsamples/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/show.html.erb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/app/views/fa_activities/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -199,8 +195,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1024" />
-    <option name="height" value="640" />
+    <option name="x" value="35" />
+    <option name="y" value="23" />
+    <option name="width" value="881" />
+    <option name="height" value="542" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -228,6 +226,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -282,7 +281,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
+              <option name="myItemId" value="fa_activities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,28 +314,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,7 +321,6 @@
       </pane>
       <pane id="RailsProjectView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,10 +334,9 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="gemfil&#9;FILE&#9;file:///Users/mariaalza/DMETER-Prototype/Gemfile&#10;data&#9;FILE&#9;file:///Users/mariaalza/DMETER-Prototype/config/database.yml&#10;datab&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;schema&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;pocket_dats&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161009204836_create_pocket_dats.rb&#10;pocket_da&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/test/controllers/pocket_dats_controller_test.rb&#10;pre&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/pre_demonstrations_controller.rb&#10;form&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/dealers/_form.html.erb&#10;fa&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/fa_activities_controller.rb&#10;dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;fa_ac&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/fa_activities.js.coffee&#10;dea&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/dealer.rb&#10;sche&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;demons&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;schem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;application&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/applications_controller.rb&#10;d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;hom&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/home_controller.rb&#10;pre_d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;sch&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;remove_de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161029104334_remove_columns_from_demonstration.rb&#10;create_demo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161023235315_create_demonstrations.rb&#10;sc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;fo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;sr_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;po&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/sr_activity.rb&#10;home&#9;null&#9;null&#10;fa_act&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/fa_activity.rb&#10;gem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/Gemfile&#10;demonstration_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;f&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;demonstration_c&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;demonstra&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;application.&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/application.js&#10;post_dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;demonstration&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;post_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;crop&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/crop.rb&#10;field&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/field_assistant.rb&#10;index&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/positions/index.html.erb&#10;p&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;position&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;area_ma&#9;null&#9;null&#10;use&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb&#10;poc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;pocke&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;user&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb" />
+    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file:///Users/mariaalza/DMETER-Prototype/config/database.yml&#10;gemfil&#9;FILE&#9;file:///Users/mariaalza/DMETER-Prototype/Gemfile&#10;datab&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;schema&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;pocket_dats&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161009204836_create_pocket_dats.rb&#10;pocket_da&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/test/controllers/pocket_dats_controller_test.rb&#10;pre&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/pre_demonstrations_controller.rb&#10;form&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/dealers/_form.html.erb&#10;fa&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/fa_activities_controller.rb&#10;dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;fa_ac&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/fa_activities.js.coffee&#10;dea&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/dealer.rb&#10;sche&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;demons&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;schem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;application&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/applications_controller.rb&#10;d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;hom&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/home_controller.rb&#10;pre_d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;sch&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;remove_de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161029104334_remove_columns_from_demonstration.rb&#10;create_demo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161023235315_create_demonstrations.rb&#10;sc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;fo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;sr_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;po&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/sr_activity.rb&#10;home&#9;null&#9;null&#10;fa_act&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/fa_activity.rb&#10;gem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/Gemfile&#10;demonstration_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;f&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;demonstration_c&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;demonstra&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;application.&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/application.js&#10;post_dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;demonstration&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;post_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;crop&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/crop.rb&#10;field&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/field_assistant.rb&#10;index&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/positions/index.html.erb&#10;p&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;position&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;area_ma&#9;null&#9;null&#10;use&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb&#10;poc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;pocke&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;user&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1252,7 +1227,10 @@
       <workItem from="1478537990584" duration="164000" />
       <workItem from="1478542035832" duration="1037000" />
       <workItem from="1478548486883" duration="5819000" />
-      <workItem from="1478567395078" duration="2785000" />
+      <workItem from="1478567395078" duration="6016000" />
+      <workItem from="1478722896698" duration="350000" />
+      <workItem from="1478732513861" duration="797000" />
+      <workItem from="1478733662286" duration="220000" />
     </task>
     <task id="LOCAL-00001" summary="Created new branch">
       <created>1476566626592</created>
@@ -1302,7 +1280,13 @@
       <option name="project" value="LOCAL" />
       <updated>1477154401040</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="new_form_users_faactivities_predemo">
+      <created>1478573666910</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1478573666910</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1326,7 +1310,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401876000" />
+    <option name="totallyTimeSpent" value="406474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1338,8 +1322,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1024" height="640" extended-state="0" />
-    <editor active="false" />
+    <frame x="35" y="23" width="881" height="542" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1347,9 +1331,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35" sideWeight="0.5046875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37894738" sideWeight="0.4953125" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26" sideWeight="0.4953125" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33808553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13706794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1406,7 +1390,8 @@
     <MESSAGE value="ProdSamples complete" />
     <MESSAGE value="ProdSamples complete added commented coffee script for state/fa selections" />
     <MESSAGE value="Demo_results_initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Demo_results_initial" />
+    <MESSAGE value="new_form_users_faactivities_predemo" />
+    <option name="LAST_COMMIT_MESSAGE" value="new_form_users_faactivities_predemo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1417,56 +1402,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/dealers/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="65" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161105174839_change_demo_status_default.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161105040553_add_status_to_pre_demonstrations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/fa_activities_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="87" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/demonstrations/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/demonstrations/_application_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1506,7 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="539" column="5" selection-start-line="539" selection-start-column="5" selection-end-line="539" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1529,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1537,13 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1561,24 +1486,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5888325">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pockets/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43294117">
           <caret line="172" column="26" selection-start-line="170" selection-start-column="20" selection-end-line="172" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-42.083332">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1593,13 +1504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15037593">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1656,7 +1560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28985506">
           <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1671,7 +1574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1693,7 +1595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3875969">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1701,7 +1602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54635763">
           <caret line="16" column="89" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1709,7 +1609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36809817">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1717,7 +1616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30463576">
           <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1725,7 +1623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1733,15 +1630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1749,15 +1637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.397351">
           <caret line="8" column="139" selection-start-line="8" selection-start-column="139" selection-end-line="8" selection-end-column="139" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_demonstration_attachment_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29801324">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1765,30 +1644,121 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8411215">
+          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/prodsamples/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="22.25">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pockets/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="112.25">
+          <caret line="11" column="159" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="159" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_pre_demonstration_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.7083335">
+        <state vertical-scroll-proportion="0.6342593">
           <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.9444444">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4861111">
+          <caret line="73" column="23" selection-start-line="71" selection-start-column="18" selection-end-line="73" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.25">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="55" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40789473">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_demonstration_attachment_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2425876">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dealer_visits/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_dealer_visit_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20215634">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dealers.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="201" column="39" selection-start-line="201" selection-start-column="39" selection-end-line="201" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fa_activities/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625">
-          <caret line="158" column="24" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5960265">
-          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.5338078">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
           <folding />
         </state>
       </provider>

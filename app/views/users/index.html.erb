@@ -46,9 +46,13 @@
                 <td class="text-center">
                   <%=link_to u.user_name,u%> <br><br>
                 </td>
+                <td class="text-center">
+                  <%= link_to 'View user', u, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                </td>
 
                 </li>
             <%end%>
+
           </tr>
           </tbody>
         </table>
