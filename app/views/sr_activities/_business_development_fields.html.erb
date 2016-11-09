@@ -1,5 +1,6 @@
 
-
+<div class="row">
+  <div class="col-md-4">
 <div class="field">
   <%= f.label :option %><br>
   <%= f.select :option, options_for_select([["Organize Farmer Meeting", 'organize_farmer_meeting'],["Organize Dealer Meeting", 'organize_dealer_meeting'],["Brand Awareness/Marketing",'brand_awareness/marketing'],
@@ -9,12 +10,12 @@
 <div class="container" id="buss_demo_div">
   <div class="field">
     <%= f.label :pre_demonstration_id %><br>
-    <%= f.collection_select :pre_demonstration_id, PreDemonstration.all, :id, :demo_code %>
+    <%= f.number_field :pre_demonstration_id, class:"form-control",:style => "width:100px"%>
   </div>
 
   <div class="field">
-    <%= f.label :numattendees %><br>
-    <%= f.number_field :numattendees %>
+    <%= f.label :numattendees, "Number of Attendees" %><br>
+    <%= f.number_field :numattendees,class:"form-control",:style => "width:100px" %>
   </div>
 
   <div class="field">
@@ -29,20 +30,26 @@
 
 <div class="field" id="buss_dev_pocket">
   <%= f.label :pocket_id %><br>
-  <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {include_blank: ''} %>
+  <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {include_blank: ''},{class:"form-control"} %>
 </div>
 
 <div class="container" id="attendees_type_div">
   <div class="field">
     <%= f.label :a_attendees %><br>
-    <%= f.number_field :a_attendees %>
+    <%= f.number_field :a_attendees,class:"form-control",:style => "width:100px" %>
   </div>
   <div class="field">
     <%= f.label :b_attendees %><br>
-    <%= f.number_field :b_attendees %>
+    <%= f.number_field :b_attendees,class:"form-control",:style => "width:100px" %>
   </div>
   <div class="field">
     <%= f.label :c_attendees %><br>
-    <%= f.number_field :c_attendees %>
+    <%= f.number_field :c_attendees,class:"form-control",:style => "width:100px" %>
   </div>
 </div>
+    <div class="col-md-4">
+      </div>
+    <div class="col-md-4">
+    </div>
+</div>
+  </div>

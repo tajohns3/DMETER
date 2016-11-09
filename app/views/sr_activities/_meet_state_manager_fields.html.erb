@@ -1,22 +1,22 @@
 <div class="field" id="state_mana_div">
   <%= f.label :purpose, 'Purpose' %><br>
   <%= f.select :purpose, options_for_select([["To Identify a Pocket", 'identify_pocket'],["To Identify a Dealer",'identify_dealer'],
-                                                               ["To indentify Field Assistant",'identify_field_assistant'],["Other", 'other']]),{include_blank: ''},
-               {id: 'meet_sm_option'}%>
+                                                               ["To indentify Field Assistant",'identify_fa'],["Other", 'other']]),{include_blank: ''},
+               {id: 'meet_sm_option', class:"form-control",:style => "width:200px"}%>
 </div>
 <div class="field" id="pocked_div">
   <%= f.label :pocket_id %><br>
-  <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {include_blank: ''} %>
+  <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {include_blank: ''},{class:"form-control",:style => "width:200px" } %>
 </div>
 <div class="field" id="dealer_div">
   <%= f.label :dealer_id %><br>
-  <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {include_blank: ''} %>
+  <%= f.number_field :dealer_id, class:"form-control", :style => "width:200px" %>
 </div>
 <div class="field" id="position_div">
   <%= f.label :position_id, 'Field Assistant' %><br>
-  <%= f.collection_select :position_id, Position.all, :id, :surname, {include_blank: ''} %>
+  <%= f.number_field :position_id, class:"form-control", :style => "width:200px" %>
 </div>
 <div class="field" id="meet_sm_other_div">
   <%= f.label :other, 'Other' %><br>
-  <%= f.text_area :other %>
+  <%= f.text_area :other, class:"form-control", :style => "width:200px" %>
 </div>

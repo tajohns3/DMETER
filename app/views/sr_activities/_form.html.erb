@@ -11,81 +11,146 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :state_id %><br>
-    <%= f.collection_select :state_id, State.all,:id, :state, {include_blank: ''},{id: 'sr_state'} %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <%= link_to 'Back', sr_activities_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+          <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+          <b>Sales Representative Activities</b>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Sales Representative Information</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>
+                    State
+                  </label>
+                  <%= f.collection_select :state_id, State.all,:id, :state, {include_blank: ''},{id: 'sr_state', class:"form-control"} %>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>
+                    Area Manager
+                  </label>
+                  <%=f.grouped_collection_select :manager_id,State.all, :area_managers,:state, :id,:sur_name,{include_blank: ''},{id: 'manager', class:"form-control"}%>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>
+                    Sales Representative&nbsp;
+                  </label>
+                  <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {include_blank: ''},{id: 'sale_rep_act_rep', class:"form-control"}%>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>
+                    Date
+                  </label>
+                  <div class='input-group date' id='datetimepicker1'>
+                    <%= f.text_field :date, "data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: "form-control" %>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md6 col-md-6" style="display: block;">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <b>SR Primary Activites</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="field">
+                      <%= f.label :pactivity, 'Primary Activity' %><br>
+                      <%= f.select :pactivity, options_for_select([["Meet with State Manager", 'meet_state_manager'],["Meet with Dealer",'meet_dealer'],
+                                                                   ["Meet with Field Assistant", 'Meet_fa'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
+                                                                   ["Business Development", 'business_development'],["Other",'other']]), {include_blank: ''},{id: 'sr_pactivity',class:"form-control"} %>
+                    </div>
+
+
+                    <div class="container" id="">
+                      <%=f.fields_for :meet_state_managers do |meet_sm|%>
+                          <%=render 'meet_state_manager_fields', f: meet_sm%>
+                      <%end%>
+                    </div>
+
+                    <div id="meet_state_managers">
+
+                    </div>
+
+
+                    <div class="container">
+                      <%=f.fields_for :meet_dealers do |meet_dealer|%>
+                          <%=render 'meet_dealer_fields', f: meet_dealer%>
+                      <%end%>
+                    </div>
+
+                    <div class="container">
+                      <%=f.fields_for :meet_fas do |meet_fa|%>
+                          <%=render 'meet_fa_fields', f: meet_fa%>
+                      <%end%>
+                    </div>
+
+                    <div class="container">
+                      <%=f.fields_for :meet_sr_farmers do |farmers|%>
+                          <%=render 'meet_sr_farmer_fields', f: farmers%>
+                      <%end%>
+                    </div>
+
+
+                    <div class="field" id="cf_option">
+                      <%= f.label :cf_option, 'C & F' %><br>
+                      <%= f.select :cf_option, options_for_select([["Billing",'billing'],["Inventory Check",'inventory_check'],["Deliveries",'deliveries']]),
+                                   {include_blank: ''},{class:"form-control"}%>
+                    </div>
+
+                    <div class="container" id="business_deve_div">
+                      <%=f.fields_for :business_developments do |buss|%>
+                          <%=render 'business_development_fields', f: buss%>
+                      <%end%>
+                    </div>
+                    <div class="field" id="sr_other">
+                      <%= f.label :other %><br>
+                      <%= f.text_area :other,class:"form-control", :style => "width:200px"%>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md3 col-md-3" style="display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-  <%= f.label :manager_id, 'Area Manager' %><br>
-    <%=f.grouped_collection_select :manager_id,State.all, :area_managers,:state, :id,:sur_name,{include_blank: ''},{id: 'manager'}%>
 </div>
-
-    <div class="field">
-      <%= f.label :user_id, 'Sales Representative' %><br>
-      <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {include_blank: ''},{id: 'sale_rep_act_rep'}%>
+    <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
     </div>
-
-
-
-
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
-  </div>
-  <div class="field">
-    <%= f.label :pactivity, 'Primary Activity' %><br>
-    <%= f.select :pactivity, options_for_select([["Meet with State Manager", 'meet_state_manager'],["Meet with Dealer",'meet_dealer'],
-                                                ["Meet with Field Assistant", 'Meet_field_assistant'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
-                                                ["Business Development", 'business_development'],["Other",'other']]), {include_blank: ''},{id: 'sr_pactivity'} %>
-  </div>
-
-
-    <div class="container" id="">
-      <%=f.fields_for :meet_state_manager do |meet_sm|%>
-      <%=render 'meet_state_manager_fields', f: meet_sm%>
-          <%end%>
-    </div>
-
-    <div id="meet_state_managers">
-
-    </div>
-
-
-    <div class="container">
-      <%=f.fields_for :meet_dealer do |meet_dealer|%>
-          <%=render 'meet_dealer_fields', f: meet_dealer%>
-      <%end%>
-    </div>
-
-    <div class="container">
-      <%=f.fields_for :meet_fa do |meet_fa|%>
-          <%=render 'meet_fa_fields', f: meet_fa%>
-      <%end%>
-    </div>
-
-    <div class="container">
-      <%=f.fields_for :meet_sr_farmer do |farmers|%>
-          <%=render 'meet_sr_farmer_fields', f: farmers%>
-      <%end%>
-    </div>
-
-
-  <div class="field" id="cf_option">
-    <%= f.label :cf_option, 'C & F' %><br>
-    <%= f.select :cf_option, options_for_select([["Billing",'billing'],["Inventory Check",'inventory_check'],["Deliveries",'deliveries']]),
-                 {include_blank: ''}%>
-  </div>
-
-    <div class="container" id="business_deve_div">
-    <%=f.fields_for :business_development do |buss|%>
-      <%=render 'business_development_fields', f: buss%>
-          <%end%>
-  </div>
-  <div class="field" id="sr_other">
-    <%= f.label :other %><br>
-    <%= f.text_area :other%>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Submit' %>
-  </div>
 <% end %>
