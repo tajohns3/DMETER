@@ -1,5 +1,7 @@
 class FieldAssistantsController < ApplicationController
   before_action :set_field_assistant, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
 
   # GET /field_assistants
   # GET /field_assistants.json
@@ -66,6 +68,11 @@ class FieldAssistantsController < ApplicationController
   end
 
   private
+
+  def input_user
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
+
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_field_assistant
       @field_assistant = FieldAssistant.find(params[:id])

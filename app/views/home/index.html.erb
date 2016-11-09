@@ -94,29 +94,29 @@
       <li class="list-group-item"> <label class="text-left">
         Dealer Registration Form
       </label>
-        <%=link_to @demos.count, demonstrations_path(:active=>nil) %></li>
+        <%=link_to @dealers.count, dealers_path(:active=>'checkem') %></li>
       <li class="list-group-item"> <label class="text-left">
         Farmer Registration Form
       </label>
-        <%=link_to @demos.count, demonstrations_path(:active=>nil) %></li>
+        <%=link_to @farmers.count, farmers_path(:active=>'checkem') %></li>
       <li class="list-group-item"> <label class="text-left">
         Activity Demo
       </label>
-        <%=link_to @demos.count, demonstrations_path(:active=>nil) %></li>
+        <%=link_to @demos.count, demonstrations_path(:active=>'checkem') %></li>
           </div>
         <div class="col-md-6">
       <li class="list-group-item"> <label class="text-left">
         Product Sample Order
       </label>
-        <%=link_to @demos.count, demonstrations_path(:active=>nil) %></li>
+        <%=link_to @prodsample.count, prodsamples_path %></li>
       <li class="list-group-item"> <label class="text-left">
         Field Assistant Registration
       </label>
-        <%=link_to @demos.count, demonstrations_path(:active=>nil) %></li>
+        <%=link_to @fieldassistants.count, positions_path(:active=>'checkem') %></li>
       <li class="list-group-item"> <label class="text-left">
         Field Assistant Activity
       </label>
-        <%=link_to @demos.count, demonstrations_path(:active=>nil) %></li>
+        <%=link_to "0", root_path %></li>
           </div>
         </div>
     </ul>
