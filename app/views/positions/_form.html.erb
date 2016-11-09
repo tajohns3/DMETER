@@ -136,9 +136,14 @@
                                 </h3>
                               </div>
                               <div class="panel-body" align="center">
-                                <label class="btn btn-info btn-file">
-                                  Upload Scan <%= f.file_field :form %>
-                                </label>
+                                <div class="picture-container">
+                                  <div class="picture">
+                                    <img src="http://image.flaticon.com/icons/png/512/52/52297.png" class="picture-src" id="wizardPicturePreview" title="">
+                                    <%= f.file_field :form, id:"wizard-picture" %>
+                                  </div>
+                                  <h5 class=""><b>Upload Form</b></h5>
+
+                                </div>
                               </div>
                             </div>
                           </div>
