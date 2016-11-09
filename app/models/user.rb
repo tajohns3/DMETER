@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   scope :area_man, -> { users.where(role: 'area_manager') }
 
   validates :phone, :length => {minimum: 12, maximum: 12},
-            format:{with:/\d{3}-\d{3}-\d{4}/, message: "Please enter a phone number in xxx-xxx-xxxx format"}
+            format:{with:/\d{3}-\d{3}-\d{4}/, message: "Please enter a phone number in xxx-xxx-xxxx format"}, allow_blank: true
 
   before_create :auto_username
   before_create :lower_email

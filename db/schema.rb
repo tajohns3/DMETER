@@ -200,17 +200,17 @@ ActiveRecord::Schema.define(version: 20161107042059) do
   create_table "demoresults", force: :cascade do |t|
     t.integer  "amid",               limit: 4
     t.integer  "srid",               limit: 4
-    t.integer  "pocket_id",          limit: 4
+    t.integer  "pocketid",           limit: 4
     t.integer  "faid",               limit: 4
     t.string   "demostatus",         limit: 4000
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.integer  "demo_id",            limit: 4
+    t.integer  "demoid",             limit: 4
     t.string   "photo_file_name",    limit: 4000
     t.string   "photo_content_type", limit: 4000
     t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
-    t.integer  "state_id",           limit: 4
+    t.integer  "stid",               limit: 4
   end
 
   create_table "demos", force: :cascade do |t|
@@ -256,7 +256,7 @@ ActiveRecord::Schema.define(version: 20161107042059) do
   end
 
   create_table "farmcrops", force: :cascade do |t|
-    t.integer  "crop_id",    limit: 4
+    t.integer  "cropid",     limit: 4
     t.integer  "acreage",    limit: 4
     t.string   "unit",       limit: 4000
     t.string   "irr_source", limit: 4000
@@ -268,16 +268,16 @@ ActiveRecord::Schema.define(version: 20161107042059) do
   add_index "farmcrops", ["farmer_id"], name: "index_farmcrops_on_farmer_id"
 
   create_table "farmers", force: :cascade do |t|
-    t.integer  "state_id",     limit: 4
+    t.integer  "stid",         limit: 4
     t.integer  "useridstmgr",  limit: 4
     t.integer  "useridamgr",   limit: 4
     t.integer  "useridsr",     limit: 4
-    t.integer  "pocket_id",    limit: 4
-    t.integer  "dealer_id",    limit: 4
+    t.integer  "pocketid",     limit: 4
+    t.integer  "dealerid",     limit: 4
     t.string   "name",         limit: 4000
-    t.integer  "village_id",   limit: 4
+    t.integer  "villageid",    limit: 4
     t.string   "phnumber",     limit: 4000
-    t.integer  "crop_id",      limit: 4
+    t.integer  "cropid",       limit: 4
     t.integer  "acreage",      limit: 4
     t.string   "unit",         limit: 4000
     t.string   "irr_source",   limit: 4000

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63463788-a095-4025-9439-05ec028f5dae" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sr_activities/index.html.erb" afterPath="$PROJECT_DIR$/app/views/sr_activities/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DMETER_PROTO.iml" afterPath="$PROJECT_DIR$/DMETER_PROTO.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="DMETER_PROTO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,12 +25,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/DMETER-Prototype@db_migrate__DMETER_PROTO.coverage" NAME="db:migrate: DMETER_PROTO Coverage Results" MODIFIED="1476651904663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
-    <SUITE FILE_PATH="coverage/DMETER-Prototype@Rails_console__DMETER_PROTO.coverage" NAME="Rails console: DMETER_PROTO Coverage Results" MODIFIED="1477737601629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
     <SUITE FILE_PATH="coverage/DMETER-Prototype@Production__DMETER_PROTO.coverage" NAME="Production: DMETER_PROTO Coverage Results" MODIFIED="1477847932754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
-    <SUITE FILE_PATH="coverage/DMETER-Prototype@Development__DMETER_PROTO.coverage" NAME="Development: DMETER_PROTO Coverage Results" MODIFIED="1477977616345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
+    <SUITE FILE_PATH="coverage/DMETER-Prototype@Rails_console__DMETER_PROTO.coverage" NAME="Rails console: DMETER_PROTO Coverage Results" MODIFIED="1478677220344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
     <SUITE FILE_PATH="coverage/DMETER-Prototype@test_models__DMETER_PROTO.coverage" NAME="test:models: DMETER_PROTO Coverage Results" MODIFIED="1475458802552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
+    <SUITE FILE_PATH="coverage/DMETER-Prototype@Development__DMETER_PROTO.coverage" NAME="Development: DMETER_PROTO Coverage Results" MODIFIED="1477977616345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
     <SUITE FILE_PATH="coverage/DMETER_PROTO@db_migrate__DMETER_PROTO.coverage" NAME="db:migrate: DMETER_PROTO Coverage Results" MODIFIED="1475348539559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
+    <SUITE FILE_PATH="coverage/DMETER-Prototype@db_migrate__DMETER_PROTO.coverage" NAME="db:migrate: DMETER_PROTO Coverage Results" MODIFIED="1476651904663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DMETER_PROTO" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -46,20 +49,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/sr_activities/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1097">
-              <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="database.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
+            <state relative-caret-position="418">
               <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
@@ -69,7 +62,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/sr_activities/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="1144">
               <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="58" />
               <folding />
             </state>
@@ -79,14 +72,14 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pockets/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-726">
+            <state relative-caret-position="374">
               <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/sr_activities/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
@@ -96,10 +89,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="12" column="127" selection-start-line="12" selection-start-column="127" selection-end-line="12" selection-end-column="127" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dealer.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/dealer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="176">
               <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding />
             </state>
@@ -109,7 +112,7 @@
       <file leaf-file-name="pocket.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/pocket.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
+            <state relative-caret-position="374">
               <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
@@ -119,7 +122,7 @@
       <file leaf-file-name="position.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/position.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="264">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
@@ -129,7 +132,7 @@
       <file leaf-file-name="sr_activity.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/sr_activity.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
+            <state relative-caret-position="594">
               <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
@@ -139,7 +142,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pockets/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="242">
               <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="159" />
               <folding />
             </state>
@@ -174,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/fa_activities_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/demonstration.rb" />
         <option value="$PROJECT_DIR$/app/views/demonstrations/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/fa_activities.js.coffee" />
@@ -225,6 +227,7 @@
         <option value="$PROJECT_DIR$/app/models/sr_activity.rb" />
         <option value="$PROJECT_DIR$/app/views/sr_activities/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sr_activities/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -249,10 +252,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-16" />
-    <option name="y" value="-16" />
-    <option name="width" value="3232" />
-    <option name="height" value="1732" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -279,10 +282,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,94 +300,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sr_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sr_activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sr_acts_show" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DMETER-Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pockets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,6 +337,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,7 +351,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="meet_state&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/meet_state_manager.rb&#10;poc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;gem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/Gemfile&#10;datab&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;schema&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;pocket_dats&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161009204836_create_pocket_dats.rb&#10;pocket_da&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/test/controllers/pocket_dats_controller_test.rb&#10;pre&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/pre_demonstrations_controller.rb&#10;form&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/dealers/_form.html.erb&#10;fa&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/fa_activities_controller.rb&#10;dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;fa_ac&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/fa_activities.js.coffee&#10;dea&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/dealer.rb&#10;sche&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;demons&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;schem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;application&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/applications_controller.rb&#10;d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;hom&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/home_controller.rb&#10;pre_d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;sch&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;remove_de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161029104334_remove_columns_from_demonstration.rb&#10;create_demo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161023235315_create_demonstrations.rb&#10;sc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;fo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;sr_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;po&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/sr_activity.rb&#10;home&#9;null&#9;null&#10;fa_act&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/fa_activity.rb&#10;demonstration_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;f&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;demonstration_c&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;demonstra&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;application.&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/application.js&#10;post_dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;demonstration&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;post_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;crop&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/crop.rb&#10;field&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/field_assistant.rb&#10;index&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/positions/index.html.erb&#10;p&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;position&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;area_ma&#9;null&#9;null&#10;use&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb&#10;pocke&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;user&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb" />
+    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;meet_state&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/meet_state_manager.rb&#10;poc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;gem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/Gemfile&#10;datab&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/config/database.yml&#10;schema&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;pocket_dats&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161009204836_create_pocket_dats.rb&#10;pocket_da&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/test/controllers/pocket_dats_controller_test.rb&#10;pre&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/pre_demonstrations_controller.rb&#10;form&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/dealers/_form.html.erb&#10;fa&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/fa_activities_controller.rb&#10;dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;fa_ac&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/fa_activities.js.coffee&#10;dea&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/dealer.rb&#10;sche&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;demons&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;schem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;application&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/applications_controller.rb&#10;d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;hom&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/home_controller.rb&#10;pre_d&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pre_demonstration.rb&#10;sch&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;remove_de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161029104334_remove_columns_from_demonstration.rb&#10;create_demo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/migrate/20161023235315_create_demonstrations.rb&#10;sc&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/db/schema.rb&#10;de&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;fo&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;sr_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/sr_activities_controller.rb&#10;po&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb&#10;sr&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/sr_activity.rb&#10;home&#9;null&#9;null&#10;fa_act&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/fa_activity.rb&#10;demonstration_a&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;demon&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;f&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/demonstrations/_form.html.erb&#10;demonstration_c&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/controllers/demonstrations_controller.rb&#10;demonstra&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration.rb&#10;application.&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/assets/javascripts/application.js&#10;post_dem&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;demonstration&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/demonstration_attachment.rb&#10;post_&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/post_demonstration.rb&#10;crop&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/crop.rb&#10;field&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/field_assistant.rb&#10;index&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/views/positions/index.html.erb&#10;p&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;position&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/position.rb&#10;area_ma&#9;null&#9;null&#10;use&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/user.rb&#10;pocke&#9;FILE&#9;file://C:/Users/Eleven Fold/IdeaProjects/DMETER-Prototype/app/models/pocket.rb" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajaxdemo" />
     <property name="full.screen.before.presentation.mode" value="true" />
   </component>
@@ -449,7 +364,7 @@
       <recent name="C:\Users\Eleven Fold\IdeaProjects\DMETER-Prototype\app\views\sr_activities\show_pages" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.1">
+  <component name="RunManager" selected="IRB console.Rails console: DMETER_PROTO">
     <configuration default="false" name="db:migrate: DMETER_PROTO" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="DMETER_PROTO" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1255,8 +1170,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.1" />
-        <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: DMETER_PROTO" />
+        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: DMETER_PROTO" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.1" />
         <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate: DMETER_PROTO" />
         <item index="3" class="java.lang.String" itemvalue="Rake.test:models: DMETER_PROTO" />
       </list>
@@ -1325,6 +1240,8 @@
       <workItem from="1478395068419" duration="1184000" />
       <workItem from="1478466426839" duration="16701000" />
       <workItem from="1478488769978" duration="3928000" />
+      <workItem from="1478668262660" duration="97000" />
+      <workItem from="1478668457953" duration="2987000" />
     </task>
     <task id="LOCAL-00001" summary="Created new branch">
       <created>1476566626592</created>
@@ -1406,7 +1323,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383655000" />
+    <option name="totallyTimeSpent" value="386739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1418,33 +1335,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35" sideWeight="0.5046875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33821478" sideWeight="0.4953125" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375" sideWeight="0.4953125" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21548387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21510416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1497,14 +1414,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11858">
-          <caret line="539" column="5" selection-start-line="539" selection-start-column="5" selection-end-line="539" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20161029104334_remove_columns_from_demonstration.rb" />
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
@@ -1539,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1724,7 +1632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1732,7 +1639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1740,7 +1646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="6" column="94" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1748,7 +1653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1756,7 +1660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1764,7 +1667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1772,7 +1674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1287">
           <caret line="39" column="33" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1787,29 +1688,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sr_activities/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
+        <state relative-caret-position="1936">
           <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pockets/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
+        <state relative-caret-position="242">
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="159" />
           <folding />
         </state>
@@ -1817,7 +1709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/dealer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="176">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
@@ -1825,7 +1717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/pocket.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
+        <state relative-caret-position="374">
           <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
@@ -1833,7 +1725,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/position.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="264">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -1841,7 +1733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pockets/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
+        <state relative-caret-position="374">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding />
         </state>
@@ -1849,7 +1741,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/sr_activity.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
+        <state relative-caret-position="594">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
@@ -1857,7 +1749,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sr_activities/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="1144">
           <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="58" />
           <folding />
         </state>
@@ -1867,6 +1759,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="127" selection-start-line="12" selection-start-column="127" selection-end-line="12" selection-end-column="127" />
           <folding />
         </state>
       </provider>
