@@ -11,8 +11,7 @@ class State < ActiveRecord::Base
   has_many :dealers
   has_many :demoresults
   has_many :farmers
-
-
+  has_many :districts
   def area_managers
     users.where(role: 'area_manager')
   end

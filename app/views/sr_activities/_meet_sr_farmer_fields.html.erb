@@ -14,7 +14,7 @@
 </div>
 
 <div class="field" id="crop_cod_div">
-  <%=f.label :crop_condition%><br>
+  <%=f.label :crop_condition, 'Crop Condition'%><br>
   <%=f.select :crop_condition, options_for_select([["Drought", 'drought'],["Flower/Fruit Shedding", 'flower'], ["Healty Growth", 'healthy_growth'], ["Heat Stress",'heat_stress'],
                                                    ["Infestation - Bacterial", 'bacterial_infest'], ["Infestation - Fungal",'fungal_infest'], ["Infestation - Mite", 'mite_infest'],
                                                    ["Infestation - Nematode", 'nematode_infest'],["Infestation - Suck Pest",'suck_pest_infest'], ["Infestation - Viral",'viral_infest'],
@@ -23,7 +23,7 @@
 </div>
 
 <div class="field" id="crop_growth_div">
-  <%= f.label :crop_growth %><br>
+  <%= f.label :crop_growth, 'Crop Growth' %><br>
   <%= f.select :crop_growth, options_for_select([["Soil Preparation",'soil_prep'],["30 - 40 days after sowing / transplanting", '30_40_days_after_sowing_transplant'],
                                                  ["40 - 60 days after sowing / transplanting",'40_60_days_after_sowing_transplant'],
                                                  ["100 - 120 Days after sowing / transplanting",'100_120_days_after_sowing_transplant'],

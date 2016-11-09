@@ -11,10 +11,10 @@ default: &default
 
 development:
   adapter: sqlserver
-  host: 10.0.0.24
+  host: ELEVEN_FOLD
   database: DMETERDBPROTO
-  username: dbuser
-  password: Test1234
+  username: dmeterlog2
+  password: password
   port: 1433
   # default
   # port: 1433 # default is 1433

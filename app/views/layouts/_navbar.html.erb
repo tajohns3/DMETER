@@ -17,36 +17,38 @@
         <%if user_signed_in?%>
         <li><%= link_to "Action Page", root_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Field Assistant <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Index <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Field Assistants", positions_path %></li>
             <li><a href="#">Activities</a></li>
+            <li><%= link_to "Field Assistants", positions_path %></li>
             <li><%= link_to "Positions", field_assistants_path %></li>
             <li><%= link_to "Pockets", pockets_path %></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Active Demonstrations Summary</a></li>
+            <li><a href="#">Dealer Summary</a></li>
+            <li><a href="#">Farmer Summary</a></li>
+            <li><a href="#">Field Assistant Activity Summary</a></li>
+            <li><a href="#">Sales Representative Activity Summary</a></li>
+
+
           </ul>
         </li>
             <%if current_user.admin?%>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Tools <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#"><%=link_to "Crops", crops_path %></a></li>
-                    <li><a href="#"><%=link_to "States", states_path %></a></li>
-                    <li><a href="#"><%=link_to "Products", products_path %></a></li>
-                    <li><a href="#"><%=link_to "Districts", districts_path %></a></li>
                     <li><%=link_to 'All Users', users_path%></li>
                     <li><%=link_to 'Approve Users', users_path(:approved=>false)%></li>
+                    <li><a href="#"><%=link_to "Crops", crops_path %></a></li>
+                    <li><a href="#"><%=link_to "Districts", districts_path %></a></li>
+                    <li><a href="#"><%=link_to "Products", products_path %></a></li>
+                    <li><a href="#"><%=link_to "Products - Single Packaging", singles_path %></a></li>
+                    <li><a href="#"><%=link_to "Products -  Box Packaging", boxes_path %></a></li>
+                    <li><a href="#"><%=link_to "States", states_path %></a></li>
                   </ul>
                 </li>
                 <%end%>
