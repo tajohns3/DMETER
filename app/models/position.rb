@@ -14,6 +14,8 @@ class Position < ActiveRecord::Base
     "#{self.first_name}" + " " + "#{self.surname.titlecase}"
   end
 
-
+  def fullname
+    "#{first_name} #{surname}"
+  end
 
 end

@@ -1,44 +1,79 @@
-<p>
-  <strong>Field assistant:</strong>
-  <%= @fa_activity.position.surname %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @fa_activity.state.state %>
-</p>
-
-<p>
-  <strong>Area Manager:</strong>
-  <%= @fa_activity.user.manager.sur_name %>
-</p>
-
-<p>
-  <strong>Sales Representative:</strong>
-  <%= @fa_activity.user.sur_name %>
-</p>
-
-<p>
-  <strong>Pocket:</strong>
-  <%= @fa_activity.pocket.pocket_name %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @fa_activity.date %>
-</p>
-
-<p>
-  <strong>Activity:</strong>
-  <%= @fa_activity.activity.humanize.titleize %>
-</p>
 
 
-<%= render 'fa_activities/fa_act_show/fa_act_other' if @fa_activity.activity=='other' %>
-<%= render 'fa_activities/meet_farmer_show/purpose_show' if @fa_activity.activity=='meet_farmers' %>
-<%= render 'fa_activities/visit_dealer_show/purpose_dealer_' if @fa_activity.activity=='visit_dealer' %>
-<%= render 'fa_activities/assist_sr_show/assist_show' if @fa_activity.activity=='assist_sr' %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title text-center">
+      <%= link_to 'Back', fa_activities_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+      <%= link_to 'Edit', edit_fa_activity_path(@fa_activity), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+      <%= link_to 'Delete', fa_activity_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+      <b>Field Assistant Activity</b>
+    </h1>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Geographic Information</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>Field Assistant:</strong>
+              <%= @fa_activity.position.surname %>
+            </p>
+
+            <p>
+              <strong>State:</strong>
+              <%= @fa_activity.state.state %>
+            </p>
+
+            <p>
+              <strong>Area Manager:</strong>
+              <%= @fa_activity.user.manager.sur_name %>
+            </p>
+
+            <p>
+              <strong>Sales Representative:</strong>
+              <%= @fa_activity.user.sur_name %>
+            </p>
+
+            <p>
+              <strong>Pocket:</strong>
+              <%= @fa_activity.pocket.pocket_name %>
+            </p>
+
+            <p>
+              <strong>Date:</strong>
+              <%= @fa_activity.date %>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Activity Information</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>Activity:</strong>
+              <%= @fa_activity.activity.humanize.titleize %>
+            </p>
 
 
-<%= link_to 'Edit', edit_fa_activity_path(@fa_activity) %> |
-<%= link_to 'Back', root_path %>
+            <%= render 'fa_activities/fa_act_show/fa_act_other' if @fa_activity.activity=='other' %>
+            <%= render 'fa_activities/meet_farmer_show/purpose_show' if @fa_activity.activity=='meet_farmers' %>
+            <%= render 'fa_activities/visit_dealer_show/purpose_dealer_' if @fa_activity.activity=='visit_dealer' %>
+            <%= render 'fa_activities/assist_sr_show/assist_show' if @fa_activity.activity=='assist_sr' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -7,19 +7,28 @@
 
               <tr>
                 <th class="text-center">
+
                   <%=f.label :application_by, 'Application Done By' %>
                 </th>
                 <th class="text-center">
                   <%=f.label :app_date, 'Application Date'%>
                 </th>
                 <th class="text-center">
-                  <%=f.label :app_comment, 'Application Date Change Reason'%>
+                  <label>
+                    <input type="checkbox" name="change_app" value="app_date">
+                    Application Date Change Reason
+                  </label>
+
                 </th>
                 <th class="text-center">
                   <%=f.label :follow_date, 'Follow Up Date'%>
                 </th>
                 <th class="text-center">
-                  <%=f.label :follow_comment, 'Follow Up  Date Change Reason'%>
+                  <label>
+                    <input type="checkbox" name="change_app" value="app_date">
+                    Follow Up  Date Change Reason
+                  </label>
+
                 </th>
 
               </tr>

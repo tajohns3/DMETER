@@ -4,7 +4,7 @@ class FaActivitiesController < ApplicationController
   # GET /fa_activities
   # GET /fa_activities.json
   def index
-    @fa_activities = FaActivity.all
+    @fa_activities = FaActivity.paginate(page: params[:page], per_page: 20)
 
   end
 
