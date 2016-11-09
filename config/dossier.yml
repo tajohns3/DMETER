@@ -11,7 +11,7 @@ default: &default
 
 development:
   adapter: sqlserver
-  host: 10.0.0.24
+  host: 192.168.203.120
   database: DMETERDBPROTO
   username: dbuser
   password: Test1234
