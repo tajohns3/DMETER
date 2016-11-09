@@ -1,37 +1,82 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sr Activities</h1>
+<html lang="en">
 
-<table>
-  <thead>
-    <tr>
-      <th>State</th>
-      <th>User</th>
-      <th>Date</th>
-      <th>Pactivity</th>
-      <th>Cf option</th>
-      <th>Other</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
 
-  <tbody>
-    <% @sr_activities.each do |sr_activity| %>
-      <tr>
-        <td><%= sr_activity.state_id %></td>
-        <td><%= sr_activity.user_id %></td>
-        <td><%= sr_activity.date %></td>
-        <td><%= sr_activity.pactivity %></td>
-        <td><%= sr_activity.cf_option %></td>
-        <td><%= sr_activity.other %></td>
-        <td><%= link_to 'Show', sr_activity %></td>
-        <td><%= link_to 'Edit', edit_sr_activity_path(sr_activity) %></td>
-        <td><%= link_to 'Delete', sr_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<body>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading ">
+      <h1 class="panel-title ">
+        <b> Sales Representative Activities</b>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th class="text-center">
+                Sales Representative
+              </th>
+              <th class="text-center">
+                Area Manager
+              </th>
+              <th class="text-center">
+                State
+              </th>
+              <th class="text-center">
+                Activity
+              </th>
+              <td class="text-center">
+                <%= link_to 'New SR Activity', new_sr_activity_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
+              </td>
+            </tr>
+            <tr>
+              <% @sr_activities.each do |sr_activity| %>
+                  <td class="text-center">
+                    <%= sr_activity.sr_name %>
+                  </td>
+                  <td class="text-center">
+                    <%= sr_activity.sr_man %>
+                  </td>
+                  <td class="text-center">
+                    <%= sr_activity.state.state %>
+                  </td>
+                  <td class="text-center">
+                    <%= sr_activity.pactivity.humanize.titleize %>
+                  </td>
+                  <td class="text-center">
+                    <%= link_to 'View SR Activity', sr_activity, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
+                  </td>
+                  </tr>
+              <% end %>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 
-<br>
-
-<%= link_to 'New Sr activity', new_sr_activity_path %>
+</html>

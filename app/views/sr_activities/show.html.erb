@@ -1,40 +1,72 @@
-<p>
-  <strong>State:</strong>
-  <%= @sr_activity.state.state %>
-</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title text-center">
+      <%= link_to 'Back', sr_activities_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+      <%= link_to 'Edit', edit_sr_activity_path(@sr_activity), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+      <%= link_to 'Delete', sr_activity_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+      <b>Sales Representative:  <%= @sr_activity.sr_name %></b>
+    </h1>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Geographic Information</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>State:</strong>
+              <%= @sr_activity.state.state %>
+            </p>
 
-<p>
-  <strong>Area Manager:</strong>
-  <%= @sr_activity.user.manager.sur_name %>
-</p>
+            <p>
+              <strong>Area Manager:</strong>
+              <%= @sr_activity.sr_man%>
+            </p>
 
-<p>
-  <strong>Area Manager:</strong>
-  <%= @sr_activity.user.sur_name %>
-</p>
+            <p>
+              <strong>Sales Representative:</strong>
+              <%= @sr_activity.sr_name%>
+            </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @sr_activity.date %>
-</p>
+            <p>
+              <strong>Date:</strong>
+              <%= @sr_activity.date %>
+            </p>
 
-<p>
-  <strong>Activity:</strong>
-  <%= @sr_activity.pactivity.humanize.titleize %>
-</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Primary Activity</b>&nbsp;
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>Activity:</strong>
+              <%= @sr_activity.pactivity.humanize.titleize %>
+            </p>
 
 
 
 
 
-<%= render 'sr_activities/sr_acts_show/cf_show' if @sr_activity.pactivity=='C&F' %>
-<%= render 'sr_activities/sr_acts_show/other' if @sr_activity.pactivity=='other' %>
-<%= render 'sr_activities/meet_state_manager_show/statemanager_show' if @sr_activity.pactivity=='meet_state_manager' %>
-<%= render 'sr_activities/meet_dealer_show/purpose_show' if @sr_activity.pactivity=='meet_dealer' %>
-<%= render 'sr_activities/meet_fa_show/fa_purpose_show' if @sr_activity.pactivity=='Meet_field_assistant'%>
-<%= render 'sr_activities/meet_farmer_show/purpose' if @sr_activity.pactivity=='meet_farmer'%>
-<%= render 'sr_activities/buss_dev_show/option_show' if @sr_activity.pactivity=='business_development'%>
-
-
-<%= link_to 'Edit', edit_sr_activity_path(@sr_activity) %> |
-<%= link_to 'Back', root_path %>
+            <%= render 'sr_activities/sr_acts_show/cf_show' if @sr_activity.pactivity=='C&F' %>
+            <%= render 'sr_activities/sr_acts_show/other' if @sr_activity.pactivity=='other' %>
+            <%= render 'sr_activities/meet_state_manager_show/statemanager_show' if @sr_activity.pactivity=='meet_state_manager' %>
+            <%= render 'sr_activities/meet_dealer_show/purpose_show' if @sr_activity.pactivity=='meet_dealer' %>
+            <%= render 'sr_activities/meet_fa_show/fa_purpose_show' if @sr_activity.pactivity=='Meet_field_assistant'%>
+            <%= render 'sr_activities/meet_farmer_show/purpose' if @sr_activity.pactivity=='meet_farmer'%>
+            <%= render 'sr_activities/buss_dev_show/option_show' if @sr_activity.pactivity=='business_development'%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

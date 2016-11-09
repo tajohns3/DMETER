@@ -16,4 +16,14 @@ class SrActivity < ActiveRecord::Base
   validates :state_id, :user_id, :manager_id, :date, :pactivity, presence: true
 
 
+
+  def sr_name
+    "#{self.user.first_name}" + " " + "#{self.user.sur_name.titlecase}"
+  end
+
+  def sr_man
+    "#{self.user.manager.first_name.titlecase}" + " " + "#{self.manager.sur_name.titlecase}"
+  end
+
+
 end
