@@ -17,7 +17,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <strong>State:</strong>
-                    <%= @farmer.state %>
+                    <%= @farmer.state.state %>
                   </div>
                   <div>
                     <strong>Sales Representative:</strong>
@@ -31,12 +31,12 @@
                   <br>
                   <div>
                     <strong>Pocket:</strong>
-                    <%= @farmer.pocketid %>
+                    <%= @farmer.pocket.pocket_name %>
                   </div>
                   <br>
                   <div>
                     <strong>Dealer:</strong>
-                    <%= @farmer.dealerid %>
+                    <%= @farmer.dealer.name %>
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@
                   </div>
                   <div>
                     <strong>Village:</strong>
-                    <%= @farmer.villageid %>
+                    <%= @farmer.village.village %>
                   </div>
                   <br>
                   <div>
@@ -113,22 +113,22 @@
                             <tr>
                               <th class="text-center">
                                 <% @farmer.farmcrops.each do |farmcrop| %>
-                                    <%= farmcrop.cropid %><br><br>
+                                    <%= farmcrop.crop.crop %><br>
                                 <% end %>
                               </th>
                               <th class="text-center">
                                 <% @farmer.farmcrops.each do |farmcrop| %>
-                                    <%= farmcrop.acreage %><br><br>
+                                    <%= farmcrop.acreage %><br>
                                 <% end %>
                               </th>
                               <th class="text-center">
                                 <% @farmer.farmcrops.each do |farmcrop| %>
-                                    <%= farmcrop.unit %><br><br>
+                                    <%= farmcrop.unit %><br>
                                 <% end %>
                               </th>
                               <th class="text-center">
                                 <% @farmer.farmcrops.each do |farmcrop| %>
-                                    <%= farmcrop.irr_source %><br><br>
+                                    <%= farmcrop.irr_source %><br>
                                 <% end %>
                               </th>
                             </tr>

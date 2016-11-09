@@ -1,7 +1,7 @@
 class CreateFarmcrops < ActiveRecord::Migration
   def change
     create_table :farmcrops do |t|
-      t.integer :cropid
+      t.integer :crop_id
       t.integer :acreage
       t.string :unit
       t.string :irr_source

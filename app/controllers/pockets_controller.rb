@@ -61,7 +61,7 @@ class PocketsController < ApplicationController
   def destroy
     @pocket.destroy
     respond_to do |format|
-      format.html { redirect_to pockets_url, notice: 'Pocket was successfully destroyed.' }
+      format.html { redirect_to pockets_url, notice: 'Pocket was successfully deleted.' }
       format.json { head :no_content }
     end
   end

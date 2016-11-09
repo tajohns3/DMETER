@@ -52,13 +52,13 @@
             <tr>
               <% @farmers.each do |farmer| %>
                   <td class="text-center">
-                    <%= farmer.stid %>
+                    <%= farmer.state.state %>
                   </td>
                   <td class="text-center">
-                    <%= farmer.pocketid %>
+                    <%= farmer.pocket.pocket_name %>
                   </td>
                   <td class="text-center">
-                    <%= farmer.dealerid %>
+                    <%= farmer.dealer.name %>
                   </td>
                   <td class="text-center">
                     <%= farmer.name %>
@@ -67,7 +67,7 @@
                     <%= farmer.phnumber %>
                   </td>
                   <td class="text-center">
-                    <%= farmer.village %>
+                    <%= farmer.village.village %>
                   </td>
                   <td class="text-center">
                     <%= link_to 'View Farmer', farmer, class: "btn btn-primary",:style=>'color:#FFFFFF' %>

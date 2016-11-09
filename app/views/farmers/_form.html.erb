@@ -20,27 +20,32 @@
           </ul>
         </div>
     <% end %>
-
     <div class="container">
-      <div class="panel panel-primary">
-        <div class="panel-heading text-center">
-          <h1 class="panel-title text-center">
-            <b> Add new farmer</b>
-          </h1>
-        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <%= link_to 'Back', farmers_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <h1 class="panel-title text-center">
+                <b>Register New Farmer</b>
+              </h1>
+            </div>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-6">
               <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                  <b>Geographic Information</b>
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <b>Geographic Information</b>
+                  </div>
                 </div>
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :State %><br>
-                        <%= f.collection_select :stid, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -64,13 +69,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Pocket' %><br>
-                        <%= f.collection_select :pocketid, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Dealer' %><br>
-                        <%= f.collection_select :dealerid, Dealer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -79,13 +84,15 @@
             </div>
             <div class="col-md-6">
               <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                  <b>Farmer Information</b>
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <b>Farmer Information</b>
+                  </div>
                 </div>
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-8">
-                      <div class="form-group">
+                      <div class="form-group has-error">
                         <div>
                           <%= f.label 'Farmer Name' %><br>
                           <%= f.text_field :name, {class: "form-control"} %>
@@ -95,7 +102,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Village' %>
-                        <%= f.collection_select :villageid, Village.all, :id, :village, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :village_id, Village.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-8">
@@ -140,10 +147,13 @@
             <div class="col-md-12">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h3 class="panel-title text-center">
-                    <b>Crop Information</b>
+                  <h3 class="panel-title">
+                    <div class="panel-title">
+                      <b>Crop Information</b>
+                    </div>
                   </h3>
                 </div>
+               </div>
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-12">
@@ -162,19 +172,20 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <%= link_to 'Cancel', root_path, class: "btn btn-danger",:style=>'color:#FFFFFF' %>
-            </div>
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-              <div class="actions">
-                <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+   </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 text-right">
+          <div class="actions">
+            <%= f.submit "Submit", class: "btn btn-primary pull-right", id:"sub_stuff"%>
+          </div>
+        </div>
+      </div>
+  </div>
 <% end %>

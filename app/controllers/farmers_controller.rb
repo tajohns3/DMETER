@@ -1,5 +1,6 @@
 class FarmersController < ApplicationController
   before_action :set_farmer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /farmers
   # GET /farmers.json
@@ -61,7 +62,7 @@ class FarmersController < ApplicationController
   def destroy
     @farmer.destroy
     respond_to do |format|
-      format.html { redirect_to farmers_url, notice: 'Farmer was successfully destroyed.' }
+      format.html { redirect_to farmers_url, notice: 'Farmer was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -74,7 +75,6 @@ class FarmersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def farmer_params
-      params.require(:farmer).permit(:stid, :useridstmgr, :useridamgr, :useridsr, :pocketid, :dealerid, :name, :villageid, :phnumber, :cropid, :acreage, :unit, :irr_source, :introcall, :callverified, farmcrops_attributes: [:id, :cropid, :acreage, :unit, :irr_source, :done, :_destroy],
-                                      crop_ids:[])
+      params.require(:farmer).permit( :state_id, :useridstmgr, :useridamgr, :useridsr, :pocket_id, :dealer_id, :name, :village_id, :phnumber, :crop_id, :acreage, :unit, :irr_source, :introcall, :callverified, farmcrops_attributes: [:id, :crop_id, :acreage, :unit, :irr_source, :done, :_destroy], crops_attributes: [:id, :crop, :done, :_destroy])
     end
 end

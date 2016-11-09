@@ -11,25 +11,31 @@
     </div>
   <% end %>
     <div class="container">
-      <div class="panel panel-primary">
-        <div class="panel-heading text-center">
-          <h1 class="panel-title text-center">
-            <b> Upload Demo Results</b>
-          </h1>
-        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <%= link_to 'Back', demoresults_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <h1 class="panel-title text-center">
+                <b>New Demo Results</b>
+              </h1>
+            </div>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-6">
               <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                  <b>Geographic Information</b>
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <b>Geographic Information</b>
+                  </div>
                 </div>
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :State %><br>
-                        <%= f.collection_select :stid, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -53,7 +59,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Pocket' %><br>
-                        <%= f.collection_select :pocketid, Pocket.all, :id, :pocket_id, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -62,8 +68,10 @@
             </div>
             <div class="col-md-6">
               <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                  <b>Demo Information</b>
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <b>Demo Information</b>
+                  </div>
                 </div>
                 <div class="panel-body">
                   <div class="row">
@@ -81,7 +89,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Demo' %><br>
-                        <%= f.collection_select :demoid, Demo.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :demo_id, Demo.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -91,9 +99,9 @@
                 <div class="col-md-12">
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h3 class="panel-title text-center">
+                      <div class="panel-title">
                         <b>Photos</b>
-                      </h3>
+                      </div>
                     </div>
                     <div class="panel-body">
                       <div class="row">
@@ -101,7 +109,7 @@
                           <div class="row">
                             <div class="col-md-4">
                             </div>
-                            <div class="col-md-4 text-center">
+                            <div class="col-md-4">
                               <%= link_to_add_association "Add Photo", f, :resultphotos ,class: "btn btn-info",:style=>'color:#FFFFFF'%>
                             </div>
                           </div>
@@ -125,5 +133,7 @@
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
 <% end %>

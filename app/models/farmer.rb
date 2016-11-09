@@ -11,4 +11,7 @@ class Farmer < ActiveRecord::Base
   has_many :meet_farmers, through: :activity_farmers
   has_many :product_prescriptions
   accepts_nested_attributes_for :farmcrops, reject_if: :all_blank, allow_destroy: true
+
+  #validates :stid, :useridstmgr, :useridamgr, :useridsr, :dealerid, :name, :villageid, presence: true
+
 end

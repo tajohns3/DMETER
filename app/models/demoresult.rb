@@ -10,4 +10,6 @@ class Demoresult < ActiveRecord::Base
                                           :medium => "300x300>" }
 
   validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+  #validates :stid, :amid, :srid, :pocketid, :demostatus, presence: true
 end

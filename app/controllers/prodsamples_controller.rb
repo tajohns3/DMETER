@@ -1,5 +1,6 @@
 class ProdsamplesController < ApplicationController
   before_action :set_prodsample, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /prodsamples
   # GET /prodsamples.json
