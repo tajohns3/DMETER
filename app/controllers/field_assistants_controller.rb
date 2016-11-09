@@ -73,6 +73,6 @@ class FieldAssistantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def field_assistant_params
-      params.require(:field_assistant).permit(:state_id, :user_id, :pocket_id, :first_name, :surname, :address, :taluka, :district, :pin_code, :contact_number, :experience, :dealer_id, :form, :yes, :fa_number, fa_targets_attributes:[:id, :field_assistant_id, :target_id, :crop_id, :start_date, :end_date, :total_month, :sample_number, :demo_number, :farmer_number, :prescription_number, :village_number,  :_destroy])
+      params.require(:field_assistant).permit(:state_id, :user_id, :pocket_id, :first_name, :surname, :address, :taluka, :district, :pin_code, :contact_number, :experience, :dealer_id, :form, :yes, :fa_number, fa_targets_attributes:[:id, :field_assistant_id, :target_id, :crop_id,:dealer_id, :start_date, :end_date, :total_month, :sample_number, :demo_number, :farmer_number, :prescription_number, :village_number,  :_destroy])
     end
 end

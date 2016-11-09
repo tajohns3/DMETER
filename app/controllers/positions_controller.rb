@@ -74,6 +74,6 @@ class PositionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def position_params
-      params.require(:position).permit(:fa_number,:field_assistant_id, :first_name, :surname, :address, :taluka, :district, :pin_code, :contact_number, :state_id, :form, :yes, :no, :dealer_id)
+      params.require(:position).permit(:fa_number,:field_assistant_id, :first_name, :surname, :address, :taluka, :district, :pin_code, :contact_number, :state_id,:district_id, :pocket_dat_id, :form, :yes, :no, :dealer_id)
     end
 end

@@ -114,9 +114,10 @@
                       </th>
                     </tr>
                     <tr>
-                      <td>
-                        <div class="form-group">
-                        </div>
+                      <td class="text-center">
+                        <% @field_assistant.fa_targets.each do |pockinfo| %>
+                            <%= pockinfo.dealer.name %><br><br>
+                        <% end %>
                       </td>
                       <td class="text-center">
                         <% @field_assistant.fa_targets.each do |pockinfo| %>
@@ -140,7 +141,7 @@
                       </td>
                       <td class="text-center">
                         <% @field_assistant.fa_targets.each do |pockinfo| %>
-                            <%= pockinfo.total_month %><br><br>
+                            <%=(pockinfo.end_date.year * 12 + pockinfo.end_date.month) - (pockinfo.start_date.year * 12 + pockinfo.start_date.month)%><br><br>
                         <% end %>
                       </td>
                       <td class="text-center">

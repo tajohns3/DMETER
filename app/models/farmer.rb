@@ -4,6 +4,8 @@ class Farmer < ActiveRecord::Base
   belongs_to :pocket
   belongs_to :village
   belongs_to :crop
+  has_many :pocket_dats
+  belongs_to :dealer
   belongs_to :meet_sr_farmer
   has_many :farmcrops
   has_many :pre_demonstrations

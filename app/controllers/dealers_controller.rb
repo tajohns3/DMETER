@@ -78,7 +78,7 @@ class DealersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dealer_params
-      params.require(:dealer).permit(:state_id, :user_id, :pocket_id, :name, :address, :atpost, :pin_code, :taluka, :district,
+      params.require(:dealer).permit(:state_id, :pocket_dat_id, :district_id, :user_id, :pocket_id, :name, :address, :atpost, :pin_code, :taluka, :district,
                                      :whaddress, :whatpost, :whpincode, :whtaluka, :whdistrict,
                                      :transportname, :transportbranch, :transportacct, :transportadd, :transportph,
                                      :fert_license, :fl_photo, :fl_issdate, :fl_expdate,
