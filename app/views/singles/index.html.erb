@@ -1,27 +1,69 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Singles</h1>
+<html lang="en">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
 
-  <tbody>
-    <% @singles.each do |single| %>
-      <tr>
-        <td><%= single.name %></td>
-        <td><%= link_to 'Show', single %></td>
-        <td><%= link_to 'Edit', edit_single_path(single) %></td>
-        <td><%= link_to 'Destroy', single, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading ">
+          <h1 class="panel-title ">
+            <%= link_to 'New Single', new_single_path, 'data-no-turbolink' => true, class: "btn btn-success pull-right",:style=>'color:#FFFFFF'%>
+            <b> Singles</b>
+          </h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table table-bordered">
+                <tbody>
+                <tr>
+                </tr>
+                <tr>
+                  <% @singles.each do |crop| %>
+                      <td class="text-center">
+                        <b><%= crop.name %></b>
+                      </td>
+                      <td class="text-center">
+                        <%= link_to 'Edit', edit_single_path(crop),class: "btn btn-info",:style=>'color:#FFFFFF' %>
+                        <%= link_to 'Delete', crop, class: "btn btn-danger",:style=>'color:#FFFFFF', method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
+</div>
+</body>
 
-<br>
 
-<%= link_to 'New Single', new_single_path %>

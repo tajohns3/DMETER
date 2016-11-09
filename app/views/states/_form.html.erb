@@ -11,15 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-    <div class="field">
-      <%= f.label :abbreviation %><br>
-      <%= f.text_field :abbreviation %>
-    </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h1 class="panel-title text-center">
+              <%= link_to 'Back', states_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+              <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+              <b>New State</b>
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div class="field">
+              <%= f.label :state, "State Name" %><br>
+              <%= f.text_field :state,{class: "form-control"} %>
+            </div>
+            <div class="field">
+              <%= f.label :abbreviation, "Abbreviation" %><br>
+              <%= f.text_field :abbreviation,{class: "form-control"} %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+            </div>
 <% end %>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+
+</div>
+</div>
+

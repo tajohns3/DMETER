@@ -9,79 +9,64 @@
   <meta name="author" content="">
   <title>
   </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
 </head>
 
 <body>
 <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading ">
-      <h1 class="panel-title ">
-        <b> Users</b>
-      </h1>
+  <div class="row">
+    <div class="col-md-4">
     </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-md-12">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th class="text-center">
-                Field Staff
-              </th>
-              <th class="text-center">
-                Username
-              </th>
-              <th class="text-center">
-                Email
-              </th>
-              <th class="text-center">
-                Role
-              </th>
-              <th class="text-center">
-                Active
-              </th>
-              <td class="text-center">
-
-              </td>
-            </tr>
-            <tr>
-              <% @users.each do |user| %>
-                  <td class="text-center">
-                    <%= user.fullname %>
-                  </td>
-                  <td class="text-center">
-                    <%= user.user_name %>
-                  </td>
-                  <td class="text-center">
-                    <%= user.email %>
-                  </td>
-                  <td class="text-center">
-                    <%= user.role.humanize.titleize %>
-                  </td>
-                  <td class="text-center">
-                    <%= user.access ? 'Yes' : 'No' %>
-                  </td>
-                  <td class="text-center">
-                    <%= link_to 'View User', user, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
-                  </td>
-                  </tr>
-              <% end %>
-              </tbody>
-          </table>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading ">
+          <h1 class="panel-title ">
+            <%= link_to 'New User', new_user_path, 'data-no-turbolink' => true, class: "btn btn-success pull-right",:style=>'color:#FFFFFF'%>
+            <b> Users</b>
+          </h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table table-bordered">
+                <tbody>
+                <tr>
+                </tr>
+                <tr>
+                  <% @users.each do |u| %>
+                      <td class="text-center">
+                        <b> <%=u.first_name%></b>
+                        <b> <%=u.sur_name%></b>
+                      </td>
+                      <td class="text-center">
+                        <%= link_to 'Edit', edit_user_path(u),class: "btn btn-info",:style=>'color:#FFFFFF' %>
+                        <%= link_to 'Delete', u, class: "btn btn-danger",:style=>'color:#FFFFFF', method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
-        </div>
-      </div>
+    </div>
+    <div class="col-md-4">
     </div>
   </div>
 </div>
+</div>
 </body>
+
 
 </html>
 

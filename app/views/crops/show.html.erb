@@ -1,9 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Crop:</strong>
-  <%= @crop.crop %>
-</p>
 
-<%= link_to 'Edit', edit_crop_path(@crop) %> |
-<%= link_to 'Back', crops_path %>
+
+<div class="row">
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <%= link_to 'Back', crops_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+          <%= link_to 'Edit', edit_crop_path(@crop), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+          <%= link_to 'Delete', crop_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+          <b><%= @crop.crop %></b>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <p>
+          <strong>Crop:</strong>
+          <%= @crop.crop %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
