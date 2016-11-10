@@ -1,5 +1,7 @@
 class FaActivitiesController < ApplicationController
   before_action :set_fa_activity, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
 
   # GET /fa_activities
   # GET /fa_activities.json
@@ -94,6 +96,9 @@ class FaActivitiesController < ApplicationController
   end
 
   private
+  def input_user
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_fa_activity
       @fa_activity = FaActivity.find(params[:id])

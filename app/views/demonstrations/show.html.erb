@@ -1,35 +1,89 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title text-center">
+      <%= link_to 'Back', demonstrations_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
+      <%= link_to 'Edit', edit_demonstration_path(@demonstration), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+      <%= link_to 'Delete', demonstration_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+      <b>Demonstration:  <%= @demonstration.demo_code %></b>
+    </h1>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Demonstration Information</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>Application Done By:</strong>
+              <% @demonstration.applications.each do |appby|%>
+                  <%=appby.application_by%>
+              <%end%>
+            </p>
 
-<p>
-  <strong>Pre demonstration:</strong>
-  <%= @demonstration.pre_demonstration_id %>
-</p>
+            <p>
+              <strong>Application Dates:</strong>
+              <% @demonstration.applications.each do |appdate|%>
+              <%=appdate.app_date%>
+                  <%end%>
+            </p>
 
-<p>
-  <strong>Appdone by:</strong>
-  <% @demonstration.applications.each do |appby|%>
-  <%=appby.application_by%>
-      <%end%>
-</p>
+            <p>
+              <strong>Application Date Change:</strong>
+              <%@demonstration.applications.each do |appcome|%>
+                  <%=appcome.app_comment%>
+              <%end%>
+            </p>
 
-<p>
-  <strong>Demo status:</strong>
-  <%= @demonstration.demo_status %>
-</p>
+            <p>
+              <strong>Follow-Up Date:</strong>
+              <% @demonstration.applications.each do |foll|%>
+                  <%=foll.follow_date%>
+              <%end%>
+            </p>
 
-<p>
-  <strong>Fa activity:</strong>
-  <%= @demonstration.fa_activity_id %>
-</p>
-
-
-
-<p>
-  <strong>Nested Results</strong>
-  <%@demonstration.demonstration_attachments.each do |demo_a|%>
-  <%=link_to (image_tag(demo_a.avatar_url(:thumb))).to_s, demo_a.avatar_url%>
-      <%end%>
-</p>
+            <p>
+              <strong>Follow-Up Date Change:</strong>
+              <% @demonstration.applications.each do |foll|%>
+                  <%=foll.follow_comment%>
+              <%end%>
+            </p>
 
 
-<%= link_to 'Edit', edit_demonstration_path(@demonstration) %>
-<%= link_to 'Back', demonstrations_path %>
+            <p>
+              <strong>Demo status:</strong>
+              <%= @demonstration.demo_status.humanize.titleize %>
+            </p>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>Demonstration Pictures</b>&nbsp;
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>
+
+              <%@demonstration.demonstration_attachments.each do |demo_a|%>
+                  <%=link_to (image_tag(demo_a.avatar_url(:thumb))).to_s, demo_a.avatar_url%>
+              <%end%>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

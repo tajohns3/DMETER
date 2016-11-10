@@ -1,35 +1,125 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First Name:</strong>
-  <%= @user.first_name %>
-</p>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @user.sur_name %>
-</p>
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md6 col-md-8" style="display: block;">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
+          <%= link_to 'Back', users_path,class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
 
-<p>
-  <strong>Phone Number:</strong>
-  <%= @user.phone %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @user.location %>
-</p>
+          <%= link_to 'Delete', user_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+          <b>User: <%=@user.fullname%></b>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <b>User Information</b>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>
+                      <strong>First Name:</strong>
+                  </label>
+                  <%= @user.first_name %>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>
+                    Surname:
+                  </label>
+                  <%= @user.sur_name %>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>
+                    Contact Number:
+                  </label>
+                  <%= @user.phone %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>
+                    <strong>Location:</strong>
+                  </label>
+                  <%= @user.location.humanize.titleize %>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>
+                    State:
+                  </label>
+                  <%= @user.state.state %>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>
+                    Email:
+                  </label>
+                  <%= @user.email %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <label>
+                  Access:
+                </label>
+                <%=@user.access ? 'Input' : 'Read-Only'%>
+              </div>
+              <div class="col-md-4">
+                <label>
+                  Approved:
+                </label>
+                <%=@user.approved ? 'Yes' : 'No'%>
+              </div>
+              <div class="col-md-4">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.user_name %>
-</p>
+              </div>
+              <div class="col-md-4">
 
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
+              </div>
+              <div class="col-md-4">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+                <div class="actions">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md2 col-md-2" style="display: block;">
+  </div>
+</div>
+
+

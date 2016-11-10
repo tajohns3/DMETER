@@ -1,6 +1,7 @@
 class PositionsController < ApplicationController
   before_action :set_position, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
   # GET /positions
   # GET /positions.json
   def index
@@ -67,6 +68,11 @@ class PositionsController < ApplicationController
   end
 
   private
+
+  def input_user
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
+
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_position
       @position = Position.find(params[:id])

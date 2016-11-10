@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :admin_user, only: [:index,:destroy]
-  before_action :input_user, only: [:edit, :update]
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
   # GET /users
   # GET /users.json
   def index
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
     end
 
   def input_user
-    redirect_to(root_url) unless current_user.access?
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
   end
 
     def set_user

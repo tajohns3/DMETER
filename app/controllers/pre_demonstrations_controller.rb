@@ -1,5 +1,6 @@
 class PreDemonstrationsController < ApplicationController
   before_action :set_pre_demonstration, only: [:show, :edit, :update, :destroy]
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
 
   # GET /pre_demonstrations
   # GET /pre_demonstrations.json
@@ -68,6 +69,10 @@ class PreDemonstrationsController < ApplicationController
   end
 
   private
+
+  def input_user
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_pre_demonstration
       @pre_demonstration = PreDemonstration.find(params[:id])
