@@ -69,6 +69,6 @@ class FaTargetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fa_target_params
-      params.require(:fa_target).permit(:field_assistant_id, :target_id, :village_number, :start_date, :end_date, :total_month, :sample_number, :demo_number, :farmer_number, :prescription_number)
+      params.require(:fa_target).permit(:field_assistant_id, :target_id, :dealer_id, :village_number, :start_date, :end_date, :total_month, :sample_number, :demo_number, :farmer_number, :prescription_number)
     end
 end

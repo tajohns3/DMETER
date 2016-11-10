@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107042059) do
+ActiveRecord::Schema.define(version: 20161109210900) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -177,6 +177,8 @@ ActiveRecord::Schema.define(version: 20161107042059) do
     t.boolean  "call"
     t.string   "taluka",          limit: 4000
     t.string   "district",        limit: 4000
+    t.integer  "pocket_dat_id",   limit: 4
+    t.integer  "district_id",     limit: 4
   end
 
   create_table "demonstration_attachments", force: :cascade do |t|
@@ -253,6 +255,7 @@ ActiveRecord::Schema.define(version: 20161107042059) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.integer  "crop_id",             limit: 4
+    t.integer  "dealer_id",           limit: 4
   end
 
   create_table "farmcrops", force: :cascade do |t|
@@ -380,6 +383,7 @@ ActiveRecord::Schema.define(version: 20161107042059) do
     t.integer  "dealer_id",      limit: 4
     t.integer  "position_id",    limit: 4
     t.string   "taluka",         limit: 4000
+    t.integer  "farmer_id",      limit: 4
   end
 
   create_table "pocket_districts", force: :cascade do |t|
@@ -433,6 +437,8 @@ ActiveRecord::Schema.define(version: 20161107042059) do
     t.datetime "updated_at",                      null: false
     t.integer  "state_id",           limit: 4
     t.integer  "field_assistant_id", limit: 4
+    t.integer  "district_id",        limit: 4
+    t.integer  "pocket_dat_id",      limit: 4
   end
 
   create_table "post_demonstrations", force: :cascade do |t|

@@ -38,18 +38,8 @@
         </th>
         <th class="text-center">
           <div class="form-group">
-            <select class="form-control">
-              <option value="pizza">
-                Pizza
-              </option>
-              <option value="salad">
-                Salad
-              </option>
-              <option value="pizzasalad">
-                Pizza and Salad
-              </option>
-            </select>
-          </div>
+          <%= f.collection_select :farmer_id, Farmer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
+            </div>
         </th>
         <th class="text-center">
           <div class="form-group">

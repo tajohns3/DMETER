@@ -74,7 +74,7 @@ class PocketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pocket_params
-      params.require(:pocket).permit(:state_id, :user_id, :pocket_name, :user_id, :district_id, :crop_id, :type_a, :type_b, :type_c, :type_d, :total_pdealer, :agriculture_land, :percent_irr, pocket_dats_attributes:[:id, :pocket_id, :pocket_info_id, :taluka, :village, :dealer_id, :position_id,  :_destroy],
+      params.require(:pocket).permit(:state_id, :user_id, :pocket_name, :user_id, :district_id, :crop_id, :type_a, :type_b, :type_c, :type_d, :total_pdealer, :agriculture_land, :percent_irr, pocket_dats_attributes:[:id, :pocket_id, :pocket_info_id, :taluka, :village, :dealer_id, :position_id, :farmer_id,  :_destroy],
                                       district_ids:[],
                                       crop_ids:[])
     end

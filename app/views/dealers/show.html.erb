@@ -42,7 +42,7 @@
 
                 <p>
                   <strong>Taluka:</strong>
-                  <%= @dealer.taluka %>
+                  <%= @dealer.pocket_dat.taluka %>
                 </p>
 
                 <p>
@@ -51,7 +51,7 @@
                 </p>
                 <p>
                   <strong>District:</strong>
-                  <%= @dealer.district %>
+                  <%= @dealer.district.district %>
                 </p>
               </div>
             </div>
@@ -70,15 +70,15 @@
                 </p>
                 <p>
                   <strong>State Manager:</strong>
-                  <%= @dealer.user_id %>
+                  <%= @dealer.user.manager.state_manager %>
                 </p>
                 <p>
                   <strong>Area Manager:</strong>
-                  <%= @dealer.user_id %>
+                  <%= @dealer.user.manager.sur_name %>
                 </p>
                 <p>
                   <strong>Sales Representative:</strong>
-                  <%= @dealer.user_id %>
+                  <%= @dealer.user.sur_name %>
                 </p>
                 <p>
                   <strong>Pocket:</strong>
@@ -112,12 +112,12 @@
 
                 <p>
                   <strong>District:</strong>
-                  <%= @dealer.whdistrict %>
+                  <%= @dealer.district.district %>
                 </p>
 
                 <p>
                   <strong>Taluka:</strong>
-                  <%= @dealer.whtaluka %>
+                  <%= @dealer.pocket_dat.taluka %>
                 </p>
 
                 <p>

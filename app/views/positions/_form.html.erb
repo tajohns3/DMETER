@@ -80,7 +80,7 @@
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
                                       <%= f.label :taluka, "Taluka" %><br>
-                                      <%= f.text_field :taluka, {class: "form-control"}  %>
+                                      <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :taluka, {:include_blank => true}, class: "form-control" %>
                                     </div>
                                   </div>
                                 </div>
@@ -88,7 +88,7 @@
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
                                       <%= f.label :district, "District" %><br>
-                                      <%= f.text_field :district, {class: "form-control"}  %>
+                                      <%= f.collection_select :district_id, District.all, :id, :district, {:include_blank => true}, class: "form-control" %>
                                     </div>
                                   </div>
                                   <div class="col-md-6">

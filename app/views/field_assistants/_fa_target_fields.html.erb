@@ -40,17 +40,7 @@
         <tr class="info">
           <td>
             <div class="form-group">
-              <select class="form-control">
-                <option value="pizza">
-                  Pizza
-                </option>
-                <option value="salad">
-                  Salad
-                </option>
-                <option value="pizzasalad">
-                  Pizza and Salad
-                </option>
-              </select>
+              <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {:include_blank => true}, class: "form-control" %>
             </div>
           </td>
           <td>

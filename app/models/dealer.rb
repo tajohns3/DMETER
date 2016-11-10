@@ -1,8 +1,11 @@
 class Dealer < ActiveRecord::Base
   belongs_to :pocket
   belongs_to :state
+  belongs_to :district
   has_many :positions
+  has_many :fa_targets
   has_many :pocket_infos
+  has_many :farmers
   has_many :pocket_dats
   has_many :accounts
   has_many :banks, through: :accounts
