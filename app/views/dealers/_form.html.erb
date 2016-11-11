@@ -58,7 +58,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <%=f.label :user_id, 'Sales Representative'%><br>
-                            <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {include_blank: ''},{class: "form-control", id: 'sale_rep_act_rep'}%>
+                            <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:fullname, {include_blank: ''},{class: "form-control", id: 'sale_rep_act_rep'}%>
                           </div>
                         </div>
                       </div>

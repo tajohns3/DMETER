@@ -75,6 +75,6 @@ class FarmersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def farmer_params
-      params.require(:farmer).permit( :state_id, :useridstmgr, :useridamgr, :useridsr, :pocket_id, :dealer_id, :name, :village_id, :phnumber, :crop_id, :acreage, :unit, :irr_source, :introcall, :callverified, farmcrops_attributes: [:id, :crop_id, :acreage, :unit, :irr_source, :done, :_destroy], crops_attributes: [:id, :crop, :done, :_destroy])
+      params.require(:farmer).permit( :state_id, :useridstmgr, :useridamgr, :useridsr, :pocket_id, :dealer_id, :name, :village_id, :phnumber, :crop_id, :acreage, :unit, :irr_source, :introcall, :callverified, :pocket_dat_id, :position_id, :user_id, :manager_id, farmcrops_attributes: [:id, :crop_id, :acreage, :unit, :irr_source, :done, :_destroy], crops_attributes: [:id, :crop, :done, :_destroy])
     end
 end

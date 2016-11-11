@@ -44,37 +44,37 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label :State %><br>
-                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.label :state_id %><br>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control",id: 'sr_state'} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'State Manager' %><br>
-                        <%= f.collection_select :useridstmgr, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%=f.label :user_id, 'State Manager'%><br>
+                        <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Area Manager' %><br>
-                        <%= f.collection_select :useridamgr, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%=f.label :user_id, 'Area Manager'%><br>
+                        <%= f.grouped_collection_select :user_id, State.all, :area_managers,:state,:id, :sur_name, {:include_blank => true}, {class: "form-control", id: 'manager'}  %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Sales Representative' %><br>
-                        <%= f.collection_select :useridsr, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%=f.label :user_id, 'Sales Representative'%><br>
+                        <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:fullname, {include_blank: ''},{class: "form-control", id: 'sale_rep_act_rep'}%>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Pocket' %><br>
+                        <%= f.label :pocket_id, 'Select Pocket' %><br>
                         <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Dealer' %><br>
+                        <%= f.label :dealer_id, 'Select Dealer' %><br>
                         <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
@@ -94,26 +94,26 @@
                     <div class="col-md-8">
                       <div class="form-group has-error">
                         <div>
-                          <%= f.label 'Farmer Name' %><br>
+                          <%= f.label :name, 'Farmer Name' %><br>
                           <%= f.text_field :name, {class: "form-control"} %>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Village' %>
+                        <%= f.label :pocket_dat_id, 'Select Village' %>
                         <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :village, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
                         <div>
-                          <%= f.label 'Farmer Phone Number' %><br>
+                          <%= f.label :phnumber, 'Farmer Phone Number' %><br>
                           <%= f.text_field :phnumber, {class: "form-control"} %>
                         </div>
                       </div>
                       <div>
-                        <%= f.label 'Introductory Call to Farmer' %><br>
+                        <%= f.label :introcall, 'Introductory Call to Farmer' %><br>
                       </div>
                       <div class='input-group date' id='datetimepicker1'>
                         <%=f.text_field :introcall, {class: "form-control"} %>
