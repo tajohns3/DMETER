@@ -41,19 +41,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Area Manager' %><br>
-                        <%= f.collection_select :amid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :manager_id, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Sales Rep' %><br>
-                        <%= f.collection_select :srid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :user_id, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select FA' %><br>
-                        <%= f.collection_select :faid, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :position_id, Position.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -89,7 +89,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Demo' %><br>
-                        <%= f.collection_select :demo_id, Demo.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :demo_id, Demonstration.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                   </div>

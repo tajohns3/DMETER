@@ -30,12 +30,12 @@
       </th>
       <th class="text-center">
         <div class="form-group">
-          <%= f.text_field :unit, class: "form-control" %>
+          <%= f.select :unit, [['Bigha'],['Guntha(Ares)'],['Acres'],['Hectares']], {:include_blank => true}, {class: "form-control"}   %>
         </div>
       </th>
       <th class="text-center">
         <div class="form-group">
-          <%= f.text_field :irr_source, {class: "form-control"} %>
+          <%= f.select :irr_source, [['Surface Water'],['Ground Water'],['Rainfall']], {:include_blank => true}, {class: "form-control"}   %>
         </div>
       </th>
     </tr>

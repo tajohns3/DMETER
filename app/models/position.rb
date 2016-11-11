@@ -3,6 +3,7 @@ class Position < ActiveRecord::Base
   belongs_to :pocket
   belongs_to :field_assistant
   belongs_to :district
+  has_many :demoresults
   has_many :pocket_dats
   has_many :fa_activities
   has_many :demonstrations
