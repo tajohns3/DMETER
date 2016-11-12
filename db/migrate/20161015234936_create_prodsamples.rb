@@ -1,9 +1,9 @@
 class CreateProdsamples < ActiveRecord::Migration
   def change
     create_table :prodsamples do |t|
-      t.integer :psid
-      t.integer :stid
-      t.integer :faid
+      t.integer :ps_id
+      t.integer :state_id
+      t.integer :position_id
       t.string :sample_purp
       t.string :sampletype
 

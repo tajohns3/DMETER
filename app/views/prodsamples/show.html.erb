@@ -17,11 +17,11 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <strong>State:</strong>
-                    <%= @prodsample.stid %>
+                    <%= @prodsample.state.state %>
                   </div>
                   <div>
                     <strong>Sales Representative:</strong>
-                    <%= @prodsample.faid %>
+                    <%= @prodsample.position.fullname %>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -45,8 +45,16 @@
                     <%= @prodsample.sample_purp %>
                   </div>
                   <div>
-                    <strong>Sample Type:</strong>
-                    <%= @prodsample.sampletype %>
+                    <strong>Sample Product:</strong>
+                    <%= @prodsample.product.name %>
+                  </div>
+                  <div>
+                    <strong>Sample Single:</strong>
+                    <%= @prodsample.single.name %>
+                  </div>
+                  <div>
+                    <strong>Sample Box:</strong>
+                    <%= @prodsample.box.name %>
                   </div>
                 </div>
                   </div>

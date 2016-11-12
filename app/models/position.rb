@@ -8,6 +8,7 @@ class Position < ActiveRecord::Base
   has_many :fa_activities
   has_many :demonstrations
   has_many :meet_state_managers
+  has_many :prodsamples
   belongs_to :dealer
 
   mount_uploader :form, ImageUploader

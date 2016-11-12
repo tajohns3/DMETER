@@ -37,7 +37,7 @@
                 Sample Purpose
               </th>
               <th class="text-center">
-                Sample Type
+                Sample Product
               </th>
               <td class="text-center">
                 <%= link_to 'New Product Sample', new_prodsample_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
@@ -46,16 +46,22 @@
             <tr>
               <% @prodsamples.each do |prodsample| %>
                   <td class="text-center">
-                    <%= prodsample.stid %>
+                    <%= prodsample.state.state %>
                   </td>
                   <td class="text-center">
-                    <%= prodsample.faid %>
+                    <%= prodsample.position.fullname %>
                   </td>
                   <td class="text-center">
                     <%= prodsample.sample_purp %>
                   </td>
                   <td class="text-center">
-                    <%= prodsample.sampletype %>
+                    <%= prodsample.product.name %>
+                  </td>
+                  <td class="text-center">
+                    <%= prodsample.single.name %>
+                  </td>
+                  <td class="text-center">
+                    <%= prodsample.box.name %>
                   </td>
                   <td class="text-center">
                     <%= link_to 'View Product Sample', prodsample, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
