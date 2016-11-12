@@ -40,3 +40,5 @@ Village.delete_all
 Village.create!(village: 'Goat')
 Village.create!(village: 'Buffalo')
 Village.create!(village: 'Yak')
+
+

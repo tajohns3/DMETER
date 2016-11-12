@@ -3,7 +3,8 @@ class FieldAssistant < ActiveRecord::Base
   belongs_to :pocket
   has_many :positions
   has_many :fa_targets, :dependent => :destroy
-  accepts_nested_attributes_for :fa_targets, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :fa_targets, allow_destroy: true
+  validates_associated :fa_targets
 
   mount_uploader :form, ImageUploader
 
@@ -12,6 +13,8 @@ class FieldAssistant < ActiveRecord::Base
     "#{self.state.abbreviation}" + "-" + "#{self.pocket.pocket_name}" + "-" + "0" + "#{self.id}"
   end
 
+  validates_presence_of :state_id
+  validates_presence_of :pocket_id, message: "name cant be blank. "
 
 
 end
