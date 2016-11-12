@@ -68,7 +68,16 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-3">
+                <label>
+                  State Manager
+                </label>
+                <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
+              </div>
+            </div>
           </div>
+
         </div>
         <div class="row">
           <div class="col-md-3">
@@ -86,13 +95,13 @@
                     <div class="field">
                       <%= f.label :pactivity, 'Primary Activity' %><br>
                       <%= f.select :pactivity, options_for_select([["Meet with State Manager", 'meet_state_manager'],["Meet with Dealer",'meet_dealer'],
-                                                                   ["Meet with Field Assistant", 'Meet_fa'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
+                                                                   ["Meet with Field Assistant", 'meet_field_assistant'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
                                                                    ["Business Development", 'business_development'],["Other",'other']]), {include_blank: ''},{id: 'sr_pactivity',class:"form-control"} %>
                     </div>
 
 
-                    <div class="container" id="">
-                      <%=f.fields_for :meet_state_managers do |meet_sm|%>
+                    <div  id="">
+                      <%=f.fields_for :meet_state_manager do |meet_sm|%>
                           <%=render 'meet_state_manager_fields', f: meet_sm%>
                       <%end%>
                     </div>
@@ -103,19 +112,19 @@
 
 
                     <div class="container">
-                      <%=f.fields_for :meet_dealers do |meet_dealer|%>
+                      <%=f.fields_for :meet_dealer do |meet_dealer|%>
                           <%=render 'meet_dealer_fields', f: meet_dealer%>
                       <%end%>
                     </div>
 
                     <div class="container">
-                      <%=f.fields_for :meet_fas do |meet_fa|%>
+                      <%=f.fields_for :meet_fa do |meet_fa|%>
                           <%=render 'meet_fa_fields', f: meet_fa%>
                       <%end%>
                     </div>
 
                     <div class="container">
-                      <%=f.fields_for :meet_sr_farmers do |farmers|%>
+                      <%=f.fields_for :meet_sr_farmer do |farmers|%>
                           <%=render 'meet_sr_farmer_fields', f: farmers%>
                       <%end%>
                     </div>
@@ -128,7 +137,7 @@
                     </div>
 
                     <div class="container" id="business_deve_div">
-                      <%=f.fields_for :business_developments do |buss|%>
+                      <%=f.fields_for :business_development do |buss|%>
                           <%=render 'business_development_fields', f: buss%>
                       <%end%>
                     </div>
@@ -146,11 +155,12 @@
           <div class="col-md3 col-md-3" style="display: block;">
           </div>
         </div>
+        <div class="actions">
+          <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
+        </div>
       </div>
     </div>
   </div>
 </div>
-    <div class="actions">
-      <%= f.submit "Submit", class: "btn btn-primary pull-right"%>
-    </div>
+
 <% end %>

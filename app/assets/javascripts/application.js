@@ -15,10 +15,18 @@
 //= require jquery-ui/datepicker
 //= require bootstrap-datepicker
 //= require bootstrap
+//= require maskedinput
 //= require cocoon
 //= require dataTables/jquery.dataTables
 //= require underscore
 //= require_tree .
+
+
+//masked input
+$('#document').ready(function() {
+    $("#contact_phone").mask("?+99-9999-999999")
+});
+
 
 //for upload dealer reg form on dealers form
 $(document).ready(function(){

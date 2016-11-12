@@ -1,3 +1,4 @@
+
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h1 class="panel-title text-center">
@@ -13,7 +14,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <b>Geographic Information</b>
+              <b>Field Assistant Information</b>
             </h3>
           </div>
           <div class="panel-body">
@@ -28,13 +29,20 @@
             </p>
 
             <p>
+              <strong>State Manager</strong>
+              <%@state_manager.where(role: 'state_manager').each do |sm|%>
+              <%=sm.sur_name%><br>
+                  <%end%>
+            </p>
+
+            <p>
               <strong>Area Manager:</strong>
-              <%= @fa_activity.user.manager.sur_name %>
+              <%= @fa_activity.manager.fullname %>
             </p>
 
             <p>
               <strong>Sales Representative:</strong>
-              <%= @fa_activity.user.sur_name %>
+              <%= @fa_activity.user.fullname %>
             </p>
 
             <p>
@@ -74,3 +82,4 @@
     </div>
   </div>
 </div>
+

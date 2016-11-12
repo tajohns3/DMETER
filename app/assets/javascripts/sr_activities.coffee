@@ -67,7 +67,7 @@ jQuery ->
 #meet with fa
 jQuery ->
   $('#sr_pactivity').on "change", ->
-    if $(this).val() is "Meet_field_assistant"
+    if $(this).val() is "meet_field_assistant"
       $('#meet_fa_opt').fadeIn()
     else
       $('#meet_fa_opt').fadeOut()

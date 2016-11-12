@@ -1,24 +1,49 @@
-<div class="field">
-  <%= f.label :demonstration_id %><br>
-  <%= f.grouped_collection_select :demonstration_id, Position.all, :demonstrations,:surname, :id,:demo_code,{},{id: 'post_demon_id'} %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <%= f.label :demonstration_id %><br>
+      <%= f.grouped_collection_select :demonstration_id, Position.all, :demonstrations,:surname, :id,:demo_code,{},{class: 'form-control',id: 'post_demon_id'} %>
+    </div>
+  </div>
 </div>
-<div class="field">
-  <%= f.label :observation %><br>
-  <%= f.select :observation, options_for_select([["Expected Results",'expected'], ["Unexpected Results",'unexpected']]),
-               {include_blank: ''},id: 'post_demonstration_observation'%>
+<div class="row">
+  <div class="col-md-5">
+    <div class="form-group">
+      <%= f.label :observation %><br>
+      <%= f.select :observation, options_for_select([["Expected Results",'expected'], ["Unexpected Results",'unexpected']]),
+                   {include_blank: ''},id: 'post_demonstration_observation', class: 'form-control'%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <br>
+      <label class="text-center">
+        <%= f.check_box :contacrsr, class: 'text-center' %>
+        Contact Sales Representative
+      </label>
+    </div>
+  </div>
+
 </div>
 
-<div class="field", id="unexpected_comments">
-  <%= f.label :comment %><br>
-  <%= f.text_area :comment %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group", id="unexpected_comments">
+      <%= f.label :comment %><br>
+      <%= f.text_area :comment, class: 'form-control' %>
+    </div>
+  </div>
+
 </div>
+
 <div class="field", id="demo_pictures">
   <div>
     <%= f.fields_for :demonstration_attachments do |da| %><br>
         <%=render 'demonstration_attachment_fields', f: da %>
     <%end%>
+
     <div class="links">
-      <%=link_to_add_association 'Add Image', f, :demonstration_attachments%>
+      <%=link_to_add_association 'Add Image', f, :demonstration_attachments, class: 'btn btn-info pull-left', style: "color: #FFFFFF"%>
     </div>
 
   </div>
@@ -27,7 +52,3 @@
 
 
 
-<div class="field">
-  <%= f.label :contacrsr, 'Contact Sales Representative' %><br>
-  <%= f.check_box :contacrsr %>
-</div>

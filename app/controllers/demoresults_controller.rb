@@ -5,7 +5,7 @@ class DemoresultsController < ApplicationController
   # GET /demoresults
   # GET /demoresults.json
   def index
-    @demoresults = Demoresult.all
+    @demoresults = Demoresult.paginate(page: params[:page], per_page: 20)
 
   end
 

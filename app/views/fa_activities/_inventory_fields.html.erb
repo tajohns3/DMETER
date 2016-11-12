@@ -1,8 +1,13 @@
 <div class="nested-fields">
-  <div class="field">
-    <%= f.label :name %><br>
-    <%=f.collection_select :product_id,Product.all,:id,:name%>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :name, 'Product' %><br>
+        <%=f.collection_select :product_id,Product.all,:id,:name, {include_blank: ''}, {class: 'form-control'}%>
+      </div>
+    </div>
+
   </div>
-  <%=link_to_remove_association 'Remove Product', f %>
+  <%=link_to_remove_association 'Remove Product', f, class: 'btn btn-danger pull-right', style: 'color: #ffffff' %>
 </div>
 

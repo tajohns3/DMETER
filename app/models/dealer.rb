@@ -6,7 +6,7 @@ class Dealer < ActiveRecord::Base
   has_many :fa_targets
   has_many :pocket_infos
   has_many :farmers
-  has_many :pocket_dats
+  belongs_to :pocket_dats
   has_many :accounts
   has_many :banks, through: :accounts
   has_many :meet_state_managers

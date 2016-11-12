@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
   has_many :users, class_name: "User", foreign_key: "manager_id"
   scope :area_man, -> { users.where(role: 'area_manager') }
 
-  validates :phone, :length => {minimum: 12, maximum: 12},
-            format:{with:/\d{3}-\d{3}-\d{4}/, message: "Please enter a phone number in xxx-xxx-xxxx format"}, allow_blank: true
+  validates :phone, :length => {minimum: 15, maximum: 15},
+             allow_blank: true
 
   before_create :auto_username
   before_create :lower_email

@@ -52,7 +52,7 @@
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
                                       <%= f.label :contact_number, "Contact Number" %><br>
-                                      <%= f.text_field :contact_number, {class: "form-control"}  %>
+                                      <%= f.text_field :contact_number, class: "form-control",id: 'contact_phone', value: number_to_phone(f.object.contact_number), placeholder: "+91-xxxx-xxxxxx"  %>
                                     </div>
                                   </div>
                                 </div>

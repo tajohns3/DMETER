@@ -6,7 +6,7 @@ class FieldAssistantsController < ApplicationController
   # GET /field_assistants
   # GET /field_assistants.json
   def index
-    @field_assistants = FieldAssistant.all
+    @field_assistants = FieldAssistant.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /field_assistants/1

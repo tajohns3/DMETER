@@ -1,52 +1,80 @@
-<div class="field">
+<div class="row">
+  <div class="col-md-5">
+    <div class="form-group">
   <%= f.label :dealer_id %><br>
-  <%= f.collection_select :dealer_id, Dealer.all, :id, :name %>
+  <%= f.collection_select :dealer_id, Dealer.all, :id, :name,{}, {class: 'form-control'} %>
+</div>
+    </div>
+
+<div class="col-md-5">
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :pocket_dat_id %><br>
+      <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :village, {include_blank: ''}, {class: 'form-control'}%>
+    </div>
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :village_id %><br>
-  <%= f.collection_select :village_id, Village.all, :id, :village, {include_blank: ''}%>
+  <div class="Col-md-3">
+    <div class="form-group">
+        <%= f.label :number_farmer, 'Farmers Met'%><br>
+        <%=f.select :number_farmer, options_for_select(1..10), {include_blank: ''}, {class: 'form-control', style: "width:75px"}%>
+    </div>
+  </div>
+
+
+
 </div>
 
 
-<div class="field">
-  <%= f.label :number_farmer, 'Number of farmers Met: '%>
-  <%=f.select :number_farmer, (1..10), {include_blank: ''}%>
-</div>
-
-
-
-<div class="container" id="met_farmers">
-
+<div class="row" id="met_farmers">
+  <div class="col-md-6">
+  <%muh_id = 'soup'%>
+  <%soup = 0%>
     <%=f.fields_for :activity_farmers do |no|%>
 
 
-              <table><%=no.collection_select :farmer_id, Farmer.all, :id, :name, {include_blank: ''}%></table>
+
+
+                <% soup+=1%>
+        <div id="<%=muh_id+soup.to_s%>" >
+                <%=no.label :farmer_id, 'Farmer'%>
+                <%=no.collection_select :farmer_id, Farmer.all, :id, :name, {include_blank: ''},{class: 'form-control'}%></div>
+
 
 
         <%end%>
+<br>
 
 
 
+  </div>
+</div>
 
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= f.label :purpose %><br>
+      <%= f.select :purpose, options_for_select([["Introduction", 'introduction'],["Pre Demonstration",'pre_demonstration'],["Demonstration",'demonstration'],["Post Demonstration", 'post_demonstration'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
+                   {include_blank: ''}, {class: 'form-control'}%>
+    </div>
+  </div>
+</div>
 
+<div class="row">
+  <div class="col-md-5">
+    <div class="form-group", id="meet_farmer_consultation_div">
+      <%= f.label :consultation %><br>
+      <%= f.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
+                                                      ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
+                   {include_blank: ''}, {class: 'form-control'}%>
+    </div>
+  </div>
 </div>
 
 
-<div class="field">
-  <%= f.label :purpose %><br>
-  <%= f.select :purpose, options_for_select([["Introduction", 'introduction'],["Pre Demonstration",'pre_demonstration'],["Demonstration",'demonstration'],["Post Demonstration", 'post_demonstration'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
-                  {include_blank: ''}%>
-</div>
-<div class="field", id="meet_farmer_consultation_div">
-  <%= f.label :consultation %><br>
-  <%= f.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
-                                                     ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
-                  {include_blank: ''}%>
-</div>
 
-
-<div class="container", id="prod_pres_sele">
+<div id="prod_pres_sele">
   <%=f.fields_for :product_prescriptions do |prod|%>
       <%=render 'product_prescription_fields', f: prod%>
   <%end%>

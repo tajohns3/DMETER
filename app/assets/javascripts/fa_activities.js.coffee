@@ -185,6 +185,21 @@ jQuery ->
       $('#fa_sales_rep').empty()
 
 
+
+
+
+jQuery ->
+  users =$('#state_manager').html()
+  $('#fa_state').change ->
+    state = $('#fa_state :selected').text()
+    escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(users).filter("optgroup[label='#{escaped_state}']").html()
+    if options
+      $('#state_manager').html(options)
+    else
+      $('#state_manager').empty()
+
+
 ##filter pocket with sales reps
 #jQuery ->
 #  $('#pocket_mon').parent().hide()
@@ -260,6 +275,19 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+
+        #the label for farmers
+      $('#soup1').fadeIn()
+      $('#soup2').fadeOut()
+      $('#soup3').fadeOut()
+      $('#soup4').fadeOut()
+      $('#soup5').fadeOut()
+      $('#soup6').fadeOut()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
+
     else if $(this).val() is ""
       $('#met_farmers').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeOut()
@@ -272,6 +300,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeOut()
+      $('#soup2').fadeOut()
+      $('#soup3').fadeOut()
+      $('#soup4').fadeOut()
+      $('#soup5').fadeOut()
+      $('#soup6').fadeOut()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "2"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -284,6 +323,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeOut()
+      $('#soup4').fadeOut()
+      $('#soup5').fadeOut()
+      $('#soup6').fadeOut()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "3"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -296,6 +346,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeOut()
+      $('#soup5').fadeOut()
+      $('#soup6').fadeOut()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "4"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -308,6 +369,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeOut()
+      $('#soup6').fadeOut()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "5"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -320,6 +392,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeIn()
+      $('#soup6').fadeOut()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "6"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -332,6 +415,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeIn()
+      $('#soup6').fadeIn()
+      $('#soup7').fadeOut()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "7"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -344,6 +438,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeIn()
+      $('#soup6').fadeIn()
+      $('#soup7').fadeIn()
+      $('#soup8').fadeOut()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "8"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -356,6 +461,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeOut()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeIn()
+      $('#soup6').fadeIn()
+      $('#soup7').fadeIn()
+      $('#soup8').fadeIn()
+      $('#soup9').fadeOut()
+      $('#soup10').fadeOut()
     if $(this).val() is "9"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -368,6 +484,17 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeOut()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeIn()
+      $('#soup6').fadeIn()
+      $('#soup7').fadeIn()
+      $('#soup8').fadeIn()
+      $('#soup9').fadeIn()
+      $('#soup10').fadeOut()
     if $(this).val() is "10"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()
@@ -380,4 +507,15 @@ jQuery ->
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_7_farmer_id').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_8_farmer_id').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_9_farmer_id').fadeIn()
+      #the labels
+      $('#soup1').fadeIn()
+      $('#soup2').fadeIn()
+      $('#soup3').fadeIn()
+      $('#soup4').fadeIn()
+      $('#soup5').fadeIn()
+      $('#soup6').fadeIn()
+      $('#soup7').fadeIn()
+      $('#soup8').fadeIn()
+      $('#soup9').fadeIn()
+      $('#soup10').fadeIn()
 

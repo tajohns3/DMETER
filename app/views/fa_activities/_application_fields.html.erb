@@ -1,42 +1,72 @@
 <div class="nested-fields">
 
-<div class="field">
-  <%= f.label :app_area, 'Area of application' %><br>
-  <%= f.text_field :app_area %>
-</div>
-<div class="field">
-  <%= f.label :app_date, 'Application Date' %><br>
-  <%= f.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
-</div>
-
-
-
-  <div>
-    <%=f.fields_for :product_applications do |prod|%>
-        <%=render 'product_application_fields', f: prod%>
-    <%end%>
-    <div class="links">
-      <%=link_to_add_association 'Add Product ', f, :product_applications, class: 'btn btn-info'%>
+<div class="row">
+  <div class="col-md-7">
+    <div class="form-group">
+      <%= f.label :app_area, 'Area of application' %><br>
+      <%= f.text_field :app_area, class: 'form-control' %>
     </div>
   </div>
 
 
 
-
-<div class="field">
-  <%= f.label :app_type, 'Application Type' %><br>
-  <%= f.select :app_type, options_for_select([["Foliar", 'foliar'],["Soil",'soil'],["Drip",'drip'],["Flood",'flood']]),{include_blank: ''} %>
+  <div class="col-md-5">
+    <div class="form-group">
+      <%= f.label :app_date, 'Application Date' %><br>
+      <%= f.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control' %>
+    </div>
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :competitor, 'Competitors product' %><br>
-  <%= f.text_field :competitor %>
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-6">
+  <div class="form-group">
+    <%= f.label :app_type, 'Application Type' %><br>
+    <%= f.select :app_type, options_for_select([["Foliar", 'foliar'],["Soil",'soil'],["Drip",'drip'],["Flood",'flood']]),{include_blank: ''}, {class: 'form-control'} %>
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :follow_date, 'Follow up Date' %><br>
-  <%= f.text_field :follow_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
-</div>
 
-<%=link_to_remove_association 'Remove Product Application', f %>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :follow_date, 'Follow up Date' %><br>
+        <%= f.text_field :follow_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control' %>
+      </div>
+    </div>
+
+
+</div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="form-group">
+        <%= f.label :competitor, 'Competitors product' %><br>
+        <%= f.text_field :competitor, class: 'form-control' %>
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <%=f.fields_for :product_applications do |prod|%>
+        <%=render 'product_application_fields', f: prod%>
+    <%end%>
+    <div class="links">
+      <%=link_to_add_association 'Add Product ', f, :product_applications, class: 'btn btn-info', style: "color: #FFFFFF"%>
+    </div>
+  </div>
+  <br>
+
+<div class="row">
+  <div class="col-md-6">
+    <%=link_to_remove_association 'Remove Product Application', f,class: 'btn btn-danger pull-left', style: "color: #FFFFFF"  %>
+  </div>
+</div>
+<br>
 </div>

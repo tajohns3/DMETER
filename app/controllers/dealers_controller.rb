@@ -7,9 +7,9 @@ class DealersController < ApplicationController
   # GET /dealers.json
   def index
     if params[:active]=='checkem'
-    @dealers = Dealer.where(call: false)
+    @dealers = Dealer.where(call: false).paginate(page: params[:page], per_page: 20)
     else
-      @dealers = Dealer.all
+      @dealers = Dealer.paginate(page: params[:page], per_page: 20)
       end
   end
 

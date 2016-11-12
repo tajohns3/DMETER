@@ -6,7 +6,7 @@ class PocketsController < ApplicationController
   # GET /pockets
   # GET /pockets.json
   def index
-    @pockets = Pocket.all
+    @pockets = Pocket.paginate(page: params[:page], per_page: 20)
 
   end
 

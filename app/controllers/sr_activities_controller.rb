@@ -6,12 +6,14 @@ class SrActivitiesController < ApplicationController
   # GET /sr_activities
   # GET /sr_activities.json
   def index
-    @sr_activities = SrActivity.all
+    @sr_activities = SrActivity.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /sr_activities/1
   # GET /sr_activities/1.json
   def show
+    state = @sr_activity.state_id
+    @state_manager = User.where(state_id: state)
   end
 
   # GET /sr_activities/new
@@ -41,7 +43,7 @@ class SrActivitiesController < ApplicationController
 
     respond_to do |format|
       if @sr_activity.save
-        format.html { redirect_to @sr_activity, notice: 'Sr activity was successfully created.' }
+        format.html { redirect_to @sr_activity, notice: 'Sales Representative activity was successfully created.' }
         format.json { render :show, status: :created, location: @sr_activity }
 
       else
@@ -62,7 +64,7 @@ class SrActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @sr_activity.update(sr_activity_params)
-        format.html { redirect_to @sr_activity, notice: 'Sr activity was successfully updated.' }
+        format.html { redirect_to @sr_activity, notice: 'Sales Representative activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @sr_activity }
       else
         format.html { render :edit }
@@ -76,7 +78,7 @@ class SrActivitiesController < ApplicationController
   def destroy
     @sr_activity.destroy
     respond_to do |format|
-      format.html { redirect_to sr_activities_url, notice: 'Sr activity was successfully destroyed.' }
+      format.html { redirect_to sr_activities_url, notice: 'Sales Representative activity was successfully deleted.' }
       format.json { head :no_content }
     end
   end

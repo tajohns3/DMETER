@@ -1,7 +1,11 @@
 <div class="nested-fields">
-  <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.label :avatar, 'Upload End Results' %><br>
+      <%= f.file_field :avatar %>
+      <br>
+    </div>
   </div>
-  <%=link_to_remove_association 'Remove Image', f %>
+
+  <%=link_to_remove_association 'Remove Image', f, class: 'btn btn-danger pull-right', style: "color: #FFFFFF" %>
 </div>

@@ -28,7 +28,7 @@ class DemonstrationsController < ApplicationController
     @demonstration = Demonstration.new
     @pre_demonstration =PreDemonstration.find(params[:pre_id])
 
-
+    @demonstration.demonstration_attachments.build
 
 
     @pre_demonstration.applications.each  do |app|
