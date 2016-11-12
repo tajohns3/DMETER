@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111023041) do
+ActiveRecord::Schema.define(version: 20161112091211) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -550,6 +550,7 @@ ActiveRecord::Schema.define(version: 20161111023041) do
     t.string   "photo_content_type", limit: 4000
     t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
+    t.string   "avatar",             limit: 4000
   end
 
   add_index "resultphotos", ["demoresult_id"], name: "index_resultphotos_on_demoresult_id"

@@ -43,7 +43,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        </div>
+
+        <div class="col-md-8">
           <div class="panel panel-default">
             <div class="panel-heading text-center">
               <b>Demo Information</b>
@@ -58,7 +60,7 @@
                   <div>
                     <strong>Demo result photos:</strong><br>
                     <% @demoresult.resultphotos.each do |resultphoto| %>
-                        <br><%=link_to image_tag(resultphoto.photo.url(:thumb)), resultphoto.photo.url(:original), :popup=>['original_image', 'height=700,width=900'], :target=> '_blank' %><br><br>
+                            <%=link_to (image_tag(resultphoto.avatar_url(:thumb))).to_s, resultphoto.avatar_url%>
                     <% end %>
                   </div>
                 </div>
@@ -83,7 +85,7 @@
           </div>
         </div>
       </div>
-    </div>
+
   </div>
 </div>
 </div>

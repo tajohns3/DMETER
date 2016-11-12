@@ -89,7 +89,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Demo' %><br>
-                        <%= f.collection_select :demo_id, Demonstration.all, :id, :id, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :demo_id, Demonstration.all, :id, :demo_code, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -110,7 +110,7 @@
                             <div class="col-md-4">
                             </div>
                             <div class="col-md-4">
-                              <%= link_to_add_association "Add Photo", f, :resultphotos ,class: "btn btn-info",:style=>'color:#FFFFFF'%>
+                              <%= link_to_add_association "Add Photo", f, :resultphotos ,class: "btn btn-info pull-left",:style=>'color:#FFFFFF'%>
                             </div>
                           </div>
                         </div>

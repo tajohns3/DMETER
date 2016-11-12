@@ -4,11 +4,17 @@
     </tbody>
     <thead>
     <tr>
+      <div class="row">
+      <div class="col-md-4">
+        <div class="text-center">
       <div class="input-group">
-        <%= f.file_field :photo %>
+        <%= f.file_field :avatar %>
       </div>
-    </tr>
+        </div>
+        </div>
+      </div>
     </thead>
+
   </table>
   <%= link_to_remove_association "Remove", f, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF'%>
 </table>
