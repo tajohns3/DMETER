@@ -21,12 +21,12 @@
                   </div>
                   <div>
                     <strong>Sales Representative:</strong>
-                    <%= @farmer.useridstmgr %>
+                    <%= @farmer.user.fullname %>
                   </div>
                   <br>
                   <div>
                     <strong>Field Agent:</strong>
-                    <%= @farmer.useridsr %>
+                    <%= @farmer.user.fullname %>
                   </div>
                   <br>
                   <div>
@@ -57,7 +57,7 @@
                   </div>
                   <div>
                     <strong>Village:</strong>
-                    <%= @farmer.village.village %>
+                    <%= @farmer.pocket_dat.village %>
                   </div>
                   <br>
                   <div>
