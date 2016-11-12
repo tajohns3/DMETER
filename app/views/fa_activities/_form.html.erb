@@ -11,88 +11,281 @@
     </div>
   <% end %>
 
-
-  <div class="field">
-    <%= f.label :state_id %><br>
-    <%= f.collection_select :state_id, State.all, :id, :state, {include_blank: ''}, {id: 'fa_state'} %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id, 'Area Manager' %><br>
-    <%= f.grouped_collection_select :user_id, State.all,:area_managers,:state, :id, :sur_name,  {include_blank: true},{id: 'fa_manager'} %>
-  </div>
-
-    <div class="field">
-      <%= f.label :user_id, 'Sales Representative' %><br>
-      <%= f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id, :sur_name,  {include_blank: true}, {id: 'fa_sales_rep'} %>
-    </div>
-
-  <div class="field">
-    <%= f.label :pocket_id %><br>
-    <%= f.collection_select :pocket_id,Pocket.all,:id, :pocket_name, {include_blank: ''}, {id: 'pocket_mon'} %>
-  </div>
-
-    <div class="field">
-      <%= f.label :position_id, 'Field Assistant' %><br>
-      <%= f.grouped_collection_select :position_id, Pocket.all,:pock_finder,:pocket_name, :id, :surname,{include_blank: ''}, {:id => 'field_assist'} %>
-    </div>
-
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'} %>
-  </div>
-
-    <div class="field">
-      <%= f.label :activity %><br>
-      <%= f.select :activity, options_for_select([["Meet Farmer(s)", 'meet_farmers'], ["Visit Dealer Shop", 'visit_dealer'], ["Assist Sales Representative", 'assist_sr'],
-                                                  ["Met Sales Representative", 'meet_sr'], ["Other", 'other']]),
-                   {include_blank: ''}%>
-    </div>
-
-    <div>
-      <div id="meet_farm_sele" class="container">
-      <%= f.fields_for :meet_farmer do |meet|%>
-          <%=render 'meet_farmer_fields', f: meet%>
-      <%end%>
-
-        <div class="container" id="demo_meeting">
-          <%=f.fields_for :pre_demonstrations do |predemo|%>
-              <%= render 'pre_demonstration_fields', f: predemo%>
-          <%end%>
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h1 class="panel-title text-center">
+            <%= link_to 'Back', fa_activities_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF' %>
+            <%= link_to 'Cancel', root_path, class: "btn btn-danger pull-right",:style=>'color:#FFFFFF' %>
+            <b>Field Assistant Activities</b>
+          </h1>
         </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <h3 class="panel-title">Field Assistant Information</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :state_id %><br>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {include_blank: ''}, {id: 'fa_state', class: 'form-control'} %>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :manager_id, 'Area Manager' %><br>
+                        <%= f.grouped_collection_select :manager_id, State.all,:area_managers,:state, :id, :sur_name,  {include_blank: ''},{id: 'fa_manager', class: 'form-control'} %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :user_id, 'Sales Representative' %><br>
+                        <%= f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id, :sur_name,  {include_blank: true}, {id: 'fa_sales_rep', class: 'form-control'} %>
+                    </div>
+                  </div>
 
-        <div class="container" id="post_demo_meeting">
-          <%=f.fields_for :post_demonstrations do |postdemo|%>
-          <%= render 'post_demonstration_fields', f: postdemo%>
-              <%end%>
+
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :pocket_id %><br>
+                        <%= f.collection_select :pocket_id,Pocket.all,:id, :pocket_name, {include_blank: ''}, {id: 'pocket_mon', class: 'form-control'} %>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>
+                        State Manager
+                      </label>
+                      <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
+                    </div>
+
+
+
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <%= f.label :position_id, 'Field Assistant' %><br>
+                        <%= f.grouped_collection_select :position_id, Pocket.all,:pock_finder,:pocket_name, :id, :surname,{include_blank: ''}, {:id => 'field_assist', class: 'form-control'} %>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+              </div>
+            </div>
+            </div>
+
+            <div class="col-md-7">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Activity Selection</b>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <%= f.label :activity %><br>
+                        <%= f.select :activity, options_for_select([["Meet Farmer(s)", 'meet_farmers'], ["Visit Dealer Shop", 'visit_dealer'], ["Assist Sales Representative", 'assist_sr'],
+                                                                    ["Met Sales Representative", 'meet_sr'], ["Other", 'other']]),
+                                     {include_blank: ''},{class:'form-control'}%>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <%= f.label :date %><br>
+                        <%= f.text_field :date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control' %>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                          <div id="meet_farm_sele">
+                            <%= f.fields_for :meet_farmer do |meet|%>
+                                <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="form-group">
+                                      <%= meet.label :dealer_id %><br>
+                                      <%= meet.collection_select :dealer_id, Dealer.all, :id, :name,{include_blank: ''}, {class: 'form-control'} %>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+
+                                      <%= meet.label :pocket_dat_id, 'Village' %><br>
+                                      <%= meet.collection_select :pocket_dat_id, PocketDat.all, :id, :village, {include_blank: ''}, {class: 'form-control'}%>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-3">
+                                    <div class="form-group">
+                                      <%= meet.label :number_farmer, 'Farmers Met'%><br>
+                                      <%=meet.select :number_farmer, options_for_select(1..10), {include_blank: ''}, {class: 'form-control', style: ''}%>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="row" id="met_farmers">
+                                  <div class="col-md-6">
+                                    <%muh_id = 'soup'%>
+                                    <%soup = 0%>
+                                    <%=meet.fields_for :activity_farmers do |no|%>
+
+
+
+
+                                        <% soup+=1%>
+                                        <div id="<%=muh_id+soup.to_s%>" >
+                                          <%=no.label :farmer_id, 'Farmer'%>
+                                          <%=no.collection_select :farmer_id, Farmer.all, :id, :name, {include_blank: ''},{class: 'form-control'}%></div>
+
+
+
+                                    <%end%>
+                                    <br>
+
+
+
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="form-group">
+                                      <%= meet.label :purpose %><br>
+                                      <%= meet.select :purpose, options_for_select([["Introduction", 'introduction'],["Pre Demonstration",'pre_demonstration'],["Demonstration",'demonstration'],["Post Demonstration", 'post_demonstration'], ["Product Prescription", 'product_prescription'], ["Consultation/Guidance", 'consultation']]),
+                                                   {include_blank: ''}, {class: 'form-control'}%>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="form-group" id="meet_farmer_consultation_div">
+                                      <%= meet.label :consultation %><br>
+                                      <%= meet.select :consultation, options_for_select([["Soil", 'soil'], ["Growth", 'growth'], ["Yield", 'yield'], ["Infestation", 'infestation'],
+                                                                                      ["Irrigation", 'irrigation'],["Product Usage", 'product_use']]),
+                                                   {include_blank: ''}, {class: 'form-control'}%>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div id="prod_pres_sele">
+                                  <%=meet.fields_for :product_prescriptions do |prod|%>
+                                      <%=render 'product_prescription_fields', f: prod%>
+                                  <%end%>
+                                </div>
+                            <%end%>
+
+
+
+                            <div id="post_demo_meeting">
+                              <%=f.fields_for :post_demonstrations do |postdemo|%>
+                                  <%= render 'post_demonstration_fields', f: postdemo%>
+                              <%end%>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                          <div id="dealer_shop">
+                            <%= f.fields_for :dealer_visits do |deal|%>
+                                <%=render 'dealer_visit_fields', f: deal%>
+                            <%end%>
+                          </div>
+
+
+
+
+
+                        <div id="assist_mvc">
+                          <%=f.fields_for :assist_reps do |assist|%>
+                              <%=render 'assist_rep_fields', f: assist%>
+                          <%end%>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="field", id="act_comment">
+                          <%= f.label :comment, 'Other' %><br>
+                          <%= f.text_area :comment, class: 'form-control' %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              </div>
+
+
+
+
+          </div>
+
+          <div class="row" id="demo_meeting">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                  <b>Pre Demonstration</b>
+                </div>
+                <div class="panel-body">
+
+                  <%=f.fields_for :pre_demonstrations do |predemo|%>
+                      <%= render 'pre_demonstration_fields', f: predemo%>
+                  <%end%>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <div class="actions">
+              <%= f.submit "Submit", id: 'demo_submit', class: "btn btn-primary pull-right"%>
+            </div>
+
+            <div class="actions" id="demonstrations_button">
+              <%= f.submit 'Next',name: "source", value: "Next",class: "btn btn-primary pull-right"%>
+            </div>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
 
-    <div id="dealer_shop" class="container">
-      <%= f.fields_for :dealer_visits do |deal|%>
-          <%=render 'dealer_visit_fields', f: deal%>
-          <%end%>
-    </div>
-
-    <div class="container" id="assist_mvc">
-      <%=f.fields_for :assist_reps do |assist|%>
-      <%=render 'assist_rep_fields', f: assist%>
-          <%end%>
-    </div>
-
-
-
-  <div class="field", id="act_comment">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Submit', id: 'demo_submit'%>
-  </div>
-
-    <div class="actions" id="demonstrations_button">
-      <%= f.submit 'Next',name: "source", value: "Next"%>
-
-    </div>
 <% end %>

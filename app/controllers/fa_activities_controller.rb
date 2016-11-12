@@ -13,6 +13,8 @@ class FaActivitiesController < ApplicationController
   # GET /fa_activities/1
   # GET /fa_activities/1.json
   def show
+    state = @fa_activity.state_id
+    @state_manager = User.where(state_id: state)
   end
 
   # GET /fa_activities/new
@@ -25,6 +27,8 @@ class FaActivitiesController < ApplicationController
     pre_demo =@fa_activity.pre_demonstrations.build
     prod = pre_demo.applications.build
     post_demo = @fa_activity.post_demonstrations.build
+
+
 
     10.times{meet_farmer.activity_farmers.build}
   end
@@ -53,7 +57,7 @@ class FaActivitiesController < ApplicationController
         if params[:source] == 'Next'
           format.html {redirect_to pre_demonstrations_path(:pending =>@fa_activity.position_id)}
         else
-        format.html { redirect_to @fa_activity, notice: 'Fa activity was successfully created.' }
+        format.html { redirect_to @fa_activity, notice: 'Field Assistant activity was successfully created.' }
         format.json { render :show, status: :created, location: @fa_activity }
         end
       else
@@ -76,7 +80,7 @@ class FaActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @fa_activity.update(fa_activity_params)
-        format.html { redirect_to @fa_activity, notice: 'Fa activity was successfully updated.' }
+        format.html { redirect_to @fa_activity, notice: 'Field Assistant activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @fa_activity }
       else
         format.html { render :edit }
@@ -90,7 +94,7 @@ class FaActivitiesController < ApplicationController
   def destroy
     @fa_activity.destroy
     respond_to do |format|
-      format.html { redirect_to fa_activities_url, notice: 'Fa activity was successfully deleted.' }
+      format.html { redirect_to fa_activities_url, notice: 'Field Assistant activity was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -106,13 +110,13 @@ class FaActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fa_activity_params
-      params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id, :pocket_id, :date, :comment,:activity,:position_id,
-      meet_farmer_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:dealer_id,:village_id,:number_farmer,:consultation,
+      params.require(:fa_activity).permit(:field_assistant_id, :state_id, :user_id,:manager_id, :pocket_id, :date, :comment,:activity,:position_id,:_destroy,
+      meet_farmer_attributes: [:id,:fa_activity_id, :farmer_id,:purpose,:dealer_id,:number_farmer,:consultation,:pocket_dat_id,:_destroy,
       activity_farmers_attributes:[:id,:meet_farmer_id, :farmer_id ,:_destroy],
       product_prescriptions_attributes:[:id,:dealer_id,:farmer_id,:crop_id,:condition,:crop_growth,:crop_cond,
      :acreage,:prescribe,:units,:meet_farmer_id,:_destroy,]],
      dealer_visits_attributes: [:id,:dealer_id,:fa_activity_id,:farmer_id,:number_farmer,:purpose, :_destroy,
-     inventories_attributes: [:id, :product_id, :dealer_visit_id]],
+     inventories_attributes: [:id, :product_id, :dealer_visit_id,:_destroy]],
      assist_reps_attributes: [:id,:fa_activity_id,:assist,:comment, :_destroy],
      pre_demonstrations_attributes: [:id,:farmer_id,:crop_id, :fa_activity_id,:crop_growth,:condition,:status,:demo_code,:_destroy,
      applications_attributes: [:id,:pre_demonstration_id,:app_area,:app_date,:competitor,:app_type,:follow_date,:follow_comment,:app_comment, :_destroy,

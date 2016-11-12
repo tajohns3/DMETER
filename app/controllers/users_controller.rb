@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    state = @user.state_id
+    @state_manager = User.where(state_id: state)
+
   end
 
   # GET /users/new

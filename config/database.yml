@@ -11,7 +11,7 @@ default: &default
 
 development:
   adapter: sqlserver
-  host: CHRIS-PC
+  host: ELEVEN_FOLD
   database: DMETERDBPROTO
   username: dmeterlog2
   password: password

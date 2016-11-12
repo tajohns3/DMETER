@@ -7,7 +7,7 @@ class SrActivity < ActiveRecord::Base
   belongs_to :state
   belongs_to :user
   belongs_to :manager, class_name: "User", foreign_key: "manager_id"
-  accepts_nested_attributes_for :business_development, allow_destroy: true, reject_if: lambda{|d| d[:option].blank?}
+  accepts_nested_attributes_for :business_development, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :meet_state_manager, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :meet_dealer, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :meet_fa, allow_destroy: true, reject_if: :all_blank
@@ -22,7 +22,7 @@ class SrActivity < ActiveRecord::Base
   end
 
   def sr_man
-    "#{self.user.manager.first_name.titlecase}" + " " + "#{self.manager.sur_name.titlecase}"
+    "#{self.user.manager.first_name}" + " " + "#{self.manager.sur_name.titlecase}"
   end
 
 

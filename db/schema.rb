@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109210900) do
+ActiveRecord::Schema.define(version: 20161112050942) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -333,8 +333,8 @@ ActiveRecord::Schema.define(version: 20161109210900) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.integer  "dealer_id",      limit: 4
-    t.integer  "village_id",     limit: 4
     t.integer  "number_farmer",  limit: 4
+    t.integer  "pocket_dat_id",  limit: 4
   end
 
   create_table "meet_fas", force: :cascade do |t|
@@ -616,6 +616,7 @@ ActiveRecord::Schema.define(version: 20161109210900) do
     t.boolean  "access",                              default: false, null: false
     t.boolean  "approved",                            default: false, null: false
     t.integer  "manager_id",             limit: 4
+    t.integer  "state_manager_id",       limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
