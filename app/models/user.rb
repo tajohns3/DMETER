@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   belongs_to :state
   has_many :dealers
+  has_many :field_assistants
   has_many :fa_activities
   has_many :sr_activities
   has_many :pockets

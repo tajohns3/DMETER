@@ -18,7 +18,8 @@ class Pocket < ActiveRecord::Base
   has_many :business_developments
   belongs_to :user
   has_many :pocket_dats, :dependent => :destroy
-  accepts_nested_attributes_for :pocket_dats, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :pocket_dats, allow_destroy: true
+  validates_associated :pocket_dats
 
 
   #Calculation for Total Number of Potential Dealers
@@ -35,4 +36,10 @@ class Pocket < ActiveRecord::Base
    self.field_assistants.collect(&:positions).flatten.uniq
 
   end
+
+  def sr_man_pock
+    "#{self.user.first_name.titlecase}" + " " + "#{self.user.sur_name.titlecase}"
+  end
+
+
 end

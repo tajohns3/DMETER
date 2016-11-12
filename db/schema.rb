@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112050942) do
+ActiveRecord::Schema.define(version: 20161112091211) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -202,17 +202,20 @@ ActiveRecord::Schema.define(version: 20161112050942) do
   create_table "demoresults", force: :cascade do |t|
     t.integer  "amid",               limit: 4
     t.integer  "srid",               limit: 4
-    t.integer  "pocketid",           limit: 4
+    t.integer  "pocket_id",          limit: 4
     t.integer  "faid",               limit: 4
     t.string   "demostatus",         limit: 4000
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.integer  "demoid",             limit: 4
+    t.integer  "demo_id",            limit: 4
     t.string   "photo_file_name",    limit: 4000
     t.string   "photo_content_type", limit: 4000
     t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
-    t.integer  "stid",               limit: 4
+    t.integer  "state_id",           limit: 4
+    t.integer  "position_id",        limit: 4
+    t.integer  "user_id",            limit: 4
+    t.integer  "manager_id",         limit: 4
   end
 
   create_table "demos", force: :cascade do |t|
@@ -259,7 +262,7 @@ ActiveRecord::Schema.define(version: 20161112050942) do
   end
 
   create_table "farmcrops", force: :cascade do |t|
-    t.integer  "cropid",     limit: 4
+    t.integer  "crop_id",    limit: 4
     t.integer  "acreage",    limit: 4
     t.string   "unit",       limit: 4000
     t.string   "irr_source", limit: 4000
@@ -271,23 +274,27 @@ ActiveRecord::Schema.define(version: 20161112050942) do
   add_index "farmcrops", ["farmer_id"], name: "index_farmcrops_on_farmer_id"
 
   create_table "farmers", force: :cascade do |t|
-    t.integer  "stid",         limit: 4
-    t.integer  "useridstmgr",  limit: 4
-    t.integer  "useridamgr",   limit: 4
-    t.integer  "useridsr",     limit: 4
-    t.integer  "pocketid",     limit: 4
-    t.integer  "dealerid",     limit: 4
-    t.string   "name",         limit: 4000
-    t.integer  "villageid",    limit: 4
-    t.string   "phnumber",     limit: 4000
-    t.integer  "cropid",       limit: 4
-    t.integer  "acreage",      limit: 4
-    t.string   "unit",         limit: 4000
-    t.string   "irr_source",   limit: 4000
-    t.string   "introcall",    limit: 4000
-    t.binary   "callverified", limit: 2147483647
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.integer  "state_id",      limit: 4
+    t.integer  "useridstmgr",   limit: 4
+    t.integer  "useridamgr",    limit: 4
+    t.integer  "useridsr",      limit: 4
+    t.integer  "pocket_id",     limit: 4
+    t.integer  "dealer_id",     limit: 4
+    t.string   "name",          limit: 4000
+    t.integer  "village_id",    limit: 4
+    t.string   "phnumber",      limit: 4000
+    t.integer  "crop_id",       limit: 4
+    t.integer  "acreage",       limit: 4
+    t.string   "unit",          limit: 4000
+    t.string   "irr_source",    limit: 4000
+    t.string   "introcall",     limit: 4000
+    t.binary   "callverified",  limit: 2147483647
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "pocket_dat_id", limit: 4
+    t.integer  "position_id",   limit: 4
+    t.integer  "user_id",       limit: 4
+    t.integer  "manager_id",    limit: 4
   end
 
   create_table "field_assistants", force: :cascade do |t|
@@ -333,8 +340,8 @@ ActiveRecord::Schema.define(version: 20161112050942) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.integer  "dealer_id",      limit: 4
+    t.integer  "village_id",     limit: 4
     t.integer  "number_farmer",  limit: 4
-    t.integer  "pocket_dat_id",  limit: 4
   end
 
   create_table "meet_fas", force: :cascade do |t|
@@ -473,6 +480,10 @@ ActiveRecord::Schema.define(version: 20161112050942) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "demoid",      limit: 4000
+    t.string   "demo_id",     limit: 4000
+    t.integer  "product_id",  limit: 4
+    t.integer  "single_id",   limit: 4
+    t.integer  "box_id",      limit: 4
   end
 
   create_table "product_applications", force: :cascade do |t|
@@ -539,6 +550,7 @@ ActiveRecord::Schema.define(version: 20161112050942) do
     t.string   "photo_content_type", limit: 4000
     t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
+    t.string   "avatar",             limit: 4000
   end
 
   add_index "resultphotos", ["demoresult_id"], name: "index_resultphotos_on_demoresult_id"
@@ -616,7 +628,6 @@ ActiveRecord::Schema.define(version: 20161112050942) do
     t.boolean  "access",                              default: false, null: false
     t.boolean  "approved",                            default: false, null: false
     t.integer  "manager_id",             limit: 4
-    t.integer  "state_manager_id",       limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

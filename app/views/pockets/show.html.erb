@@ -29,7 +29,9 @@
                 </div>
                 <div class="col-md-6">
                   <strong>State Manager:</strong>
-                  <%= @pocket.user_id %>
+                  <% @state_manager.where(role: 'state_manager').each do |sm| %>
+                      <%=sm.sur_name%><br>
+                  <%end%>
                 </div>
               </div>
               <div class="row">
@@ -40,7 +42,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <strong>Sales Representative:</strong>
-                  <%= @pocket.user_id %>
+                  <%= @pocket.sr_man_pock%>
                 </div>
               </div>
               <br>

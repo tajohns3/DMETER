@@ -15,6 +15,10 @@
 
 <body>
 <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
   <div class="panel panel-default">
     <div class="panel-heading ">
       <h1 class="panel-title ">
@@ -33,12 +37,6 @@
               <th class="text-center">
                 State
               </th>
-              <th class="text-center">
-                State Manager
-              </th>
-              <th class="text-center">
-                Sales Representative
-              </th>
               <td class="text-center">
                 <%= link_to 'New Pocket', new_pocket_path, 'data-no-turbolink' => true, class: "btn btn-success",:style=>'color:#FFFFFF'%>
               </td>
@@ -52,12 +50,6 @@
                 <%= pocket.state.state %>
               </td>
               <td class="text-center">
-                <%= pocket.user_id %>
-              </td>
-              <td class="text-center">
-                <%= pocket.user_id %>
-              </td>
-              <td class="text-center">
                 <%= link_to 'View Pocket', pocket, class: "btn btn-primary",:style=>'color:#FFFFFF' %>
               </td>
             </tr>
@@ -66,13 +58,9 @@
           </table>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
         </div>
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
-        </div>
+      </div>
+      <div class="col-md-3">
       </div>
     </div>
   </div>

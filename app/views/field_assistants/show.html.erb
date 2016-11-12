@@ -5,9 +5,10 @@
   <div class="panel panel-primary">
     <div class="panel-heading text-center">
       <h1 class="panel-title text-center">
-        <%= link_to 'Back', field_assistants_path, class: "btn btn-success pull-left",:style=>'color:#FFFFFF'%>
-        <%= link_to 'Edit', edit_field_assistant_path(@field_assistant), class: "btn btn-info pull-left",:style=>'color:#FFFFFF' %>
-        <%= link_to 'Delete', field_assistant_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+        <%= link_to 'Back', field_assistants_path, class: "btn btn-sm btn-success pull-left",:style=>'color:#FFFFFF'%>
+        <%= link_to 'Edit', edit_field_assistant_path(@field_assistant), class: "btn btn-sm btn-info pull-left",:style=>'color:#FFFFFF' %>
+        <%= link_to 'Delete', field_assistant_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger pull-right", :style=> 'color:#FFFFFF' %>
+        <%= link_to 'Fullfill Position', new_position_path, class: "btn btn-sm btn-success pull-right",:style=>'color:#FFFFFF'%>
         <strong>Position:</strong>
         <%= @field_assistant.fa_num %>
       </h1>
@@ -29,17 +30,29 @@
                 </div>
                 <div class="col-md-6">
                   <strong>State Manager:</strong>
-                  <%= @field_assistant.user_id %>
+                  <% @state_manager.where(role: 'state_manager').each do |sm| %>
+                  <%=sm.sur_name%><br>
+                      <%end%>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <strong>Area Manager:</strong>
-                  <%= @field_assistant.user_id %>
+                  <%= @field_assistant.a_man_fa %>
                 </div>
                 <div class="col-md-6">
                   <strong>Sales Representative:</strong>
-                  <%= @field_assistant.user_id %>
+                  <%= @field_assistant.sr_man_fa %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>Pocket:</strong>
+                  <%= @field_assistant.pocket.pocket_name %>
+                </div>
+                <div class="col-md-6">
+                  <strong>Field Assistant ID:</strong>
+                  <%= @field_assistant.fa_num %>
                 </div>
               </div>
               <br>

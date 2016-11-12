@@ -8,4 +8,6 @@ class FaTarget < ActiveRecord::Base
     "#{self.crop.crop}"
   end
 
+  validates_presence_of :dealer_id
+  validates_presence_of :crop_id
 end
