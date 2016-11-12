@@ -33,13 +33,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :state_id %><br>
-                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control",id: 'sr_state'} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :user_id, "State Manager" %><br>
-                        <%= f.number_field :user_id, {class: "form-control"} %>
+                        <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
                       </div>
                     </div>
                   </div>
@@ -53,7 +53,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :user_id, "Sales Representative" %><br>
-                        <%= f.number_field :user_id, {class: "form-control"} %>
+                        <%=f.grouped_collection_select :user_id, State.all,:sales_rep,:state, :id,:sur_name, {include_blank: ''},{class: "form-control", id: 'pocket_sr'}%>
                       </div>
                     </div>
                   </div>

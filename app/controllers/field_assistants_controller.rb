@@ -15,6 +15,9 @@ class FieldAssistantsController < ApplicationController
     @field_assistants = FaTarget.all
     @field_assistants = Crop.all
     @field_assistants = Target.all
+    state = @field_assistant.state_id
+    @state_manager = User.where(state_id: state)
+
   end
 
   # GET /field_assistants/new

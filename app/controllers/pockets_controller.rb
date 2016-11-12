@@ -13,7 +13,8 @@ class PocketsController < ApplicationController
   # GET /pockets/1
   # GET /pockets/1.json
   def show
-
+    state = @pocket.state_id
+    @state_manager = User.where(state_id: state)
   end
 
   # GET /pockets/new
