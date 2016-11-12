@@ -24,7 +24,7 @@
 
 //masked input
 $('#document').ready(function() {
-    $("#contact_phone").mask("?+91-9999-999999")
+    $("#contact_phone").mask("?+99-9999-999999")
 });
 
 
