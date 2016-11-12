@@ -6,7 +6,7 @@ class SrActivitiesController < ApplicationController
   # GET /sr_activities
   # GET /sr_activities.json
   def index
-    @sr_activities = SrActivity.all
+    @sr_activities = SrActivity.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /sr_activities/1

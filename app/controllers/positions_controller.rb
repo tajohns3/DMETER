@@ -6,9 +6,9 @@ class PositionsController < ApplicationController
   # GET /positions.json
   def index
     if params[:active]=='checkem'
-      @positions = Position.where(form: nil)
+      @positions = Position.where(form: nil).paginate(page: params[:page], per_page: 20)
     else
-      @positions = Position.all
+      @positions = Position.paginate(page: params[:page], per_page: 20)
     end
 
   end

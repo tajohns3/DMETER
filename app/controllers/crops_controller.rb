@@ -4,7 +4,7 @@ class CropsController < ApplicationController
   # GET /crops
   # GET /crops.json
   def index
-    @crops = Crop.all
+    @crops = Crop.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /crops/1

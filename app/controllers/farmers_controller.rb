@@ -6,9 +6,9 @@ class FarmersController < ApplicationController
   # GET /farmers.json
   def index
     if params[:active]=='checkem'
-      @farmers = Farmer.where(callverified: nil)
+      @farmers = Farmer.where(callverified: nil).paginate(page: params[:page], per_page: 20)
     else
-      @farmers = Farmer.all
+      @farmers = Farmer.paginate(page: params[:page], per_page: 20)
     end
 
   end
