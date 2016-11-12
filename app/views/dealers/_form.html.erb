@@ -224,7 +224,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <%= f.label :transportph, "Phone Number" %><br>
-                            <%= f.text_field :transportph, {class: "form-control"} %>
+                            <%= f.text_field :transportph, class: "form-control",id: 'contact_phone', value: number_to_phone(f.object.transportph), placeholder: "+91-xxxx-xxxxxx" %>
                           </div>
                         </div>
                       </div>

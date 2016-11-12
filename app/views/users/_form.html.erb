@@ -52,7 +52,7 @@
                       <label>
                         Contact Number
                       </label>
-                      <%=f.text_field :phone, class: 'form-control'%>
+                      <%=f.text_field :phone, class: 'form-control',id: 'contact_phone', value: number_to_phone(f.object.phone), placeholder: "+91-xxxx-xxxxxx"%>
                     </div>
                   </div>
                 </div>
@@ -125,6 +125,16 @@
                   <div class="col-md-4">
                   </div>
                 </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <%=f.label :admin, 'Grant Admin Access'%>
+                    <%=f.check_box :admin%>
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+                </div>
+
                 <div class="row">
                   <div class="col-md-4">
                   </div>

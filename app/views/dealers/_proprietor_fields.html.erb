@@ -49,7 +49,7 @@
         <label>
           Contact Number
         </label>
-        <%= f.text_field :phnumber, {class: "form-control"} %>
+        <%= f.text_field :phnumber, class: "form-control", id: 'contact_phone', value: number_to_phone(f.object.phnumber), placeholder: "+91-xxxx-xxxxxx" %>
       </div>
     </div>
   </div>
