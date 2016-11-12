@@ -37,6 +37,9 @@ class Pocket < ActiveRecord::Base
 
   end
 
+  def sr_man_pock
+    "#{self.user.first_name.titlecase}" + " " + "#{self.user.sur_name.titlecase}"
+  end
 
 
 end
