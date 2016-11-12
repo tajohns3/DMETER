@@ -24,7 +24,7 @@ gem 'ajax-datatables-rails'
 gem 'dossier'
 gem 'underscore-rails'
 gem 'dependent-fields-rails'
-
+gem 'maskedinput-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

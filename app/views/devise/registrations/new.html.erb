@@ -43,7 +43,7 @@
                   <label>
                     Contact Number
                   </label>
-                  <%=f.telephone_field :phone, class: 'form-control'%>
+                  <%=f.text_field :phone, class: 'form-control', id: 'contact_phone', value: number_to_phone(f.object.phone), placeholder: "+91-xxxx-xxxxxx"%>
                 </div>
               </div>
             </div>
