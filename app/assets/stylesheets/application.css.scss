@@ -267,3 +267,17 @@
 }
 /*Profile Pic End*/
 
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  width: auto;
+  max-width: 200px;
+  overflow-x: hidden;
+}
+
+
+
+label.required:after{
+  content: "*";
+  color:red;
+}

@@ -1,21 +1,22 @@
-
+<%@sr_activity.meet_sr_farmers.each do |me_sr|%>
 <p>
   <strong>Farmer:</strong>
-  <%= @sr_activity.meet_sr_farmer.farmer.name%>
+  <%= me_sr.farmer.name%>
 </p>
 
 <p>
   <strong>Crop:</strong>
-  <%= @sr_activity.meet_sr_farmer.crop.crop%>
+  <%= me_sr.crop.crop%>
 </p>
 
 
 <p>
   <strong>Crop Condition:</strong>
-  <%= @sr_activity.meet_sr_farmer.crop_condition.humanize.titleize%>
+  <%= me_sr.crop_condition.humanize.titleize%>
 </p>
 
 <p>
   <strong>Crop Growth:</strong>
-  <%= @sr_activity.meet_sr_farmer.crop_growth.humanize.titleize%>
+  <%= me_sr.crop_growth.humanize.titleize%>
 </p>
+<%end%>

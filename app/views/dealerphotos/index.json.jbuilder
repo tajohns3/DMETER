@@ -1,0 +1,1 @@
+json.array! @dealerphotos, partial: 'dealerphotos/dealerphoto', as: :dealerphoto

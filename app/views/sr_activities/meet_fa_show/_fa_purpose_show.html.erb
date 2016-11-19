@@ -1,4 +1,6 @@
+<%@sr_activity.meet_fas.each do |me_fa|%>
 <p>
     <strong>Purpose:</strong>
-    <%= @sr_activity.meet_fa.purpose.humanize.titleize%>
+    <%= me_fa.purpose.humanize.titleize%>
 </p>
+<%end%>

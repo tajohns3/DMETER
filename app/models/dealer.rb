@@ -6,7 +6,8 @@ class Dealer < ActiveRecord::Base
   has_many :fa_targets
   has_many :pocket_infos
   has_many :farmers
-  belongs_to :pocket_dats
+  belongs_to :pocket_dat
+  has_many :pocket_dats
   has_many :accounts
   has_many :banks, through: :accounts
   has_many :meet_state_managers
@@ -32,6 +33,12 @@ class Dealer < ActiveRecord::Base
   has_many :blank_checks, through: :dealer_blanks
   accepts_nested_attributes_for :blank_checks, allow_destroy: true
   validates_associated :blank_checks
+
+  has_many :dealerphotos
+  accepts_nested_attributes_for :dealerphotos, reject_if: :all_blank, allow_destroy: true
+
+  has_many :dealeravatars
+  accepts_nested_attributes_for :dealeravatars, reject_if: :all_blank, allow_destroy: true
 
 
   mount_uploader :fl_photo, ImageUploader

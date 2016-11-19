@@ -6,9 +6,9 @@ class PositionsController < ApplicationController
   # GET /positions.json
   def index
     if params[:active]=='checkem'
-      @positions = Position.where(form: nil).paginate(page: params[:page], per_page: 20)
+      @positions = Position.where(form: nil).paginate(page: params[:page], per_page: 10)
     else
-      @positions = Position.paginate(page: params[:page], per_page: 20)
+      @positions = Position.where.not(first_name: "Not").paginate(page: params[:page], per_page: 10)
     end
 
   end
@@ -31,11 +31,14 @@ class PositionsController < ApplicationController
   # POST /positions.json
   def create
     @position = Position.new(position_params)
+    @field_assistant = FieldAssistant.find(@position.field_assistant_id)
 
     respond_to do |format|
       if @position.save
         format.html { redirect_to @position, notice: 'Position was successfully created.' }
         format.json { render :show, status: :created, location: @position }
+        @field_assistant.update_column(:position_status, true)
+
       else
         format.html { render :new }
         format.json { render json: @position.errors, status: :unprocessable_entity }
@@ -46,10 +49,13 @@ class PositionsController < ApplicationController
   # PATCH/PUT /positions/1
   # PATCH/PUT /positions/1.json
   def update
+    @field_assistant = FieldAssistant.find(@position.field_assistant_id)
     respond_to do |format|
       if @position.update(position_params)
         format.html { redirect_to @position, notice: 'Position was successfully updated.' }
         format.json { render :show, status: :ok, location: @position }
+        @field_assistant.update_column(:position_status, true)
+
       else
         format.html { render :edit }
         format.json { render json: @position.errors, status: :unprocessable_entity }

@@ -2,11 +2,9 @@ class Prodsample < ActiveRecord::Base
   belongs_to :state
   belongs_to :user
   belongs_to :position
-  has_many :products
-  has_many :product_singles
-  has_many :singles, through: :product_singles
-  has_many :product_boxes
-  has_many :boxes, through:  :product_boxes
+  belongs_to :product
+  belongs_to :single
+  belongs_to :box
 
 #this needs to be corrected
 #  def ps_num

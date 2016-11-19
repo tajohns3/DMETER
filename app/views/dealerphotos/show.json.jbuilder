@@ -1,0 +1,1 @@
+json.partial! "dealerphotos/dealerphoto", dealerphoto: @dealerphoto

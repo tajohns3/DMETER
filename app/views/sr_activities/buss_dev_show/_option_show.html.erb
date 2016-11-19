@@ -1,7 +1,9 @@
+<%@sr_activity.business_developments.each do |buss_dev|%>
 <p>
   <strong>Option:</strong>
-  <%=@sr_activity.business_development.option.humanize.titleize %>
+  <%=buss_dev.option.humanize.titleize %>
 </p>
 
-<%= render 'sr_activities/buss_dev_show/org_farm_show' if @sr_activity.business_development.option=='organize_farmer_meeting'%>
-<%= render 'sr_activities/buss_dev_show/org_dealer_show' if @sr_activity.business_development.option=='organize_dealer_meeting'%>
+<%= render 'sr_activities/buss_dev_show/org_farm_show' if buss_dev.option=='organize_farmer_meeting'%>
+<%= render 'sr_activities/buss_dev_show/org_dealer_show' if buss_dev.option=='organize_dealer_meeting'%>
+<%end%>

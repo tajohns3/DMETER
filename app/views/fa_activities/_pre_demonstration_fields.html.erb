@@ -1,13 +1,13 @@
 
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-2">
     <div class="form-group">
       <%= f.label :farmer_id %><br>
       <%= f.collection_select :farmer_id, Farmer.all, :id, :name,{include_blank: ''}, {class: 'form-control'} %>
     </div>
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-2">
     <div class="field">
       <%= f.label :crop_id %><br>
       <%= f.collection_select :crop_id, Crop.all, :id, :crop, {include_blank: ''}, {class: 'form-control'} %>
@@ -34,8 +34,8 @@
                                                      ["After Plucking",'after_plucking'],["After 2-3 plucking",'2-3_after_plucking']]), {include_blank: ''}, {class: 'form-control'} %>
     </div>
   </div>
-</div>
-<div class="row">
+
+
   <div class="col-md-3">
     <div class="field">
       <%= f.label :condition %><br>
@@ -46,86 +46,14 @@
                                                    ["Salt Stress", 'salt_stress'], ["Water Stress",'water_stress']]), {include_blank: ''}, {class: 'form-control'} %>
     </div>
   </div>
-
+</div>
 
 
 
   <%=f.fields_for :applications do |app|%>
-
-        <div class="col-md-3">
-          <div class="form-group">
-            <%= app.label :app_area, 'Area of application' %><br>
-            <%= app.text_field :app_area, class: 'form-control' %>
-          </div>
-        </div>
-
-
-
-        <div class="col-md-3">
-          <div class="form-group">
-            <%= app.label :app_date, 'Application Date' %><br>
-            <%= app.text_field :app_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control' %>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="col-md-3">
-          <div class="form-group">
-            <%= app.label :follow_date, 'Follow up Date' %><br>
-            <%= app.text_field :follow_date,"data-provide" => 'datepicker', data: {date_format: 'yyyy-mm-dd'}, class: 'form-control' %>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-      <div class="col-md-2">
-        <div class="form-group">
-          <%= app.label :app_type, 'Application Type' %><br>
-          <%= app.select :app_type, options_for_select([["Foliar", 'foliar'],["Soil",'soil'],["Drip",'drip'],["Flood",'flood']]),{include_blank: ''}, {class: 'form-control'} %>
-        </div>
-      </div>
-
-
-
-        <div class="col-md-5">
-          <div class="form-group">
-            <%= app.label :competitor, 'Competitors product' %><br>
-            <%= app.text_field :competitor, class: 'form-control' %>
-          </div>
-
-        </div>
-      </div>
-
-
-        <%=app.fields_for :product_applications do |prod|%>
-            <%=render 'product_application_fields', app: prod%>
-        <%end%>
-        <div class="links">
-          <%=link_to_add_association 'Add Product ', app, :product_applications, class: 'btn btn-info', style: "color: #FFFFFF"%>
-        </div>
-
-      <br>
-
-<div class="row">
-  <div class="col-md-12">
-
-
-
-
-  </div>
-</div>
+  <%=render 'application_fields',f: app%>
   <%end%>
+        
   <div class="links">
     <%=link_to_add_association 'More Product Application?', f, :applications, class: 'btn btn-info pull-right', style: "color: #FFFFFF"%>
   </div>

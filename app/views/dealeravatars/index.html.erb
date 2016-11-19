@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dealeravatars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dealer</th>
+      <th>Dealer photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dealeravatars.each do |dealeravatar| %>
+      <tr>
+        <td><%= dealeravatar.dealer_id %></td>
+        <td><%= dealeravatar.dealer_photo %></td>
+        <td><%= link_to 'Show', dealeravatar %></td>
+        <td><%= link_to 'Edit', edit_dealeravatar_path(dealeravatar) %></td>
+        <td><%= link_to 'Destroy', dealeravatar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dealeravatar', new_dealeravatar_path %>

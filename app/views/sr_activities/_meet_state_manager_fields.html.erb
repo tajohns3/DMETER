@@ -1,7 +1,7 @@
 <div class="field" id="state_mana_div">
   <%= f.label :purpose, 'Purpose' %><br>
   <%= f.select :purpose, options_for_select([["Identify a Pocket", 'identify_pocket'],["Identify a Dealer",'identify_dealer'],
-                                                               ["Indentify Field Assistant",'identify_field_assistant'],["Other", 'other']]),{include_blank: ''},
+                                                               ["Identify Field Assistant",'identify_field_assistant'],["Other", 'other']]),{include_blank: ''},
                {id: 'meet_sm_option', class:"form-control",:style => "width:200px"}%>
 </div>
 <div class="field" id="pocked_div">

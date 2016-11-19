@@ -6,7 +6,7 @@ class ProdsamplesController < ApplicationController
   # GET /prodsamples
   # GET /prodsamples.json
   def index
-    @prodsamples = Prodsample.paginate(page: params[:page], per_page: 20)
+    @prodsamples = Prodsample.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /prodsamples/1

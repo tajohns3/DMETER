@@ -7,15 +7,17 @@ class DealersController < ApplicationController
   # GET /dealers.json
   def index
     if params[:active]=='checkem'
-    @dealers = Dealer.where(call: false).paginate(page: params[:page], per_page: 20)
+    @dealers = Dealer.where(call: false).paginate(page: params[:page], per_page: 10)
     else
-      @dealers = Dealer.paginate(page: params[:page], per_page: 20)
+      @dealers = Dealer.where.not(name: "Not Assigned").paginate(page: params[:page], per_page: 10)
       end
   end
 
   # GET /dealers/1
   # GET /dealers/1.json
   def show
+   state = @dealer.state_id
+    @state_manager = User.where(state_id: state)
   end
 
   # GET /dealers/new
@@ -25,6 +27,8 @@ class DealersController < ApplicationController
     deal_prop =@dealer.proprietors.build
    dealer_security=@dealer.security_checks.build
     dealer_blank=@dealer.blank_checks.build
+	@dealer.dealerphotos.build
+  @dealer.dealeravatars.build
   end
 
 
@@ -97,6 +101,8 @@ class DealersController < ApplicationController
                                      proprietors_attributes:[:id, :fname, :sname, :mname, :designation, :staddress, :phnumber, :_destroy],
                                      banks_attributes: [:id, :name, :branch, :account_number, :address, :phone, :noreceive, :chnumber, :_destroy],
                                      security_checks_attributes:[:bank_name, :check_number, :bank_account, :amount,:issue_date, :status, :_destroy],
-                                      blank_checks_attributes:[:bank_name, :blank_check, :bank_account, :cheque_num, :_destroy])
+                                      blank_checks_attributes:[:bank_name, :blank_check, :bank_account, :cheque_num, :_destroy],
+                                      dealerphotos_attributes: [:id, :avatar, :avatar_photo, :_destroy],
+                                      dealeravatars_attributes: [:id, :dealer_photo,:_destroy])
     end
 end

@@ -6,7 +6,7 @@ class PocketsController < ApplicationController
   # GET /pockets
   # GET /pockets.json
   def index
-    @pockets = Pocket.paginate(page: params[:page], per_page: 20)
+    @pockets = Pocket.where.not(pocket_name: "Not Assigned").paginate(page: params[:page], per_page: 10)
 
   end
 

@@ -14,7 +14,7 @@ jQuery ->
 $('#demonstrations_button').fadeOut()
 #meet farmer drop down
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "consultation"
       $('#meet_farmer_consultation_div').fadeIn()
       $('#demonstrations_button').fadeOut()
@@ -24,7 +24,7 @@ jQuery ->
 
 #meet farmer drop down
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "product_prescription"
       $('#prod_pres_sele').fadeIn()
       $('#demonstrations_button').fadeOut()
@@ -35,7 +35,7 @@ jQuery ->
 
 #meet farmer drop down pre demo
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "pre_demonstration"
       $('#demo_meeting').fadeIn()
       $('#demonstrations_button').fadeOut()
@@ -44,7 +44,7 @@ jQuery ->
       $('#demonstrations_button').fadeOut()
 
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "demonstration"
       $('#pop_forms').fadeIn()
     else
@@ -53,7 +53,7 @@ jQuery ->
 
 #post demonstration hide and show
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "post_demonstration"
       $('#post_demo_meeting').fadeIn()
       $('#demonstrations_button').fadeOut()
@@ -215,17 +215,7 @@ jQuery ->
 #      $('#pocket_mon').empty()
 #      $('#pocket_mon').parent().hide()
 
-#filter field assistants with pocket
-jQuery ->
-  field_assist =$('#field_assist').html()
-  $('#pocket_mon').change ->
-    pocket = $('#pocket_mon :selected').text()
-    escaped_pocket = pocket.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
-    options = $(field_assist).filter("optgroup[label='#{escaped_pocket}']").html()
-    if options
-      $('#field_assist').html(options)
-    else
-      $('#field_assist').empty()
+
 
 
 
@@ -244,7 +234,7 @@ jQuery ->
 
 #demo select toggle submit
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "demonstration"
       $('#demo_submit').hide()
     else
@@ -254,7 +244,7 @@ jQuery ->
 
 #show and hide the next button in demonstrations
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_purpose').on "change", ->
+  $('#purpose_meet').on "change", ->
     if $(this).val() is "demonstration"
       $('#demonstrations_button').show()
     else
@@ -262,7 +252,7 @@ jQuery ->
 
 #number of farmers met
 jQuery ->
-  $('#fa_activity_meet_farmer_attributes_number_farmer').on "change", ->
+  $('#fa_activity_meet_farmers_attributes_0_number_farmer').on "change", ->
     if $(this).val() is "1"
       $('#met_farmers').fadeIn()
       $('#fa_activity_meet_farmer_attributes_activity_farmers_attributes_0_farmer_id').fadeIn()

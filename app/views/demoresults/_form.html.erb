@@ -41,13 +41,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Area Manager' %><br>
-                        <%= f.collection_select :manager_id, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :manager_id, User.where(role: 'area_manager'), :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label 'Select Sales Rep' %><br>
-                        <%= f.collection_select :user_id, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :user_id, User.where(role: 'sale_representative'), :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -106,13 +106,10 @@
                     <div class="panel-body">
                       <div class="row">
                         <div class="col-md-12">
-                          <div class="row">
-                            <div class="col-md-4">
-                            </div>
-                            <div class="col-md-4">
+                          <%= f.fields_for :resultphotos do |sec|%>
+                          <%=render 'resultphoto_fields', f: sec%>
+                      <%end%>
                               <%= link_to_add_association "Add Photo", f, :resultphotos ,class: "btn btn-info pull-left",:style=>'color:#FFFFFF'%>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>

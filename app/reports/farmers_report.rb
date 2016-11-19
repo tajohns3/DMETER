@@ -1,13 +1,13 @@
 
 class FarmersReport < Dossier::Report
   def sql
-    "SELECT        states.state as 'State', users.sur_name, users.first_name, pockets.pocket_name as 'Pocket', pocket_dats.village as 'Village', farmers.name as 'Farmer', dealers.name AS 'Dealer', positions.first_name AS 'FAFname', positions.surname as 'FASname'
-    FROM            farmers INNER JOIN
-    states ON farmers.state_id = states.id INNER JOIN
-    pockets ON farmers.pocket_id = pockets.id INNER JOIN
-    dealers ON farmers.dealer_id = dealers.id INNER JOIN
-    pocket_dats ON farmers.pocket_dat_id = pocket_dats.id INNER JOIN
-    positions ON farmers.position_id = positions.id INNER JOIN
-    users ON farmers.user_id = users.id AND farmers.manager_id = users.manager_id"
+    "SELECT        states.state AS 'State', CONCAT(users.first_name, '', users.sur_name) AS 'State Manager', farmers.name AS 'Farmer', pocket_dats.village AS 'Village', pockets.pocket_name AS 'Pocket', 
+                         dealers.name AS 'Dealer'
+FROM            states INNER JOIN
+                         farmers ON states.id = farmers.state_id INNER JOIN
+                         dealers ON farmers.dealer_id = dealers.id INNER JOIN
+                         pockets ON states.id = pockets.state_id INNER JOIN
+                         pocket_dats ON pockets.id = pocket_dats.pocket_id INNER JOIN
+                         users ON states.id = users.state_id "
   end
 end

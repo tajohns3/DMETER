@@ -41,7 +41,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <%= f.label :position_id, 'Select Field Staff' %><br>
-                            <%= f.collection_select :position_id, User.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
+                            <%= f.collection_select :position_id, Position.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
                       </div>
@@ -108,8 +108,8 @@
                           <div class="col-md-6">
                             <div class="form-group">
                               <div>
-                                <%= f.label :ps_id, 'Product Sample Code'%>
-                                <%= f.text_field :ps_id,:disabled => true, class: "form-control" %>
+                                <!--<%= f.label :ps_id, 'Product Sample Code'%> -->
+                                <!-- <%= f.text_field :ps_id,:disabled => true, class: "form-control" %> -->
                               </div>
                             </div>
                           </div>

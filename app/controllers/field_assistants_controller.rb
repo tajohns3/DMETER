@@ -6,7 +6,7 @@ class FieldAssistantsController < ApplicationController
   # GET /field_assistants
   # GET /field_assistants.json
   def index
-    @field_assistants = FieldAssistant.paginate(page: params[:page], per_page: 20)
+    @field_assistants = FieldAssistant.where(position_status: false).paginate(page: params[:page], per_page: 10)
   end
 
   # GET /field_assistants/1
@@ -39,7 +39,7 @@ class FieldAssistantsController < ApplicationController
       if @field_assistant.save
         format.html { redirect_to @field_assistant, notice: 'Field assistant was successfully created.' }
         format.json { render :show, status: :created, location: @field_assistant }
-      else
+              else
         format.html { render :new }
         format.json { render json: @field_assistant.errors, status: :unprocessable_entity }
       end

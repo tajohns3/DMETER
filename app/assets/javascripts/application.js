@@ -155,19 +155,55 @@ function readUwttt(input) {
     }
 }
 
+//for upload photo on demo results
+$(document).ready(function(){
+// Prepare the preview for profile picture
+    $("#wizard-picture12").change(function(){
+        readmoret(this);
+    });
+});
+function readmoret(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview12').attr('src', e.target.result).fadeIn('slow');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
 //for the ajax call to get demonstration to appear in fa acts
 $('.dropdown-toggle').dropdown()
 
-// $(document).ready(function() {
-//     DependentFields.bind()
-// });
+$(document).ready(function() {
+    DependentFields.bind()
+});
 
-// $(document).on("change","#field_assist",function(){
-//     $.ajax({
-//         url: "/demo_date/populate_dates",
-//         type: "GET",
-//         data: {pre_demo_id: $(this).val()}
-//     })
-//
-// })
-//
+$(document).on("change","#fa_state",function(){
+    $.ajax({
+        url: "/demo_date/populate_dates",
+        type: "GET",
+        data: {pre_demo_id: $(this).val()}
+    })
+
+})
+
+
+
+$('.dropdown-toggle').dropdown()
+
+$(document).ready(function() {
+    DependentFields.bind()
+});
+
+$(document).on("change","#sr_state",function(){
+    $.ajax({
+        url: "/demo_date/populate_dates",
+        type: "GET",
+        data: {pre_demo_id: $(this).val()}
+    })
+
+})
+
+sr_state

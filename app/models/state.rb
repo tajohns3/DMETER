@@ -23,6 +23,10 @@ class State < ActiveRecord::Base
   def state_manager
     users.where(role: 'state_manager')
   end
+  
+  def fieldassistants
+	positions.all
+  end
 
 
 end

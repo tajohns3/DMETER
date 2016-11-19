@@ -1,6 +1,8 @@
+<%@sr_activity.meet_dealers.each do |meet_deal|%>
 <p>
   <strong>Purpose:</strong>
-  <%= @sr_activity.meet_dealer.purpose.humanize.titleize%>
+  <%= meet_deal.purpose.humanize.titleize%>
 </p>
 
-<%= render 'sr_activities/meet_dealer_show/other_dealer' if @sr_activity.meet_dealer.purpose=='other'%>
+<%= render 'sr_activities/meet_dealer_show/other_dealer' if meet_deal.purpose=='other'%>
+<%end%>

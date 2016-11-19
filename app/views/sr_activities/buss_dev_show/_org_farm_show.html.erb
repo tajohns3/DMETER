@@ -1,13 +1,15 @@
+<%@sr_activity.business_developments.each do |buss_dev|%>
 <p>
   <strong>Pre Demonstration</strong>
-  <%=@sr_activity.business_development.pre_demonstration.demo_code%>
+  <%=buss_dev.pre_demonstration.demo_code%>
 </p>
 <p>
   <strong>Number of Attendants</strong>
-  <%=@sr_activity.business_development.numattendees%>
+  <%=buss_dev.numattendees%>
 </p>
 
 <p>
   <strong>Sample Request</strong>
-  <%=@sr_activity.business_development.set_bool%>
+  <%=buss_dev.set_bool%>
 </p>
+<%end%>

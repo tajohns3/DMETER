@@ -1,4 +1,5 @@
-<%@fa_activity.meet_farmer.product_prescriptions.each do |prod_presc|%>
+<%@fa_activity.meet_farmers.each do |meet_farm|%>
+<% meet_farm.product_prescriptions.each do |prod_presc|%>
 <p>
   <strong>Dealer:</strong>
   <%= prod_presc.dealer.name %>
@@ -34,4 +35,5 @@
   <strong>Prescribe:</strong>
   <%= prod_presc.prescribe ? 'Yes' : 'No' %>
 </p>
+<%end%>
 <%end%>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dealerphotos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dealer</th>
+      <th>Avatar</th>
+      <th>Avatar photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dealerphotos.each do |dealerphoto| %>
+      <tr>
+        <td><%= dealerphoto.dealer_id %></td>
+        <td><%= dealerphoto.avatar %></td>
+        <td><%= dealerphoto.avatar_photo %></td>
+        <td><%= link_to 'Show', dealerphoto %></td>
+        <td><%= link_to 'Edit', edit_dealerphoto_path(dealerphoto) %></td>
+        <td><%= link_to 'Destroy', dealerphoto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dealerphoto', new_dealerphoto_path %>

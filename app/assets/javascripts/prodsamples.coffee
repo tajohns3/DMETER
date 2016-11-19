@@ -2,14 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #jQuery ->
-#  fas = $('#prodsample_faid').html()
-#  $('#prodsample_stid').change ->
-#    states = $('prodsample_stid :selected').text()
+#  fas = $('#prodsample_position_id').html()
+#  $('#prodsample_state_id').change ->
+#    states = $('prodsample_state_id :selected').text()
 #    options = $(fas).filter("optgroup[label='#{states}']").html()
 #    if options
-#      $('#prodsample_faid').html(options)
+#      $('#prodsample_position_id').html(options)
 #    else
-#      $('#prodsample_faid').empty()
+#      $('#prodsample_position_id').empty()
 
 jQuery ->
   $("#active_demo").hide();

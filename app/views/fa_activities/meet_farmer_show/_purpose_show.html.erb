@@ -1,31 +1,33 @@
+<%@fa_activity.meet_farmers.each do |meet_farm|%>
 <p>
   <strong>Dealer:</strong>
-  <%= @fa_activity.meet_farmer.dealer.name %>
+  <%= meet_farm.dealer.name %>
 </p>
 
 <p>
   <strong>Village:</strong>
-  <%=  @fa_activity.meet_farmer.pocket_dat.village %>
+  <%=  meet_farm.pocket_dat.village %>
 </p>
 <p>
   <strong>Number Of Farmers Met</strong>
-  <%=@fa_activity.meet_farmer.number_farmer%>
+  <%=meet_farm.number_farmer%>
 </p>
 
 
 <p>
   <strong>Farmers:</strong>
-  <% @fa_activity.meet_farmer.activity_farmers.each do |farm| %>
+  <% meet_farm.activity_farmers.each do |farm| %>
   <%=farm.farmer.name%><br>
       <%end%>
 </p>
 
 <p>
   <strong>Purpose:</strong>
-  <%= @fa_activity.meet_farmer.purpose.humanize.titleize %>
+  <%= meet_farm.purpose.humanize.titleize %>
 </p>
 
-<%= render 'fa_activities/meet_farmer_show/pre_demo_show' if @fa_activity.meet_farmer.purpose=='pre_demonstration' %>
-<%= render 'fa_activities/meet_farmer_show/post_demo_show' if @fa_activity.meet_farmer.purpose=='post_demonstration' %>
-<%= render 'fa_activities/meet_farmer_show/product_prescribe_show' if @fa_activity.meet_farmer.purpose=='product_prescription' %>
-<%= render 'fa_activities/meet_farmer_show/consultation_show' if @fa_activity.meet_farmer.purpose=='consultation' %>
+<%= render 'fa_activities/meet_farmer_show/pre_demo_show' if meet_farm.purpose=='pre_demonstration' %>
+<%= render 'fa_activities/meet_farmer_show/post_demo_show' if meet_farm.purpose=='post_demonstration' %>
+<%= render 'fa_activities/meet_farmer_show/product_prescribe_show' if meet_farm.purpose=='product_prescription' %>
+<%= render 'fa_activities/meet_farmer_show/consultation_show' if meet_farm.purpose=='consultation' %>
+<%end%>

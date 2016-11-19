@@ -61,33 +61,29 @@
                     <div class="col-md-6 checkbox-list text-center">
                       <div class="form-group">
                         <br>
-                        <div class="dropdown">
-                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select Districts
-                            <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <div class="checkbox">
-                              <%= f.collection_check_boxes :district_ids, District.all, :id, :district%>
-                            </div>
-                          </ul>
-                        </div>
+                        <div class="btn-group">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Districts <span class="caret"></span></button>
+                      <ul class="dropdown-menu scrollable-menu" role="menu">
+                        <li><div class="checkbox">
+                          <%= f.collection_check_boxes :district_ids, District.all, :id, :district%>
+                        </div></li>
+                      </ul>
+
+                    </div>
                       </div>
                     </div>
                     <div class="col-md-6 checkbox-list text-center">
                       <div class="form-group">
                         <br>
-                        <div class="dropdown">
-                          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select Crops
-                            <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <div class="checkbox">
-                              <%= f.collection_check_boxes :crop_ids, Crop.all, :id, :crop%>
-                            </div>
-                          </ul>
-                        </div>
+                        <div class="btn-group">
+                      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Select Crops <span class="caret"></span></button>
+                      <ul class="dropdown-menu scrollable-menu" role="menu">
+                        <li><div class="checkbox">
+                          <%= f.collection_check_boxes :crop_ids, Crop.all, :id, :crop%>
+                        </div></li>
+                      </ul>
+
+                    </div>
                       </div>
                     </div>
                   </div>

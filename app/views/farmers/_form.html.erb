@@ -56,8 +56,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%=f.label :user_id, 'Area Manager'%><br>
-                        <%= f.grouped_collection_select :user_id, State.all, :area_managers,:state,:id, :sur_name, {:include_blank => true}, {class: "form-control", id: 'manager'}  %>
+                        <%=f.label :manager_id, 'Area Manager'%><br>
+                        <%= f.grouped_collection_select :manager_id, State.all, :area_managers,:state,:id, :sur_name, {:include_blank => true}, {class: "form-control", id: 'manager'}  %>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -92,7 +92,7 @@
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-8">
-                      <div class="form-group has-error">
+                      <div class="form-group">
                         <div>
                           <%= f.label :name, 'Farmer Name' %><br>
                           <%= f.text_field :name, {class: "form-control"} %>
@@ -109,7 +109,7 @@
                       <div class="form-group">
                         <div>
                           <%= f.label :phnumber, 'Farmer Phone Number' %><br>
-                          <%= f.text_field :phnumber, {class: "form-control"} %>
+                          <%= f.text_field :phnumber, {class: "form-control",id: 'contact_phone', value: number_to_phone(f.object.phnumber), placeholder: "+91-xxxx-xxxxxx"} %>
                         </div>
                       </div>
                       <div>

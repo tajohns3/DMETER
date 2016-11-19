@@ -1,6 +1,7 @@
 class DemoDateController < ApplicationController
   def populate_dates
-    @populates = Position.find(params[:pre_demo_id])
+    @populates = State.find(params[:pre_demo_id])
+    @state_manager = User.where(role: 'state_manager').where(state_id: @populates.id)
 
     respond_to do |format|
 

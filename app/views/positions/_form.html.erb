@@ -46,7 +46,7 @@
                                       <label>
                                         Select Open Position
                                       </label>
-                                      <%= f.collection_select :field_assistant_id, FieldAssistant.all, :id, :fa_num, {:include_blank => true},{class: "form-control"}  %>
+                                      <%= f.collection_select :field_assistant_id, FieldAssistant.where(position_status: false), :id, :fa_num, {},{class: "form-control"}  %>
                                     </div>
                                   </div>
                                   <div class="col-md-6">

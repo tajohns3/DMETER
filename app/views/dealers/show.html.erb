@@ -70,7 +70,9 @@
                 </p>
                 <p>
                   <strong>State Manager:</strong>
-                  <%= @dealer.user.manager.state_manager %>
+                  <% @state_manager.where(role: 'state_manager').each do |sm| %>
+                      <%=sm.sur_name%><br>
+                  <%end%>
                 </p>
                 <p>
                   <strong>Area Manager:</strong>
@@ -460,14 +462,18 @@
                         <div class="row">
                           <div class="col-md-6">
                             <p>
-                              <strong>Dealer Registration Form:</strong>
-                              <%= link_to (image_tag(@dealer.dealerreqform_url(:thumb))), @dealer.dealerreqform_url %>
+                               <strong>Dealer Registration Form:</strong><br>
+                    <% @dealer.dealerphotos.each do |dealerphoto| %>
+                            <%=link_to (image_tag(dealerphoto.avatar_url(:thumb))).to_s, dealerphoto.avatar_url%>
+                    <% end %>
                             </p>
                           </div>
                           <div class="col-md-6">
                             <p>
-                              <strong>Dealer Photograph:</strong>
-                              <%= link_to (image_tag(@dealer.dealerphoto_url(:thumb))), @dealer.dealerphoto_url %>
+                              <strong>Dealer Photograph:</strong><br>
+                    <% @dealer.dealeravatars.each do |dealerphot| %>
+                            <%=link_to (image_tag(dealerphot.dealer_photo_url(:thumb))).to_s, dealerphot.dealer_photo_url%>
+                    <% end %>
                             </p>
                           </div>
                         </div>

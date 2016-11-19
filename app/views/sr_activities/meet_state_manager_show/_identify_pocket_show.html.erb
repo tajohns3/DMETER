@@ -1,4 +1,6 @@
+<%@sr_activity.meet_state_managers.each do |state_man|%>
 <p>
   <strong>Pocket:</strong>
-  <%=@sr_activity.meet_state_manager.pocket.pocket_name%>
+  <%=state_man.pocket.pocket_name%>
 </p>
+<%end%>

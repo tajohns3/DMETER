@@ -22,6 +22,9 @@
         </h1>
       </div>
       <div class="panel-body">
+      <label class="required">
+        Required Fields: 
+      </label>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -32,7 +35,7 @@
             <div class="row">
               <div class="col-md-3">
                 <div class="form-group">
-                  <label>
+                  <label class="required">
                     State
                   </label>
                   <%= f.collection_select :state_id, State.all,:id, :state, {include_blank: ''},{id: 'sr_state', class:"form-control"} %>
@@ -40,7 +43,7 @@
               </div>
               <div class="col-md-3">
                 <div class="form-group">
-                  <label>
+                  <label class="required">
                     Area Manager
                   </label>
                   <%=f.grouped_collection_select :manager_id,State.all, :area_managers,:state, :id,:sur_name,{include_blank: ''},{id: 'manager', class:"form-control"}%>
@@ -48,7 +51,7 @@
               </div>
               <div class="col-md-3">
                 <div class="form-group">
-                  <label>
+                  <label class="required">
                     Sales Representative&nbsp;
                   </label>
                   <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:sur_name, {include_blank: ''},{id: 'sale_rep_act_rep', class:"form-control"}%>
@@ -56,7 +59,7 @@
               </div>
               <div class="col-md-3">
                 <div class="form-group">
-                  <label>
+                  <label class="required">
                     Date
                   </label>
                   <div class='input-group date' id='datetimepicker1'>
@@ -69,14 +72,17 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-3">
-                <label>
-                  State Manager
-                </label>
-                <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
+              <div class="col-md-4">
+                 <div id="pop_statmana">
+                         
+
+                       </div>
               </div>
             </div>
           </div>
+
+
+
 
         </div>
         <div class="row">
@@ -93,15 +99,15 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="field">
-                      <%= f.label :pactivity, 'Primary Activity' %><br>
+                      <%= f.label :pactivity, 'Primary Activity ', class: 'required' %><br>
                       <%= f.select :pactivity, options_for_select([["Meet with State Manager", 'meet_state_manager'],["Meet with Dealer",'meet_dealer'],
-                                                                   ["Meet with Field Assistant", 'meet_field_assistant'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
+                                                                   ["Meet with Field Assistant", 'Meet_field_assistant'], ["Meet with Farmer", 'meet_farmer'],["C&F",'C&F'],
                                                                    ["Business Development", 'business_development'],["Other",'other']]), {include_blank: ''},{id: 'sr_pactivity',class:"form-control"} %>
                     </div>
 
 
                     <div  id="">
-                      <%=f.fields_for :meet_state_manager do |meet_sm|%>
+                      <%=f.fields_for :meet_state_managers do |meet_sm|%>
                           <%=render 'meet_state_manager_fields', f: meet_sm%>
                       <%end%>
                     </div>
@@ -112,19 +118,19 @@
 
 
                     <div class="container">
-                      <%=f.fields_for :meet_dealer do |meet_dealer|%>
+                      <%=f.fields_for :meet_dealers do |meet_dealer|%>
                           <%=render 'meet_dealer_fields', f: meet_dealer%>
                       <%end%>
                     </div>
 
                     <div class="container">
-                      <%=f.fields_for :meet_fa do |meet_fa|%>
+                      <%=f.fields_for :meet_fas do |meet_fa|%>
                           <%=render 'meet_fa_fields', f: meet_fa%>
                       <%end%>
                     </div>
 
                     <div class="container">
-                      <%=f.fields_for :meet_sr_farmer do |farmers|%>
+                      <%=f.fields_for :meet_sr_farmers do |farmers|%>
                           <%=render 'meet_sr_farmer_fields', f: farmers%>
                       <%end%>
                     </div>
@@ -137,7 +143,7 @@
                     </div>
 
                     <div class="container" id="business_deve_div">
-                      <%=f.fields_for :business_development do |buss|%>
+                      <%=f.fields_for :business_developments do |buss|%>
                           <%=render 'business_development_fields', f: buss%>
                       <%end%>
                     </div>

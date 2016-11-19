@@ -6,39 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+#List of states
+Dealer.delete_all
+Dealer.new(state_id: '1', name: 'Not Assigned', user_id: '1', pocket_id: '1').save(validate:false)
 
 #List of states
-State.delete_all
-State.create!(state: 'Alabama', abbreviation: 'AL')
-State.create!(state: 'Alaska', abbreviation: 'AK')
-State.create!(state: 'Arizona', abbreviation: 'AZ')
+Farmer.delete_all
+Farmer.new(name: 'Not Assigned').save(validate:false)
 
-#List of districts
-District.delete_all
-District.create!(district: 'Queens')
-District.create!(district: 'Bronx')
-District.create!(district: 'Harlem')
-District.create!(district: 'Kansas')
-District.create!(district: 'San Diego')
-District.create!(district: 'Miami')
+#List of states
+Position.delete_all
+Position.new(first_name: 'Not', surname:'Assigned').save(validate:false)
 
-#List of Crops
-Crop.delete_all
-Crop.create!(crop: 'Corn')
-Crop.create!(crop: 'Lettuce')
-Crop.create!(crop: 'Wheat')
+#List of states
+Pocket.delete_all
+Pocket.new(pocket_name: 'Not Assigned', state_id: '1').save(validate: false)
 
-#List of Talukas
-Taluka.delete_all
-Taluka.create!(taluka: 'Austin')
-Taluka.create!(taluka: 'Houston')
-Taluka.create!(taluka: 'Dallas')
-
-#List of Villages
-Village.delete_all
-Village.create!(village: 'Goat')
-Village.create!(village: 'Buffalo')
-Village.create!(village: 'Yak')
+#List of states
+PocketDat.delete_all
+PocketDat.new(taluka: 'Not Assigned', village: 'Not Assigned').save(validate: false)
 
 

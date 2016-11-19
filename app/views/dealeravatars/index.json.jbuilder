@@ -1,0 +1,1 @@
+json.array! @dealeravatars, partial: 'dealeravatars/dealeravatar', as: :dealeravatar

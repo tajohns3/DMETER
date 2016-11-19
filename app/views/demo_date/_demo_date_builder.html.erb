@@ -1,9 +1,8 @@
-<% @populates.fa_activities.each do |f|%>
-    <% f.pre_demonstrations.each do |pre|%>
-        <h4><%=pre.demo_code%>
-        <%= link_to 'New Demonstration', new_demonstration_path(:pre_id => pre.id), class: 'btn btn-primary',:style=>'color:#FFFFFF',  id: 'hope'%></h4><br>
-    <%end%>
-
-
+ <div class="col-md-6">
+<%@state_manager.each do |sm|%>
+<label>State Manager </label>
+<input type="text_field" name="state_manager" class="form-control"  value='<%=sm.sur_name%>' readonly="readonly"/>
 
 <%end%>
+
+</div>

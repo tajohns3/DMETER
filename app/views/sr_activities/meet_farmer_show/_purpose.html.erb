@@ -1,7 +1,9 @@
+<%@sr_activity.meet_sr_farmers.each do |me_sr|%>
 <p>
   <strong>Purpose:</strong>
-  <%= @sr_activity.meet_sr_farmer.purpose.humanize.titleize%>
+  <%= me_sr.purpose.humanize.titleize%>
 </p>
 
-<%= render 'sr_activities/meet_farmer_show/tech_guide_show' if @sr_activity.meet_sr_farmer.purpose=='technical_guidance'%>
-<%= render 'sr_activities/meet_farmer_show/recommendation_show' if @sr_activity.meet_sr_farmer.purpose=='recommendation_farmers'%>
+<%= render 'sr_activities/meet_farmer_show/tech_guide_show' if me_sr.purpose=='technical_guidance'%>
+<%= render 'sr_activities/meet_farmer_show/recommendation_show' if me_sr.purpose=='recommendation_farmers'%>
+<%end%>

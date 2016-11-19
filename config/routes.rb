@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :dealeravatars
+  resources :dealerphotos
   resources :singles
   resources :boxes
   resources :demonstration_attachments

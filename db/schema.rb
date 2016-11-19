@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112091211) do
+ActiveRecord::Schema.define(version: 20161114234832) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "bank_id",    limit: 4
@@ -126,6 +126,21 @@ ActiveRecord::Schema.define(version: 20161112091211) do
     t.string   "purpose",        limit: 4000
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "dealeravatars", force: :cascade do |t|
+    t.integer  "dealer_id",    limit: 4
+    t.string   "dealer_photo", limit: 4000
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "dealerphotos", force: :cascade do |t|
+    t.integer  "dealer_id",    limit: 4
+    t.string   "avatar",       limit: 4000
+    t.string   "avatar_photo", limit: 4000
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "dealers", force: :cascade do |t|
@@ -298,23 +313,24 @@ ActiveRecord::Schema.define(version: 20161112091211) do
   end
 
   create_table "field_assistants", force: :cascade do |t|
-    t.integer  "state_id",       limit: 4
-    t.integer  "user_id",        limit: 4
-    t.integer  "pocket_id",      limit: 4
-    t.string   "first_name",     limit: 4000
-    t.string   "surname",        limit: 4000
-    t.string   "address",        limit: 4000
-    t.string   "taluka",         limit: 4000
-    t.string   "district",       limit: 4000
-    t.string   "pin_code",       limit: 4000
-    t.string   "contact_number", limit: 4000
+    t.integer  "state_id",        limit: 4
+    t.integer  "user_id",         limit: 4
+    t.integer  "pocket_id",       limit: 4
+    t.string   "first_name",      limit: 4000
+    t.string   "surname",         limit: 4000
+    t.string   "address",         limit: 4000
+    t.string   "taluka",          limit: 4000
+    t.string   "district",        limit: 4000
+    t.string   "pin_code",        limit: 4000
+    t.string   "contact_number",  limit: 4000
     t.boolean  "experience"
-    t.integer  "dealer_id",      limit: 4
-    t.string   "form",           limit: 4000
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.integer  "dealer_id",       limit: 4
+    t.string   "form",            limit: 4000
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.boolean  "yes"
-    t.string   "fa_number",      limit: 4000
+    t.string   "fa_number",       limit: 4000
+    t.boolean  "position_status",              default: false, null: false
   end
 
   create_table "inventories", force: :cascade do |t|
@@ -340,8 +356,8 @@ ActiveRecord::Schema.define(version: 20161112091211) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.integer  "dealer_id",      limit: 4
-    t.integer  "village_id",     limit: 4
     t.integer  "number_farmer",  limit: 4
+    t.integer  "pocket_dat_id",  limit: 4
   end
 
   create_table "meet_fas", force: :cascade do |t|
@@ -440,12 +456,13 @@ ActiveRecord::Schema.define(version: 20161112091211) do
     t.boolean  "yes"
     t.boolean  "no"
     t.integer  "dealer_id",          limit: 4
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.integer  "state_id",           limit: 4
     t.integer  "field_assistant_id", limit: 4
     t.integer  "district_id",        limit: 4
     t.integer  "pocket_dat_id",      limit: 4
+    t.boolean  "position_status",                 default: false, null: false
   end
 
   create_table "post_demonstrations", force: :cascade do |t|
@@ -472,9 +489,9 @@ ActiveRecord::Schema.define(version: 20161112091211) do
   end
 
   create_table "prodsamples", force: :cascade do |t|
-    t.integer  "psid",        limit: 4
-    t.integer  "stid",        limit: 4
-    t.integer  "faid",        limit: 4
+    t.integer  "ps_id",       limit: 4
+    t.integer  "state_id",    limit: 4
+    t.integer  "position_id", limit: 4
     t.string   "sample_purp", limit: 4000
     t.string   "sampletype",  limit: 4000
     t.datetime "created_at",               null: false
@@ -628,6 +645,7 @@ ActiveRecord::Schema.define(version: 20161112091211) do
     t.boolean  "access",                              default: false, null: false
     t.boolean  "approved",                            default: false, null: false
     t.integer  "manager_id",             limit: 4
+    t.integer  "state_manager_id",       limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

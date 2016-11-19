@@ -1,4 +1,4 @@
-<%=will_paginate%>
+
 
 <html lang="en">
 
@@ -31,9 +31,6 @@
                 Sales Representative
               </th>
               <th class="text-center">
-                Area Manager
-              </th>
-              <th class="text-center">
                 State
               </th>
               <th class="text-center">
@@ -47,9 +44,6 @@
               <% @sr_activities.each do |sr_activity| %>
                   <td class="text-center">
                     <%= sr_activity.sr_name %>
-                  </td>
-                  <td class="text-center">
-                    <%= sr_activity.sr_man %>
                   </td>
                   <td class="text-center">
                     <%= sr_activity.state.state %>

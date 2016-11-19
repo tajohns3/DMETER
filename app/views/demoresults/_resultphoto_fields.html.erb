@@ -4,15 +4,16 @@
     </tbody>
     <thead>
     <tr>
-      <div class="row">
-      <div class="col-md-4">
-        <div class="text-center">
-      <div class="input-group">
-        <%= f.file_field :avatar %>
-      </div>
-        </div>
-        </div>
-      </div>
+      <th class="text-center">
+        <div class="picture-container">
+                                    <div class="picture">
+                                      <img src="http://image.flaticon.com/icons/png/512/52/52297.png"
+                                           class="picture-src" id="wizardPicturePreview12" title="">
+                                      <%= f.file_field :avatar, id:"wizard-picture12" %>
+                                    </div>
+                                    <h5 class=""><b>Upload Photo</b></h5>
+      </th>
+    </tr>
     </thead>
 
   </table>

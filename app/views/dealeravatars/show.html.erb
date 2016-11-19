@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @dealeravatar.dealer_id %>
+</p>
+
+<p>
+  <strong>Dealer photo:</strong>
+  <%= @dealeravatar.dealer_photo %>
+</p>
+
+<%= link_to 'Edit', edit_dealeravatar_path(@dealeravatar) %> |
+<%= link_to 'Back', dealeravatars_path %>

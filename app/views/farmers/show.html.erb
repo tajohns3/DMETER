@@ -2,6 +2,7 @@
   <div class="panel panel-primary">
     <div class="panel-heading text-center">
       <h1 class="panel-title text-center">
+	  <%= link_to 'Delete', farmer_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right", :style=> 'color:#FFFFFF' %>
         <b> Farmer Information </b>
       </h1>
     </div>
@@ -21,11 +22,6 @@
                   </div>
                   <div>
                     <strong>Sales Representative:</strong>
-                    <%= @farmer.user.fullname %>
-                  </div>
-                  <br>
-                  <div>
-                    <strong>Field Agent:</strong>
                     <%= @farmer.user.fullname %>
                   </div>
                   <br>
@@ -143,12 +139,13 @@
         </div>
         <div class="col-md-6">
           <div class="actions">
-            <%= link_to "Edit", edit_farmer_path(@farmer), class: "btn btn-primary pull-right"%>
+            <%= link_to "Edit", edit_farmer_path(@farmer), class: "btn btn-primary pull-right",style:"color:#FFFFFF"%>
+			
           </div>
         </div>
         <div class="col-md-6">
           <div class="actions">
-            <%= link_to "Cancel", :back, {:class => "btn btn-primary"}%>
+            <%= link_to "Cancel", :back, {:class => "btn btn-primary", style:"color:#FFFFFF"}%>
           </div>
         </div>
       </div>

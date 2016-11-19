@@ -11,7 +11,7 @@ default: &default
 
 development:
   adapter: sqlserver
-  host: ELEVEN_FOLD
+  host: localhost
   database: DMETERDBPROTO
   username: dmeterlog2
   password: password
@@ -21,7 +21,7 @@ development:
   # default
   # mode: dblib
   # dataserver: <name from freetds.conf>
-  # timeout: 5000
+  timeout: 30000
   # timeout: 0 - to have no timeout
   # azure: true
   # dsn: <server_dsn>

@@ -1,4 +1,4 @@
-<%=will_paginate%>
+
 
 <html lang="en">
 
@@ -34,9 +34,6 @@
                 State
               </th>
               <th class="text-center">
-                State Manager
-              </th>
-              <th class="text-center">
                 Area Manager
               </th>
               <th class="text-center">
@@ -57,14 +54,12 @@
                   <td class="text-center">
                     <%= field_assistant.state.state %>
                   </td>
-                  <td class="text-center">
-                    <%= field_assistant.user_id %>
                   </td>
                   <td class="text-center">
-                    <%= field_assistant.user_id %>
+                    <%= field_assistant.a_man_fa %>
                   </td>
                   <td class="text-center">
-                    <%= field_assistant.user_id %>
+                    <%= field_assistant.sr_man_fa %>
                   </td>
                   <td class="text-center">
                     <%= field_assistant.pocket.pocket_name %>
