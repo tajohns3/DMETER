@@ -41,3 +41,18 @@ jQuery ->
       $('#sale_rep_act_rep').html(options)
     else
       $('#sale_rep_act_rep').empty()
+
+#filter districts
+jQuery ->
+#  $('#sale_rep_act_rep').parent().hide()
+  villages =$('#le_village').html()
+  $('#pocket_farmer').change ->
+    pocket = $('#pocket_farmer :selected').text()
+    escaped_pocket = pocket.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(villages).filter("optgroup[label='#{escaped_pocket}']").html()
+    if options
+      $('#le_village').html(options)
+#      $('#sale_rep_act_rep').parent().show()
+    else
+      $('#le_village').empty()
+#      $('#sale_rep_act_rep').parent().hide()

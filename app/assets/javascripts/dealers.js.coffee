@@ -40,3 +40,34 @@ jQuery ->
     else
       $('#sale_rep_act_rep').empty()
 
+
+#filter districts
+jQuery ->
+#  $('#sale_rep_act_rep').parent().hide()
+  districts =$('#deal_dist').html()
+  $('#sr_state').change ->
+    state = $('#sr_state :selected').text()
+    escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(districts).filter("optgroup[label='#{escaped_state}']").html()
+    if options
+      $('#deal_dist').html(options)
+#      $('#sale_rep_act_rep').parent().show()
+    else
+      $('#deal_dist').empty()
+#      $('#sale_rep_act_rep').parent().hide()
+
+
+#filter districts
+jQuery ->
+#  $('#sale_rep_act_rep').parent().hide()
+  districts =$('#deal_dist2').html()
+  $('#sr_state').change ->
+    state = $('#sr_state :selected').text()
+    escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(districts).filter("optgroup[label='#{escaped_state}']").html()
+    if options
+      $('#deal_dist2').html(options)
+#      $('#sale_rep_act_rep').parent().show()
+    else
+      $('#deal_dist2').empty()
+#      $('#sale_rep_act_rep').parent().hide()

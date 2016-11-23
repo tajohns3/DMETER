@@ -25,6 +25,7 @@
             </div>
             <div class="panel-body">
               <h4><b>Sections I-VIII Mandatory</b> </h4>
+              <label class="required">Required Fields: </label>
               <div class="row">
                 <div class="col-md-6">
                   <div class="panel panel-default">
@@ -37,13 +38,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%= f.label :state_id %><br>
+                            <%= f.label :state_id, class: 'required' %><br>
                             <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control",id: 'sr_state'} %>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%=f.label :user_id, 'State Manager'%><br>
+                            <%=f.label :user_id, 'State Manager', class: 'required'%><br>
                             <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
                           </div>
                         </div>
@@ -51,13 +52,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%=f.label :user_id, 'Area Manager'%><br>
+                            <%=f.label :user_id, 'Area Manager', class: 'required'%><br>
                             <%= f.grouped_collection_select :user_id, State.all, :area_managers,:state,:id, :sur_name, {:include_blank => true}, {class: "form-control", id: 'manager'}  %>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%=f.label :user_id, 'Sales Representative'%><br>
+                            <%=f.label :user_id, 'Sales Representative', class: 'required'%><br>
                             <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:fullname, {include_blank: ''},{class: "form-control", id: 'sale_rep_act_rep'}%>
                           </div>
                         </div>
@@ -65,7 +66,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <%= f.label :pocket_id %><br>
+                            <%= f.label :pocket_id, class: 'required' %><br>
                             <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
@@ -84,7 +85,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <%= f.label :name, "Dealership / Agency Name" %><br>
+                            <%= f.label :name, "Dealership / Agency Name", class: 'required' %><br>
                             <%= f.text_field :name, {class: "form-control"} %>
                           </div>
                         </div>
@@ -92,19 +93,19 @@
                       <div class="row">
                         <div class="col-md-5">
                           <div class="form-group">
-                            <%= f.label :address, "Street Address" %><br>
+                            <%= f.label :address, "Street Address", class: 'required' %><br>
                             <%= f.text_field :address, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md4 col-md-4" style="display: block;">
                           <div class="form-group">
-                            <%= f.label :atpost, "At & Post" %><br>
+                            <%= f.label :atpost, "At & Post", class: 'required' %><br>
                             <%= f.text_field :atpost, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md3 col-md-3" style="display: block;">
                           <div class="form-group">
-                            <%= f.label :pin_code, "Pin Code" %><br>
+                            <%= f.label :pin_code, "Pin Code", class: 'required' %><br>
                             <%= f.text_field :pin_code, {class: "form-control"} %>
                           </div>
                         </div>
@@ -112,14 +113,14 @@
                       <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :taluka, "Taluka / Tehsil" %><br>
+                            <%= f.label :taluka, "Taluka / Tehsil", class: 'required' %><br>
                             <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :taluka, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :district, "District" %><br>
-                            <%= f.collection_select :district_id, District.all, :id, :district, {:include_blank => true}, {class: "form-control"} %>
+                            <%= f.label :district_id, "District", class: 'required' %><br>
+                            <%= f.grouped_collection_select :district_id,State.all, :districts_state,:state, :id,:district, {:include_blank => ''}, {class: "form-control", id: 'deal_dist'} %>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -146,19 +147,19 @@
                       <div class="row">
                         <div class="col-md-5">
                           <div class="form-group">
-                            <%= f.label :whaddress, "Street Address" %><br>
+                            <%= f.label :whaddress, "Street Address", class: 'required' %><br>
                             <%= f.text_field :whaddress, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md4 col-md-4" style="display: block;">
                           <div class="form-group">
-                            <%= f.label :whatpost, "At & Post" %><br>
+                            <%= f.label :whatpost, "At & Post", class: 'required' %><br>
                             <%= f.text_field :whatpost, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md3 col-md-3" style="display: block;">
                           <div class="form-group">
-                            <%= f.label :whpincode, "Pin Code" %><br>
+                            <%= f.label :whpincode, "Pin Code", class: 'required' %><br>
                             <%= f.text_field :whpincode, {class: "form-control"} %>
                           </div>
                         </div>
@@ -166,14 +167,14 @@
                       <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :whtaluka, "Taluka / Tehsil" %><br>
+                            <%= f.label :whtaluka, "Taluka / Tehsil", class: 'required' %><br>
                             <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :taluka, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :whdistrict, "District" %><br>
-                            <%= f.collection_select :district_id, District.all, :id, :district, {:include_blank => true}, {class: "form-control"} %>
+                            <%= f.label :whdistrict, "District", class: 'required' %><br>
+                            <%= f.grouped_collection_select :district_id, State.all, :districts_state,:state,:id, :district, {:include_blank => true}, {class: "form-control",id: 'deal_dist2'} %>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -197,19 +198,19 @@
                       <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :transportname, "Transporter Name" %><br>
+                            <%= f.label :transportname, "Transporter Name", class: 'required' %><br>
                             <%= f.text_field :transportname, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :transportbranch, "Branch Name" %><br>
+                            <%= f.label :transportbranch, "Branch Name", class: 'required' %><br>
                             <%= f.text_field :transportbranch, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <%= f.label :transportadd, "Address" %><br>
+                            <%= f.label :transportadd, "Address", class: 'required' %><br>
                             <%= f.text_field :transportadd, {class: "form-control"} %>
                           </div>
                         </div>
@@ -217,13 +218,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%= f.label :transportacct, "Account Number" %><br>
+                            <%= f.label :transportacct, "Account Number", class: 'required' %><br>
                             <%= f.text_field :transportacct, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%= f.label :transportph, "Phone Number" %><br>
+                            <%= f.label :transportph, "Phone Number", class: 'required' %><br>
                             <%= f.text_field :transportph, class: "form-control",id: 'contact_phone', value: number_to_phone(f.object.transportph), placeholder: "+91-xxxx-xxxxxx" %>
                           </div>
                         </div>
@@ -242,7 +243,7 @@
                     </div>
                     <div class="panel-body">
                       <div>
-                      <%= f.fields_for :proprietors do |prop|%>
+                      <%= f.fields_for :proprietors  do |prop|%>
                           <%=render 'proprietor_fields', f: prop%>
                       <%end%>
 

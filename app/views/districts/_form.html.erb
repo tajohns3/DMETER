@@ -25,6 +25,11 @@
             </h1>
           </div>
           <div class="panel-body">
+
+            <div class="field">
+              <%=f.label :state_id%>
+              <%=f.collection_select :state_id, State.all,:id, :state, {include_blank: ''}, {class: 'form-control'}%>
+            </div>
             <div class="field">
               <%= f.label :district, "District Name" %><br>
               <%= f.text_field :district,{class: "form-control"} %>

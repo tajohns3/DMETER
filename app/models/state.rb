@@ -28,5 +28,9 @@ class State < ActiveRecord::Base
 	positions.all
   end
 
+  def districts_state
+    districts.all
+  end
+
 
 end

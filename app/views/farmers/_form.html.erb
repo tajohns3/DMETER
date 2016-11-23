@@ -32,6 +32,7 @@
               </h1>
             </div>
         <div class="panel-body">
+          <label class="required">Required Fields: </label>
           <div class="row">
             <div class="col-md-6">
               <div class="panel panel-default">
@@ -44,37 +45,37 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label :state_id %><br>
+                        <%= f.label :state_id, class: 'required' %><br>
                         <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control",id: 'sr_state'} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%=f.label :user_id, 'State Manager'%><br>
+                        <%=f.label :user_id, 'State Manager', class: 'required'%><br>
                         <%= f.grouped_collection_select :user_id, State.all,:state_manager,:state, :id, :sur_name, {:include_blank => true}, {class: "form-control",id: 'state_manager'}  %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%=f.label :manager_id, 'Area Manager'%><br>
+                        <%=f.label :manager_id, 'Area Manager', class: 'required'%><br>
                         <%= f.grouped_collection_select :manager_id, State.all, :area_managers,:state,:id, :sur_name, {:include_blank => true}, {class: "form-control", id: 'manager'}  %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%=f.label :user_id, 'Sales Representative'%><br>
+                        <%=f.label :user_id, 'Sales Representative', class: 'required'%><br>
                         <%=f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id,:fullname, {include_blank: ''},{class: "form-control", id: 'sale_rep_act_rep'}%>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :pocket_id, 'Select Pocket' %><br>
-                        <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control", id: 'pocket_farmer'} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label :dealer_id, 'Select Dealer' %><br>
+                        <%= f.label :dealer_id, 'Select Dealer', class: 'required' %><br>
                         <%= f.collection_select :dealer_id, Dealer.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
@@ -94,15 +95,15 @@
                     <div class="col-md-8">
                       <div class="form-group">
                         <div>
-                          <%= f.label :name, 'Farmer Name' %><br>
+                          <%= f.label :name, 'Farmer Name', class: 'required' %><br>
                           <%= f.text_field :name, {class: "form-control"} %>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label :pocket_dat_id, 'Select Village' %>
-                        <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :village, {:include_blank => true}, {class: "form-control"} %>
+                        <%= f.label :pocket_dat_id, 'Select Village', class: 'required' %>
+                        <%= f.grouped_collection_select :pocket_dat_id, Pocket.all, :village_pocket,:pocket_name,:id, :village, {:include_blank => true}, {class: "form-control", id: 'le_village'} %>
                       </div>
                     </div>
                     <div class="col-md-8">

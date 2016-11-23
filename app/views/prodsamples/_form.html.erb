@@ -22,6 +22,9 @@
               </h1>
             </div>
             <div class="panel-body">
+              <label class="required">
+                Required Fields:
+              </label>
               <div class="row">
                 <div class="col-md-6">
                   <div class="panel panel-default">
@@ -34,13 +37,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%= f.label :State %><br>
+                            <%= f.label :State, class: 'required' %><br>
                             <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <%= f.label :position_id, 'Select Field Staff' %><br>
+                            <%= f.label :position_id, 'Select Field Staff ', class: 'required' %><br>
                             <%= f.collection_select :position_id, Position.all, :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                           </div>
                         </div>
@@ -61,7 +64,7 @@
                           <div class="form-group">
                             <div>
                               <div class="field">
-                                <%= f.label :sample_purp, 'Select Sample Purpose' %><br>
+                                <%= f.label :sample_purp, 'Select Sample Purpose', class: 'required' %><br>
                                 <%= f.select :sample_purp, [['Active Field Demonstration'],['Dealer Introduction'],['Farmer Meeting'],['Organize Dealer Meeting'],['Complimentary']], {:include_blank => true}, {class: "form-control"}   %>
                               </div>
                               <div class="field" id="active_demo">
@@ -77,13 +80,19 @@
                           <thead>
                             <tr>
                               <th class="text-center">
-                                Product
+                                <label class="required">
+                                  Product
+                                </label>
                               </th>
                               <th class="text-center">
-                                Single
+                                <label class="required">
+                                  Single
+                                </label>
                               </th>
                               <th class="text-center">
-                                Box
+                                <label class="required">
+                                  Box
+                                </label>
                               </th>
                             </tr>
                             <tr>

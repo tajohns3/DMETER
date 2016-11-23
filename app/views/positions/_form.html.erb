@@ -31,6 +31,9 @@
                         </h3>
                       </div>
                       <div class="panel-body">
+                        <label class="required">
+                          Required Fields:
+                        </label>
                         <div class="row">
                           <div class="col-md-6">
                             <div class="panel panel-default">
@@ -43,7 +46,7 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <label>
+                                      <label class="required">
                                         Select Open Position
                                       </label>
                                       <%= f.collection_select :field_assistant_id, FieldAssistant.where(position_status: false), :id, :fa_num, {},{class: "form-control"}  %>
@@ -51,7 +54,7 @@
                                   </div>
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <%= f.label :contact_number, "Contact Number" %><br>
+                                      <%= f.label :contact_number, "Contact Number", class: 'required' %><br>
                                       <%= f.text_field :contact_number, class: "form-control",id: 'contact_phone', value: number_to_phone(f.object.contact_number), placeholder: "+91-xxxx-xxxxxx"  %>
                                     </div>
                                   </div>
@@ -59,13 +62,13 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <%= f.label :first_name, "First Name" %><br>
+                                      <%= f.label :first_name, "First Name", class: 'required' %><br>
                                       <%= f.text_field :first_name, {class: "form-control"}  %>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <%= f.label :surname, "Surname" %><br>
+                                      <%= f.label :surname, "Surname", class: 'required' %><br>
                                       <%= f.text_field :surname, {class: "form-control"}  %>
                                     </div>
                                   </div>
@@ -73,13 +76,13 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <%= f.label :address, "Address" %><br>
+                                      <%= f.label :address, "Address", class: 'required' %><br>
                                       <%= f.text_field :address, {class: "form-control"}  %>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <%= f.label :taluka, "Taluka" %><br>
+                                      <%= f.label :taluka, "Taluka", class: 'required' %><br>
                                       <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :taluka, {:include_blank => true}, class: "form-control" %>
                                     </div>
                                   </div>
@@ -87,7 +90,7 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group text-left">
-                                      <%= f.label :district, "District" %><br>
+                                      <%= f.label :district, "District", class: 'required' %><br>
                                       <%= f.collection_select :district_id, District.all, :id, :district, {:include_blank => true}, class: "form-control" %>
                                     </div>
                                   </div>
@@ -120,7 +123,7 @@
                             <div class="panel panel-default">
                               <div class="panel-heading">
                                 <h3 class="panel-title">
-                                  <b>Recommended Dealer</b>
+                                  <b> Recommended Dealer</b>
                                 </h3>
                               </div>
                               <div class="panel-body">

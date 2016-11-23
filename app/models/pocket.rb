@@ -34,7 +34,10 @@ class Pocket < ActiveRecord::Base
 
   def pock_finder
    self.field_assistants.collect(&:positions).flatten.uniq
+  end
 
+  def village_pocket
+    self.pocket_dats.all
   end
 
   def sr_man_pock

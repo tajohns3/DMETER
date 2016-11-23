@@ -22,6 +22,9 @@
               </h1>
             </div>
         <div class="panel-body">
+          <label class="required">
+            Required Fields:
+          </label>
           <div class="row">
             <div class="col-md-6">
               <div class="panel panel-default">
@@ -31,22 +34,23 @@
                   </div>
                 </div>
                 <div class="panel-body">
+
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label :State %><br>
+                        <%= f.label :State, class: 'required' %><br>
                         <%= f.collection_select :state_id, State.all, :id, :state, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Area Manager' %><br>
+                        <%= f.label 'Select Area Manager', class: 'required' %><br>
                         <%= f.collection_select :manager_id, User.where(role: 'area_manager'), :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Sales Rep' %><br>
+                        <%= f.label 'Select Sales Rep', class: 'required' %><br>
                         <%= f.collection_select :user_id, User.where(role: 'sale_representative'), :id, :fullname, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
@@ -58,7 +62,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Pocket' %><br>
+                        <%= f.label 'Select Pocket', class: 'required' %><br>
                         <%= f.collection_select :pocket_id, Pocket.all, :id, :pocket_name, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
@@ -78,7 +82,7 @@
                     <div class="col-md-8">
                       <div class="form-group">
                         <div>
-                          <%= f.label 'Select Demo Status' %><br>
+                          <%= f.label 'Select Demo Status', class: 'required' %><br>
                           <%= f.radio_button(:demostatus, "Active Demonstration") %>
                           <%= label_tag(:demostatus, 'Active Demonstration') %> <br>
                           <%= f.radio_button(:demostatus, "Completed Demonstration") %>
@@ -88,7 +92,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <%= f.label 'Select Demo' %><br>
+                        <%= f.label 'Select Demo', class: 'required' %><br>
                         <%= f.collection_select :demo_id, Demonstration.all, :id, :demo_code, {:include_blank => true}, {class: "form-control"} %>
                       </div>
                     </div>
