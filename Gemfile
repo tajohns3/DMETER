@@ -25,6 +25,7 @@ gem 'dossier'
 gem 'underscore-rails'
 gem 'dependent-fields-rails'
 gem 'maskedinput-rails'
+gem 'seed_dump'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

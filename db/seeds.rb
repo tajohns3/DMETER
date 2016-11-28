@@ -25,5 +25,3 @@ Pocket.new(pocket_name: 'Not Assigned', state_id: '1').save(validate: false)
 #List of states
 PocketDat.delete_all
 PocketDat.new(taluka: 'Not Assigned', village: 'Not Assigned').save(validate: false)
-
-

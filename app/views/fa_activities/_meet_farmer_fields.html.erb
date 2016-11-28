@@ -10,7 +10,7 @@
     <div class="form-group">
 
       <%= f.label :pocket_dat_id, 'Village' %><br>
-      <%= f.collection_select :pocket_dat_id, PocketDat.all, :id, :village, {include_blank: ''}, {class: 'form-control'}%>
+      <%= f.grouped_collection_select :pocket_dat_id, Pocket.all, :village_pocket,:pocket_name,:id,:village, {include_blank: ''}, {class: 'form-control', id: 'fa_village'}%>
     </div>
   </div>
 

@@ -69,6 +69,6 @@ class BusinessDevelopmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_development_params
-      params.require(:business_development).permit(:pre_demonstration_id, :pocket_id, :option, :sample_request, :numattendees, :a_attendees, :b_attendees, :c_attendees,:sr_activity_id)
+      params.require(:business_development).permit(:pre_demonstration_id, :pocket_id, :option, :sample_request, :numattendees, :a_attendees, :b_attendees, :c_attendees,:d_attendees,:sr_activity_id)
     end
 end

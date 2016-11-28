@@ -200,6 +200,23 @@ jQuery ->
       $('#state_manager').empty()
 
 
+#filter village
+jQuery ->
+#  $('#sale_rep_act_rep').parent().hide()
+  villages =$('#fa_village').html()
+  $('#pocket_mon').change ->
+    pocket = $('#pocket_mon :selected').text()
+    escaped_pocket = pocket.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(villages).filter("optgroup[label='#{escaped_pocket}']").html()
+    if options
+      $('#fa_village').html(options)
+#      $('#sale_rep_act_rep').parent().show()
+    else
+      $('#fa_village').empty()
+#      $('#sale_rep_act_rep').parent().hide()
+
+
+
 ##filter pocket with sales reps
 #jQuery ->
 #  $('#pocket_mon').parent().hide()
