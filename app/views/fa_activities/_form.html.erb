@@ -49,7 +49,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :user_id, 'Sales Representative', class: "required" %><br>
-                        <%= f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id, :sur_name,  {include_blank: true}, {id: 'fa_sales_rep', class: 'form-control'} %>
+                        <%= f.grouped_collection_select :user_id, User.all,:sales_rep,:sur_name, :id, :fullname,  {include_blank: true}, {id: 'fa_sales_rep', class: 'form-control'} %>
                     </div>
                   </div>
 
@@ -68,7 +68,7 @@
                          <div class="col-md-6">
                       <div class="form-group">
                         <%= f.label :position_id, 'Field Assistant', class: "required" %><br>
-                        <%= f.grouped_collection_select :position_id, Pocket.all,:pock_finder,:pocket_name, :id, :surname,{include_blank: ''}, {:id => 'field_assist', class: 'form-control'} %>
+                        <%= f.grouped_collection_select :position_id, Pocket.all,:pock_finder,:pocket_name, :id, :fa_name,{include_blank: ''}, {:id => 'field_assist', class: 'form-control'} %>
                       </div>
                     </div>
 
