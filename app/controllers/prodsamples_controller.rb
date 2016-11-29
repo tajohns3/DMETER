@@ -75,6 +75,6 @@ class ProdsamplesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prodsample_params
-      params.require(:prodsample).permit(:ps_id, :state_id, :position_id, :sample_purp, :sampletype, :product_id, :single_id, :box_id)
+      params.require(:prodsample).permit(:ps_id, :state_id, :position_id, :sample_purp, :sampletype, :product_id, :single_id, :box_id,:demo_id)
     end
 end

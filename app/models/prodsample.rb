@@ -17,7 +17,7 @@ class Prodsample < ActiveRecord::Base
   end
 
 #validates :stid, :faid, :sample_purp, :sampletype, presence: true
-
+  validates :box_id,:single_id, :product_id,:state_id,:position_id, presence: true
 end
 
 

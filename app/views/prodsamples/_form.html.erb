@@ -103,12 +103,12 @@
                               </th>
                               <th class="text-center">
                                 <div class="form-group">
-                                  <%= f.collection_select :single_id, Single.all, :id, :name, {:include_blank => true}, {class: "form-control"}%>
+                                  <%= f.collection_select :single_id, Single.all, :id, :name,{}, {class: "form-control"}%>
                                 </div>
                               </th>
                               <th class="text-center">
                                 <div class="form-group">
-                                  <%= f.collection_select :box_id, Box.all, :id, :name, {:include_blank => true}, {class: "form-control"}%>
+                                  <%= f.collection_select :box_id, Box.all, :id, :name,{}, {class: "form-control"}%>
                                 </div>
                               </th>
                               </tr>
