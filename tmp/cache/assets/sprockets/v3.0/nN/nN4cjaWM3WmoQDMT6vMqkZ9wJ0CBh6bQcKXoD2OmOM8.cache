@@ -1,0 +1,71 @@
+I"±(function() {
+  jQuery(function() {
+    return $('#farmers').dataTable();
+  });
+
+  jQuery(function() {
+    var users;
+    users = $('#manager').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#manager').html(options);
+      } else {
+        return $('#manager').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var users;
+    users = $('#state_manager').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#state_manager').html(options);
+      } else {
+        return $('#state_manager').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var users;
+    users = $('#sale_rep_act_rep').html();
+    return $('#manager').change(function() {
+      var escaped_manager, manager, options;
+      manager = $('#manager :selected').text();
+      escaped_manager = manager.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_manager + "']").html();
+      if (options) {
+        return $('#sale_rep_act_rep').html(options);
+      } else {
+        return $('#sale_rep_act_rep').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var villages;
+    villages = $('#le_village').html();
+    return $('#pocket_farmer').change(function() {
+      var escaped_pocket, options, pocket;
+      pocket = $('#pocket_farmer :selected').text();
+      escaped_pocket = pocket.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(villages).filter("optgroup[label='" + escaped_pocket + "']").html();
+      if (options) {
+        return $('#le_village').html(options);
+      } else {
+        return $('#le_village').empty();
+      }
+    });
+  });
+
+}).call(this);
+:ET

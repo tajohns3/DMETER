@@ -1,0 +1,17 @@
+I"–(function() {
+  jQuery(function() {
+    return $("#active_demo").hide();
+  });
+
+  jQuery(function() {
+    return $('#prodsample_sample_purp').on("change", function() {
+      if ($(this).val() === "Active Field Demonstration" || $(this).val() === "Farmer Meeting") {
+        return $('#active_demo').fadeIn();
+      } else {
+        return $('#active_demo').fadeOut();
+      }
+    });
+  });
+
+}).call(this);
+:ET

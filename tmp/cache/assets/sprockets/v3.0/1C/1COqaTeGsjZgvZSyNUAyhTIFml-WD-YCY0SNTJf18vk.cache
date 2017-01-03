@@ -1,0 +1,18 @@
+I"(function() {
+  jQuery(function() {
+    return $('#post_demonstration_observation').on("change", function() {
+      if ($(this).val() === "expected") {
+        $('#demo_pictures').fadeIn();
+        return $('#unexpected_comments').fadeOut();
+      } else if ($(this).val() === "unexpected") {
+        $('#unexpected_comments').fadeIn();
+        return $('#demo_pictures').fadeOut();
+      } else {
+        $('#unexpected_comments').fadeOut();
+        return $('#demo_pictures').fadeOut();
+      }
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,84 @@
+I"q
+(function() {
+  jQuery(function() {
+    var users;
+    users = $('#manager').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#manager').html(options);
+      } else {
+        return $('#manager').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var users;
+    users = $('#state_manager').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#state_manager').html(options);
+      } else {
+        return $('#state_manager').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var users;
+    users = $('#sale_rep_act_rep').html();
+    return $('#manager').change(function() {
+      var escaped_manager, manager, options;
+      manager = $('#manager :selected').text();
+      escaped_manager = manager.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_manager + "']").html();
+      if (options) {
+        return $('#sale_rep_act_rep').html(options);
+      } else {
+        return $('#sale_rep_act_rep').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var districts;
+    districts = $('#deal_dist').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(districts).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#deal_dist').html(options);
+      } else {
+        return $('#deal_dist').empty();
+      }
+    });
+  });
+
+  jQuery(function() {
+    var districts;
+    districts = $('#deal_dist2').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(districts).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#deal_dist2').html(options);
+      } else {
+        return $('#deal_dist2').empty();
+      }
+    });
+  });
+
+}).call(this);
+:ET
