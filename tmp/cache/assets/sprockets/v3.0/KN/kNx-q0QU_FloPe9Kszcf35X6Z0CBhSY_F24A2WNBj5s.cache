@@ -1,0 +1,23 @@
+I"(function() {
+  jQuery(function() {
+    return $(document).on("change", function() {
+      if ($("#chbox1").prop('checked')) {
+        return $("#app_comment_field").show();
+      } else {
+        return $("#app_comment_field").hide();
+      }
+    });
+  });
+
+  jQuery(function() {
+    return $(document).on("change", function() {
+      if ($("#chbox2").prop('checked')) {
+        return $("#follow_comment_field").show();
+      } else {
+        return $("#follow_comment_field").hide();
+      }
+    });
+  });
+
+}).call(this);
+:ET

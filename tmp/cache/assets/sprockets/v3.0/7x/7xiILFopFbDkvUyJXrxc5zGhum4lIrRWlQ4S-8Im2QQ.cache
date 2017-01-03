@@ -1,0 +1,24 @@
+I"(function() {
+  jQuery(function() {
+    $('#role_select').hide();
+    return $('#user_location').on("change", function() {
+      if ($(this).val() === "field_staff") {
+        return $('#role_select').show();
+      } else {
+        return $('#role_select').hide();
+      }
+    });
+  });
+
+  jQuery(function() {
+    return $('#kaman').on("change", function() {
+      if ($(this).val() === "sale_representative") {
+        return $('#mana_tan').show();
+      } else {
+        return $('#mana_tan').hide();
+      }
+    });
+  });
+
+}).call(this);
+:ET

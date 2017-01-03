@@ -1,0 +1,19 @@
+I"!(function() {
+  jQuery(function() {
+    var users;
+    users = $('#pocket_sr').html();
+    return $('#sr_state').change(function() {
+      var escaped_state, options, state;
+      state = $('#sr_state :selected').text();
+      escaped_state = state.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+      options = $(users).filter("optgroup[label='" + escaped_state + "']").html();
+      if (options) {
+        return $('#pocket_sr').html(options);
+      } else {
+        return $('#pocket_sr').empty();
+      }
+    });
+  });
+
+}).call(this);
+:ET
