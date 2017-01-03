@@ -30,8 +30,12 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: sqlserver
+  host: localhost
+  database: DMETERDBPROTO
+  username: dmeterlog2
+  password: password
+  port: 1433
 
 production:
   <<: *default
