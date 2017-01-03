@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   before_create :auto_username
   before_create :lower_email
-  after_update :send_admin_mail
+  # after_update :send_admin_mail
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
