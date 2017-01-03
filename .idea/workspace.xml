@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63463788-a095-4025-9439-05ec028f5dae" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DMETER_PROTO.iml" afterPath="$PROJECT_DIR$/DMETER_PROTO.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="DMETER_PROTO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1266,7 +1263,7 @@
       <workItem from="1480311893264" duration="134000" />
       <workItem from="1480365270490" duration="2913000" />
       <workItem from="1480385050474" duration="2126000" />
-      <workItem from="1483475423631" duration="3429000" />
+      <workItem from="1483475423631" duration="3863000" />
     </task>
     <task id="LOCAL-00001" summary="Created new branch">
       <created>1476566626592</created>
@@ -1348,7 +1345,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505879000" />
+    <option name="totallyTimeSpent" value="506313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
