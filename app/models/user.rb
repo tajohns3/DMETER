@@ -36,9 +36,9 @@ class User < ActiveRecord::Base
     self.user_name=(self.first_name[0]+self.sur_name).to_s.downcase+number.to_s
   end
 
-  def active_for_authentication?
-    super && approved?
-  end
+  # def active_for_authentication?
+  #   super && approved?
+  # end
 
   def fullname
     "#{first_name} #{sur_name}"
