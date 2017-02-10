@@ -1,6 +1,7 @@
 class DemoresultsController < ApplicationController
   before_action :set_demoresult, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
 
   # GET /demoresults
   # GET /demoresults.json
@@ -66,6 +67,10 @@ class DemoresultsController < ApplicationController
   end
 
   private
+  def input_user
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
+
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_demoresult
       @demoresult = Demoresult.find(params[:id])
