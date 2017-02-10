@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63463788-a095-4025-9439-05ec028f5dae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/farmers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/farmers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
     </list>
     <ignored path="DMETER_PROTO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1283,7 +1281,7 @@
       <workItem from="1483675889792" duration="44000" />
       <workItem from="1484165949263" duration="239000" />
       <workItem from="1486513488653" duration="114000" />
-      <workItem from="1486756014435" duration="2244000" />
+      <workItem from="1486756014435" duration="3400000" />
     </task>
     <task id="LOCAL-00001" summary="Created new branch">
       <created>1476566626592</created>
@@ -1365,7 +1363,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513971000" />
+    <option name="totallyTimeSpent" value="515127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
