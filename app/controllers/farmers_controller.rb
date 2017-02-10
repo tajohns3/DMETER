@@ -1,6 +1,7 @@
 class FarmersController < ApplicationController
   before_action :set_farmer, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :input_user, only: [:new,:edit, :update,:destroy]
 
   # GET /farmers
   # GET /farmers.json
