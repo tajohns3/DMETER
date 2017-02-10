@@ -69,6 +69,11 @@ class FarmersController < ApplicationController
   end
 
   private
+
+  def input_user
+    redirect_to root_url, notice: 'Your account does not have access to this resource' unless current_user.access?
+
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_farmer
       @farmer = Farmer.find(params[:id])
